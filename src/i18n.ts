@@ -6,6 +6,7 @@ import deTranslation from "./locales/de/translation.json";
 import deATTranslation from "./locales/de-AT/translation.json";
 import esTranslation from "./locales/es/translation.json";
 import frTranslation from "./locales/fr/translation.json";
+import jaTranslation from "./locales/ja/translation.json";
 
 i18n
   .use(LanguageDetector)
@@ -26,6 +27,9 @@ i18n
       },
       fr: {
         translation: frTranslation,
+      },
+      ja: {
+        translation: jaTranslation,
       },
     },
     fallbackLng: {
