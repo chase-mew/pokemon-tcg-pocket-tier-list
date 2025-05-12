@@ -124,10 +124,10 @@ for (const deckName of Object.keys(matchupResults)) {
 
 fs.writeFileSync("./data/best-decks.json", JSON.stringify(bestDecks, null, 2));
 fs.writeFileSync(
-  "../src/app/best-decks.json",
+  "../public/data/best-decks.json",
   JSON.stringify(bestDecks, null, 2)
 );
 fs.writeFileSync(
-  "../src/app/matchup-data.json",
+  "../public/data/matchup-data.json",
   JSON.stringify(matchupData, null, 2)
 );
