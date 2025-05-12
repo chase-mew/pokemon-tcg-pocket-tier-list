@@ -3,6 +3,7 @@ import DECKS from "./best-decks.json";
 import OLD_DECKS from "./old.json";
 import { DEBUG, MIN_PERCENT_TO_QUALIFY } from "./config";
 import useMissing from "./use-missing";
+import matchupData from "./matchup-data.json";
 
 const CARDS_URL =
   "https://raw.githubusercontent.com/chase-manning/pokemon-tcg-pocket-cards/refs/heads/main/v4.json";
@@ -19,6 +20,12 @@ export interface CardType {
   image: string;
 }
 
+export interface MatchupType {
+  name: string;
+  winRate: number;
+  totalGames: number;
+}
+
 export interface FullDeckType {
   id: string;
   name: string;
@@ -26,6 +33,7 @@ export interface FullDeckType {
   score: number;
   place: number;
   percentOfGames: number;
+  matchups: MatchupType[];
 }
 
 interface BestDecksCardType {
@@ -108,6 +116,10 @@ const useDecks = (old = false): FullDeckType[] | null => {
       return bestDeck;
     })
     .filter((deck) => deck)
+    .filter((deck) => {
+      const isAboveMin = deck.percentOfGames > MIN_PERCENT_TO_QUALIFY;
+      return DEBUG || isAboveMin;
+    })
     .map((oldDeck, index) => {
       const deckCards = [];
       for (const oldCard of oldDeck.cards) {
@@ -121,6 +133,7 @@ const useDecks = (old = false): FullDeckType[] | null => {
           deckCards.push(card);
         }
       }
+      const matchups = (matchupData as Record<string, any>)[oldDeck.name];
 
       const deck: FullDeckType = {
         id: oldDeck.name.toLowerCase().replace(/\s/g, "-"),
@@ -129,12 +142,9 @@ const useDecks = (old = false): FullDeckType[] | null => {
         score: oldDeck.score,
         place: index + 1,
         percentOfGames: oldDeck.percentOfGames,
+        matchups,
       };
       return deck;
-    })
-    .filter((deck) => {
-      const isAboveMin = deck.percentOfGames > MIN_PERCENT_TO_QUALIFY;
-      return DEBUG || isAboveMin;
     });
 
   // return bestDecks;
