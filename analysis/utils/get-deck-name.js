@@ -150,11 +150,17 @@ const DECK_NAMES = [
   ["Snorlax A2a 63", "Giratina ex A2b 35"],
   ["Wigglytuff A2b 61", "Greninja A1 89"],
   ["Wigglytuff A2b 61", "Oricorio A3 66"],
-  ["Greninja A1 89", "Oricorio A3 66"],
+  ["Oricorio A3 66", "Greninja A1 89"],
   ["Solgaleo ex A3 122", "Snorlax A2a 63"],
   ["Incineroar ex A3 33", "Turtonator A3 37"],
   ["Pachirisu A2b 25", "Oricorio A3 66"],
   ["Decidueye ex A3 12", "Lurantis A3 15"],
+  ["Decidueye ex A3 12", "Lurantis A3 15"],
+  ["Giratina ex A2b 35", "Greninja A1 89"],
+  ["Dragonite A1 185", "Oricorio A3 66"],
+  ["Garchomp A2 123", "Greninja A1 89"],
+  ["Vikavolt A3 65", "Oricorio A3 66"],
+  ["Giratina ex A2b 35", "Tapu Lele A3 84"],
 
   // Main Card (never side card)
   "Bronzong A2a 59",
