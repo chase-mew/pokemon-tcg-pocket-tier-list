@@ -1,7 +1,9 @@
 import { useNavigate, useParams } from "react-router-dom";
 import styled from "styled-components";
-import useDecks, { FullDeckType } from "../../app/use-decks";
+import useDecks, { FullDeckType, MatchupType } from "../../app/use-decks";
 import useMissing from "../../app/use-missing";
+import DeckCard from "../../components/DeckCard";
+import { MIN_MATCHUP_GAMES } from "../../app/config";
 
 const StyledDeckPage = styled.div`
   width: 100%;
@@ -10,10 +12,32 @@ const StyledDeckPage = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 4.8rem;
+  gap: 8rem;
 
   @media (max-width: 900px) {
     padding: 2.4rem;
   }
+`;
+
+const Section = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 2.4rem;
+`;
+
+const Header = styled.div`
+  display: flex;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 8rem;
+  background: var(--a);
+  color: var(--bg);
+  font-size: 5rem;
+  font-weight: 500;
 `;
 
 const CardList = styled.div`
@@ -78,6 +102,66 @@ const Link = styled.button`
   text-decoration: underline;
 `;
 
+const Matchups = styled.div`
+  display: flex;
+  width: 100%;
+  gap: 2.4rem;
+`;
+
+const SubHeader = styled.div<{ $backgroundColor: string }>`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 8rem;
+  background: ${(props) => props.$backgroundColor};
+  color: var(--bg);
+  font-size: 4rem;
+  font-weight: 500;
+  opacity: 0.9;
+`;
+
+const MatchupSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  gap: 2.4rem;
+  height: auto;
+`;
+
+const MatchupList = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 2.4rem;
+  flex: 1;
+  width: 100%;
+`;
+
+const MatchupContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  gap: 1.2rem;
+`;
+
+const DeckCardContainer = styled.div`
+  position: relative;
+  height: 15rem;
+  aspect-ratio: 1 / 1;
+`;
+
+const MatchupLabel = styled.div<{ $winRate: number }>`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: ${(props) => (props.$winRate > 0.5 ? "var(--e)" : "var(--s)")};
+`;
+
 const DeckPage = () => {
   const deckId = useParams().deckId;
   const decks = useDecks();
@@ -111,16 +195,82 @@ const DeckPage = () => {
 
   return (
     <StyledDeckPage>
-      <CardList>
-        {uniqueCards.map((card) => (
-          <CardContainer key={card.id} onClick={() => addMissing(card.id)}>
-            <CardImage src={card.image} alt={card.name} />
-            <CardNumber>
-              {deck && deck.cards.filter((c) => c.id === card.id).length}
-            </CardNumber>
-          </CardContainer>
-        ))}
-      </CardList>
+      <Section>
+        <Header>{`#${deck.place} Decklist`}</Header>
+        <CardList>
+          {uniqueCards.map((card) => (
+            <CardContainer key={card.id} onClick={() => addMissing(card.id)}>
+              <CardImage src={card.image} alt={card.name} />
+              <CardNumber>
+                {deck && deck.cards.filter((c) => c.id === card.id).length}
+              </CardNumber>
+            </CardContainer>
+          ))}
+        </CardList>
+      </Section>
+      <Section>
+        <Header>Matchups</Header>
+        <Matchups>
+          <MatchupSection>
+            <SubHeader $backgroundColor="var(--e)">Strong Against</SubHeader>
+            <MatchupList>
+              {deck.matchups
+                .filter((matchup) => matchup.totalGames > MIN_MATCHUP_GAMES)
+                .filter((matchup) => matchup.winRate > 0.5)
+                .filter((matchup) => matchup.name !== deck.name)
+                .filter((matchup) =>
+                  decks.some((deck) => deck.name === matchup.name)
+                )
+                .sort((a, b) => b.winRate - a.winRate)
+                .sort(
+                  (a, b) =>
+                    decks.find((deck) => deck.name === a.name)!.place -
+                    decks.find((deck) => deck.name === b.name)!.place
+                )
+                .slice(0, 8)
+                .map((matchup: MatchupType) => (
+                  <MatchupContainer key={matchup.name}>
+                    <DeckCardContainer>
+                      <DeckCard
+                        deck={decks.find((deck) => deck.name === matchup.name)!}
+                      />
+                    </DeckCardContainer>
+                    <MatchupLabel $winRate={matchup.winRate}>
+                      {`${(matchup.winRate * 100).toFixed(0)}%`}
+                    </MatchupLabel>
+                  </MatchupContainer>
+                ))}
+            </MatchupList>
+          </MatchupSection>
+          <MatchupSection>
+            <SubHeader $backgroundColor="var(--s)">Weak Against</SubHeader>
+            <MatchupList>
+              {deck.matchups
+                .filter((matchup) => !!matchup)
+                .filter((matchup) => matchup.totalGames > MIN_MATCHUP_GAMES)
+                .filter((matchup) => matchup.winRate < 0.5)
+                .filter((matchup) => matchup.name !== deck.name)
+                .filter((matchup) =>
+                  decks.some((deck) => deck.name === matchup.name)
+                )
+                .sort((a, b) => a.winRate - b.winRate)
+                .slice(0, 8)
+                .map((matchup: MatchupType) => (
+                  <MatchupContainer key={matchup.name}>
+                    <DeckCardContainer>
+                      <DeckCard
+                        deck={decks.find((deck) => deck.name === matchup.name)!}
+                      />
+                    </DeckCardContainer>
+                    <MatchupLabel $winRate={matchup.winRate}>
+                      {`${(matchup.winRate * 100).toFixed(0)}%`}
+                    </MatchupLabel>
+                  </MatchupContainer>
+                ))}
+            </MatchupList>
+          </MatchupSection>
+        </Matchups>
+      </Section>
     </StyledDeckPage>
   );
 };
