@@ -1,5 +1,6 @@
 import { useNavigate, useParams } from "react-router-dom";
 import styled from "styled-components";
+import { useTranslation } from "react-i18next";
 import useDecks, { FullDeckType, MatchupType } from "../../app/use-decks";
 import useMissing from "../../app/use-missing";
 import DeckCard from "../../components/DeckCard";
@@ -187,6 +188,7 @@ const DeckPage = () => {
   const decks = useDecks();
   const navigate = useNavigate();
   const { addMissing } = useMissing();
+  const { t } = useTranslation();
 
   if (!decks) return <Overlay>Loading...</Overlay>;
 
@@ -229,10 +231,12 @@ const DeckPage = () => {
         </CardList>
       </Section>
       <Section>
-        <Header>Matchups</Header>
+        <Header>{t("deckPage.matchups")}</Header>
         <Matchups>
           <MatchupSection>
-            <SubHeader $backgroundColor="var(--e)">Strong Against</SubHeader>
+            <SubHeader $backgroundColor="var(--e)">
+              {t("deckPage.strongAgainst")}
+            </SubHeader>
             <MatchupList>
               {deck.matchups
                 .filter((matchup) => matchup.totalGames > MIN_MATCHUP_GAMES)
@@ -263,7 +267,9 @@ const DeckPage = () => {
             </MatchupList>
           </MatchupSection>
           <MatchupSection>
-            <SubHeader $backgroundColor="var(--s)">Weak Against</SubHeader>
+            <SubHeader $backgroundColor="var(--s)">
+              {t("deckPage.weakAgainst")}
+            </SubHeader>
             <MatchupList>
               {deck.matchups
                 .filter((matchup) => !!matchup)

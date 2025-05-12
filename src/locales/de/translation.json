@@ -34,5 +34,10 @@
       "title": "Open Source",
       "description": "Diese Website ist Open Source. Du findest den Quellcode auf <0>GitHub</0>. Beiträge sind willkommen!"
     }
+  },
+  "deckPage": {
+    "matchups": "Deck-Duelle",
+    "strongAgainst": "Stark gegen",
+    "weakAgainst": "Schwach gegen"
   }
 }

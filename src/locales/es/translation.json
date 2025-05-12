@@ -34,5 +34,10 @@
       "title": "Código Abierto",
       "description": "Este sitio web es de código abierto. Puedes encontrar el código fuente en <0>GitHub</0>. ¡Las contribuciones son bienvenidas!"
     }
+  },
+  "deckPage": {
+    "matchups": "Enfrentamientos",
+    "strongAgainst": "Fuerte contra",
+    "weakAgainst": "Débil contra"
   }
 }

@@ -34,5 +34,10 @@
       "title": "開源專案",
       "description": "本網站是開源的。您可以在<0>GitHub</0>上找到源代碼。歡迎貢獻！"
     }
+  },
+  "deckPage": {
+    "matchups": "對戰情況",
+    "strongAgainst": "優勢對局",
+    "weakAgainst": "劣勢對局"
   }
 }
