@@ -25,15 +25,27 @@ const getDecks = () => {
     .filter((deck) => deck.wigglytuffPercent < WIGGLYTUFF_PERCENT_CUTOFF)
     .filter((deck) => deck.noTrainerPercent < NO_TRAINER_PERCENT_CUTOFF);
 
-  const decksWithNames = decksWithoutNames
-    .map((deck) => {
-      const name = getDeckName(deck);
-      return {
-        ...deck,
-        name,
-      };
-    })
-    .filter((deck) => deck.name);
+  // Populating deck names
+  let decksWithNames = [];
+  const idToName = {};
+  for (const deck of decksWithoutNames) {
+    const name = getDeckName(deck);
+    if (!name) continue;
+    idToName[deck.id] = name;
+    decksWithNames.push({
+      ...deck,
+      name,
+    });
+  }
+
+  // Updating wins and losses with deck names
+  decksWithNames = decksWithNames.map((deck) => {
+    return {
+      ...deck,
+      wins: deck.wins.map((win) => idToName[win]).filter((name) => name),
+      losses: deck.losses.map((loss) => idToName[loss]).filter((name) => name),
+    };
+  });
 
   const totalGames = decksWithNames.reduce(
     (acc, deck) => acc + deck.totalGames,
@@ -69,7 +81,7 @@ const getDecks = () => {
     return {
       ...deck,
       totalGames: deck.totalGames * multiplier,
-      wins: deck.wins * multiplier,
+      winCount: deck.winCount * multiplier,
     };
   });
 

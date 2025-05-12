@@ -20,7 +20,9 @@ const uniqueDeckNames = decks
 // Calculate Best Decks
 const bestDecks = [];
 const idExists = {};
+let matchupResults = {};
 for (const deckName of uniqueDeckNames) {
+  matchupResults[deckName] = {};
   const matchingDecks = decks.filter((game) => game.name === deckName);
   const matchingGames = matchingDecks.reduce(
     (acc, game) => acc + game.totalGames,
@@ -30,22 +32,40 @@ for (const deckName of uniqueDeckNames) {
 
   const cards = {};
   for (const deck of matchingDecks) {
+    // Updating deck results
+    const deckResult = { wins: 0, losses: 0 };
+    for (const win of deck.wins) {
+      if (!matchupResults[deckName][win]) {
+        matchupResults[deckName][win] = deckResult;
+      }
+      matchupResults[deckName][win].wins += deck.winCount;
+    }
+    for (const loss of deck.losses) {
+      if (!matchupResults[deckName][loss]) {
+        matchupResults[deckName][loss] = deckResult;
+      }
+      matchupResults[deckName][loss].losses += deck.winCount;
+    }
+
+    // Updating card results
     for (const card of deck.cards) {
       const cardName = cardToString(card);
       if (cards[cardName]) {
-        cards[cardName].wins += deck.wins;
+        cards[cardName].winCount += deck.winCount;
         cards[cardName].totalGames += deck.totalGames;
       } else {
         cards[cardName] = {
-          wins: deck.wins,
+          winCount: deck.winCount,
           totalGames: deck.totalGames,
         };
       }
     }
   }
+
+  // Calculating card scores
   for (const card in cards) {
     const cardData = cards[card];
-    const winRate = cardData.wins / cardData.totalGames;
+    const winRate = cardData.winCount / cardData.totalGames;
     const popularity = cardData.totalGames / matchingGames;
     const isRedCard = card.toLowerCase().includes("red card");
     const multiplier = isRedCard ? RED_CARD_MULTIPLIER : 1;
@@ -85,8 +105,29 @@ for (const deckName of uniqueDeckNames) {
 
 bestDecks.sort((a, b) => b.score - a.score);
 
+const matchupData = {};
+for (const deckName of Object.keys(matchupResults)) {
+  matchupData[deckName] = Object.keys(matchupResults[deckName]).map((key) => {
+    const winRate =
+      matchupResults[deckName][key].wins /
+      (matchupResults[deckName][key].wins +
+        matchupResults[deckName][key].losses);
+    return {
+      name: key,
+      winRate,
+      totalGames:
+        matchupResults[deckName][key].wins +
+        matchupResults[deckName][key].losses,
+    };
+  });
+}
+
 fs.writeFileSync("./data/best-decks.json", JSON.stringify(bestDecks, null, 2));
 fs.writeFileSync(
   "../src/app/best-decks.json",
   JSON.stringify(bestDecks, null, 2)
+);
+fs.writeFileSync(
+  "../src/app/matchup-data.json",
+  JSON.stringify(matchupData, null, 2)
 );
