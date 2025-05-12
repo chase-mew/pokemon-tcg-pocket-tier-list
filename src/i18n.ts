@@ -7,6 +7,7 @@ import deATTranslation from "./locales/de-AT/translation.json";
 import esTranslation from "./locales/es/translation.json";
 import frTranslation from "./locales/fr/translation.json";
 import jaTranslation from "./locales/ja/translation.json";
+import koTranslation from "./locales/ko/translation.json";
 
 i18n
   .use(LanguageDetector)
@@ -30,6 +31,9 @@ i18n
       },
       ja: {
         translation: jaTranslation,
+      },
+      ko: {
+        translation: koTranslation,
       },
     },
     fallbackLng: {
