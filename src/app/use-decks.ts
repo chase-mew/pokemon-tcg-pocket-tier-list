@@ -1,9 +1,6 @@
 import { useEffect, useState } from "react";
-import DECKS from "./best-decks.json";
-import OLD_DECKS from "./old.json";
 import { DEBUG, MIN_PERCENT_TO_QUALIFY } from "./config";
 import useMissing from "./use-missing";
-import matchupData from "./matchup-data.json";
 
 const CARDS_URL =
   "https://raw.githubusercontent.com/chase-manning/pokemon-tcg-pocket-cards/refs/heads/main/v4.json";
@@ -24,6 +21,18 @@ export interface MatchupType {
   name: string;
   winRate: number;
   totalGames: number;
+}
+
+interface PartialDeckType {
+  name: string;
+  cards: {
+    count: number;
+    set: string;
+    number: string;
+    name: string;
+  }[];
+  score: number;
+  percentOfGames: number;
 }
 
 export interface FullDeckType {
@@ -61,9 +70,14 @@ const cardToId = (card: BestDecksCardType): string => {
   return output;
 };
 
-const useDecks = (old = false): FullDeckType[] | null => {
+const useDecks = (): FullDeckType[] | null => {
   const { missing } = useMissing();
   const [cards, setCards] = useState<CardType[] | null>(null);
+  const [decks, setDecks] = useState<PartialDeckType[] | null>(null);
+  const [matchupData, setMatchupData] = useState<Record<
+    string,
+    MatchupType[]
+  > | null>(null);
 
   useEffect(() => {
     fetch(CARDS_URL)
@@ -71,27 +85,53 @@ const useDecks = (old = false): FullDeckType[] | null => {
       .then((data) => setCards(data));
   }, []);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const [decksResponse, matchupDataResponse] = await Promise.all([
+          fetch("/data/best-decks.json"),
+          fetch("/data/matchup-data.json"),
+        ]);
+
+        const [decksData, matchupDataData] = await Promise.all([
+          decksResponse.json(),
+          matchupDataResponse.json(),
+        ]);
+
+        setDecks(decksData);
+        setMatchupData(matchupDataData);
+      } catch (error) {
+        console.error("Error loading data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   if (!cards) return null;
 
-  const decks = (old ? OLD_DECKS : DECKS) as any[];
+  if (!decks) return null;
 
-  const uniqueDeckNames: string[] = decks.reduce((acc, deck) => {
-    if (!acc.includes(deck.name)) {
-      acc.push(deck.name);
-    }
-    return acc;
-  }, []);
+  const uniqueDeckNames: string[] = decks.reduce(
+    (acc: string[], deck: PartialDeckType) => {
+      if (!acc.includes(deck.name)) {
+        acc.push(deck.name);
+      }
+      return acc;
+    },
+    []
+  );
 
   const uniqueMissing = [...new Set(missing)];
 
   const bestDecks = uniqueDeckNames
     .map((name) => {
       const matchingDecks = decks
-        .filter((deck) => deck.name === name)
-        .filter((deck) => {
+        .filter((deck: PartialDeckType) => deck.name === name)
+        .filter((deck: PartialDeckType) => {
           for (const missingCard of uniqueMissing) {
             const matchingCards = deck.cards.reduce(
-              (acc: number, card: any) => {
+              (acc: number, card: BestDecksCardType) => {
                 const id = cardToId(card);
                 if (id === missingCard) {
                   acc += card.count;
@@ -163,7 +203,9 @@ const useDecks = (old = false): FullDeckType[] | null => {
     includedDecks.push(deck);
   }
 
-  return includedDecks.sort((a, b) => a.place - b.place);
+  return includedDecks.sort(
+    (a: FullDeckType, b: FullDeckType) => a.place - b.place
+  );
 };
 
 export default useDecks;
