@@ -83,7 +83,6 @@ const useDecks = (old = false): FullDeckType[] | null => {
   }, []);
 
   const uniqueMissing = [...new Set(missing)];
-  console.log(missing);
 
   const bestDecks = uniqueDeckNames
     .map((name) => {
