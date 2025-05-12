@@ -2,8 +2,6 @@ import { Outlet, Route, Routes } from "react-router-dom";
 import styled from "styled-components";
 import LandingPage from "./pages/landing/LandingPage";
 import DeckPage from "./pages/deck/DeckPage";
-import DeltasPage from "./pages/deltas/DeltasPage";
-import NewPage from "./pages/new/NewPage";
 import Footer from "./components/Footer";
 
 const StyledApp = styled.div`
@@ -33,10 +31,6 @@ const App = () => {
           <Route index element={<DeckPage />} />
           <Route path=":deckId" element={<DeckPage />} />
         </Route>
-
-        <Route path="deltas" element={<DeltasPage />} />
-
-        <Route path="new" element={<NewPage />} />
 
         <Route path="*" element={<LandingPage />} />
       </Route>
