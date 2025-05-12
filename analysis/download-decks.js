@@ -39,6 +39,40 @@ const getTournaments = async () => {
     .filter((tournament) => !processedTournamentIds.includes(tournament.id));
 };
 
+// [
+//     {
+//         "round": 1,
+//         "phase": 1,
+//         "table": 1,
+//         "winner": "shoji300",
+//         "player1": "hedilily",
+//         "player2": "shoji300"
+//     },
+//     ...
+//     {
+//         "phase": 2,
+//         "round": 12,
+//         "match": "T2-1",
+//         "winner": "espel",
+//         "player1": "harun",
+//         "player2": "espel"
+//     }
+// ]
+const getPairings = async (tournament) => {
+  const res = await fetch(
+    `${BASE}/tournaments/${tournament.id}/pairings${append}`
+  );
+  const pairings = await res.json();
+  return pairings.map((pairing) => {
+    return {
+      winner: `${tournament.id}-${pairing.winner}`,
+      loser: `${tournament.id}-${
+        pairing.player1 === pairing.winner ? pairing.player2 : pairing.player1
+      }`,
+    };
+  });
+};
+
 // {
 //   name: 'KingHeracross',
 //   country: 'US',
@@ -83,20 +117,41 @@ const getDecks = async (tournament) => {
     decks.filter((deck) => deck.decklist.trainer.length === 0).length /
     decks.length;
 
+  const pairings = await getPairings(tournament);
+
   return decks.map((deck) => {
+    const id = `${tournament.id}-${deck.player}`;
+    const wins = pairings
+      .filter((pairing) => {
+        return pairing.winner === id;
+      })
+      .map((pairing) => {
+        return pairing.loser;
+      });
+    const losses = pairings
+      .filter((pairing) => {
+        return pairing.loser === id;
+      })
+      .map((pairing) => {
+        return pairing.winner;
+      });
+
     return {
+      id,
       cards: [...deck.decklist.pokemon, ...deck.decklist.trainer],
       pokemon: deck.decklist.pokemon.reduce((acc, card) => {
         return acc + card.count;
       }, 0),
       differentPokemon: deck.decklist.pokemon.length,
-      wins: deck.record.wins,
-      losses: deck.record.losses,
+      winCount: deck.record.wins,
+      lossCount: deck.record.losses,
       totalGames: deck.record.wins + deck.record.losses,
       date: tournament.date,
       tournamentExPercent,
       wigglytuffPercent,
       noTrainerPercent,
+      wins,
+      losses,
     };
   });
 };
