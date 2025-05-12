@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
 import { DEBUG, MIN_PERCENT_TO_QUALIFY } from "./config";
 import useMissing from "./use-missing";
 
@@ -72,45 +72,35 @@ const cardToId = (card: BestDecksCardType): string => {
 
 const useDecks = (): FullDeckType[] | null => {
   const { missing } = useMissing();
-  const [cards, setCards] = useState<CardType[] | null>(null);
-  const [decks, setDecks] = useState<PartialDeckType[] | null>(null);
-  const [matchupData, setMatchupData] = useState<Record<
-    string,
-    MatchupType[]
-  > | null>(null);
 
-  useEffect(() => {
-    fetch(CARDS_URL)
-      .then((res) => res.json())
-      .then((data) => setCards(data));
-  }, []);
+  const { data: cards } = useQuery({
+    queryKey: ["cards"],
+    queryFn: async () => {
+      const response = await fetch(CARDS_URL);
+      return response.json();
+    },
+  });
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const [decksResponse, matchupDataResponse] = await Promise.all([
-          fetch("/data/best-decks.json"),
-          fetch("/data/matchup-data.json"),
-        ]);
+  const { data: decksData } = useQuery({
+    queryKey: ["decks"],
+    queryFn: async () => {
+      const [decksResponse, matchupDataResponse] = await Promise.all([
+        fetch("/data/best-decks.json"),
+        fetch("/data/matchup-data.json"),
+      ]);
 
-        const [decksData, matchupDataData] = await Promise.all([
-          decksResponse.json(),
-          matchupDataResponse.json(),
-        ]);
+      const [decksData, matchupData] = await Promise.all([
+        decksResponse.json(),
+        matchupDataResponse.json(),
+      ]);
 
-        setDecks(decksData);
-        setMatchupData(matchupDataData);
-      } catch (error) {
-        console.error("Error loading data:", error);
-      }
-    };
+      return { decks: decksData, matchupData };
+    },
+  });
 
-    fetchData();
-  }, []);
+  if (!cards || !decksData) return null;
 
-  if (!cards) return null;
-
-  if (!decks) return null;
+  const { decks, matchupData } = decksData;
 
   const uniqueDeckNames: string[] = decks.reduce(
     (acc: string[], deck: PartialDeckType) => {
@@ -150,7 +140,9 @@ const useDecks = (): FullDeckType[] | null => {
           return true;
         });
       // sort by highest score
-      matchingDecks.sort((a, b) => b.score - a.score);
+      matchingDecks.sort(
+        (a: PartialDeckType, b: PartialDeckType) => b.score - a.score
+      );
       const bestDeck = matchingDecks[0];
       return bestDeck;
     })
@@ -164,7 +156,7 @@ const useDecks = (): FullDeckType[] | null => {
       for (const oldCard of oldDeck.cards) {
         const amount = oldCard.count;
         const id = cardToId(oldCard);
-        const card = cards?.find((card) => card.id === id);
+        const card = cards?.find((card: CardType) => card.id === id);
         if (!card) {
           throw new Error(`Card not found: ${id}`);
         }
@@ -172,7 +164,7 @@ const useDecks = (): FullDeckType[] | null => {
           deckCards.push(card);
         }
       }
-      const matchups = (matchupData as Record<string, any>)[oldDeck.name];
+      const matchups = matchupData[oldDeck.name];
 
       const deck: FullDeckType = {
         id: oldDeck.name.toLowerCase().replace(/\s/g, "-"),
