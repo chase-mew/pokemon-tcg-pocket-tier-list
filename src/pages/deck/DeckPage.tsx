@@ -106,6 +106,10 @@ const Matchups = styled.div`
   display: flex;
   width: 100%;
   gap: 2.4rem;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
 `;
 
 const SubHeader = styled.div<{ $backgroundColor: string }>`
@@ -128,6 +132,10 @@ const MatchupSection = styled.div`
   flex: 1;
   gap: 2.4rem;
   height: auto;
+
+  @media (max-width: 900px) {
+    width: 100%;
+  }
 `;
 
 const MatchupList = styled.div`
@@ -136,6 +144,10 @@ const MatchupList = styled.div`
   gap: 2.4rem;
   flex: 1;
   width: 100%;
+
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  }
 `;
 
 const MatchupContainer = styled.div`
@@ -150,6 +162,10 @@ const DeckCardContainer = styled.div`
   position: relative;
   height: 15rem;
   aspect-ratio: 1 / 1;
+
+  @media (max-width: 900px) {
+    height: 12rem;
+  }
 `;
 
 const MatchupLabel = styled.div<{ $winRate: number }>`
@@ -160,6 +176,10 @@ const MatchupLabel = styled.div<{ $winRate: number }>`
   font-size: 2.4rem;
   font-weight: 500;
   color: ${(props) => (props.$winRate > 0.5 ? "var(--e)" : "var(--s)")};
+
+  @media (max-width: 900px) {
+    font-size: 2rem;
+  }
 `;
 
 const DeckPage = () => {
