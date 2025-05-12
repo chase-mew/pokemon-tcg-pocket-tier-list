@@ -200,7 +200,7 @@ const DeckPage = () => {
     deck = decks.sort((a, b) => b.score - a.score)[0];
   }
 
-  if (deck === undefined) {
+  if (!deck) {
     return (
       <Overlay>
         Not enough cards,{" "}
@@ -241,7 +241,7 @@ const DeckPage = () => {
               {deck.matchups
                 .filter((matchup) => matchup.totalGames > MIN_MATCHUP_GAMES)
                 .filter((matchup) => matchup.winRate > 0.5)
-                .filter((matchup) => matchup.name !== deck.name)
+                .filter((matchup) => deck && matchup.name !== deck.name)
                 .filter((matchup) =>
                   decks.some((deck) => deck.name === matchup.name)
                 )
@@ -275,7 +275,7 @@ const DeckPage = () => {
                 .filter((matchup) => !!matchup)
                 .filter((matchup) => matchup.totalGames > MIN_MATCHUP_GAMES)
                 .filter((matchup) => matchup.winRate < 0.5)
-                .filter((matchup) => matchup.name !== deck.name)
+                .filter((matchup) => deck && matchup.name !== deck.name)
                 .filter((matchup) =>
                   decks.some((deck) => deck.name === matchup.name)
                 )
