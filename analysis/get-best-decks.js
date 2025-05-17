@@ -38,13 +38,13 @@ for (const deckName of uniqueDeckNames) {
       if (!matchupResults[deckName][win]) {
         matchupResults[deckName][win] = deckResult;
       }
-      matchupResults[deckName][win].wins += deck.winCount;
+      matchupResults[deckName][win].wins += 1;
     }
     for (const loss of deck.losses) {
       if (!matchupResults[deckName][loss]) {
         matchupResults[deckName][loss] = deckResult;
       }
-      matchupResults[deckName][loss].losses += deck.winCount;
+      matchupResults[deckName][loss].losses += 1;
     }
 
     // Updating card results
@@ -107,19 +107,18 @@ bestDecks.sort((a, b) => b.score - a.score);
 
 const matchupData = {};
 for (const deckName of Object.keys(matchupResults)) {
-  matchupData[deckName] = Object.keys(matchupResults[deckName]).map((key) => {
-    const winRate =
-      matchupResults[deckName][key].wins /
-      (matchupResults[deckName][key].wins +
-        matchupResults[deckName][key].losses);
-    return {
-      name: key,
-      winRate,
-      totalGames:
-        matchupResults[deckName][key].wins +
-        matchupResults[deckName][key].losses,
-    };
-  });
+  matchupData[deckName] = Object.keys(matchupResults[deckName]).map(
+    (opponent) => {
+      const { wins, losses } = matchupResults[deckName][opponent];
+      const totalGames = wins + losses;
+      const winRate = wins / totalGames;
+      return {
+        name: opponent,
+        winRate,
+        totalGames,
+      };
+    }
+  );
 }
 
 fs.writeFileSync("./data/best-decks.json", JSON.stringify(bestDecks, null, 2));
