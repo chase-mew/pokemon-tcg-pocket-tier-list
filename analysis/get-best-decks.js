@@ -33,18 +33,17 @@ for (const deckName of uniqueDeckNames) {
   const cards = {};
   for (const deck of matchingDecks) {
     // Updating deck results
-    const deckResult = { wins: 0, losses: 0 };
-    for (const win of deck.wins) {
-      if (!matchupResults[deckName][win]) {
-        matchupResults[deckName][win] = deckResult;
+    for (const opponent of deck.wins) {
+      if (!matchupResults[deckName][opponent]) {
+        matchupResults[deckName][opponent] = { wins: 0, losses: 0 };
       }
-      matchupResults[deckName][win].wins += 1;
+      matchupResults[deckName][opponent].wins += 1;
     }
-    for (const loss of deck.losses) {
-      if (!matchupResults[deckName][loss]) {
-        matchupResults[deckName][loss] = deckResult;
+    for (const opponent of deck.losses) {
+      if (!matchupResults[deckName][opponent]) {
+        matchupResults[deckName][opponent] = { wins: 0, losses: 0 };
       }
-      matchupResults[deckName][loss].losses += 1;
+      matchupResults[deckName][opponent].losses += 1;
     }
 
     // Updating card results
