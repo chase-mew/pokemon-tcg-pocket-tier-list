@@ -8,7 +8,7 @@ import {
   CARDS_IN_DECK,
   RED_CARD_MULTIPLIER,
 } from "./settings";
-import { Card, Deck, MatchupData, MatchupResult } from "./types";
+import { Card, Deck, MatchupData, MatchupResult } from "./utils/types";
 
 // Global Variables
 const decks = getDecks();

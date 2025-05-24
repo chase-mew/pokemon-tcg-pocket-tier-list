@@ -1,5 +1,5 @@
 import cardToString from "./card-to-string";
-import { Card, Deck } from "../types";
+import { Card, Deck } from "./types";
 import { DEBUG } from "../settings";
 
 type DeckNameType = string | string[];

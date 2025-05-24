@@ -9,7 +9,7 @@ import {
   WIGGLYTUFF_PERCENT_CUTOFF,
   NO_TRAINER_PERCENT_CUTOFF,
 } from "../settings";
-import { Deck } from "../types";
+import { Deck } from "./types";
 
 const getDecks = () => {
   const decksWithoutNames_: Deck[] = JSON.parse(

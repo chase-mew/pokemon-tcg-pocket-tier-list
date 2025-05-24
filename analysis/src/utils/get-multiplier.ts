@@ -3,7 +3,7 @@ import {
   NEW_MULTIPLIER,
   EXPANSION_RELEASE_DATE,
 } from "../settings";
-import { Deck } from "../types";
+import { Deck } from "./types";
 
 const getRecencyMultiplier = (game: Deck, newestDate: Date) => {
   const deckDate = new Date(game.date);

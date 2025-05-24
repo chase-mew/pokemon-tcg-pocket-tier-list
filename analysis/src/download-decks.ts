@@ -1,5 +1,5 @@
 import fs from "fs";
-import { Pairing, Tournament } from "./types";
+import { Pairing, Tournament } from "./utils/types";
 
 // State
 

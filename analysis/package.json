@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "download": "ts-node download-decks.ts",
-    "start": "ts-node get-best-decks.ts",
+    "download": "ts-node src/download-decks.ts",
+    "start": "ts-node src/get-best-decks.ts",
     "build": "tsc",
     "dev": "tsc --watch"
   },

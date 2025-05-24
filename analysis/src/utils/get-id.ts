@@ -1,4 +1,4 @@
-import { Deck } from "../types";
+import { Deck } from "./types";
 
 const getId = (deck: Deck) => {
   const cards = deck.cards.map(
