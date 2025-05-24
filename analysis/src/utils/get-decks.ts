@@ -7,32 +7,42 @@ import { calculateMultipliers } from "./calculate-multipliers";
 import { fixPokeballCards } from "./fix-pokeball-cards";
 import { Deck } from "./types";
 
-const getDecks = () => {
-  const decksWithoutNames_: Deck[] = JSON.parse(
-    fs.readFileSync("./data/decks.json", "utf-8")
-  );
+const readDecksFromFile = (): Deck[] => {
+  try {
+    const fileContent = fs.readFileSync("./data/decks.json", "utf-8");
+    const decks = JSON.parse(fileContent);
+    if (!Array.isArray(decks)) {
+      throw new Error("Decks data is not an array");
+    }
+    return decks;
+  } catch (error) {
+    throw new Error(
+      `Failed to read decks file: ${
+        error instanceof Error ? error.message : String(error)
+      }`
+    );
+  }
+};
 
-  const filteredDecks = filterDecks(decksWithoutNames_);
-  const { decks: decksWithNames, idToName } = populateDeckNames(filteredDecks);
-  const decksWithResults = updateDeckResults(decksWithNames, idToName);
+const calculateTotalGames = (decks: Deck[]): number => {
+  return decks.reduce((acc, deck) => acc + deck.totalGames, 0);
+};
 
-  const totalGames = decksWithResults.reduce(
-    (acc, deck) => acc + deck.totalGames,
-    0
-  );
-  console.log("Sample Games:", (totalGames / 2).toLocaleString());
-
-  let dates = decksWithResults.map((deck) => new Date(deck.date));
-  dates = dates.filter((date, index) => dates.indexOf(date) === index);
-  const newestDate = dates.reduce(
-    (acc, date) => (date > acc ? date : acc),
+const getNewestDate = (decks: Deck[]): Date => {
+  const uniqueDates = [...new Set(decks.map((deck) => deck.date))];
+  return uniqueDates.reduce(
+    (newest, date) => (new Date(date) > newest ? new Date(date) : newest),
     new Date(0)
   );
+};
 
-  const { beforeExpansionMul, afterExpansionMul } =
-    calculateMultipliers(decksWithResults);
-
-  let output = decksWithResults.map((deck) => {
+const applyMultipliers = (
+  decks: Deck[],
+  newestDate: Date,
+  beforeExpansionMul: number,
+  afterExpansionMul: number
+): Deck[] => {
+  return decks.map((deck) => {
     const multiplier = getMultiplier(
       deck,
       newestDate,
@@ -43,10 +53,33 @@ const getDecks = () => {
       ...deck,
       totalGames: deck.totalGames * multiplier,
       winCount: deck.winCount * multiplier,
+      wins: deck.wins || [],
+      losses: deck.losses || [],
     };
   });
+};
 
-  return fixPokeballCards(output);
+const getDecks = (): Deck[] => {
+  const rawDecks = readDecksFromFile();
+  const filteredDecks = filterDecks(rawDecks);
+  const { decks: decksWithNames, idToName } = populateDeckNames(filteredDecks);
+  const decksWithResults = updateDeckResults(decksWithNames, idToName);
+
+  const totalGames = calculateTotalGames(decksWithResults);
+  console.log("Sample Games:", (totalGames / 2).toLocaleString());
+
+  const newestDate = getNewestDate(decksWithResults);
+  const { beforeExpansionMul, afterExpansionMul } =
+    calculateMultipliers(decksWithResults);
+
+  const decksWithMultipliers = applyMultipliers(
+    decksWithResults,
+    newestDate,
+    beforeExpansionMul,
+    afterExpansionMul
+  );
+
+  return fixPokeballCards(decksWithMultipliers);
 };
 
 export default getDecks;
