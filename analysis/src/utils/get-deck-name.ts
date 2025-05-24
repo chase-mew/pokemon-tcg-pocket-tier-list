@@ -1,5 +1,5 @@
 import cardToString from "./card-to-string";
-import { Card, Deck } from "./types";
+import { Deck } from "./types";
 import { DEBUG } from "../settings";
 import formatName from "./format-name";
 
