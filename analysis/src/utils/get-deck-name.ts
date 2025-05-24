@@ -252,44 +252,52 @@ const DECK_NAMES: DeckNameType[] = [
   "Oricorio A3 66",
 ];
 
-const getDeckName = (deck: Deck) => {
-  const { cards } = deck;
-  for (const criteria of DECK_NAMES) {
-    let match: string[] = [];
-    if (typeof criteria === "string") {
-      match = [criteria];
-    } else {
-      match = criteria;
-    }
+/**
+ * Checks if a deck contains all cards in a given match criteria
+ * @param cards The deck's cards
+ * @param match The card names to match against
+ * @param requireTwo Whether to require exactly 2 copies of each card
+ * @returns Whether all cards in the match criteria are found in the deck
+ */
+const hasAllCards = (
+  cards: Deck["cards"],
+  match: string[],
+  requireTwo: boolean
+): boolean => {
+  // Create a Set of card strings for O(1) lookup
+  const cardStrings = new Set(cards.map((card) => cardToString(card)));
 
-    const hasAll = match.every((cardName) => {
-      for (const card of cards) {
-        if (cardToString(card) === `2 ${cardName}`) return true;
-      }
-      return false;
-    });
-    if (hasAll) return formatName(cards, match);
+  return match.every((cardName) => {
+    const twoCopies = `2 ${cardName}`;
+    if (requireTwo) {
+      return cardStrings.has(twoCopies);
+    }
+    return cardStrings.has(twoCopies) || cardStrings.has(`1 ${cardName}`);
+  });
+};
+
+/**
+ * Attempts to find a matching deck name based on the deck's cards
+ * @param deck The deck to find a name for
+ * @returns The formatted deck name if found, null otherwise
+ */
+const getDeckName = (deck: Deck): string | null => {
+  const { cards } = deck;
+
+  // First try matching with exactly 2 copies of each card
+  for (const criteria of DECK_NAMES) {
+    const match = Array.isArray(criteria) ? criteria : [criteria];
+    if (hasAllCards(cards, match, true)) {
+      return formatName(cards, match);
+    }
   }
 
+  // Then try matching with 1 or 2 copies of each card
   for (const criteria of DECK_NAMES) {
-    let match: string[] = [];
-    if (typeof criteria === "string") {
-      match = [criteria];
-    } else {
-      match = criteria;
+    const match = Array.isArray(criteria) ? criteria : [criteria];
+    if (hasAllCards(cards, match, false)) {
+      return formatName(cards, match);
     }
-
-    const hasAll = match.every((cardName) => {
-      for (const card of cards) {
-        if (
-          cardToString(card) === `2 ${cardName}` ||
-          cardToString(card) === `1 ${cardName}`
-        )
-          return true;
-      }
-      return false;
-    });
-    if (hasAll) return formatName(cards, match);
   }
 
   if (DEBUG) return "Professor's Research-PA-007";
