@@ -1,8 +1,6 @@
 import fs from "fs";
 import { Pairing, Tournament } from "./utils/types";
 
-// State
-
 // Facts
 const API_KEY = process.env.API_KEY;
 const GAME = "POCKET";
