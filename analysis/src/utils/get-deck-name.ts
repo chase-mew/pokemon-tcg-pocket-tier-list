@@ -1,6 +1,7 @@
 import cardToString from "./card-to-string";
 import { Card, Deck } from "./types";
 import { DEBUG } from "../settings";
+import formatName from "./format-name";
 
 type DeckNameType = string | string[];
 
@@ -250,22 +251,6 @@ const DECK_NAMES: DeckNameType[] = [
   "Snorlax A2a 63",
   "Oricorio A3 66",
 ];
-
-const formatName = (cards: Card[], match: string[]) => {
-  return match
-    .map((cardName) => {
-      const card = cards.find(
-        (card) =>
-          cardToString(card) === `2 ${cardName}` ||
-          cardToString(card) === `1 ${cardName}`
-      );
-      if (!card) throw new Error(`Card ${cardName} not found`);
-      const padded = card.number.padStart(3, "0");
-      const set = card.set === "P-A" ? "PA" : card.set;
-      return `${card.name}-${set}-${padded}`;
-    })
-    .join("&");
-};
 
 const getDeckName = (deck: Deck) => {
   const { cards } = deck;
