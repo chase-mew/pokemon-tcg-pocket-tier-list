@@ -1,6 +1,5 @@
 import fs from "fs";
 import cardToString from "./utils/card-to-string";
-import getEligibleDecks from "./utils/get-eligible-decks";
 import getDecks from "./utils/get-decks";
 import getId from "./utils/get-id";
 import {
@@ -94,9 +93,7 @@ for (const deckName of uniqueDeckNames) {
     return deckScore * WINRATE_IMPORTANCE + popularity * POPULARITY_IMPORTANCE;
   };
 
-  const eligibleDecks = getEligibleDecks(matchingDecks);
-  if (eligibleDecks.length === 0) continue;
-  const sortedDecks = eligibleDecks.sort((a, b) => deckScore(b) - deckScore(a));
+  const sortedDecks = matchingDecks.sort((a, b) => deckScore(b) - deckScore(a));
 
   for (const deck of sortedDecks) {
     const id = getId(deck);
