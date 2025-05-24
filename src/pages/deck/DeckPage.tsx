@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import useDecks, { FullDeckType, MatchupType } from "../../app/use-decks";
 import useMissing from "../../app/use-missing";
 import DeckCard from "../../components/DeckCard";
-import { MIN_MATCHUP_GAMES } from "../../app/config";
+import { MIN_MATCHUP_GAMES, WINRATE_THRESHOLD } from "../../app/config";
 
 const StyledDeckPage = styled.div`
   width: 100%;
@@ -176,7 +176,8 @@ const MatchupLabel = styled.div<{ $winRate: number }>`
   width: 100%;
   font-size: 2.4rem;
   font-weight: 500;
-  color: ${(props) => (props.$winRate > 0.5 ? "var(--e)" : "var(--s)")};
+  color: ${(props) =>
+    props.$winRate > WINRATE_THRESHOLD ? "var(--e)" : "var(--s)"};
 
   @media (max-width: 900px) {
     font-size: 2rem;
@@ -240,7 +241,7 @@ const DeckPage = () => {
             <MatchupList>
               {deck.matchups
                 .filter((matchup) => matchup.totalGames > MIN_MATCHUP_GAMES)
-                .filter((matchup) => matchup.winRate > 0.5)
+                .filter((matchup) => matchup.winRate > WINRATE_THRESHOLD)
                 .filter((matchup) => deck && matchup.name !== deck.name)
                 .filter((matchup) =>
                   decks.some((deck) => deck.name === matchup.name)
@@ -274,7 +275,7 @@ const DeckPage = () => {
               {deck.matchups
                 .filter((matchup) => !!matchup)
                 .filter((matchup) => matchup.totalGames > MIN_MATCHUP_GAMES)
-                .filter((matchup) => matchup.winRate < 0.5)
+                .filter((matchup) => matchup.winRate <= WINRATE_THRESHOLD)
                 .filter((matchup) => deck && matchup.name !== deck.name)
                 .filter((matchup) =>
                   decks.some((deck) => deck.name === matchup.name)
