@@ -1,10 +1,10 @@
-import getMultiplier from "../get-multiplier";
+import getMultiplier from "../utils/get-multiplier";
 import {
   EXPANSION_RELEASE_DATE,
   OLD_MULTIPLIER,
   NEW_MULTIPLIER,
-} from "../../settings";
-import { Deck } from "../types";
+} from "../settings";
+import { Deck } from "../utils/types";
 
 describe("getMultiplier", () => {
   const mockDeck: Deck = {
