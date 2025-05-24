@@ -1,0 +1,51 @@
+import { getTournaments } from "../utils/get-tournaments";
+import fs from "fs";
+
+jest.mock("fs");
+
+describe("getTournaments", () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+    (fs.readFileSync as jest.Mock).mockReturnValue(JSON.stringify([]));
+  });
+
+  it("should filter tournaments based on minimum games", async () => {
+    const mockTournaments = [
+      { id: "1", players: 50 },
+      { id: "2", players: 150 },
+      { id: "3", players: 200 },
+    ];
+
+    global.fetch = jest.fn().mockResolvedValue({
+      json: () => Promise.resolve(mockTournaments),
+    });
+
+    const result = await getTournaments();
+    expect(result).toHaveLength(2);
+    expect(result).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ id: "2", players: 150 }),
+        expect.objectContaining({ id: "3", players: 200 }),
+      ])
+    );
+  });
+
+  it("should filter out processed tournaments", async () => {
+    const mockTournaments = [
+      { id: "1", players: 150 },
+      { id: "2", players: 150 },
+    ];
+
+    (fs.readFileSync as jest.Mock).mockReturnValue(
+      JSON.stringify([{ id: "1" }])
+    );
+
+    global.fetch = jest.fn().mockResolvedValue({
+      json: () => Promise.resolve(mockTournaments),
+    });
+
+    const result = await getTournaments();
+    expect(result).toHaveLength(1);
+    expect(result[0].id).toBe("2");
+  });
+});
