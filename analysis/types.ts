@@ -1,0 +1,54 @@
+export interface Card {
+  name: string;
+  count: number;
+  set: string;
+  number: string;
+}
+
+export interface Deck {
+  id: string;
+  name: string;
+  cards: Card[];
+  pokemon: number;
+  differentPokemon: number;
+  winCount: number;
+  lossCount: number;
+  totalGames: number;
+  date: string;
+  tournamentExPercent: number;
+  wigglytuffPercent: number;
+  noTrainerPercent: number;
+  wins: string[];
+  losses: string[];
+}
+
+export interface Tournament {
+  id: string;
+  date: string;
+  players?: number;
+}
+
+export interface Pairing {
+  winner: string;
+  player1: string;
+  player2: string;
+}
+
+export interface MatchupResult {
+  wins: number;
+  losses: number;
+}
+
+export interface MatchupData {
+  name: string;
+  winRate: number;
+  totalGames: number;
+}
+
+export interface BestDeck {
+  name: string;
+  cards: Card[];
+  score: number;
+  percentOfGames: number;
+  id: string;
+}

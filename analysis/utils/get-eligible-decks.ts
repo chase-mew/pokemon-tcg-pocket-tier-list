@@ -1,6 +1,7 @@
-const cardToString = require("./card-to-string");
+import cardToString from "./card-to-string";
+import { Deck } from "../types";
 
-const EXCLUDE = [
+const EXCLUDE: string[] = [
   // "2 Koga A1 222",
   // "2 Mewtwo A1 128",
   // "2 Charizard A1 35",
@@ -10,7 +11,7 @@ const EXCLUDE = [
   // "2 Machamp ex A1 146",
 ];
 
-const getEligibleDecks = (decks) => {
+const getEligibleDecks = (decks: Deck[]) => {
   return decks.filter(
     (deck) =>
       !EXCLUDE.some((exclude) =>
@@ -19,4 +20,4 @@ const getEligibleDecks = (decks) => {
   );
 };
 
-module.exports = getEligibleDecks;
+export default getEligibleDecks;

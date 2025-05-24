@@ -1,6 +1,10 @@
-const cardToString = require("./card-to-string");
+import cardToString from "./card-to-string";
+import { Card, Deck } from "../types";
+import { DEBUG } from "../settings";
 
-const DECK_NAMES = [
+type DeckNameType = string | string[];
+
+const DECK_NAMES: DeckNameType[] = [
   // Doubles
   ["Gyarados ex A1a 18", "Giratina ex A2b 35"],
   ["Giratina ex A2b 35", "Darkrai ex A2 110"],
@@ -247,7 +251,7 @@ const DECK_NAMES = [
   "Oricorio A3 66",
 ];
 
-const formatName = (cards, match) => {
+const formatName = (cards: Card[], match: string[]) => {
   return match
     .map((cardName) => {
       const card = cards.find(
@@ -255,6 +259,7 @@ const formatName = (cards, match) => {
           cardToString(card) === `2 ${cardName}` ||
           cardToString(card) === `1 ${cardName}`
       );
+      if (!card) throw new Error(`Card ${cardName} not found`);
       const padded = card.number.padStart(3, "0");
       const set = card.set === "P-A" ? "PA" : card.set;
       return `${card.name}-${set}-${padded}`;
@@ -262,12 +267,14 @@ const formatName = (cards, match) => {
     .join("&");
 };
 
-const getDeckName = (deck) => {
+const getDeckName = (deck: Deck) => {
   const { cards } = deck;
   for (const criteria of DECK_NAMES) {
-    let match = criteria;
-    if (!Array.isArray(criteria)) {
+    let match: string[] = [];
+    if (typeof criteria === "string") {
       match = [criteria];
+    } else {
+      match = criteria;
     }
 
     const hasAll = match.every((cardName) => {
@@ -280,9 +287,11 @@ const getDeckName = (deck) => {
   }
 
   for (const criteria of DECK_NAMES) {
-    let match = criteria;
-    if (!Array.isArray(criteria)) {
+    let match: string[] = [];
+    if (typeof criteria === "string") {
       match = [criteria];
+    } else {
+      match = criteria;
     }
 
     const hasAll = match.every((cardName) => {
@@ -297,9 +306,9 @@ const getDeckName = (deck) => {
     });
     if (hasAll) return formatName(cards, match);
   }
-  return null;
 
-  return "Professor's Research-PA-007";
+  if (DEBUG) return "Professor's Research-PA-007";
+  return null;
 };
 
-module.exports = getDeckName;
+export default getDeckName;

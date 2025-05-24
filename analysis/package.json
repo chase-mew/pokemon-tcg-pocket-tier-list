@@ -1,0 +1,20 @@
+{
+  "name": "pokemon-tcg-pocket-analysis",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "download": "ts-node download-decks.ts",
+    "start": "ts-node get-best-decks.ts",
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "@types/node-fetch": "^2.6.11",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}

@@ -1,4 +1,6 @@
-const getId = (deck) => {
+import { Deck } from "../types";
+
+const getId = (deck: Deck) => {
   const cards = deck.cards.map(
     (card) => `${card.count}-${card.name}-${card.set}-${card.number}`
   );
@@ -7,4 +9,4 @@ const getId = (deck) => {
   return hash.update(deckString).digest("hex");
 };
 
-module.exports = getId;
+export default getId;

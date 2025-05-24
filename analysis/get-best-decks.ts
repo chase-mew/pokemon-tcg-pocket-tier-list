@@ -1,36 +1,46 @@
-const fs = require("fs");
-const cardToString = require("./utils/card-to-string");
-const getEligibleDecks = require("./utils/get-eligible-decks");
-const getDecks = require("./utils/get-decks");
-const getId = require("./utils/get-id");
-const {
+import fs from "fs";
+import cardToString from "./utils/card-to-string";
+import getEligibleDecks from "./utils/get-eligible-decks";
+import getDecks from "./utils/get-decks";
+import getId from "./utils/get-id";
+import {
   WINRATE_IMPORTANCE,
   POPULARITY_IMPORTANCE,
   CARDS_IN_DECK,
   RED_CARD_MULTIPLIER,
-} = require("./settings");
+} from "./settings";
+import { Card, Deck, MatchupData, MatchupResult } from "./types";
 
 // Global Variables
 const decks = getDecks();
-const allGames = decks.reduce((acc, deck) => acc + deck.totalGames, 0);
+const allGames = decks.reduce(
+  (acc: number, deck: Deck) => acc + deck.totalGames,
+  0
+);
 const uniqueDeckNames = decks
-  .map((deck) => deck.name)
-  .filter((value, index, self) => self.indexOf(value) === index);
+  .map((deck: Deck) => deck.name)
+  .filter(
+    (value: string, index: number, self: string[]) =>
+      self.indexOf(value) === index
+  );
 
 // Calculate Best Decks
 const bestDecks = [];
-const idExists = {};
-let matchupResults = {};
+const idExists: Record<string, boolean> = {};
+let matchupResults: Record<string, Record<string, MatchupResult>> = {};
 for (const deckName of uniqueDeckNames) {
   matchupResults[deckName] = {};
-  const matchingDecks = decks.filter((game) => game.name === deckName);
+  const matchingDecks = decks.filter((game: Deck) => game.name === deckName);
   const matchingGames = matchingDecks.reduce(
-    (acc, game) => acc + game.totalGames,
+    (acc: number, game: Deck) => acc + game.totalGames,
     0
   );
   const percentOfGames = matchingGames / allGames;
 
-  const cards = {};
+  const cards: Record<
+    string,
+    { winCount: number; totalGames: number; score?: number }
+  > = {};
   for (const deck of matchingDecks) {
     // Updating deck results
     for (const opponent of deck.wins) {
@@ -73,11 +83,12 @@ for (const deckName of uniqueDeckNames) {
       multiplier;
   }
 
-  const deckScore = (deck) => {
+  const deckScore = (deck: Deck) => {
     const popularity = matchingGames / allGames;
     const deckScore =
       deck.cards.reduce(
-        (acc, card) => acc + cards[cardToString(card)].score * card.count,
+        (acc: number, card: Card) =>
+          acc + (cards[cardToString(card)]?.score || 0) * card.count,
         0
       ) / CARDS_IN_DECK;
     return deckScore * WINRATE_IMPORTANCE + popularity * POPULARITY_IMPORTANCE;
@@ -104,10 +115,10 @@ for (const deckName of uniqueDeckNames) {
 
 bestDecks.sort((a, b) => b.score - a.score);
 
-const matchupData = {};
+const matchupData: Record<string, MatchupData[]> = {};
 for (const deckName of Object.keys(matchupResults)) {
   matchupData[deckName] = Object.keys(matchupResults[deckName]).map(
-    (opponent) => {
+    (opponent: string) => {
       const { wins, losses } = matchupResults[deckName][opponent];
       const totalGames = wins + losses;
       const winRate = wins / totalGames;

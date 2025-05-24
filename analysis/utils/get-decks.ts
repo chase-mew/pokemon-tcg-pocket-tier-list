@@ -1,18 +1,20 @@
-const fs = require("fs");
-const getDeckName = require("./get-deck-name");
-const getMultiplier = require("./get-multiplier");
-
-const {
+import fs from "fs";
+import getDeckName from "./get-deck-name";
+import getMultiplier from "./get-multiplier";
+import {
   NOEX,
   EXPANSION_RELEASE_DATE,
   POST_EXPANSION_PERCENT,
   NOEX_PERCENT_CUTOFF,
   WIGGLYTUFF_PERCENT_CUTOFF,
   NO_TRAINER_PERCENT_CUTOFF,
-} = require("../settings");
+} from "../settings";
+import { Deck } from "../types";
 
 const getDecks = () => {
-  const decksWithoutNames_ = JSON.parse(fs.readFileSync("./data/decks.json"));
+  const decksWithoutNames_: Deck[] = JSON.parse(
+    fs.readFileSync("./data/decks.json", "utf-8")
+  );
 
   const decksWithoutNames = decksWithoutNames_
     .filter(
@@ -27,7 +29,7 @@ const getDecks = () => {
 
   // Populating deck names
   let decksWithNames = [];
-  const idToName = {};
+  const idToName: Record<string, string> = {};
   for (const deck of decksWithoutNames) {
     const name = getDeckName(deck);
     if (!name) continue;
@@ -104,4 +106,4 @@ const getDecks = () => {
   });
 };
 
-module.exports = getDecks;
+export default getDecks;
