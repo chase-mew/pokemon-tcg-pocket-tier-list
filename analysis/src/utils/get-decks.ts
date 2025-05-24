@@ -57,7 +57,10 @@ const getDecks = () => {
 
   let dates = decksWithNames.map((deck) => new Date(deck.date));
   dates = dates.filter((date, index) => dates.indexOf(date) === index);
-  const newestDate = dates.reduce((acc, date) => (date > acc ? date : acc));
+  const newestDate = dates.reduce(
+    (acc, date) => (date > acc ? date : acc),
+    new Date(0)
+  );
   const totalDeckCount = decksWithNames.length;
   const deckCountBeforeExpansion = decksWithNames.filter(
     (deck) => new Date(deck.date) < EXPANSION_RELEASE_DATE
