@@ -2,13 +2,10 @@ import fs from "fs";
 import cardToString from "./utils/card-to-string";
 import getDecks from "./utils/get-decks";
 import getId from "./utils/get-id";
-import {
-  WINRATE_IMPORTANCE,
-  POPULARITY_IMPORTANCE,
-  CARDS_IN_DECK,
-  RED_CARD_MULTIPLIER,
-} from "./settings";
-import { Card, Deck, MatchupData, MatchupResult } from "./utils/types";
+import { calculateDeckScore } from "./utils/calculate-deck-score";
+import { calculateCardScores } from "./utils/calculate-card-scores";
+import { calculateMatchupResults } from "./utils/calculate-matchup-results";
+import { Deck, MatchupData } from "./utils/types";
 
 // Global Variables
 const decks = getDecks();
@@ -26,7 +23,11 @@ const uniqueDeckNames = decks
 // Calculate Best Decks
 const bestDecks = [];
 const idExists: Record<string, boolean> = {};
-let matchupResults: Record<string, Record<string, MatchupResult>> = {};
+let matchupResults: Record<
+  string,
+  Record<string, { wins: number; losses: number }>
+> = {};
+
 for (const deckName of uniqueDeckNames) {
   matchupResults[deckName] = {};
   const matchingDecks = decks.filter((game: Deck) => game.name === deckName);
@@ -41,20 +42,6 @@ for (const deckName of uniqueDeckNames) {
     { winCount: number; totalGames: number; score?: number }
   > = {};
   for (const deck of matchingDecks) {
-    // Updating deck results
-    for (const opponent of deck.wins) {
-      if (!matchupResults[deckName][opponent]) {
-        matchupResults[deckName][opponent] = { wins: 0, losses: 0 };
-      }
-      matchupResults[deckName][opponent].wins += 1;
-    }
-    for (const opponent of deck.losses) {
-      if (!matchupResults[deckName][opponent]) {
-        matchupResults[deckName][opponent] = { wins: 0, losses: 0 };
-      }
-      matchupResults[deckName][opponent].losses += 1;
-    }
-
     // Updating card results
     for (const card of deck.cards) {
       const cardName = cardToString(card);
@@ -70,30 +57,17 @@ for (const deckName of uniqueDeckNames) {
     }
   }
 
-  // Calculating card scores
-  for (const card in cards) {
-    const cardData = cards[card];
-    const winRate = cardData.winCount / cardData.totalGames;
-    const popularity = cardData.totalGames / matchingGames;
-    const isRedCard = card.toLowerCase().includes("red card");
-    const multiplier = isRedCard ? RED_CARD_MULTIPLIER : 1;
-    cards[card].score =
-      (winRate * WINRATE_IMPORTANCE + popularity * POPULARITY_IMPORTANCE) *
-      multiplier;
-  }
+  // Calculate card scores
+  const scoredCards = calculateCardScores(cards, matchingGames);
 
-  const deckScore = (deck: Deck) => {
-    const popularity = matchingGames / allGames;
-    const deckScore =
-      deck.cards.reduce(
-        (acc: number, card: Card) =>
-          acc + (cards[cardToString(card)]?.score || 0) * card.count,
-        0
-      ) / CARDS_IN_DECK;
-    return deckScore * WINRATE_IMPORTANCE + popularity * POPULARITY_IMPORTANCE;
-  };
+  // Calculate matchup results
+  matchupResults[deckName] = calculateMatchupResults(decks, deckName);
 
-  const sortedDecks = matchingDecks.sort((a, b) => deckScore(b) - deckScore(a));
+  const sortedDecks = matchingDecks.sort(
+    (a, b) =>
+      calculateDeckScore(b, scoredCards, matchingGames, allGames) -
+      calculateDeckScore(a, scoredCards, matchingGames, allGames)
+  );
 
   for (const deck of sortedDecks) {
     const id = getId(deck);
@@ -101,7 +75,7 @@ for (const deckName of uniqueDeckNames) {
     const formattedDeck = {
       name: deckName,
       cards: deck.cards,
-      score: deckScore(deck),
+      score: calculateDeckScore(deck, scoredCards, matchingGames, allGames),
       percentOfGames,
       id,
     };
