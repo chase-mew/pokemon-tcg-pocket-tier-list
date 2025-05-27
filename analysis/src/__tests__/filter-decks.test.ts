@@ -11,7 +11,7 @@ jest.mock("../settings", () => ({
 describe("filterDecks", () => {
   const mockDeck: Deck = {
     id: "test-id",
-    cards: [],
+    cards: [{ name: "Charizard", count: 1, set: "SVI", number: "1" }],
     pokemon: 0,
     differentPokemon: 0,
     winCount: 0,
@@ -64,6 +64,7 @@ describe("filterDecks", () => {
     const deckWithLowWigglytuff: Deck = {
       ...mockDeck,
       wigglytuffPercent: 0.05,
+      cards: [{ name: "Charizard", count: 1, set: "SVI", number: "1" }],
     };
     const decks = [deckWithHighWigglytuff, deckWithLowWigglytuff];
     const result = filterDecks(decks);
