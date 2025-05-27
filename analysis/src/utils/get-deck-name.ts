@@ -29,6 +29,7 @@ const DECK_NAMES: DeckNameType[] = [
   ["Arceus ex A2a 71", "Dialga ex A2 119"],
   ["Dialga ex A2 119", "Shaymin A2 22"],
   ["Crobat A2a 50", "Darkrai ex A2 110"],
+  ["Darkrai ex A2 110", "Arceus ex A2a 71"],
   ["Crobat A2a 50", "Arceus ex A2a 71"],
   ["Lapras ex P-A 14", "Greninja A1 89"],
   ["Leafeon ex A2a 10", "Celebi ex A1a 3"],
@@ -166,6 +167,8 @@ const DECK_NAMES: DeckNameType[] = [
   ["Garchomp A2 123", "Greninja A1 89"],
   ["Vikavolt A3 65", "Oricorio A3 66"],
   ["Giratina ex A2b 35", "Tapu Lele A3 84"],
+  ["Carnivine A2a 9", "Arceus ex A2a 71"],
+  ["Giratina ex A2b 35", "Magnezone A2 53"],
 
   // Main Card (never side card)
   "Bronzong A2a 59",
