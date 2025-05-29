@@ -60,6 +60,7 @@ const setCode = (set: string): string => {
   if (set === "A2b") return "a2b";
   if (set === "P-A") return "pa";
   if (set === "A3") return "a3";
+  if (set === "A3a") return "a3a";
   throw new Error(`Unknown set code: ${set}`);
 };
 
