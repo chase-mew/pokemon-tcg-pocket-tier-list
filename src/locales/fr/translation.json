@@ -39,5 +39,18 @@
     "matchups": "Matchups",
     "strongAgainst": "Fort contre",
     "weakAgainst": "Faible contre"
+  },
+  "energyDropdown": {
+    "all": "Tous les types d'énergie",
+    "Grass": "Plante",
+    "Fire": "Feu",
+    "Water": "Eau",
+    "Lightning": "Électrique",
+    "Psychic": "Psy",
+    "Fighting": "Combat",
+    "Darkness": "Ténèbres",
+    "Metal": "Métal",
+    "Dragon": "Dragon",
+    "Colorless": "Incolore"
   }
 }

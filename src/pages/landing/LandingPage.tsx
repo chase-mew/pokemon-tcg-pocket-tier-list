@@ -3,6 +3,7 @@ import useDecks from "../../app/use-decks";
 import DeckCard from "../../components/DeckCard";
 import useFilters from "../../app/use-filters";
 import ArrowDown from "../../assets/arrow-down.svg";
+import { useTranslation } from "react-i18next";
 
 const StyledLandingPage = styled.div`
   width: 100%;
@@ -118,6 +119,7 @@ const ENERGY_TYPES = [
 const LandingPage = () => {
   const decks = useDecks();
   const { energy, setEnergy } = useFilters();
+  const { t } = useTranslation();
 
   if (!decks) return <Loading>Loading...</Loading>;
 
@@ -161,10 +163,10 @@ const LandingPage = () => {
           setEnergy(value === "" ? null : value);
         }}
       >
-        <option value="">All Energy Types</option>
+        <option value="">{t("energyDropdown.all")}</option>
         {ENERGY_TYPES.map((type) => (
           <option key={type} value={type}>
-            {type}
+            {t(`energyDropdown.${type}`)}
           </option>
         ))}
       </EnergySelect>

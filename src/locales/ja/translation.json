@@ -39,5 +39,18 @@
     "matchups": "対戦相性",
     "strongAgainst": "有利な対戦相手",
     "weakAgainst": "不利な対戦相手"
+  },
+  "energyDropdown": {
+    "all": "すべてのエネルギータイプ",
+    "Grass": "くさ",
+    "Fire": "ほのお",
+    "Water": "みず",
+    "Lightning": "でんき",
+    "Psychic": "エスパー",
+    "Fighting": "かくとう",
+    "Darkness": "あく",
+    "Metal": "はがね",
+    "Dragon": "ドラゴン",
+    "Colorless": "ノーマル"
   }
 }

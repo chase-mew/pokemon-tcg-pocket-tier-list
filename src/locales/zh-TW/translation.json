@@ -39,5 +39,18 @@
     "matchups": "對戰情況",
     "strongAgainst": "優勢對局",
     "weakAgainst": "劣勢對局"
+  },
+  "energyDropdown": {
+    "all": "所有能量類型",
+    "Grass": "草",
+    "Fire": "火",
+    "Water": "水",
+    "Lightning": "雷",
+    "Psychic": "超能力",
+    "Fighting": "格鬥",
+    "Darkness": "惡",
+    "Metal": "鋼",
+    "Dragon": "龍",
+    "Colorless": "無色"
   }
 }

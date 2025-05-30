@@ -39,5 +39,18 @@
     "matchups": "Deck-Duelle",
     "strongAgainst": "Stark gegen",
     "weakAgainst": "Schwach gegen"
+  },
+  "energyDropdown": {
+    "all": "Alle Energietypen",
+    "Grass": "Pflanze",
+    "Fire": "Feuer",
+    "Water": "Wasser",
+    "Lightning": "Elektro",
+    "Psychic": "Psycho",
+    "Fighting": "Kampf",
+    "Darkness": "Finsternis",
+    "Metal": "Metall",
+    "Dragon": "Drache",
+    "Colorless": "Farblos"
   }
 }

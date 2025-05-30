@@ -39,5 +39,18 @@
     "matchups": "매치업",
     "strongAgainst": "유리한 상대",
     "weakAgainst": "불리한 상대"
+  },
+  "energyDropdown": {
+    "all": "모든 에너지 타입",
+    "Grass": "풀",
+    "Fire": "불꽃",
+    "Water": "물",
+    "Lightning": "번개",
+    "Psychic": "에스퍼",
+    "Fighting": "격투",
+    "Darkness": "악",
+    "Metal": "강철",
+    "Dragon": "드래곤",
+    "Colorless": "노말"
   }
 }
