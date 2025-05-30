@@ -68,9 +68,15 @@ const IncludeExContainer = styled.label`
   gap: 0.8rem;
 `;
 
-const IncludeExCheckbox = styled.input`
+const IncludeExCheckbox = styled.input.attrs({ type: "checkbox" })`
   width: 1.6rem;
   height: 1.6rem;
+  accent-color: var(--e);
+  background: var(--bg);
+  border: 2px solid var(--main);
+  border-radius: 0.3rem;
+  margin-left: 0.8rem;
+  cursor: pointer;
 `;
 
 const DeckRow = styled.div`
