@@ -25,6 +25,18 @@ const FilterContainer = styled.div`
   position: absolute;
   top: 2rem;
   right: 2rem;
+  gap: 1.5rem;
+
+  @media (max-width: 900px) {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin: 2rem;
+    width: calc(100% - 4rem);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 `;
 
 const EnergySelect = styled.select`
@@ -47,20 +59,11 @@ const EnergySelect = styled.select`
   &:hover {
     border-color: var(--a);
   }
-
-  @media (max-width: 900px) {
-    position: relative;
-    top: 0;
-    right: 0;
-    margin: 2rem;
-    width: calc(100% - 4rem);
-  }
 `;
 
 const IncludeExContainer = styled.label`
   display: flex;
   align-items: center;
-  margin-top: 1.5rem;
   font-size: 1.4rem;
   color: var(--main);
   cursor: pointer;
