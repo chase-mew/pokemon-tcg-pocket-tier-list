@@ -33,6 +33,9 @@
     "openSource": {
       "title": "オープンソース",
       "description": "このウェブサイトはオープンソースです。ソースコードは<0>GitHub</0>で見つけることができます。貢献を歓迎します！"
+    },
+    "filter": {
+      "includeEx": "EXカードを含める"
     }
   },
   "deckPage": {

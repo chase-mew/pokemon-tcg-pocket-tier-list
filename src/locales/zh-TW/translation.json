@@ -33,6 +33,9 @@
     "openSource": {
       "title": "開源專案",
       "description": "本網站是開源的。您可以在<0>GitHub</0>上找到源代碼。歡迎貢獻！"
+    },
+    "filter": {
+      "includeEx": "包含EX卡牌"
     }
   },
   "deckPage": {

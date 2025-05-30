@@ -33,6 +33,9 @@
     "openSource": {
       "title": "Open Source",
       "description": "Ce site est open source. Vous pouvez trouver le code source sur <0>GitHub</0>. Les contributions sont les bienvenues !"
+    },
+    "filter": {
+      "includeEx": "Inclure les cartes EX"
     }
   },
   "deckPage": {
