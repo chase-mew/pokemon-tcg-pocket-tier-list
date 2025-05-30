@@ -17,6 +17,7 @@ export interface CardType {
   stage: string | null;
   craftingCost: number | null;
   image: string;
+  ex: string;
 }
 
 export interface MatchupType {
@@ -75,7 +76,7 @@ const cardToId = (card: BestDecksCardType): string => {
 
 const useDecks = (): FullDeckType[] | null => {
   const { missing } = useMissing();
-  const { energy } = useFilters();
+  const { energy, includeEx } = useFilters();
 
   const { data: cards } = useQuery({
     queryKey: ["cards"],
@@ -162,7 +163,18 @@ const useDecks = (): FullDeckType[] | null => {
             // Check if any Pokemon card in the deck matches the energy type
             return cardType === energy || cardType === "Trainer";
           });
+        })
+        .filter((deck: PartialDeckType) => {
+          if (includeEx) return true;
+          return deck.cards.every((card: BestDecksCardType) => {
+            const id = cardToId(card);
+            const cardData = cardsMapping[id];
+            if (!cardData) throw new Error(`Card not found: ${id}`);
+            if (cardData.type === "Trainer") return true;
+            return cardData.ex === "No";
+          });
         });
+
       // sort by highest score
       matchingDecks.sort(
         (a: PartialDeckType, b: PartialDeckType) => b.score - a.score
@@ -173,7 +185,11 @@ const useDecks = (): FullDeckType[] | null => {
     .filter((deck) => deck)
     .filter((deck) => {
       if (energy !== null) return true;
-      const isAboveMin = deck.percentOfGames > MIN_PERCENT_TO_QUALIFY;
+      let percentToQualify = MIN_PERCENT_TO_QUALIFY;
+      if (!includeEx) {
+        percentToQualify /= 6;
+      }
+      const isAboveMin = deck.percentOfGames > percentToQualify;
       return DEBUG || isAboveMin;
     })
     .map((oldDeck, index) => {

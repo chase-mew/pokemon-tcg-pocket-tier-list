@@ -18,10 +18,16 @@ const StyledLandingPage = styled.div`
   }
 `;
 
-const EnergySelect = styled.select`
+const FilterContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   position: absolute;
   top: 2rem;
   right: 2rem;
+`;
+
+const EnergySelect = styled.select`
   padding: 0.8rem 4rem 0.8rem 1.2rem;
   font-size: 1.6rem;
   border-radius: 0.4rem;
@@ -49,6 +55,22 @@ const EnergySelect = styled.select`
     margin: 2rem;
     width: calc(100% - 4rem);
   }
+`;
+
+const IncludeExContainer = styled.label`
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+  font-size: 1.4rem;
+  color: var(--main);
+  cursor: pointer;
+  user-select: none;
+  gap: 0.8rem;
+`;
+
+const IncludeExCheckbox = styled.input`
+  width: 1.6rem;
+  height: 1.6rem;
 `;
 
 const DeckRow = styled.div`
@@ -118,7 +140,7 @@ const ENERGY_TYPES = [
 
 const LandingPage = () => {
   const decks = useDecks();
-  const { energy, setEnergy } = useFilters();
+  const { energy, setEnergy, includeEx, setIncludeEx } = useFilters();
   const { t } = useTranslation();
 
   if (!decks) return <Loading>Loading...</Loading>;
@@ -156,20 +178,30 @@ const LandingPage = () => {
 
   return (
     <StyledLandingPage>
-      <EnergySelect
-        value={energy ?? ""}
-        onChange={(e) => {
-          const value = e.target.value;
-          setEnergy(value === "" ? null : value);
-        }}
-      >
-        <option value="">{t("energyDropdown.all")}</option>
-        {ENERGY_TYPES.map((type) => (
-          <option key={type} value={type}>
-            {t(`energyDropdown.${type}`)}
-          </option>
-        ))}
-      </EnergySelect>
+      <FilterContainer>
+        <EnergySelect
+          value={energy ?? ""}
+          onChange={(e) => {
+            const value = e.target.value;
+            setEnergy(value === "" ? null : value);
+          }}
+        >
+          <option value="">{t("energyDropdown.all")}</option>
+          {ENERGY_TYPES.map((type) => (
+            <option key={type} value={type}>
+              {t(`energyDropdown.${type}`)}
+            </option>
+          ))}
+        </EnergySelect>
+        <IncludeExContainer>
+          {t("filter.includeEx")}
+          <IncludeExCheckbox
+            type="checkbox"
+            checked={includeEx}
+            onChange={(e) => setIncludeEx(e.target.checked)}
+          />
+        </IncludeExContainer>
+      </FilterContainer>
 
       <DeckRow>
         <RowHeader $backgroundColor="var(--s)">S</RowHeader>
