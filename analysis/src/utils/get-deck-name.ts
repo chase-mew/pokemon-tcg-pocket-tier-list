@@ -7,6 +7,7 @@ type DeckNameType = string | string[];
 
 const DECK_NAMES: DeckNameType[] = [
   // Doubles
+  ["Weavile ex A2 99", "Weezing A1 177"],
   ["Gyarados ex A1a 18", "Giratina ex A2b 35"],
   ["Giratina ex A2b 35", "Darkrai ex A2 110"],
   ["Leafeon ex A2a 10", "Irida A2a 72"],
@@ -49,7 +50,7 @@ const DECK_NAMES: DeckNameType[] = [
   ["Darkrai ex A2 110", "Greninja A1 89"],
   ["Palkia ex A2 49", "Manaphy A2 50"],
   ["Gliscor A2 84", "Lucario A2 92"],
-  ["Darkrai ex A2 110", "Weavile ex A2 99"],
+  ["Weavile ex A2 99", "Darkrai ex A2 110"],
   ["Hitmonlee A1 154", "Magnezone A2 53"],
   ["Yanmega ex A2 7", "Exeggutor ex A1 23"],
   ["Mew ex A1a 32", "Greninja A1 89"],
@@ -81,7 +82,6 @@ const DECK_NAMES: DeckNameType[] = [
   ["Infernape ex A2 29", "Moltres ex A1 47"],
   ["Pikachu ex A1 96", "Zebstrika A1 106"],
   ["Pikachu ex A1 96", "Pachirisu ex A2 61"],
-  ["Pikachu ex A1 96", "Zapdos ex A1 104"],
   ["Gallade ex A2 95", "Lucario A2 92"],
   ["Gallade ex A2 95", "Hitmonlee A1 154"],
   ["Starmie ex A1 76", "Magnezone A2 53"],
@@ -97,7 +97,7 @@ const DECK_NAMES: DeckNameType[] = [
   ["Pikachu ex A1 96", "Raichu A1 95"],
   ["Weezing A1 177", "Weavile ex A2 99"],
   ["Pidgeot ex A1a 59", "Dialga ex A2 119"],
-  ["Mismagius ex A2 67", "Togekiss A2 65"],
+  ["Togekiss A2 65", "Mismagius ex A2 67"],
   ["Lucario A2 92", "Machamp ex A1 146"],
   ["Dialga ex A2 119", "Lickilicky ex A2 125"],
   ["Kangaskhan A1 203", "Greninja A1 89"],
@@ -125,7 +125,7 @@ const DECK_NAMES: DeckNameType[] = [
   ["Gholdengo A2b 57", "Dialga ex A2 119"],
   ["Mesprit A2 76", "Uxie A2 75"],
   ["Mesprit A2 76", "Uxie A2 75"],
-  ["Giratina ex A2b 35", "Gengar ex A1 123"],
+  ["Giratina ex A2b 35", "Gastly A1 120"],
   ["Gallade ex A2 95", "Sudowoodo A2a 36"],
   ["Honchkrow A2 97", "Greninja A1 89"],
   ["Meowscarada A2b 7", "Magnezone A2 53"],
@@ -169,6 +169,19 @@ const DECK_NAMES: DeckNameType[] = [
   ["Giratina ex A2b 35", "Tapu Lele A3 84"],
   ["Carnivine A2a 9", "Arceus ex A2a 71"],
   ["Giratina ex A2b 35", "Magnezone A2 53"],
+  ["Golduck A1 58", "Palkia ex A2 49"],
+  ["Pikachu ex A1 96", "Galvantula A1a 29"],
+  ["Pikachu ex A1 96", "Zapdos ex A1 104"],
+  ["Mismagius ex A2 67", "Tapu Lele A3 84"],
+  ["Gengar ex A1 123", "Tapu Lele A3 84"],
+  ["Alakazam A1 117", "Banette A3 75"],
+  ["Alolan Muk ex A3 111", "Grafaiai A2b 51"],
+  ["Paldean Clodsire ex A2b 48", "Weezing A1 177"],
+  ["Luxray A2 60", "Togedemaru A3 67"],
+  ["Zapdos ex A1 104", "Magnezone A2 53"],
+  ["Alolan Muk ex A3 111", "Toxapex A3 116"],
+  ["Melmetal A1 182", "Skarmory A2 111"],
+  ["Bastiodon A2 114", "Dialga ex A2 119"],
 
   // Main Card (never side card)
   "Bronzong A2a 59",
@@ -224,7 +237,6 @@ const DECK_NAMES: DeckNameType[] = [
   "Marowak A1 152",
   "Mismagius ex A2 67",
   "Golduck A1 58",
-  "Golduck A1 58",
   "Wugtrio ex A2b 19",
   "Lucario ex A2b 43",
   "Paldean Clodsire ex A2b 48",
@@ -234,6 +246,9 @@ const DECK_NAMES: DeckNameType[] = [
   "Grafaiai A2b 51",
   "Crabominable ex A3 49",
   "Banette A3 75",
+  "Lurantis A3 15",
+  "Alolan Muk ex A3 111",
+  "Weavile ex A2 99",
 
   // Basic ex (can be side card)
   "Pachirisu ex A2 61",
@@ -253,6 +268,7 @@ const DECK_NAMES: DeckNameType[] = [
   "Tauros A1a 60",
   "Snorlax A2a 63",
   "Oricorio A3 66",
+  "Togedemaru A3 67",
 ];
 
 /**
