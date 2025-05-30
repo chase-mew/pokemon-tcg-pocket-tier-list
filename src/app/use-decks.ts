@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { DEBUG, MIN_PERCENT_TO_QUALIFY } from "./config";
 import useMissing from "./use-missing";
 import useFilters from "./use-filters";
+import { useMemo } from "react";
 
 const CARDS_URL =
   "https://raw.githubusercontent.com/chase-manning/pokemon-tcg-pocket-cards/refs/heads/main/v4.json";
@@ -84,6 +85,13 @@ const useDecks = (): FullDeckType[] | null => {
     },
   });
 
+  const cardsMapping: Record<string, CardType> = useMemo(() => {
+    return cards?.reduce((acc: Record<string, CardType>, card: CardType) => {
+      acc[card.id] = card;
+      return acc;
+    }, {});
+  }, [cards]);
+
   const { data: decksData } = useQuery({
     queryKey: ["decks"],
     queryFn: async () => {
@@ -141,6 +149,19 @@ const useDecks = (): FullDeckType[] | null => {
             }
           }
           return true;
+        })
+        .filter((deck: PartialDeckType) => {
+          return deck.cards.every((card: BestDecksCardType) => {
+            if (energy === null) return true;
+
+            const id = cardToId(card);
+            const cardData = cardsMapping[id];
+            if (!cardData) throw new Error(`Card not found: ${id}`);
+            const cardType = cardData.type;
+
+            // Check if any Pokemon card in the deck matches the energy type
+            return cardType === energy || cardType === "Trainer";
+          });
         });
       // sort by highest score
       matchingDecks.sort(
@@ -160,7 +181,7 @@ const useDecks = (): FullDeckType[] | null => {
       for (const oldCard of oldDeck.cards) {
         const amount = oldCard.count;
         const id = cardToId(oldCard);
-        const card = cards?.find((card: CardType) => card.id === id);
+        const card = cardsMapping[id];
         if (!card) {
           throw new Error(`Card not found: ${id}`);
         }
@@ -180,14 +201,6 @@ const useDecks = (): FullDeckType[] | null => {
         matchups,
       };
       return deck;
-    })
-    .filter((deck) => {
-      if (energy === null) return true;
-
-      // Check if any Pokemon card in the deck matches the energy type
-      return deck.cards.every(
-        (card) => card.type === energy || card.type === "Trainer"
-      );
     });
 
   // return bestDecks;
