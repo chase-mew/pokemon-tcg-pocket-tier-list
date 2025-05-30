@@ -2,6 +2,7 @@ import styled from "styled-components";
 import useDecks from "../../app/use-decks";
 import DeckCard from "../../components/DeckCard";
 import useFilters from "../../app/use-filters";
+import ArrowDown from "../../assets/arrow-down.svg";
 
 const StyledLandingPage = styled.div`
   width: 100%;
@@ -20,7 +21,7 @@ const EnergySelect = styled.select`
   position: absolute;
   top: 2rem;
   right: 2rem;
-  padding: 0.8rem 1.2rem;
+  padding: 0.8rem 4rem 0.8rem 1.2rem;
   font-size: 1.6rem;
   border-radius: 0.4rem;
   background: var(--bg);
@@ -28,6 +29,13 @@ const EnergySelect = styled.select`
   border: 1px solid var(--main);
   cursor: pointer;
   outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url(${ArrowDown});
+  background-repeat: no-repeat;
+  background-position: right 1.2rem center;
+  background-size: 1.2em 1.2em;
 
   &:hover {
     border-color: var(--a);
