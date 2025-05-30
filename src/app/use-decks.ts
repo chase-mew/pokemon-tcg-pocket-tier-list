@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { DEBUG, MIN_PERCENT_TO_QUALIFY } from "./config";
 import useMissing from "./use-missing";
+import useFilters from "./use-filters";
 
 const CARDS_URL =
   "https://raw.githubusercontent.com/chase-manning/pokemon-tcg-pocket-cards/refs/heads/main/v4.json";
@@ -73,6 +74,7 @@ const cardToId = (card: BestDecksCardType): string => {
 
 const useDecks = (): FullDeckType[] | null => {
   const { missing } = useMissing();
+  const { energy } = useFilters();
 
   const { data: cards } = useQuery({
     queryKey: ["cards"],
@@ -149,6 +151,7 @@ const useDecks = (): FullDeckType[] | null => {
     })
     .filter((deck) => deck)
     .filter((deck) => {
+      if (energy !== null) return true;
       const isAboveMin = deck.percentOfGames > MIN_PERCENT_TO_QUALIFY;
       return DEBUG || isAboveMin;
     })
@@ -177,6 +180,14 @@ const useDecks = (): FullDeckType[] | null => {
         matchups,
       };
       return deck;
+    })
+    .filter((deck) => {
+      if (energy === null) return true;
+
+      // Check if any Pokemon card in the deck matches the energy type
+      return deck.cards.every(
+        (card) => card.type === energy || card.type === "Trainer"
+      );
     });
 
   // return bestDecks;
