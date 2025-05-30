@@ -33,9 +33,6 @@
     "openSource": {
       "title": "Código Abierto",
       "description": "Este sitio web es de código abierto. Puedes encontrar el código fuente en <0>GitHub</0>. ¡Las contribuciones son bienvenidas!"
-    },
-    "filter": {
-      "includeEx": "Incluir cartas EX"
     }
   },
   "deckPage": {
@@ -55,5 +52,8 @@
     "Metal": "Metálico",
     "Dragon": "Dragón",
     "Colorless": "Incolora"
+  },
+  "filter": {
+    "includeEx": "Incluir cartas EX"
   }
 }

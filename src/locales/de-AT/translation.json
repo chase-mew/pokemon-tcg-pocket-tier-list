@@ -33,9 +33,6 @@
     "openSource": {
       "title": "Open Source",
       "description": "Diese Website ist Open Source. Du findest den Quellcode auf <0>GitHub</0>. Beiträge sind willkommen!"
-    },
-    "filter": {
-      "includeEx": "EX-Karten einbeziehen"
     }
   },
   "deckPage": {
@@ -55,5 +52,8 @@
     "Metal": "Metall",
     "Dragon": "Drache",
     "Colorless": "Farblos"
+  },
+  "filter": {
+    "includeEx": "EX-Karten einbeziehen"
   }
 }
