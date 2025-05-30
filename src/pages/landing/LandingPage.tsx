@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import useDecks from "../../app/use-decks";
 import DeckCard from "../../components/DeckCard";
+import useFilters from "../../app/use-filters";
 
 const StyledLandingPage = styled.div`
   width: 100%;
@@ -8,9 +9,36 @@ const StyledLandingPage = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 
   @media (max-width: 900px) {
     height: auto;
+  }
+`;
+
+const EnergySelect = styled.select`
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.6rem;
+  border-radius: 0.4rem;
+  background: var(--bg);
+  color: var(--main);
+  border: 1px solid var(--main);
+  cursor: pointer;
+  outline: none;
+
+  &:hover {
+    border-color: var(--a);
+  }
+
+  @media (max-width: 900px) {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin: 2rem;
+    width: calc(100% - 4rem);
   }
 `;
 
@@ -66,8 +94,22 @@ const Loading = styled.div`
   font-weight: 500;
 `;
 
+const ENERGY_TYPES = [
+  "Grass",
+  "Fire",
+  "Water",
+  "Lightning",
+  "Psychic",
+  "Fighting",
+  "Darkness",
+  "Metal",
+  "Dragon",
+  "Colorless",
+];
+
 const LandingPage = () => {
   const decks = useDecks();
+  const { energy, setEnergy } = useFilters();
 
   if (!decks) return <Loading>Loading...</Loading>;
 
@@ -104,6 +146,21 @@ const LandingPage = () => {
 
   return (
     <StyledLandingPage>
+      <EnergySelect
+        value={energy ?? ""}
+        onChange={(e) => {
+          const value = e.target.value;
+          setEnergy(value === "" ? null : value);
+        }}
+      >
+        <option value="">All Energy Types</option>
+        {ENERGY_TYPES.map((type) => (
+          <option key={type} value={type}>
+            {type}
+          </option>
+        ))}
+      </EnergySelect>
+
       <DeckRow>
         <RowHeader $backgroundColor="var(--s)">S</RowHeader>
         <RowContent>
