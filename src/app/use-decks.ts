@@ -152,9 +152,9 @@ const useDecks = (): FullDeckType[] | null => {
           return true;
         })
         .filter((deck: PartialDeckType) => {
-          return deck.cards.every((card: BestDecksCardType) => {
-            if (energy === null) return true;
+          if (energy === null) return true;
 
+          return deck.cards.every((card: BestDecksCardType) => {
             const id = cardToId(card);
             const cardData = cardsMapping[id];
             if (!cardData) throw new Error(`Card not found: ${id}`);
