@@ -22,4 +22,5 @@ yarn-debug.log*
 yarn-error.log*
 
 analysis/data
+/analysis/.env
 .env
