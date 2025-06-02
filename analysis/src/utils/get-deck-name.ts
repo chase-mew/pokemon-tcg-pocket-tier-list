@@ -148,6 +148,7 @@ const DECK_NAMES: DeckNameType[] = [
   ["Rampardos A2 89", "Kabutops A1 159"],
   ["Charizard ex A2b 10", "Turtonator A3 37"],
   ["Crabominable ex A3 49", "Greninja A1 89"],
+  ["Crabominable ex A3 49", "Palkia ex A2 49"],
   ["Beedrill ex A2b 3", "Beedrill A1 10"],
   ["Lunala ex A3 87", "Giratina ex A2b 35"],
   ["Pawmot A2b 28", "Oricorio A3 66"],
@@ -182,6 +183,25 @@ const DECK_NAMES: DeckNameType[] = [
   ["Alolan Muk ex A3 111", "Toxapex A3 116"],
   ["Melmetal A1 182", "Skarmory A2 111"],
   ["Bastiodon A2 114", "Dialga ex A2 119"],
+  ["Buzzwole ex A3a 6", "Celesteela A3a 62"],
+  ["Buzzwole ex A3a 6", "Pheromosa A3a 7"],
+  ["Buzzwole ex A3a 6", "Kartana A3a 8"],
+  ["Solgaleo ex A3 122", "Shiinotic A3a 27"],
+  ["Rampardos A2 89", "Silvally A3a 61"],
+  ["Guzzlord ex A3a 43", "Naganadel A3a 45"],
+  ["Guzzlord ex A3a 43", "Nihilego A3a 42"],
+  ["Guzzlord ex A3a 43", "Celesteela A3a 62"],
+  ["Tapu Koko ex A3a 19", "Zeraora A3a 21"],
+  ["Decidueye ex A3 12", "Pheromosa A3a 7"],
+  ["Naganadel A3a 45", "Darkrai ex A2 110"],
+  ["Naganadel A3a 45", "Nihilego A3a 42"],
+  ["Silvally A3a 61", "Zeraora A3a 21"],
+  ["Lycanroc ex A3a 33", "Hitmonlee A1 154"],
+  ["Pheromosa A3a 7", "Kartana A3a 8"],
+  ["Salazzle A3 36", "Nihilego A3a 42"],
+  ["Silvally A3a 61", "Greninja A1 89"],
+  ["Weezing A1 177", "Nihilego A3a 42"],
+  ["Silvally A3a 61", "Tapu Lele A3 84"],
 
   // Main Card (never side card)
   "Bronzong A2a 59",
@@ -216,6 +236,7 @@ const DECK_NAMES: DeckNameType[] = [
   "Lunala ex A3 87",
   "Pawmot A2b 28",
   "Incineroar ex A3 33",
+  "Gengar A1 122",
 
   // Stage 1 (can be side card)
   "Abomasnow A2a 21",
@@ -249,6 +270,11 @@ const DECK_NAMES: DeckNameType[] = [
   "Lurantis A3 15",
   "Alolan Muk ex A3 111",
   "Weavile ex A2 99",
+  "Shiinotic A3a 27",
+  "Silvally A3a 61",
+  "Naganadel A3a 45",
+  "Lycanroc ex A3a 33",
+  "Salazzle A3 36",
 
   // Basic ex (can be side card)
   "Pachirisu ex A2 61",
@@ -260,6 +286,9 @@ const DECK_NAMES: DeckNameType[] = [
   "Arceus ex A2a 71",
   "Pikachu ex A2b 22",
   "Giratina ex A2b 35",
+  "Buzzwole ex A3a 6",
+  "Guzzlord ex A3a 43",
+  "Tapu Koko ex A3a 19",
 
   // Basic (can be side card)
   "Lt. Surge A1 226",
@@ -269,6 +298,11 @@ const DECK_NAMES: DeckNameType[] = [
   "Snorlax A2a 63",
   "Oricorio A3 66",
   "Togedemaru A3 67",
+  "Celesteela A3a 62",
+  "Pheromosa A3a 7",
+  "Kartana A3a 8",
+  "Nihilego A3a 42",
+  "Zeraora A3a 21",
 ];
 
 /**
