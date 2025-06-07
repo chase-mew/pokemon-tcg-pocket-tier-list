@@ -11,6 +11,7 @@ const StyledHeader = styled.div<{ $footer?: boolean }>`
   justify-content: space-between;
   padding: 2rem 4rem;
   position: relative;
+  margin-bottom: ${(props) => (props.$footer ? "2rem" : "0")};
 
   @media (max-width: 768px) {
     padding: ${(props) => (props.$footer ? "0 2rem" : "0")};
