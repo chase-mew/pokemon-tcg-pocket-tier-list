@@ -29,7 +29,7 @@ const StyledButton = styled.button`
   background-size: 300% 300%;
   animation: ${rainbowAnimation} 8s ease infinite;
   color: var(--bg);
-  font-size: 2.2rem;
+  font-size: 2.1rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
