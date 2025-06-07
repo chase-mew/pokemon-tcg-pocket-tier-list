@@ -63,5 +63,9 @@
     "description1": "Entdecke das stärkste Deck, das du mit deiner Sammlung bauen kannst. Der Beste Deck Finder zeigt dir zunächst das beste Deck im Spiel, aber du kannst auf Karten klicken, die du nicht hast. Es zeigt dir dann das nächstbeste Deck, das diese Karten nicht verwendet.",
     "description2": "Entferne weiterhin Karten, bis du ein Deck findest, in dem du alles hast. Der relative Stärke-Indikator zeigt dir, wie mächtig dein Deck im Vergleich zum besten Deck im Spiel ist.",
     "button": "Beste Deck Finder ausprobieren"
+  },
+  "header": {
+    "tierList": "Tier-Liste",
+    "bestDeckFinder": "Bester Deck-Finder"
   }
 }

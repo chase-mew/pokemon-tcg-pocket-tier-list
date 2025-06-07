@@ -63,5 +63,9 @@
     "description1": "Discover the strongest deck you can build with your collection. The Best Deck Finder starts by showing you the top deck in the game, but you can click any cards you don't have. It will then show you the next best deck that doesn't use those cards.",
     "description2": "Keep removing cards until you find a deck where you have everything. The relative strength indicator shows you how powerful your deck is compared to the best deck in the game.",
     "button": "Try Best Deck Finder"
+  },
+  "header": {
+    "tierList": "Tier List",
+    "bestDeckFinder": "Best Deck Finder"
   }
 }

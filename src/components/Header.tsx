@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Link, useLocation } from "react-router-dom";
 import Logo from "./Logo";
 import Socials from "./Socials";
+import { useTranslation } from "react-i18next";
 
 const StyledHeader = styled.div`
   width: 100%;
@@ -34,16 +35,17 @@ const NavItem = styled(Link)<{ $active: boolean }>`
 
 const Header = () => {
   const location = useLocation();
+  const { t } = useTranslation();
 
   return (
     <StyledHeader>
       <Logo />
       <Nav>
         <NavItem to="/tier-list" $active={location.pathname === "/tier-list"}>
-          Tier List
+          {t("header.tierList")}
         </NavItem>
         <NavItem to="/deck" $active={location.pathname === "/deck"}>
-          Best Deck Finder
+          {t("header.bestDeckFinder")}
         </NavItem>
       </Nav>
       <Socials />
