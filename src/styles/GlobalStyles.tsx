@@ -19,6 +19,7 @@ const GlobalStyle = createGlobalStyle`
         padding: 0;
         font-size: 10px;
         font-family: "Roboto", sans-serif;
+        line-height: 1.2;
     }
 
     div {
