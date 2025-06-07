@@ -96,6 +96,7 @@ const CardList = styled.div`
 const CardContainer = styled.button`
   position: relative;
   width: 100%;
+  cursor: pointer;
 `;
 
 const CardImage = styled.img`
@@ -285,7 +286,18 @@ const DeckPage = () => {
         )}
         <CardList>
           {uniqueCards.map((card) => (
-            <CardContainer key={card.id} onClick={() => addMissing(card.id)}>
+            <CardContainer
+              key={card.id}
+              onClick={() => {
+                if (!deck) return;
+                const count = deck.cards.filter((c) => c.id === card.id).length;
+                if (count === 1) {
+                  addMissing([card.id, card.id]);
+                } else {
+                  addMissing([card.id]);
+                }
+              }}
+            >
               <CardImage src={card.image} alt={card.name} />
               <CardNumber>
                 {deck && deck.cards.filter((c) => c.id === card.id).length}

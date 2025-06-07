@@ -2,7 +2,7 @@ import { createContext, useState } from "react";
 
 interface MissingContextType {
   missing: string[];
-  addMissing: (id: string) => void;
+  addMissing: (ids: string[]) => void;
 }
 
 export const MissingContext = createContext<MissingContextType>({
@@ -17,8 +17,8 @@ interface Props {
 const MissingContextProvider = ({ children }: Props) => {
   const [missing, setMissing] = useState<string[]>([]);
 
-  const addMissing = (id: string) => {
-    const newMissing = [...missing, id];
+  const addMissing = (ids: string[]) => {
+    const newMissing = [...missing, ...ids];
     setMissing(newMissing);
   };
 
