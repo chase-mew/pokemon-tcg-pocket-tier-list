@@ -1,9 +1,10 @@
 import { Outlet, Route, Routes } from "react-router-dom";
 import styled from "styled-components";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import LandingPage from "./pages/landing/LandingPage";
+import TierListPage from "./pages/tier-list/TierListPage";
 import DeckPage from "./pages/deck/DeckPage";
 import Footer from "./components/Footer";
+import LandingPage from "./pages/landing/LandingPage";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -37,6 +38,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<LandingPage />} />
+          <Route path="tier-list" element={<TierListPage />} />
 
           <Route path="deck">
             <Route index element={<DeckPage />} />
