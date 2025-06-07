@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Hero from "./Hero";
 import Header from "../../components/Header";
 import Features from "./Features";
+import BestDeckFinder from "./BestDeckFinder";
 
 const StyledLandingPage = styled.div`
   width: 100%;
@@ -19,6 +20,7 @@ const LandingPage = () => {
     <StyledLandingPage>
       <Hero />
       <Features />
+      <BestDeckFinder />
       <Header />
     </StyledLandingPage>
   );
