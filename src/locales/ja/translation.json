@@ -38,7 +38,9 @@
   "deckPage": {
     "matchups": "対戦相性",
     "strongAgainst": "有利な対戦相手",
-    "weakAgainst": "不利な対戦相手"
+    "weakAgainst": "不利な対戦相手",
+    "deckFinderHeader": "持っていないカードをクリックしてください。利用可能なカードで最適なデッキが表示されます。",
+    "relativeStrength": "相対的な強さ"
   },
   "energyDropdown": {
     "all": "すべてのエネルギータイプ",

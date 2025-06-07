@@ -38,7 +38,9 @@
   "deckPage": {
     "matchups": "对战情况",
     "strongAgainst": "优势对局",
-    "weakAgainst": "劣势对局"
+    "weakAgainst": "劣势对局",
+    "deckFinderHeader": "点击您没有的卡牌。牌组将更新为显示您可用卡牌中的最佳组合。",
+    "relativeStrength": "相对强度"
   },
   "filter": {
     "includeEx": "包含EX卡牌"

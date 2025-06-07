@@ -38,7 +38,9 @@
   "deckPage": {
     "matchups": "對戰情況",
     "strongAgainst": "優勢對局",
-    "weakAgainst": "劣勢對局"
+    "weakAgainst": "劣勢對局",
+    "deckFinderHeader": "點擊您沒有的卡牌。牌組將更新為顯示您可用卡牌中的最佳組合。",
+    "relativeStrength": "相對強度"
   },
   "energyDropdown": {
     "all": "所有能量類型",

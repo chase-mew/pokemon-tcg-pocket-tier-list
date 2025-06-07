@@ -38,7 +38,9 @@
   "deckPage": {
     "matchups": "Matchups",
     "strongAgainst": "Fort contre",
-    "weakAgainst": "Faible contre"
+    "weakAgainst": "Faible contre",
+    "deckFinderHeader": "Cliquez sur les cartes que vous n'avez pas. Le deck sera mis à jour pour montrer le meilleur avec vos cartes disponibles.",
+    "relativeStrength": "Force Relative"
   },
   "energyDropdown": {
     "all": "Tous les types d'énergie",

@@ -5,6 +5,7 @@ import useDecks, { FullDeckType, MatchupType } from "../../app/use-decks";
 import useMissing from "../../app/use-missing";
 import DeckCard from "../../components/DeckCard";
 import { MIN_MATCHUP_GAMES, WINRATE_THRESHOLD } from "../../app/config";
+import { useEffect, useState } from "react";
 
 const StyledDeckPage = styled.div`
   width: 100%;
@@ -28,17 +29,56 @@ const Section = styled.div`
   gap: 2.4rem;
 `;
 
-const Header = styled.div`
+const DeckFinderHeader = styled.div`
   display: flex;
-  display: none;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 8rem;
-  background: var(--a);
+  background: var(--e);
   color: var(--bg);
-  font-size: 5rem;
+  font-size: 3.2rem;
   font-weight: 500;
+  text-align: center;
+  padding: 0 4rem;
+
+  @media (max-width: 900px) {
+    font-size: 2.4rem;
+    height: auto;
+    padding: 2rem;
+  }
+`;
+
+const RelativeStrength = styled.div<{ $relativeScore: number }>`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 8rem;
+  background: ${(props) => {
+    const colors = [
+      "var(--s)",
+      "var(--a)",
+      "var(--b)",
+      "var(--c)",
+      "var(--d)",
+      "var(--e)",
+    ];
+    const index = Math.floor(props.$relativeScore * (colors.length - 1));
+    return colors[index];
+  }};
+  color: var(--bg);
+  font-size: 3.2rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 0 4rem;
+  margin-bottom: 2rem;
+
+  @media (max-width: 900px) {
+    font-size: 2.4rem;
+    height: auto;
+    padding: 2rem;
+  }
 `;
 
 const CardList = styled.div`
@@ -190,6 +230,15 @@ const DeckPage = () => {
   const navigate = useNavigate();
   const { addMissing } = useMissing();
   const { t } = useTranslation();
+  const [bestScore, setBestScore] = useState<number | null>(null);
+
+  useEffect(() => {
+    if (deckId) return;
+    if (bestScore) return;
+    if (!decks) return;
+    const bestDeck = decks.sort((a, b) => b.score - a.score)[0];
+    setBestScore(bestDeck.score);
+  }, [deckId, decks, bestScore]);
 
   if (!decks) return <Overlay>Loading...</Overlay>;
 
@@ -200,6 +249,8 @@ const DeckPage = () => {
   } else {
     deck = decks.sort((a, b) => b.score - a.score)[0];
   }
+
+  const relativeScore = deck ? deck.score / (bestScore ?? 1) : 0;
 
   if (!deck) {
     return (
@@ -216,10 +267,22 @@ const DeckPage = () => {
       (card, index, self) => self.findIndex((c) => c.id === card.id) === index
     );
 
+  const isDeckFinderMode = !deckId;
+
   return (
     <StyledDeckPage>
       <Section>
-        <Header>{`#${deck.place} Decklist`}</Header>
+        {isDeckFinderMode && (
+          <>
+            <DeckFinderHeader>
+              {t("deckPage.deckFinderHeader")}
+            </DeckFinderHeader>
+            <RelativeStrength $relativeScore={relativeScore}>
+              {t("deckPage.relativeStrength")}{" "}
+              {`${(relativeScore * 100).toFixed(0)}%`}
+            </RelativeStrength>
+          </>
+        )}
         <CardList>
           {uniqueCards.map((card) => (
             <CardContainer key={card.id} onClick={() => addMissing(card.id)}>
@@ -231,73 +294,78 @@ const DeckPage = () => {
           ))}
         </CardList>
       </Section>
-      <Section>
-        <Header>{t("deckPage.matchups")}</Header>
-        <Matchups>
-          <MatchupSection>
-            <SubHeader $backgroundColor="var(--e)">
-              {t("deckPage.strongAgainst")}
-            </SubHeader>
-            <MatchupList>
-              {deck.matchups
-                .filter((matchup) => matchup.totalGames > MIN_MATCHUP_GAMES)
-                .filter((matchup) => matchup.winRate > WINRATE_THRESHOLD)
-                .filter((matchup) => deck && matchup.name !== deck.name)
-                .filter((matchup) =>
-                  decks.some((deck) => deck.name === matchup.name)
-                )
-                .sort((a, b) => b.winRate - a.winRate)
-                .sort(
-                  (a, b) =>
-                    decks.find((deck) => deck.name === a.name)!.place -
-                    decks.find((deck) => deck.name === b.name)!.place
-                )
-                .slice(0, 8)
-                .map((matchup: MatchupType) => (
-                  <MatchupContainer key={matchup.name}>
-                    <DeckCardContainer>
-                      <DeckCard
-                        deck={decks.find((deck) => deck.name === matchup.name)!}
-                      />
-                    </DeckCardContainer>
-                    <MatchupLabel $winRate={matchup.winRate}>
-                      {`${(matchup.winRate * 100).toFixed(0)}%`}
-                    </MatchupLabel>
-                  </MatchupContainer>
-                ))}
-            </MatchupList>
-          </MatchupSection>
-          <MatchupSection>
-            <SubHeader $backgroundColor="var(--s)">
-              {t("deckPage.weakAgainst")}
-            </SubHeader>
-            <MatchupList>
-              {deck.matchups
-                .filter((matchup) => !!matchup)
-                .filter((matchup) => matchup.totalGames > MIN_MATCHUP_GAMES)
-                .filter((matchup) => matchup.winRate <= WINRATE_THRESHOLD)
-                .filter((matchup) => deck && matchup.name !== deck.name)
-                .filter((matchup) =>
-                  decks.some((deck) => deck.name === matchup.name)
-                )
-                .sort((a, b) => a.winRate - b.winRate)
-                .slice(0, 8)
-                .map((matchup: MatchupType) => (
-                  <MatchupContainer key={matchup.name}>
-                    <DeckCardContainer>
-                      <DeckCard
-                        deck={decks.find((deck) => deck.name === matchup.name)!}
-                      />
-                    </DeckCardContainer>
-                    <MatchupLabel $winRate={matchup.winRate}>
-                      {`${(matchup.winRate * 100).toFixed(0)}%`}
-                    </MatchupLabel>
-                  </MatchupContainer>
-                ))}
-            </MatchupList>
-          </MatchupSection>
-        </Matchups>
-      </Section>
+      {!isDeckFinderMode && (
+        <Section>
+          <Matchups>
+            <MatchupSection>
+              <SubHeader $backgroundColor="var(--e)">
+                {t("deckPage.strongAgainst")}
+              </SubHeader>
+              <MatchupList>
+                {deck.matchups
+                  .filter((matchup) => matchup.totalGames > MIN_MATCHUP_GAMES)
+                  .filter((matchup) => matchup.winRate > WINRATE_THRESHOLD)
+                  .filter((matchup) => deck && matchup.name !== deck.name)
+                  .filter((matchup) =>
+                    decks.some((deck) => deck.name === matchup.name)
+                  )
+                  .sort((a, b) => b.winRate - a.winRate)
+                  .sort(
+                    (a, b) =>
+                      decks.find((deck) => deck.name === a.name)!.place -
+                      decks.find((deck) => deck.name === b.name)!.place
+                  )
+                  .slice(0, 8)
+                  .map((matchup: MatchupType) => (
+                    <MatchupContainer key={matchup.name}>
+                      <DeckCardContainer>
+                        <DeckCard
+                          deck={
+                            decks.find((deck) => deck.name === matchup.name)!
+                          }
+                        />
+                      </DeckCardContainer>
+                      <MatchupLabel $winRate={matchup.winRate}>
+                        {`${(matchup.winRate * 100).toFixed(0)}%`}
+                      </MatchupLabel>
+                    </MatchupContainer>
+                  ))}
+              </MatchupList>
+            </MatchupSection>
+            <MatchupSection>
+              <SubHeader $backgroundColor="var(--s)">
+                {t("deckPage.weakAgainst")}
+              </SubHeader>
+              <MatchupList>
+                {deck.matchups
+                  .filter((matchup) => !!matchup)
+                  .filter((matchup) => matchup.totalGames > MIN_MATCHUP_GAMES)
+                  .filter((matchup) => matchup.winRate <= WINRATE_THRESHOLD)
+                  .filter((matchup) => deck && matchup.name !== deck.name)
+                  .filter((matchup) =>
+                    decks.some((deck) => deck.name === matchup.name)
+                  )
+                  .sort((a, b) => a.winRate - b.winRate)
+                  .slice(0, 8)
+                  .map((matchup: MatchupType) => (
+                    <MatchupContainer key={matchup.name}>
+                      <DeckCardContainer>
+                        <DeckCard
+                          deck={
+                            decks.find((deck) => deck.name === matchup.name)!
+                          }
+                        />
+                      </DeckCardContainer>
+                      <MatchupLabel $winRate={matchup.winRate}>
+                        {`${(matchup.winRate * 100).toFixed(0)}%`}
+                      </MatchupLabel>
+                    </MatchupContainer>
+                  ))}
+              </MatchupList>
+            </MatchupSection>
+          </Matchups>
+        </Section>
+      )}
     </StyledDeckPage>
   );
 };

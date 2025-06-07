@@ -38,7 +38,9 @@
   "deckPage": {
     "matchups": "매치업",
     "strongAgainst": "유리한 상대",
-    "weakAgainst": "불리한 상대"
+    "weakAgainst": "불리한 상대",
+    "deckFinderHeader": "가지고 있지 않은 카드를 클릭하세요. 보유한 카드로 만들 수 있는 최적의 덱이 표시됩니다.",
+    "relativeStrength": "상대적 강도"
   },
   "energyDropdown": {
     "all": "모든 에너지 타입",

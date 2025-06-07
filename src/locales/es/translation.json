@@ -38,7 +38,9 @@
   "deckPage": {
     "matchups": "Enfrentamientos",
     "strongAgainst": "Fuerte contra",
-    "weakAgainst": "Débil contra"
+    "weakAgainst": "Débil contra",
+    "deckFinderHeader": "Haz clic en las cartas que no tienes. El mazo se actualizará para mostrar el mejor con tus cartas disponibles.",
+    "relativeStrength": "Fuerza Relativa"
   },
   "energyDropdown": {
     "all": "Todos los tipos de Energía",
