@@ -5,6 +5,7 @@ import TierListPage from "./pages/tier-list/TierListPage";
 import DeckPage from "./pages/deck/DeckPage";
 import Footer from "./components/Footer";
 import LandingPage from "./pages/landing/LandingPage";
+import { AuthProvider } from "./contexts/AuthContext";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -35,19 +36,21 @@ const Layout = () => {
 const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<LandingPage />} />
-          <Route path="tier-list" element={<TierListPage />} />
+      <AuthProvider>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<LandingPage />} />
+            <Route path="tier-list" element={<TierListPage />} />
 
-          <Route path="deck">
-            <Route index element={<DeckPage />} />
-            <Route path=":deckId" element={<DeckPage />} />
+            <Route path="deck">
+              <Route index element={<DeckPage />} />
+              <Route path=":deckId" element={<DeckPage />} />
+            </Route>
+
+            <Route path="*" element={<LandingPage />} />
           </Route>
-
-          <Route path="*" element={<LandingPage />} />
-        </Route>
-      </Routes>
+        </Routes>
+      </AuthProvider>
     </QueryClientProvider>
   );
 };

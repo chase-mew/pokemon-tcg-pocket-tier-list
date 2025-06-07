@@ -65,8 +65,10 @@
     "button": "Probar el Buscador de Mejores Mazos"
   },
   "header": {
-    "tierList": "Lista de Tiers",
-    "bestDeckFinder": "Buscador de Mejores Mazos"
+    "tierList": "Lista de Niveles",
+    "bestDeckFinder": "Buscador de Mejores Mazos",
+    "signIn": "Iniciar sesión con Google",
+    "signOut": "Cerrar sesión"
   },
   "hero": {
     "title": "Mejores Mazos y Lista de Tiers de Pokémon TCG Pocket",

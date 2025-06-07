@@ -4,6 +4,7 @@ import Logo from "./Logo";
 import Socials from "./Socials";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
+import { useAuth } from "../contexts/AuthContext";
 
 const StyledHeader = styled.div<{ $footer?: boolean }>`
   width: 100%;
@@ -51,6 +52,34 @@ const RightSection = styled.div`
   gap: 2rem;
 `;
 
+const AuthButton = styled.button`
+  background: var(--main);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 4px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.9;
+  }
+`;
+
+const UserInfo = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.4rem;
+`;
+
+const UserAvatar = styled.img`
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+`;
+
 interface Props {
   footer?: boolean;
 }
@@ -58,6 +87,7 @@ interface Props {
 const Header = ({ footer }: Props) => {
   const location = useLocation();
   const { t } = useTranslation();
+  const { user, signInWithGoogle, signOut } = useAuth();
 
   return (
     <StyledHeader $footer={footer}>
@@ -72,6 +102,19 @@ const Header = ({ footer }: Props) => {
       </Nav>
       <RightSection>
         {footer && <LanguageSwitcher />}
+        {user ? (
+          <UserInfo>
+            <UserAvatar
+              src={user.photoURL || undefined}
+              alt={user.displayName || "User"}
+            />
+            <AuthButton onClick={signOut}>{t("header.signOut")}</AuthButton>
+          </UserInfo>
+        ) : (
+          <AuthButton onClick={signInWithGoogle}>
+            {t("header.signIn")}
+          </AuthButton>
+        )}
         <Socials />
       </RightSection>
     </StyledHeader>

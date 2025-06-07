@@ -55,5 +55,11 @@
   },
   "filter": {
     "includeEx": "EX-Karten einbeziehen"
+  },
+  "header": {
+    "tierList": "Tier-Liste",
+    "bestDeckFinder": "Bester Deck-Finder",
+    "signIn": "Mit Google anmelden",
+    "signOut": "Abmelden"
   }
 }

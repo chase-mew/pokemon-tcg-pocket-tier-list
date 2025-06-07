@@ -65,8 +65,10 @@
     "button": "Essayer le Meilleur Deck Finder"
   },
   "header": {
-    "tierList": "Liste des Tiers",
-    "bestDeckFinder": "Meilleur Deck Finder"
+    "tierList": "Liste des Niveaux",
+    "bestDeckFinder": "Trouveur de Meilleur Deck",
+    "signIn": "Se connecter avec Google",
+    "signOut": "Se déconnecter"
   },
   "hero": {
     "title": "Meilleurs Decks et Liste des Tiers Pokemon TCG Pocket",
