@@ -19,7 +19,7 @@ const rainbowAnimation = keyframes`
 
 const StyledHero = styled.div`
   width: 100%;
-  height: 100dvh;
+  height: 80dvh;
   display: flex;
   flex-direction: column;
 `;
@@ -58,7 +58,7 @@ const ImageSection = styled.div`
   perspective: 1000px;
 `;
 
-const ImageContainer = styled.div<{ $rotateX: number; $rotateY: number }>`
+const ImageContainer = styled.button<{ $rotateX: number; $rotateY: number }>`
   padding: 4px;
   border-radius: 16px;
   background: linear-gradient(
@@ -76,10 +76,11 @@ const ImageContainer = styled.div<{ $rotateX: number; $rotateY: number }>`
   transform-style: preserve-3d;
   transform: rotateX(${(props) => props.$rotateX}deg)
     rotateY(${(props) => props.$rotateY}deg);
-  transition: transform 0.1s ease;
+  transition: all 0.2s ease;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 255, 255, 0.1),
     0 0 40px rgba(255, 255, 255, 0.05);
   filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.1));
+  cursor: pointer;
 `;
 
 const Image = styled.img`
@@ -135,7 +136,11 @@ const Hero = () => {
           </div>
         </TextSection>
         <ImageSection ref={containerRef}>
-          <ImageContainer $rotateX={rotateX} $rotateY={rotateY}>
+          <ImageContainer
+            $rotateX={rotateX}
+            $rotateY={rotateY}
+            onClick={() => navigate("/tier-list")}
+          >
             <Image src={tierList} alt="Tier List" />
           </ImageContainer>
         </ImageSection>
