@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Hero from "./Hero";
+import Header from "../../components/Header";
 
 const StyledLandingPage = styled.div`
   width: 100%;
@@ -8,12 +9,15 @@ const StyledLandingPage = styled.div`
   flex-direction: column;
   align-items: center;
   max-width: 150rem;
+  margin: 0 auto;
+  background-color: var(--bg);
 `;
 
 const LandingPage = () => {
   return (
     <StyledLandingPage>
       <Hero />
+      <Header />
     </StyledLandingPage>
   );
 };
