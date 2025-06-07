@@ -67,5 +67,10 @@
   "header": {
     "tierList": "Lista de Tiers",
     "bestDeckFinder": "Buscador de Mejores Mazos"
+  },
+  "hero": {
+    "title": "Mejores Mazos y Lista de Tiers de Pokémon TCG Pocket",
+    "subtitle": "Mantente al día con el meta de Pokémon TCG Pocket con una lista de tiers basada en datos. Construida a partir de resultados de torneos, encuentra listas completas, marca las cartas que te faltan y descubre las construcciones más fuertes que puedes crear ahora mismo.",
+    "button": "Ver Lista de Tiers"
   }
 }

@@ -67,5 +67,10 @@
   "header": {
     "tierList": "Tier-Liste",
     "bestDeckFinder": "Bester Deck-Finder"
+  },
+  "hero": {
+    "title": "Pokémon TCG Pocket Beste Decks und Tier-Liste",
+    "subtitle": "Bleibe mit einer datengesteuerten Deck-Tier-Liste dem Pokémon TCG Pocket Meta voraus. Basierend auf Turnierergebnissen, finde vollständige Listen, markiere fehlende Karten und entdecke die stärksten Decks, die du jetzt bauen kannst.",
+    "button": "Tier-Liste anzeigen"
   }
 }

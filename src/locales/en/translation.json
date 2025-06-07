@@ -67,5 +67,10 @@
   "header": {
     "tierList": "Tier List",
     "bestDeckFinder": "Best Deck Finder"
+  },
+  "hero": {
+    "title": "Pokemon TCG Pocket Best Decks and Tier List",
+    "subtitle": "Stay ahead of the Pokemon TCG Pocket meta with a data driven deck tier list. Built from tournament results, find full lists, mark the cards you're missing, and uncover the strongest builds you can craft right now.",
+    "button": "View Tier List"
   }
 }

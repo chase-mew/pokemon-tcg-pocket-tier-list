@@ -67,5 +67,10 @@
   "header": {
     "tierList": "Liste des Tiers",
     "bestDeckFinder": "Meilleur Deck Finder"
+  },
+  "hero": {
+    "title": "Meilleurs Decks et Liste des Tiers Pokemon TCG Pocket",
+    "subtitle": "Restez à la pointe de la méta Pokemon TCG Pocket avec une liste de tiers basée sur les données. Construite à partir des résultats des tournois, trouvez des listes complètes, marquez les cartes qui vous manquent et découvrez les constructions les plus fortes que vous pouvez créer maintenant.",
+    "button": "Voir la Liste des Tiers"
   }
 }

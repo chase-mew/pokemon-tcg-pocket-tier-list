@@ -4,6 +4,7 @@ import tierList from "../../assets/tier-list.jpeg";
 import Button from "../../components/Button";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const rainbowAnimation = keyframes`
   0% {
@@ -92,6 +93,7 @@ const Image = styled.img`
 
 const Hero = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const [rotateX, setRotateX] = useState(0);
   const [rotateY, setRotateY] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -120,18 +122,11 @@ const Hero = () => {
       <Header />
       <Content>
         <TextSection>
-          <StyledHeader>
-            Pokemon TCG Pocket <br /> Best Decks and Tier List
-          </StyledHeader>
-          <StyledSubheader>
-            Stay ahead of the Pokemon TCG Pocket meta with a data driven deck
-            tier list. Built from tournament results, find full lists, mark the
-            cards you're missing, and uncover the strongest builds you can craft
-            right now.
-          </StyledSubheader>
+          <StyledHeader>{t("hero.title")}</StyledHeader>
+          <StyledSubheader>{t("hero.subtitle")}</StyledSubheader>
           <div>
             <Button action={() => navigate("/tier-list")}>
-              View Tier List
+              {t("hero.button")}
             </Button>
           </div>
         </TextSection>
@@ -141,7 +136,7 @@ const Hero = () => {
             $rotateY={rotateY}
             onClick={() => navigate("/tier-list")}
           >
-            <Image src={tierList} alt="Tier List" />
+            <Image src={tierList} alt={t("hero.title")} />
           </ImageContainer>
         </ImageSection>
       </Content>
