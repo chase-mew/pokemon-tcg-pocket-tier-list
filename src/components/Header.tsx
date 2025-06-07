@@ -9,7 +9,7 @@ const StyledHeader = styled.div<{ $footer?: boolean }>`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem 4rem;
+  padding: 2rem 2rem;
   position: relative;
   margin-bottom: ${(props) => (props.$footer ? "2rem" : "0")};
 

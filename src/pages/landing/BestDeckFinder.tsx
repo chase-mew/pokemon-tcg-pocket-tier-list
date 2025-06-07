@@ -82,7 +82,7 @@ const ImageSection = styled.div`
 `;
 
 const ImageContainer = styled.div`
-  padding: 4px;
+  padding: 3px;
   border-radius: 12px;
   background: linear-gradient(
     45deg,

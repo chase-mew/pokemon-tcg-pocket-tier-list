@@ -23,7 +23,7 @@ const StyledHero = styled.div`
   min-height: 80dvh;
   display: flex;
   flex-direction: column;
-  padding: 4rem;
+  padding: 2rem 4rem;
 
   @media (max-width: 768px) {
     padding: 2rem;
@@ -59,11 +59,11 @@ const TextSection = styled.div`
 `;
 
 const StyledHeader = styled.h1`
-  font-size: 6rem;
+  font-size: 5.5rem;
   font-weight: 600;
 
   @media (max-width: 1400px) {
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
 
   @media (max-width: 768px) {
