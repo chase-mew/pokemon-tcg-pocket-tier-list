@@ -13,8 +13,8 @@ const rainbowAnimation = keyframes`
 `;
 
 const StyledButton = styled.button`
-  height: 4.6rem;
-  padding: 0 2.4rem;
+  height: 5.4rem;
+  padding: 0 3.2rem;
   border-radius: 0.8rem;
   background: linear-gradient(
     45deg,
@@ -29,7 +29,7 @@ const StyledButton = styled.button`
   background-size: 300% 300%;
   animation: ${rainbowAnimation} 8s ease infinite;
   color: var(--bg);
-  font-size: 1.9rem;
+  font-size: 2.2rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
