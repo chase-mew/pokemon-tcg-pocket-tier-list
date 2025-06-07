@@ -4,12 +4,18 @@ import Logo from "./Logo";
 import Socials from "./Socials";
 import { useTranslation } from "react-i18next";
 
-const StyledHeader = styled.div`
+const StyledHeader = styled.div<{ $footer?: boolean }>`
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 2rem 4rem;
+  position: relative;
+
+  @media (max-width: 768px) {
+    padding: ${(props) => (props.$footer ? "0 2rem" : "0")};
+    margin-bottom: ${(props) => (props.$footer ? "2rem" : "5rem")};
+  }
 `;
 
 const Nav = styled.nav`
@@ -18,6 +24,10 @@ const Nav = styled.nav`
   transform: translateX(-50%);
   display: flex;
   gap: 4rem;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const NavItem = styled(Link)<{ $active: boolean }>`
@@ -33,12 +43,16 @@ const NavItem = styled(Link)<{ $active: boolean }>`
   }
 `;
 
-const Header = () => {
+interface Props {
+  footer?: boolean;
+}
+
+const Header = ({ footer }: Props) => {
   const location = useLocation();
   const { t } = useTranslation();
 
   return (
-    <StyledHeader>
+    <StyledHeader $footer={footer}>
       <Logo />
       <Nav>
         <NavItem to="/tier-list" $active={location.pathname === "/tier-list"}>

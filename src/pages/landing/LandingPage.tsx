@@ -21,7 +21,7 @@ const LandingPage = () => {
       <Hero />
       <Features />
       <BestDeckFinder />
-      <Header />
+      <Header footer />
     </StyledLandingPage>
   );
 };

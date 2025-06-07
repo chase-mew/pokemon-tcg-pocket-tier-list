@@ -20,10 +20,15 @@ const rainbowAnimation = keyframes`
 
 const StyledHero = styled.div`
   width: 100%;
-  height: 80dvh;
+  min-height: 80dvh;
   display: flex;
   flex-direction: column;
   padding: 4rem;
+
+  @media (max-width: 768px) {
+    padding: 2rem;
+    min-height: 0;
+  }
 `;
 
 const Content = styled.div`
@@ -32,6 +37,13 @@ const Content = styled.div`
   display: flex;
   align-items: center;
   flex: 1;
+  gap: 4rem;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    text-align: center;
+    gap: 8rem;
+  }
 `;
 
 const TextSection = styled.div`
@@ -39,6 +51,11 @@ const TextSection = styled.div`
   flex-direction: column;
   flex: 1;
   gap: 4rem;
+
+  @media (max-width: 1024px) {
+    align-items: center;
+    gap: 2rem;
+  }
 `;
 
 const StyledHeader = styled.h1`
@@ -47,6 +64,10 @@ const StyledHeader = styled.h1`
 
   @media (max-width: 1400px) {
     font-size: 5rem;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 3.6rem;
   }
 `;
 
@@ -58,6 +79,10 @@ const StyledSubheader = styled.h2`
   @media (max-width: 1400px) {
     font-size: 1.8rem;
   }
+
+  @media (max-width: 768px) {
+    font-size: 1.6rem;
+  }
 `;
 
 const ImageSection = styled.div`
@@ -66,6 +91,10 @@ const ImageSection = styled.div`
   align-items: center;
   justify-content: center;
   perspective: 1000px;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 
 const ImageContainer = styled.button<{ $rotateX: number; $rotateY: number }>`
@@ -91,6 +120,11 @@ const ImageContainer = styled.button<{ $rotateX: number; $rotateY: number }>`
     0 0 40px rgba(255, 255, 255, 0.05);
   filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.1));
   cursor: pointer;
+
+  @media (max-width: 1024px) {
+    transform: none;
+    animation: none;
+  }
 `;
 
 const Image = styled.img`
@@ -98,6 +132,11 @@ const Image = styled.img`
   object-fit: cover;
   border-radius: 12px;
   display: block;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    max-width: 50rem;
+  }
 `;
 
 const Hero = () => {

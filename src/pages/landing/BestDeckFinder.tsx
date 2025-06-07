@@ -24,9 +24,11 @@ const StyledBestDeckFinder = styled.div`
   padding: 8rem 4.8rem;
   gap: 4.8rem;
   background: var(--bg);
+  margin-bottom: 10rem;
 
   @media (max-width: 900px) {
     padding: 4.8rem 2.4rem;
+    margin-bottom: 0;
   }
 `;
 
@@ -57,6 +59,7 @@ const Title = styled.h2`
 
   @media (max-width: 900px) {
     font-size: 4rem;
+    text-align: center;
   }
 `;
 
@@ -67,6 +70,7 @@ const Description = styled.p`
 
   @media (max-width: 900px) {
     font-size: 1.6rem;
+    text-align: center;
   }
 `;
 

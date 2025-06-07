@@ -11,12 +11,20 @@ const Container = styled(Link)`
 
 const StyledLogo = styled.img`
   width: 8rem;
+
+  @media (max-width: 768px) {
+    width: 6rem;
+  }
 `;
 
 const StyledText = styled.p`
   font-size: 2.8rem;
   font-weight: 600;
   color: var(--main);
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
 `;
 
 const Logo = () => {
