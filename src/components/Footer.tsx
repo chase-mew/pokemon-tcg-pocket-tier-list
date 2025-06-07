@@ -4,6 +4,7 @@ import InfoIcon from "./InfoIcon";
 import InfoModal from "./InfoModal";
 import { useLocation } from "react-router-dom";
 import { SOCIALS } from "../app/constants";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const FooterContainer = styled.footer`
   position: fixed;
@@ -12,6 +13,7 @@ const FooterContainer = styled.footer`
   z-index: 1000;
   display: flex;
   gap: 16px;
+  align-items: center;
 `;
 
 const IconLink = styled.a`
@@ -59,6 +61,7 @@ const Footer = () => {
 
   return (
     <FooterContainer>
+      <LanguageSwitcher />
       <IconButton
         onClick={() => setIsInfoModalOpen(true)}
         aria-label="Information about this website"

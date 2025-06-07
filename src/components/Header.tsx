@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import Logo from "./Logo";
 import Socials from "./Socials";
 import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const StyledHeader = styled.div<{ $footer?: boolean }>`
   width: 100%;
@@ -44,6 +45,12 @@ const NavItem = styled(Link)<{ $active: boolean }>`
   }
 `;
 
+const RightSection = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+`;
+
 interface Props {
   footer?: boolean;
 }
@@ -63,7 +70,10 @@ const Header = ({ footer }: Props) => {
           {t("header.bestDeckFinder")}
         </NavItem>
       </Nav>
-      <Socials />
+      <RightSection>
+        {footer && <LanguageSwitcher />}
+        <Socials />
+      </RightSection>
     </StyledHeader>
   );
 };
