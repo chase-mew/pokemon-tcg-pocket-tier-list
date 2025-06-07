@@ -6,10 +6,12 @@ import tournament from "../../assets/features/tournament.png";
 import weeklyUpdates from "../../assets/features/weekly.png";
 import missingCards from "../../assets/features/missing.png";
 import { useTranslation } from "react-i18next";
+import { Trans } from "react-i18next";
+import { GITHUB_URL } from "../../app/constants";
 
 interface FeatureType {
   title: string;
-  description: string;
+  description: string | React.ReactNode;
   image: string;
 }
 
@@ -101,6 +103,22 @@ const Description = styled.p`
   }
 `;
 
+const StyledLink = styled.a`
+  color: var(--main);
+  text-decoration: underline;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  font-size: 1.8rem;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  @media (max-width: 900px) {
+    font-size: 1.6rem;
+  }
+`;
+
 const Features = () => {
   const { t } = useTranslation();
 
@@ -132,7 +150,19 @@ const Features = () => {
     },
     {
       title: t("features.openSource.title"),
-      description: t("features.openSource.description"),
+      description: (
+        <Trans
+          i18nKey="features.openSource.description"
+          components={[
+            <StyledLink
+              href={GITHUB_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              key="github"
+            />,
+          ]}
+        />
+      ),
       image: openSource,
     },
   ];
