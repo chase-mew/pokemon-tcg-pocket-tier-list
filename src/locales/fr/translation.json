@@ -72,5 +72,32 @@
     "title": "Meilleurs Decks et Liste des Tiers Pokemon TCG Pocket",
     "subtitle": "Restez à la pointe de la méta Pokemon TCG Pocket avec une liste de tiers basée sur les données. Construite à partir des résultats des tournois, trouvez des listes complètes, marquez les cartes qui vous manquent et découvrez les constructions les plus fortes que vous pouvez créer maintenant.",
     "button": "Voir la Liste des Tiers"
+  },
+  "features": {
+    "title": "Fonctionnalités",
+    "tournamentResults": {
+      "title": "Résultats des Tournois",
+      "description": "La liste des tiers est basée sur les résultats des tournois, avec un algorithme pour déterminer le tier et la liste de deck"
+    },
+    "weeklyUpdates": {
+      "title": "Mises à Jour Hebdomadaires",
+      "description": "La liste des tiers est mise à jour chaque semaine, avec de nouveaux decks et matchups ajoutés tous les lundis"
+    },
+    "filters": {
+      "title": "Filtres",
+      "description": "Filtrez les decks par type d'Énergie ou sans cartes Ex, utile pour aider à battre certains Combats en Solo"
+    },
+    "missingCards": {
+      "title": "Cartes Manquantes",
+      "description": "Cliquez sur les cartes qui vous manquent, et la liste des tiers se mettra à jour automatiquement pour ce que vous avez"
+    },
+    "matchups": {
+      "title": "Matchups",
+      "description": "Consultez les données de matchup pour voir quels decks sont forts contre d'autres, et leurs taux de victoire"
+    },
+    "openSource": {
+      "title": "Open Source",
+      "description": "Ce site est open source, vous pouvez trouver le code source sur <0>GitHub</0>"
+    }
   }
 }

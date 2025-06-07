@@ -72,5 +72,32 @@
     "title": "Pokémon TCG Pocket Beste Decks und Tier-Liste",
     "subtitle": "Bleibe mit einer datengesteuerten Deck-Tier-Liste dem Pokémon TCG Pocket Meta voraus. Basierend auf Turnierergebnissen, finde vollständige Listen, markiere fehlende Karten und entdecke die stärksten Decks, die du jetzt bauen kannst.",
     "button": "Tier-Liste anzeigen"
+  },
+  "features": {
+    "title": "Funktionen",
+    "tournamentResults": {
+      "title": "Turnierergebnisse",
+      "description": "Die Tier-Liste basiert auf Turnierergebnissen, mit einem Algorithmus zur Bestimmung des Tiers und der Deckliste"
+    },
+    "weeklyUpdates": {
+      "title": "Wöchentliche Updates",
+      "description": "Die Tier-Liste wird wöchentlich aktualisiert, mit neuen Decks und Matchups, die jeden Montag hinzugefügt werden"
+    },
+    "filters": {
+      "title": "Filter",
+      "description": "Filtere Decks nach Energietyp oder ohne Ex-Karten, nützlich um einige dieser Solo-Kämpfe zu gewinnen"
+    },
+    "missingCards": {
+      "title": "Fehlende Karten",
+      "description": "Klicke auf Karten, die dir fehlen, und die Tier-Liste wird automatisch für deine verfügbaren Karten aktualisiert"
+    },
+    "matchups": {
+      "title": "Deck-Duelle",
+      "description": "Siehe Matchup-Daten, welche Decks gegen andere stark sind, und ihre Gewinnraten"
+    },
+    "openSource": {
+      "title": "Open Source",
+      "description": "Diese Website ist Open Source, du findest den Quellcode auf <0>GitHub</0>"
+    }
   }
 }

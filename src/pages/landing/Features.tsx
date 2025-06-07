@@ -5,6 +5,7 @@ import matchups from "../../assets/features/matchups.png";
 import tournament from "../../assets/features/tournament.png";
 import weeklyUpdates from "../../assets/features/weekly.png";
 import missingCards from "../../assets/features/missing.png";
+import { useTranslation } from "react-i18next";
 
 interface FeatureType {
   title: string;
@@ -101,48 +102,44 @@ const Description = styled.p`
 `;
 
 const Features = () => {
+  const { t } = useTranslation();
+
   const FEATURES: FeatureType[] = [
     {
-      title: "Tournament Results",
-      description:
-        "The tier list is based on tournament results, with an algorithm to determine the tier and decklist",
+      title: t("features.tournamentResults.title"),
+      description: t("features.tournamentResults.description"),
       image: tournament,
     },
     {
-      title: "Weekly Updates",
-      description:
-        "The tier list is updated weekly, with new decks and matchups added every Monday",
+      title: t("features.weeklyUpdates.title"),
+      description: t("features.weeklyUpdates.description"),
       image: weeklyUpdates,
     },
     {
-      title: "Filters",
-      description:
-        "Filter decks by Energy or no Ex cards, useful for helping beat some of those Solo Battles",
+      title: t("features.filters.title"),
+      description: t("features.filters.description"),
       image: filters,
     },
     {
-      title: "Missing Cards",
-      description:
-        "Click on any cards that you are missing, and the tier list will update automatically for what you have",
+      title: t("features.missingCards.title"),
+      description: t("features.missingCards.description"),
       image: missingCards,
     },
     {
-      title: "Matchups",
-      description:
-        "See matchup data for which decks are strong against others, and their winrates",
+      title: t("features.matchups.title"),
+      description: t("features.matchups.description"),
       image: matchups,
     },
     {
-      title: "Open Source",
-      description:
-        "This website is open source, you can find the source code on <0>GitHub</0>",
+      title: t("features.openSource.title"),
+      description: t("features.openSource.description"),
       image: openSource,
     },
   ];
 
   return (
     <StyledFeatures>
-      <Title>Features</Title>
+      <Title>{t("features.title")}</Title>
       <Grid>
         {FEATURES.map((feature) => (
           <Card key={feature.title}>

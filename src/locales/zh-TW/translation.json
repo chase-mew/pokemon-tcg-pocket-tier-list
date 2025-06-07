@@ -72,5 +72,32 @@
     "title": "寶可夢卡牌遊戲 Pocket 最強牌組和等級列表",
     "subtitle": "通過數據驅動的牌組等級列表，領先寶可夢卡牌遊戲 Pocket 的環境。基於比賽結果構建，查找完整列表，標記您缺少的卡牌，並發現您現在可以構建的最強牌組。",
     "button": "查看等級列表"
+  },
+  "features": {
+    "title": "功能",
+    "tournamentResults": {
+      "title": "比賽結果",
+      "description": "等級列表基於比賽結果，使用算法確定等級和牌組列表"
+    },
+    "weeklyUpdates": {
+      "title": "每週更新",
+      "description": "等級列表每週更新，每週一添加新的牌組和對戰數據"
+    },
+    "filters": {
+      "title": "篩選",
+      "description": "按能量類型或無EX卡牌篩選牌組，有助於擊敗單人戰鬥"
+    },
+    "missingCards": {
+      "title": "缺少卡牌",
+      "description": "點擊您缺少的卡牌，等級列表將根據您擁有的卡牌自動更新"
+    },
+    "matchups": {
+      "title": "對戰數據",
+      "description": "查看哪些牌組對其他牌組有優勢，以及它們的勝率"
+    },
+    "openSource": {
+      "title": "開源專案",
+      "description": "本網站是開源的，您可以在<0>GitHub</0>上找到源代碼"
+    }
   }
 }

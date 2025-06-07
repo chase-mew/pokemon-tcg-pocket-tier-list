@@ -59,5 +59,32 @@
     "title": "宝可梦卡牌游戏 Pocket 最强卡组和等级列表",
     "subtitle": "通过数据驱动的卡组等级列表，领先宝可梦卡牌游戏 Pocket 的环境。基于比赛结果构建，查找完整列表，标记您缺少的卡牌，并发现您现在可以构建的最强卡组。",
     "button": "查看等级列表"
+  },
+  "features": {
+    "title": "功能",
+    "tournamentResults": {
+      "title": "比赛结果",
+      "description": "等级列表基于比赛结果，使用算法确定等级和卡组列表"
+    },
+    "weeklyUpdates": {
+      "title": "每周更新",
+      "description": "等级列表每周更新，每周一添加新的卡组和对战数据"
+    },
+    "filters": {
+      "title": "筛选",
+      "description": "按能量类型或无EX卡牌筛选卡组，有助于击败单人战斗"
+    },
+    "missingCards": {
+      "title": "缺失卡牌",
+      "description": "点击您缺少的卡牌，等级列表将根据您拥有的卡牌自动更新"
+    },
+    "matchups": {
+      "title": "对战数据",
+      "description": "查看哪些卡组对其他卡组有优势，以及它们的胜率"
+    },
+    "openSource": {
+      "title": "开源项目",
+      "description": "本网站是开源的，您可以在<0>GitHub</0>上找到源代码"
+    }
   }
 }

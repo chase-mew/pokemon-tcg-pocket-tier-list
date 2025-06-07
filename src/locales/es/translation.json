@@ -72,5 +72,32 @@
     "title": "Mejores Mazos y Lista de Tiers de Pokémon TCG Pocket",
     "subtitle": "Mantente al día con el meta de Pokémon TCG Pocket con una lista de tiers basada en datos. Construida a partir de resultados de torneos, encuentra listas completas, marca las cartas que te faltan y descubre las construcciones más fuertes que puedes crear ahora mismo.",
     "button": "Ver Lista de Tiers"
+  },
+  "features": {
+    "title": "Características",
+    "tournamentResults": {
+      "title": "Resultados de Torneos",
+      "description": "La lista de tiers se basa en resultados de torneos, con un algoritmo para determinar el tier y la lista de mazo"
+    },
+    "weeklyUpdates": {
+      "title": "Actualizaciones Semanales",
+      "description": "La lista de tiers se actualiza semanalmente, con nuevos mazos y enfrentamientos añadidos cada lunes"
+    },
+    "filters": {
+      "title": "Filtros",
+      "description": "Filtra mazos por tipo de Energía o sin cartas Ex, útil para ayudar a vencer algunos de esos Combates en Solitario"
+    },
+    "missingCards": {
+      "title": "Cartas Faltantes",
+      "description": "Haz clic en las cartas que te faltan, y la lista de tiers se actualizará automáticamente según lo que tengas"
+    },
+    "matchups": {
+      "title": "Enfrentamientos",
+      "description": "Consulta los datos de enfrentamientos para ver qué mazos son fuertes contra otros, y sus tasas de victoria"
+    },
+    "openSource": {
+      "title": "Código Abierto",
+      "description": "Este sitio web es de código abierto, puedes encontrar el código fuente en <0>GitHub</0>"
+    }
   }
 }
