@@ -2,6 +2,7 @@ import styled, { keyframes } from "styled-components";
 import bestDeck from "../../assets/best-deck.png";
 import Button from "../../components/Button";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const rainbowAnimation = keyframes`
   0% {
@@ -104,28 +105,22 @@ const Image = styled.img`
 
 const BestDeckFinder = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   return (
     <StyledBestDeckFinder>
       <Content>
         <TextSection>
-          <Title>Find Your Best Deck</Title>
-          <Description>
-            Discover the strongest deck you can build with your collection. The
-            Best Deck Finder starts by showing you the top deck in the game, but
-            you can click any cards you don't have. It will then show you the
-            next best deck that doesn't use those cards.
-          </Description>
-          <Description>
-            Keep removing cards until you find a deck where you have everything.
-            The relative strength indicator shows you how powerful your deck is
-            compared to the best deck in the game.
-          </Description>
-          <Button action={() => navigate("/deck")}>Try Best Deck Finder</Button>
+          <Title>{t("bestDeckFinder.title")}</Title>
+          <Description>{t("bestDeckFinder.description1")}</Description>
+          <Description>{t("bestDeckFinder.description2")}</Description>
+          <Button action={() => navigate("/deck")}>
+            {t("bestDeckFinder.button")}
+          </Button>
         </TextSection>
         <ImageSection>
           <ImageContainer>
-            <Image src={bestDeck} alt="Best Deck Finder" />
+            <Image src={bestDeck} alt={t("bestDeckFinder.title")} />
           </ImageContainer>
         </ImageSection>
       </Content>

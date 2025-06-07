@@ -57,5 +57,11 @@
   },
   "filter": {
     "includeEx": "Inclure les cartes EX"
+  },
+  "bestDeckFinder": {
+    "title": "Trouvez Votre Meilleur Deck",
+    "description1": "Découvrez le deck le plus puissant que vous pouvez construire avec votre collection. Le Meilleur Deck Finder commence par vous montrer le meilleur deck du jeu, mais vous pouvez cliquer sur les cartes que vous n'avez pas. Il vous montrera ensuite le prochain meilleur deck qui n'utilise pas ces cartes.",
+    "description2": "Continuez à retirer des cartes jusqu'à ce que vous trouviez un deck où vous avez tout. L'indicateur de force relative vous montre à quel point votre deck est puissant par rapport au meilleur deck du jeu.",
+    "button": "Essayer le Meilleur Deck Finder"
   }
 }

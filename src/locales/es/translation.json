@@ -57,5 +57,11 @@
   },
   "filter": {
     "includeEx": "Incluir cartas EX"
+  },
+  "bestDeckFinder": {
+    "title": "Encuentra Tu Mejor Mazo",
+    "description1": "Descubre el mazo más fuerte que puedes construir con tu colección. El Buscador de Mejores Mazos comienza mostrándote el mejor mazo del juego, pero puedes hacer clic en las cartas que no tienes. Luego te mostrará el siguiente mejor mazo que no usa esas cartas.",
+    "description2": "Sigue eliminando cartas hasta encontrar un mazo donde tengas todo. El indicador de fuerza relativa te muestra qué tan poderoso es tu mazo en comparación con el mejor mazo del juego.",
+    "button": "Probar el Buscador de Mejores Mazos"
   }
 }
