@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styled from "styled-components";
-import GitHubIcon from "./GitHubIcon";
 import InfoIcon from "./InfoIcon";
 import InfoModal from "./InfoModal";
+import { useLocation } from "react-router-dom";
+import { SOCIALS } from "../app/constants";
 
 const FooterContainer = styled.footer`
   position: fixed;
@@ -44,8 +45,17 @@ const IconButton = styled.button`
   }
 `;
 
+const Icon = styled.img`
+  width: 32px;
+  height: 32px;
+`;
+
 const Footer = () => {
+  const location = useLocation();
+
   const [isInfoModalOpen, setIsInfoModalOpen] = useState(false);
+
+  if (location.pathname === "/") return null;
 
   return (
     <FooterContainer>
@@ -56,14 +66,17 @@ const Footer = () => {
         <InfoIcon />
       </IconButton>
 
-      <IconLink
-        href="https://github.com/chase-manning/pokemon-tcg-pocket-tier-list"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="View source code on GitHub"
-      >
-        <GitHubIcon />
-      </IconLink>
+      {SOCIALS.map((social) => (
+        <IconLink
+          key={social.url}
+          href={social.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={social.label}
+        >
+          <Icon src={social.icon} alt={social.alt} />
+        </IconLink>
+      ))}
 
       <InfoModal
         isOpen={isInfoModalOpen}
