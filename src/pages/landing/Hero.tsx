@@ -23,6 +23,7 @@ const StyledHero = styled.div`
   height: 80dvh;
   display: flex;
   flex-direction: column;
+  padding: 4rem;
 `;
 
 const Content = styled.div`
@@ -43,12 +44,20 @@ const TextSection = styled.div`
 const StyledHeader = styled.h1`
   font-size: 6rem;
   font-weight: 600;
+
+  @media (max-width: 1400px) {
+    font-size: 5rem;
+  }
 `;
 
 const StyledSubheader = styled.h2`
   font-size: 2rem;
   font-weight: 500;
   max-width: 65rem;
+
+  @media (max-width: 1400px) {
+    font-size: 1.8rem;
+  }
 `;
 
 const ImageSection = styled.div`
@@ -85,7 +94,7 @@ const ImageContainer = styled.button<{ $rotateX: number; $rotateY: number }>`
 `;
 
 const Image = styled.img`
-  width: 70dvh;
+  width: 65dvh;
   object-fit: cover;
   border-radius: 12px;
   display: block;
