@@ -118,9 +118,11 @@ const BestDeckFinder = () => {
           <Title>{t("bestDeckFinder.title")}</Title>
           <Description>{t("bestDeckFinder.description1")}</Description>
           <Description>{t("bestDeckFinder.description2")}</Description>
-          <Button action={() => navigate("/deck")}>
-            {t("bestDeckFinder.button")}
-          </Button>
+          <div>
+            <Button action={() => navigate("/deck")}>
+              {t("bestDeckFinder.button")}
+            </Button>
+          </div>
         </TextSection>
         <ImageSection>
           <ImageContainer>
