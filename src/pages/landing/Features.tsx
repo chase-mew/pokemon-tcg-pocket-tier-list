@@ -1,0 +1,159 @@
+import styled from "styled-components";
+import filters from "../../assets/features/filters.png";
+import openSource from "../../assets/features/open-source.png";
+import matchups from "../../assets/features/matchups.png";
+import tournament from "../../assets/features/tournament.png";
+import weeklyUpdates from "../../assets/features/weekly.png";
+import missingCards from "../../assets/features/missing.png";
+
+interface FeatureType {
+  title: string;
+  description: string;
+  image: string;
+}
+
+const StyledFeatures = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8rem 4.8rem;
+  gap: 4.8rem;
+  background: var(--bg);
+
+  @media (max-width: 900px) {
+    padding: 4.8rem 2.4rem;
+  }
+`;
+
+const Title = styled.h2`
+  font-size: 5.6rem;
+  font-weight: 500;
+  color: var(--text);
+  text-align: center;
+
+  @media (max-width: 900px) {
+    font-size: 4rem;
+  }
+`;
+
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  gap: 4.8rem;
+  width: 100%;
+  max-width: 150rem;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    gap: 3.2rem;
+  }
+`;
+
+const Card = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+  padding: 3.2rem;
+  background: var(--card);
+  border-radius: 1.6rem;
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-0.4rem);
+  }
+
+  @media (max-width: 900px) {
+    padding: 2.4rem;
+  }
+`;
+
+const Image = styled.img`
+  width: 100%;
+  max-width: 24rem;
+  height: auto;
+  border-radius: 0.4rem;
+  border: 1px solid white;
+  box-shadow: 0 0.8rem 1.6rem rgba(0, 0, 0, 0.2);
+`;
+
+const CardTitle = styled.h3`
+  font-size: 3.2rem;
+  font-weight: 500;
+  color: var(--text);
+  text-align: center;
+
+  @media (max-width: 900px) {
+    font-size: 2.4rem;
+  }
+`;
+
+const Description = styled.p`
+  font-size: 1.8rem;
+  color: var(--text-secondary);
+  text-align: center;
+  line-height: 1.6;
+
+  @media (max-width: 900px) {
+    font-size: 1.6rem;
+  }
+`;
+
+const Features = () => {
+  const FEATURES: FeatureType[] = [
+    {
+      title: "Tournament Results",
+      description:
+        "The tier list is based on tournament results, with an algorithm to determine the tier and decklist",
+      image: tournament,
+    },
+    {
+      title: "Weekly Updates",
+      description:
+        "The tier list is updated weekly, with new decks and matchups added every Monday",
+      image: weeklyUpdates,
+    },
+    {
+      title: "Filters",
+      description:
+        "Filter decks by Energy or no Ex cards, useful for helping beat some of those Solo Battles",
+      image: filters,
+    },
+    {
+      title: "Missing Cards",
+      description:
+        "Click on any cards that you are missing, and the tier list will update automatically for what you have",
+      image: missingCards,
+    },
+    {
+      title: "Matchups",
+      description:
+        "See matchup data for which decks are strong against others, and their winrates",
+      image: matchups,
+    },
+    {
+      title: "Open Source",
+      description:
+        "This website is open source, you can find the source code on <0>GitHub</0>",
+      image: openSource,
+    },
+  ];
+
+  return (
+    <StyledFeatures>
+      <Title>Features</Title>
+      <Grid>
+        {FEATURES.map((feature) => (
+          <Card key={feature.title}>
+            <Image src={feature.image} alt={feature.title} />
+            <CardTitle>{feature.title}</CardTitle>
+            <Description>{feature.description}</Description>
+          </Card>
+        ))}
+      </Grid>
+    </StyledFeatures>
+  );
+};
+
+export default Features;
