@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import TierListPage from "./pages/tier-list/TierListPage";
 import DeckPage from "./pages/deck/DeckPage";
-import Footer from "./components/Footer";
 import LandingPage from "./pages/landing/LandingPage";
 import { AuthProvider } from "./contexts/AuthContext";
 
@@ -28,7 +27,6 @@ const Layout = () => {
   return (
     <StyledApp>
       <Outlet />
-      <Footer />
     </StyledApp>
   );
 };
