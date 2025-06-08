@@ -42,6 +42,11 @@ const UserAvatar = styled.img`
   width: 3.2rem;
   height: 3.2rem;
   border-radius: 50%;
+
+  @media (max-width: 900px) {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
 `;
 
 const ButtonContainer = styled.div`

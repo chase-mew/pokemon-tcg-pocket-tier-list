@@ -25,7 +25,7 @@ const StyledHero = styled.div`
   flex-direction: column;
   padding: 2rem 4rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     padding: 2rem;
     min-height: 0;
   }
@@ -66,7 +66,7 @@ const StyledHeader = styled.h1`
     font-size: 4.5rem;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     font-size: 3.6rem;
   }
 `;
@@ -80,7 +80,7 @@ const StyledSubheader = styled.h2`
     font-size: 1.8rem;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     font-size: 1.6rem;
   }
 `;

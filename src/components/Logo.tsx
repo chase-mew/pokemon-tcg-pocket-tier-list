@@ -12,7 +12,7 @@ const Container = styled(Link)`
 const StyledLogo = styled.img`
   width: 8rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     width: 6rem;
   }
 `;
@@ -22,7 +22,7 @@ const StyledText = styled.p`
   font-weight: 600;
   color: var(--main);
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     font-size: 2rem;
   }
 `;

@@ -36,7 +36,6 @@ const FilterContainer = styled.div`
     right: 0;
     margin: 2rem;
     width: calc(100% - 4rem);
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }

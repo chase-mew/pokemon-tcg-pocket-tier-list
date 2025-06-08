@@ -1,11 +1,15 @@
 import styled from "styled-components";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const TooltipContainer = styled.div`
   position: relative;
   display: inline-flex;
   align-items: center;
   margin-left: 0.8rem;
+
+  @media (max-width: 900px) {
+    margin-left: 0.4rem;
+  }
 `;
 
 const TooltipIcon = styled.div`
@@ -21,9 +25,17 @@ const TooltipIcon = styled.div`
   cursor: help;
   opacity: 0.7;
   transition: opacity 0.2s ease;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 
   &:hover {
     opacity: 1;
+  }
+
+  @media (max-width: 900px) {
+    width: 1.6rem;
+    height: 1.6rem;
+    font-size: 1.1rem;
   }
 `;
 
@@ -44,6 +56,7 @@ const TooltipContent = styled.div<{ $isVisible: boolean }>`
   transition: all 0.2s ease;
   z-index: 1000;
   width: 30rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 
   &::after {
     content: "";
@@ -55,6 +68,13 @@ const TooltipContent = styled.div<{ $isVisible: boolean }>`
     border-style: solid;
     border-color: var(--main) transparent transparent transparent;
   }
+
+  @media (max-width: 900px) {
+    width: 24rem;
+    font-size: 1.4rem;
+    padding: 1rem;
+    margin-bottom: 0.6rem;
+  }
 `;
 
 interface Props {
@@ -63,12 +83,52 @@ interface Props {
 
 const Tooltip = ({ text }: Props) => {
   const [isVisible, setIsVisible] = useState(false);
+  const tooltipRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        tooltipRef.current &&
+        !tooltipRef.current.contains(event.target as Node)
+      ) {
+        setIsVisible(false);
+      }
+    };
+
+    const handleScroll = () => {
+      if (isVisible) {
+        setIsVisible(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("scroll", handleScroll, true);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("scroll", handleScroll, true);
+    };
+  }, [isVisible]);
+
+  const handleToggle = () => {
+    setIsVisible(!isVisible);
+  };
 
   return (
-    <TooltipContainer>
+    <TooltipContainer ref={tooltipRef}>
       <TooltipIcon
         onMouseEnter={() => setIsVisible(true)}
         onMouseLeave={() => setIsVisible(false)}
+        onClick={handleToggle}
+        role="button"
+        aria-label="Show tooltip"
+        tabIndex={0}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            handleToggle();
+          }
+        }}
       >
         ?
       </TooltipIcon>

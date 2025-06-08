@@ -51,6 +51,21 @@ const RightSection = styled.div`
   display: flex;
   align-items: center;
   gap: 2rem;
+
+  @media (max-width: 900px) {
+    gap: 1rem;
+    flex-direction: column;
+  }
+`;
+
+const RightSectionItem = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  @media (max-width: 900px) {
+    gap: 1rem;
+  }
 `;
 
 interface Props {
@@ -75,8 +90,10 @@ const Header = ({ footer }: Props) => {
       <RightSection>
         {footer && <LanguageSwitcher />}
         <Socials />
-        <UserAccount />
-        <Premium />
+        <RightSectionItem>
+          <UserAccount />
+          <Premium />
+        </RightSectionItem>
       </RightSection>
     </StyledHeader>
   );

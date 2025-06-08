@@ -23,6 +23,11 @@ const PremiumIcon = styled.img`
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
+
+  @media (max-width: 900px) {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
 `;
 
 const ComparisonTable = styled.table`
@@ -30,6 +35,11 @@ const ComparisonTable = styled.table`
   border-collapse: collapse;
   margin: 2rem 0;
   font-size: 2.2rem;
+
+  @media (max-width: 900px) {
+    font-size: 1.6rem;
+    margin: 1.5rem 0;
+  }
 `;
 
 const TableHeader = styled.th<{ $isFirst?: boolean }>`
@@ -44,6 +54,11 @@ const TableHeader = styled.th<{ $isFirst?: boolean }>`
   &:first-child {
     text-align: left;
   }
+
+  @media (max-width: 900px) {
+    padding: 0.8rem;
+    font-size: 1.8rem;
+  }
 `;
 
 const TableCell = styled.td`
@@ -55,6 +70,11 @@ const TableCell = styled.td`
 
   &:first-child {
     text-align: left;
+  }
+
+  @media (max-width: 900px) {
+    padding: 0.8rem;
+    font-size: 1.6rem;
   }
 `;
 
@@ -74,6 +94,22 @@ const CommonCell = styled(TableCell)`
 const FeatureCell = styled(TableCell)`
   display: flex;
   align-items: center;
+  gap: 0.8rem;
+
+  @media (max-width: 900px) {
+    gap: 0.4rem;
+  }
+`;
+
+const ButtonWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 100%;
+
+  @media (max-width: 900px) {
+    gap: 0.8rem;
+  }
 `;
 
 interface Props {
@@ -182,51 +218,53 @@ const Premium = ({ showUpsell = false }: Props) => {
             </tr>
           </tbody>
         </ComparisonTable>
-        {!user ? (
-          <Button wide action={signInWithGoogle}>
-            {t("premium.signIn")}
-          </Button>
-        ) : !isPremium ? (
-          <>
+        <ButtonWrapper>
+          {!user ? (
+            <Button wide action={signInWithGoogle}>
+              {t("premium.signIn")}
+            </Button>
+          ) : !isPremium ? (
+            <>
+              <Button
+                wide
+                isLoading={isLoading}
+                action={async () => {
+                  setIsLoading(true);
+                  const session = await createCheckoutSession(payments, {
+                    price: MONTHLY_PRICE_ID,
+                  });
+                  window.location.assign(session.url);
+                  setIsLoading(false);
+                }}
+              >
+                {t("premium.getPremiumMonthly")}
+              </Button>
+              <Button
+                wide
+                isLoading={isLoading}
+                action={async () => {
+                  setIsLoading(true);
+                  const session = await createCheckoutSession(payments, {
+                    price: YEARLY_PRICE_ID,
+                  });
+                  window.location.assign(session.url);
+                  setIsLoading(false);
+                }}
+              >
+                {t("premium.getPremiumYearly")}
+              </Button>
+            </>
+          ) : (
             <Button
               wide
-              isLoading={isLoading}
-              action={async () => {
-                setIsLoading(true);
-                const session = await createCheckoutSession(payments, {
-                  price: MONTHLY_PRICE_ID,
-                });
-                window.location.assign(session.url);
-                setIsLoading(false);
+              action={() => {
+                window.open(MANAGE_SUBSCRIPTION_URL, "_blank")?.focus();
               }}
             >
-              {t("premium.getPremiumMonthly")}
+              {t("premium.manageSubscription")}
             </Button>
-            <Button
-              wide
-              isLoading={isLoading}
-              action={async () => {
-                setIsLoading(true);
-                const session = await createCheckoutSession(payments, {
-                  price: YEARLY_PRICE_ID,
-                });
-                window.location.assign(session.url);
-                setIsLoading(false);
-              }}
-            >
-              {t("premium.getPremiumYearly")}
-            </Button>
-          </>
-        ) : (
-          <Button
-            wide
-            action={() => {
-              window.open(MANAGE_SUBSCRIPTION_URL, "_blank")?.focus();
-            }}
-          >
-            {t("premium.manageSubscription")}
-          </Button>
-        )}
+          )}
+        </ButtonWrapper>
       </Popup>
     </>
   );
