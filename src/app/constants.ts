@@ -8,6 +8,7 @@ export const MONTHLY_PRICE_ID = "price_1RXU5FBIHa8JB5eJAkWt6cRp";
 export const YEARLY_PRICE_ID = "price_1RXgpJBIHa8JB5eJKys9UK8W";
 export const MANAGE_SUBSCRIPTION_URL =
   "https://billing.stripe.com/p/login/4gM9ASeDk2QcaKq2Y957W00";
+export const FREE_DECK_AMOUNT = 30;
 
 export const SOCIALS = [
   {
