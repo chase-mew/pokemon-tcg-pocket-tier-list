@@ -15,12 +15,12 @@ const ModalOverlay = styled.div`
   z-index: 1000;
 `;
 
-const ModalContent = styled.div`
+const ModalContent = styled.div<{ $width?: string }>`
   background: var(--bg);
   color: var(--text);
   padding: 3rem;
   border-radius: 12px;
-  max-width: 70rem;
+  max-width: ${(props) => props.$width || "70rem"};
   width: 100%;
   margin: 0 2rem;
   max-height: 90vh;
@@ -61,16 +61,17 @@ interface Props {
   header: string;
   close: () => void;
   children: React.ReactNode;
+  width?: string;
 }
 
-const Popup: React.FC<Props> = ({ isOpen, header, close, children }) => {
+const Popup: React.FC<Props> = ({ isOpen, header, close, children, width }) => {
   const { t } = useTranslation();
 
   if (!isOpen) return null;
 
   return (
     <ModalOverlay onClick={close}>
-      <ModalContent onClick={(e) => e.stopPropagation()}>
+      <ModalContent onClick={(e) => e.stopPropagation()} $width={width}>
         <CloseButton onClick={close}>×</CloseButton>
         <Title>{t(header)}</Title>
         {children}
