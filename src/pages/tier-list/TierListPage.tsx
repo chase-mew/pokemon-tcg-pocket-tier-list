@@ -5,6 +5,7 @@ import useFilters from "../../app/use-filters";
 import ArrowDown from "../../assets/arrow-down.svg";
 import { useTranslation } from "react-i18next";
 import Premium from "../../components/Premium";
+import useIsPremium from "../../app/use-is-premium";
 
 const StyledTierListPage = styled.div`
   width: 100%;
@@ -152,6 +153,7 @@ const LandingPage = () => {
   const decks = useDecks();
   const { energy, setEnergy, includeEx, setIncludeEx } = useFilters();
   const { t } = useTranslation();
+  const isPremium = useIsPremium();
 
   if (!decks) return <Loading>Loading...</Loading>;
 
@@ -189,29 +191,33 @@ const LandingPage = () => {
   return (
     <StyledTierListPage>
       <FilterContainer>
-        <Premium />
-        <EnergySelect
-          value={energy ?? ""}
-          onChange={(e) => {
-            const value = e.target.value;
-            setEnergy(value === "" ? null : value);
-          }}
-        >
-          <option value="">{t("energyDropdown.all")}</option>
-          {ENERGY_TYPES.map((type) => (
-            <option key={type} value={type}>
-              {t(`energyDropdown.${type}`)}
-            </option>
-          ))}
-        </EnergySelect>
-        <IncludeExContainer>
-          {t("filter.includeEx")}
-          <IncludeExCheckbox
-            type="checkbox"
-            checked={includeEx}
-            onChange={(e) => setIncludeEx(e.target.checked)}
-          />
-        </IncludeExContainer>
+        <Premium showUpsell />
+        {isPremium && (
+          <>
+            <EnergySelect
+              value={energy ?? ""}
+              onChange={(e) => {
+                const value = e.target.value;
+                setEnergy(value === "" ? null : value);
+              }}
+            >
+              <option value="">{t("energyDropdown.all")}</option>
+              {ENERGY_TYPES.map((type) => (
+                <option key={type} value={type}>
+                  {t(`energyDropdown.${type}`)}
+                </option>
+              ))}
+            </EnergySelect>
+            <IncludeExContainer>
+              {t("filter.includeEx")}
+              <IncludeExCheckbox
+                type="checkbox"
+                checked={includeEx}
+                onChange={(e) => setIncludeEx(e.target.checked)}
+              />
+            </IncludeExContainer>
+          </>
+        )}
       </FilterContainer>
 
       <DeckRow>
