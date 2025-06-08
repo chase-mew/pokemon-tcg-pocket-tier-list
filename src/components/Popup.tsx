@@ -29,6 +29,9 @@ const ModalContent = styled.div<{ $width?: string }>`
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   font-size: 1.25rem;
   line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 `;
 
 const CloseButton = styled.button`
