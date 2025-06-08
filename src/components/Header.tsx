@@ -4,10 +4,9 @@ import Logo from "./Logo";
 import Socials from "./Socials";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
-import premiumIcon from "../assets/premium.png";
-import useIsPremium from "../app/use-is-premium";
 import UserAccount from "./UserAccount";
 
+import Premium from "./Premium";
 const StyledHeader = styled.div<{ $footer?: boolean }>`
   width: 100%;
   display: flex;
@@ -54,12 +53,6 @@ const RightSection = styled.div`
   gap: 2rem;
 `;
 
-const PremiumIcon = styled.img`
-  width: 4rem;
-  height: 4rem;
-  border-radius: 50%;
-`;
-
 interface Props {
   footer?: boolean;
 }
@@ -67,7 +60,6 @@ interface Props {
 const Header = ({ footer }: Props) => {
   const location = useLocation();
   const { t } = useTranslation();
-  const isPremium = useIsPremium();
 
   return (
     <StyledHeader $footer={footer}>
@@ -84,7 +76,7 @@ const Header = ({ footer }: Props) => {
         {footer && <LanguageSwitcher />}
         <Socials />
         <UserAccount />
-        {isPremium && <PremiumIcon src={premiumIcon} alt="Premium" />}
+        <Premium />
       </RightSection>
     </StyledHeader>
   );
