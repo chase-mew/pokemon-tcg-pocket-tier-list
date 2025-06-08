@@ -1,40 +1,4 @@
 {
-  "infoModal": {
-    "title": "关于宝可梦卡牌游戏 Pocket 卡组强度排行",
-    "whatIsThis": {
-      "title": "这个网站是什么？",
-      "description": "这个网站基于<0>Limitless Tournaments</0>的比赛数据，展示宝可梦卡牌游戏 Pocket 当前最强的卡组。强度排行会定期更新以反映最新的环境。"
-    },
-    "howToUse": {
-      "title": "如何使用这个网站",
-      "features": {
-        "deckLists": {
-          "title": "查看卡组列表",
-          "description": "点击强度排行中的任意卡组即可查看其完整的卡牌列表。"
-        },
-        "missingCards": {
-          "title": "缺失卡牌功能",
-          "description": "在查看卡组列表时，您可以点击没有的卡牌。网站随后会显示您在没有这些卡牌的情况下可以制作的最佳卡组。"
-        },
-        "dynamicTierList": {
-          "title": "动态强度排行",
-          "description": "当您标记卡牌为缺失时，强度排行会根据您拥有的卡牌更新评分。"
-        }
-      }
-    },
-    "dataSources": {
-      "title": "数据来源",
-      "intro": "本项目使用两个主要数据来源：",
-      "sources": {
-        "tournament": "<0>Limitless Tournaments</0>的比赛数据，这是宝可梦卡牌游戏比赛的主要平台。",
-        "cards": "<0>pokemon-tcg-pocket-cards</0>的卡牌数据，这是一个提供全面卡牌信息的开源仓库。"
-      }
-    },
-    "openSource": {
-      "title": "开源项目",
-      "description": "本网站是开源的。您可以在<0>GitHub</0>上找到源代码。欢迎贡献！"
-    }
-  },
   "deckPage": {
     "matchups": "对战情况",
     "strongAgainst": "优势对局",

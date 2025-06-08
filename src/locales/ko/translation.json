@@ -1,40 +1,4 @@
 {
-  "infoModal": {
-    "title": "포켓몬 카드게임 포켓 덱 티어 리스트 소개",
-    "whatIsThis": {
-      "title": "이 웹사이트는 무엇인가요?",
-      "description": "이 웹사이트는 <0>Limitless Tournaments</0>의 토너먼트 데이터를 기반으로 포켓몬 카드게임 포켓의 현재 최고의 덱을 보여줍니다. 티어 리스트는 최신 메타를 반영하기 위해 정기적으로 업데이트됩니다."
-    },
-    "howToUse": {
-      "title": "이 웹사이트 사용 방법",
-      "features": {
-        "deckLists": {
-          "title": "덱 리스트 보기",
-          "description": "티어 리스트에서 원하는 덱을 클릭하면 전체 카드 리스트를 볼 수 있습니다."
-        },
-        "missingCards": {
-          "title": "보유하지 않은 카드 기능",
-          "description": "덱 리스트를 볼 때 보유하지 않은 카드를 클릭할 수 있습니다. 웹사이트는 그 카드들 없이 만들 수 있는 다음으로 좋은 덱을 보여줄 것입니다."
-        },
-        "dynamicTierList": {
-          "title": "동적 티어 리스트",
-          "description": "카드를 보유하지 않음으로 표시하면, 보유한 카드를 기반으로 새로운 평가를 반영하여 티어 리스트가 업데이트됩니다."
-        }
-      }
-    },
-    "dataSources": {
-      "title": "데이터 소스",
-      "intro": "이 프로젝트는 두 가지 주요 데이터 소스를 사용합니다:",
-      "sources": {
-        "tournament": "<0>Limitless Tournaments</0>의 토너먼트 데이터. 포켓몬 카드게임 토너먼트의 주요 플랫폼입니다.",
-        "cards": "<0>pokemon-tcg-pocket-cards</0>의 카드 데이터. 포괄적인 카드 정보를 제공하는 오픈소스 저장소입니다."
-      }
-    },
-    "openSource": {
-      "title": "오픈소스",
-      "description": "이 웹사이트는 오픈소스입니다. 소스 코드는 <0>GitHub</0>에서 찾을 수 있습니다. 기여를 환영합니다!"
-    }
-  },
   "deckPage": {
     "matchups": "매치업",
     "strongAgainst": "유리한 상대",

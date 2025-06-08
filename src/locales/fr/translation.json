@@ -1,40 +1,4 @@
 {
-  "infoModal": {
-    "title": "À propos de la Liste des Decks Pokémon TCG Pocket",
-    "whatIsThis": {
-      "title": "Qu'est-ce que ce site ?",
-      "description": "Ce site montre les meilleurs decks actuels pour le jeu Pokémon TCG Pocket basé sur les données de performance des tournois de <0>Limitless Tournaments</0>. La liste des tiers est mise à jour régulièrement pour refléter la dernière méta."
-    },
-    "howToUse": {
-      "title": "Comment utiliser ce site",
-      "features": {
-        "deckLists": {
-          "title": "Voir les Listes de Decks",
-          "description": "Cliquez sur n'importe quel deck dans la liste des tiers pour voir sa liste complète de cartes."
-        },
-        "missingCards": {
-          "title": "Fonction Cartes Manquantes",
-          "description": "En visualisant une liste de deck, vous pouvez cliquer sur les cartes que vous n'avez pas. Le site vous montrera alors le meilleur deck suivant que vous pouvez faire sans ces cartes."
-        },
-        "dynamicTierList": {
-          "title": "Liste des Tiers Dynamique",
-          "description": "Lorsque vous marquez des cartes comme manquantes, la liste des tiers se mettra à jour pour refléter les nouvelles évaluations basées sur les cartes dont vous disposez."
-        }
-      }
-    },
-    "dataSources": {
-      "title": "Sources de Données",
-      "intro": "Ce projet utilise deux sources de données principales :",
-      "sources": {
-        "tournament": "Données de tournois de <0>Limitless Tournaments</0>, une plateforme leader pour les tournois Pokémon TCG.",
-        "cards": "Données des cartes de <0>pokemon-tcg-pocket-cards</0>, un dépôt open-source qui fournit des informations complètes sur les cartes."
-      }
-    },
-    "openSource": {
-      "title": "Open Source",
-      "description": "Ce site est open source. Vous pouvez trouver le code source sur <0>GitHub</0>. Les contributions sont les bienvenues !"
-    }
-  },
   "deckPage": {
     "matchups": "Matchups",
     "strongAgainst": "Fort contre",
