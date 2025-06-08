@@ -4,9 +4,9 @@ import Logo from "./Logo";
 import Socials from "./Socials";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
-import { useAuth } from "../contexts/AuthContext";
 import premiumIcon from "../assets/premium.png";
 import useIsPremium from "../app/use-is-premium";
+import UserAccount from "./UserAccount";
 
 const StyledHeader = styled.div<{ $footer?: boolean }>`
   width: 100%;
@@ -54,17 +54,9 @@ const RightSection = styled.div`
   gap: 2rem;
 `;
 
-const UserInfo = styled.button`
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  font-size: 1.4rem;
-  cursor: pointer;
-`;
-
-const UserAvatar = styled.img`
-  width: 3.2rem;
-  height: 3.2rem;
+const PremiumIcon = styled.img`
+  width: 4rem;
+  height: 4rem;
   border-radius: 50%;
 `;
 
@@ -75,7 +67,6 @@ interface Props {
 const Header = ({ footer }: Props) => {
   const location = useLocation();
   const { t } = useTranslation();
-  const { user, signOut } = useAuth();
   const isPremium = useIsPremium();
 
   return (
@@ -92,15 +83,8 @@ const Header = ({ footer }: Props) => {
       <RightSection>
         {footer && <LanguageSwitcher />}
         <Socials />
-        {user && (
-          <UserInfo onClick={signOut}>
-            <UserAvatar
-              src={user.photoURL || undefined}
-              alt={user.displayName || "User"}
-            />
-          </UserInfo>
-        )}
-        {isPremium && <UserAvatar src={premiumIcon} alt="Premium" />}
+        <UserAccount />
+        {isPremium && <PremiumIcon src={premiumIcon} alt="Premium" />}
       </RightSection>
     </StyledHeader>
   );
