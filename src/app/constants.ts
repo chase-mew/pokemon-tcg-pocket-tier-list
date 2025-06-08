@@ -5,7 +5,7 @@ export const GITHUB_URL =
   "https://github.com/chase-manning/pokemon-tcg-pocket-tier-list";
 export const TWITTER_URL = "https://x.com/pocketdecks";
 export const MONTHLY_PRICE_ID = "price_1RXU5FBIHa8JB5eJAkWt6cRp";
-export const YEARLY_PRICE_ID = "price_1RXUYrBIHa8JB5eJ9XMAnFia";
+export const YEARLY_PRICE_ID = "price_1RXgpJBIHa8JB5eJKys9UK8W";
 export const MANAGE_SUBSCRIPTION_URL =
   "https://billing.stripe.com/p/login/4gM9ASeDk2QcaKq2Y957W00";
 
