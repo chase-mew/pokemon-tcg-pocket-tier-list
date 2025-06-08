@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import useMissing from "./use-missing";
 import useFilters from "./use-filters";
 import { useMemo } from "react";
+import useIsPremium from "./use-is-premium";
 
 const CARDS_URL =
   "https://raw.githubusercontent.com/chase-manning/pokemon-tcg-pocket-cards/refs/heads/main/v4.json";
@@ -35,6 +36,7 @@ interface PartialDeckType {
   }[];
   score: number;
   percentOfGames: number;
+  date: string;
 }
 
 export interface FullDeckType {
@@ -45,6 +47,7 @@ export interface FullDeckType {
   place: number;
   percentOfGames: number;
   matchups: MatchupType[];
+  date: Date;
 }
 
 interface BestDecksCardType {
@@ -76,6 +79,7 @@ const cardToId = (card: BestDecksCardType): string => {
 const useDecks = (): FullDeckType[] | null => {
   const { missing } = useMissing();
   const { energy, includeEx, deckAmount } = useFilters();
+  const isPremium = useIsPremium();
 
   const { data: cards } = useQuery({
     queryKey: ["cards"],
@@ -129,6 +133,15 @@ const useDecks = (): FullDeckType[] | null => {
     .map((name) => {
       const matchingDecks = decks
         .filter((deck: PartialDeckType) => deck.name === name)
+        .filter((deck: PartialDeckType) => {
+          if (isPremium) return true;
+          let now = new Date();
+          const date = new Date(deck.date);
+          const day = date.getDay();
+          const daysAfterMonday = (day + 6) % 7;
+          now.setDate(now.getDate() - daysAfterMonday);
+          return date <= now;
+        })
         .filter((deck: PartialDeckType) => {
           for (const missingCard of uniqueMissing) {
             const matchingCards = deck.cards.reduce(
@@ -207,6 +220,7 @@ const useDecks = (): FullDeckType[] | null => {
         score: oldDeck.score,
         place: index + 1,
         percentOfGames: oldDeck.percentOfGames,
+        date: new Date(oldDeck.date),
         matchups,
       };
       return deck;
