@@ -77,6 +77,7 @@ for (const deckName of uniqueDeckNames) {
       cards: deck.cards,
       score: calculateDeckScore(deck, scoredCards, matchingGames, allGames),
       percentOfGames,
+      date: deck.date,
       id,
     };
     bestDecks.push(formattedDeck);
