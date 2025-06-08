@@ -6,6 +6,10 @@
     "getPremium": "Get Premium",
     "manageSubscription": "Manage Subscription"
   },
+  "userAccount": {
+    "title": "User Account",
+    "signOut": "Sign out"
+  },
   "deckPage": {
     "matchups": "Matchups",
     "strongAgainst": "Strong Against",
