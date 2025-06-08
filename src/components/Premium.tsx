@@ -7,8 +7,24 @@ import { useState } from "react";
 import Popup from "./Popup";
 import { useAuth } from "../contexts/AuthContext";
 import { useTranslation } from "react-i18next";
+import styled from "styled-components";
+import premiumIcon from "../assets/premium.png";
 
-const Premium = () => {
+const ButtonContainer = styled.button`
+  cursor: pointer;
+`;
+
+const PremiumIcon = styled.img`
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+`;
+
+interface Props {
+  showUpsell?: boolean;
+}
+
+const Premium = ({ showUpsell = false }: Props) => {
   const { t } = useTranslation();
   const isPremium = useIsPremium();
   const { user, signInWithGoogle } = useAuth();
@@ -17,13 +33,26 @@ const Premium = () => {
 
   return (
     <>
-      <Button
-        action={async () => {
-          setIsOpen(true);
-        }}
-      >
-        Get Premium
-      </Button>
+      {isPremium && (
+        <ButtonContainer
+          onClick={async () => {
+            setIsOpen(true);
+          }}
+        >
+          <PremiumIcon src={premiumIcon} alt="Premium" />
+        </ButtonContainer>
+      )}
+      {!isPremium && showUpsell && (
+        <Button
+          wide
+          action={async () => {
+            setIsOpen(true);
+          }}
+          icon={premiumIcon}
+        >
+          {t("premium.getPremium")}
+        </Button>
+      )}
       <Popup
         isOpen={isOpen}
         header="premium.title"
