@@ -1,7 +1,6 @@
 import Button from "./Button";
 import { createCheckoutSession } from "@invertase/firestore-stripe-payments";
 import {
-  FREE_DECK_AMOUNT,
   MANAGE_SUBSCRIPTION_URL,
   MONTHLY_PRICE_ID,
   YEARLY_PRICE_ID,

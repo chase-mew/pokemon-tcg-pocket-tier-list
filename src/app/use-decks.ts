@@ -1,5 +1,4 @@
 import { useQuery } from "@tanstack/react-query";
-import { DEBUG, MIN_PERCENT_TO_QUALIFY } from "./config";
 import useMissing from "./use-missing";
 import useFilters from "./use-filters";
 import { useMemo } from "react";
