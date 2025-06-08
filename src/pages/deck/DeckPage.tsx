@@ -6,6 +6,7 @@ import useMissing from "../../app/use-missing";
 import DeckCard from "../../components/DeckCard";
 import { MIN_MATCHUP_GAMES, WINRATE_THRESHOLD } from "../../app/config";
 import { useEffect, useState } from "react";
+import useIsPremium from "../../app/use-is-premium";
 
 const StyledDeckPage = styled.div`
   width: 100%;
@@ -145,6 +146,7 @@ const Link = styled.button`
 `;
 
 const Matchups = styled.div`
+  position: relative;
   display: flex;
   width: 100%;
   gap: 2.4rem;
@@ -232,6 +234,7 @@ const DeckPage = () => {
   const { addMissing } = useMissing();
   const { t } = useTranslation();
   const [bestScore, setBestScore] = useState<number | null>(null);
+  const isPremium = useIsPremium();
 
   useEffect(() => {
     if (deckId) return;
@@ -306,7 +309,7 @@ const DeckPage = () => {
           ))}
         </CardList>
       </Section>
-      {!isDeckFinderMode && (
+      {!isDeckFinderMode && isPremium && (
         <Section>
           <Matchups>
             <MatchupSection>
