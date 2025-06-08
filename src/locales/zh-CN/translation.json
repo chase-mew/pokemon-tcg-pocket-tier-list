@@ -66,5 +66,59 @@
       "title": "开源项目",
       "description": "本网站是开源的，您可以在<0>GitHub</0>上找到源代码"
     }
+  },
+  "premium": {
+    "title": "Top Pocket Decks Premium",
+    "description": "获取高级会员以解锁所有功能并支持项目发展。",
+    "signIn": "登录以获取高级会员",
+    "getPremium": "获取高级会员",
+    "getPremiumMonthly": "高级会员 $1/月",
+    "getPremiumYearly": "高级会员 $6/年（50%优惠！）",
+    "manageSubscription": "管理订阅",
+    "features": {
+      "title": "功能",
+      "free": "免费",
+      "premium": "高级会员",
+      "bestDeckFinder": {
+        "title": "最佳卡组查找器",
+        "description": "找到您能用收藏卡牌组建的最强卡组",
+        "free": "✅",
+        "premium": "✅"
+      },
+      "exclude": {
+        "title": "排除未拥有的卡牌",
+        "description": "过滤掉您没有的卡牌，实时更新等级列表以显示您拥有的卡牌",
+        "free": "✅",
+        "premium": "✅"
+      },
+      "matchups": {
+        "title": "卡组优势/劣势",
+        "description": "查看每个卡组对哪些卡组有优势或劣势，包括胜率",
+        "free": "🚫",
+        "premium": "✅"
+      },
+      "filters": {
+        "title": "卡组筛选",
+        "description": "按能量类型或无EX卡牌筛选卡组，有助于击败单人战斗",
+        "free": "🚫",
+        "premium": "✅"
+      },
+      "updated": {
+        "title": "等级列表更新",
+        "description": "等级列表更新新数据的频率。更快的更新帮助您领先于环境。",
+        "free": "每周",
+        "premium": "每小时"
+      },
+      "decks": {
+        "title": "等级列表卡组数量",
+        "description": "等级列表中显示的卡组数量。更多卡组意味着更多选择。发现尚未流行的强力卡组。",
+        "free": "30",
+        "premium": "100"
+      }
+    }
+  },
+  "userAccount": {
+    "title": "用户账户",
+    "signOut": "退出登录"
   }
 }

@@ -66,5 +66,59 @@
       "title": "オープンソース",
       "description": "このウェブサイトはオープンソースです。ソースコードは<0>GitHub</0>で見つけることができます"
     }
+  },
+  "premium": {
+    "title": "Top Pocket Decks Premium",
+    "description": "すべての機能をアンロックし、プロジェクトをサポートするためにプレミアムを取得してください。",
+    "signIn": "プレミアムを取得するにはサインインしてください",
+    "getPremium": "プレミアムを取得",
+    "getPremiumMonthly": "プレミアムを月額$1で取得",
+    "getPremiumYearly": "プレミアムを年間$6で取得（50%オフ！）",
+    "manageSubscription": "サブスクリプション管理",
+    "features": {
+      "title": "機能",
+      "free": "無料",
+      "premium": "プレミアム",
+      "bestDeckFinder": {
+        "title": "ベストデッキファインダー",
+        "description": "あなたのカードで作れる最強のデッキを見つけましょう",
+        "free": "✅",
+        "premium": "✅"
+      },
+      "exclude": {
+        "title": "所持していないカードを除外",
+        "description": "所持していないカードをフィルタリングして、ティアリストを所持カードに基づいてリアルタイムで更新",
+        "free": "✅",
+        "premium": "✅"
+      },
+      "matchups": {
+        "title": "デッキの強み/弱み",
+        "description": "各デッキについて、どのデッキに対して強く、どのデッキに対して弱いかを勝率とともに確認",
+        "free": "🚫",
+        "premium": "✅"
+      },
+      "filters": {
+        "title": "デッキフィルター",
+        "description": "エネルギータイプやEXカードなしでデッキをフィルタリングし、ソロバトル攻略に役立ちます",
+        "free": "🚫",
+        "premium": "✅"
+      },
+      "updated": {
+        "title": "ティアリスト更新",
+        "description": "ティアリストが新しいデータで更新される頻度。より速い更新でメタに先んじることができます。",
+        "free": "週間",
+        "premium": "時間単位"
+      },
+      "decks": {
+        "title": "ティアリストのデッキ数",
+        "description": "ティアリストに表示されるデッキの数。より多くのデッキはより多くの選択肢を意味します。まだ人気になっていない強力なデッキを発見しましょう。",
+        "free": "30",
+        "premium": "100"
+      }
+    }
+  },
+  "userAccount": {
+    "title": "ユーザーアカウント",
+    "signOut": "サインアウト"
   }
 }

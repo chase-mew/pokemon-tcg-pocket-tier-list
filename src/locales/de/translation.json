@@ -66,5 +66,59 @@
       "title": "Open Source",
       "description": "Diese Website ist Open Source, du findest den Quellcode auf <0>GitHub</0>"
     }
+  },
+  "premium": {
+    "title": "Top Pocket Decks Premium",
+    "description": "Holen Sie sich Premium, um alle Funktionen freizuschalten und das Projekt zu unterstützen.",
+    "signIn": "Anmelden für Premium",
+    "getPremium": "Premium erhalten",
+    "getPremiumMonthly": "Premium für 1€/Monat",
+    "getPremiumYearly": "Premium für 6€/Jahr (50% Rabatt!)",
+    "manageSubscription": "Abonnement verwalten",
+    "features": {
+      "title": "Funktionen",
+      "free": "Kostenlos",
+      "premium": "Premium",
+      "bestDeckFinder": {
+        "title": "Bester Deck-Finder",
+        "description": "Finden Sie das stärkste Deck, das Sie mit Ihren Karten bauen können",
+        "free": "✅",
+        "premium": "✅"
+      },
+      "exclude": {
+        "title": "Karten ausschließen, die Sie nicht haben",
+        "description": "Filtern Sie Karten aus, die Sie nicht besitzen, um die Tier-Liste live mit Ihren verfügbaren Karten zu aktualisieren",
+        "free": "✅",
+        "premium": "✅"
+      },
+      "matchups": {
+        "title": "Deck-Stärken/Schwächen",
+        "description": "Sehen Sie für jedes Deck, gegen welche Decks es stark oder schwach ist, einschließlich Gewinnraten",
+        "free": "🚫",
+        "premium": "✅"
+      },
+      "filters": {
+        "title": "Deck-Filter",
+        "description": "Filtern Sie Decks nach Energie oder ohne Ex-Karten, nützlich für Solo-Kämpfe",
+        "free": "🚫",
+        "premium": "✅"
+      },
+      "updated": {
+        "title": "Tier-Liste aktualisiert",
+        "description": "Wie oft die Tier-Liste mit neuen Daten aktualisiert wird. Schnellere Updates helfen Ihnen, dem Meta voraus zu sein.",
+        "free": "Wöchentlich",
+        "premium": "Stündlich"
+      },
+      "decks": {
+        "title": "Decks in der Tier-Liste",
+        "description": "Anzahl der in der Tier-Liste angezeigten Decks. Mehr Decks bedeutet mehr Auswahlmöglichkeiten. Entdecken Sie starke Decks, die noch nicht populär geworden sind.",
+        "free": "30",
+        "premium": "100"
+      }
+    }
+  },
+  "userAccount": {
+    "title": "Benutzerkonto",
+    "signOut": "Abmelden"
   }
 }

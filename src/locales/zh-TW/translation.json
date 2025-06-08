@@ -66,5 +66,59 @@
       "title": "開源專案",
       "description": "本網站是開源的，您可以在<0>GitHub</0>上找到源代碼"
     }
+  },
+  "premium": {
+    "title": "Top Pocket Decks Premium",
+    "description": "獲取高級會員以解鎖所有功能並支持項目發展。",
+    "signIn": "登入以獲取高級會員",
+    "getPremium": "獲取高級會員",
+    "getPremiumMonthly": "高級會員 $1/月",
+    "getPremiumYearly": "高級會員 $6/年（50%優惠！）",
+    "manageSubscription": "管理訂閱",
+    "features": {
+      "title": "功能",
+      "free": "免費",
+      "premium": "高級會員",
+      "bestDeckFinder": {
+        "title": "最佳牌組查找器",
+        "description": "找到您能用收藏卡牌組建的最強牌組",
+        "free": "✅",
+        "premium": "✅"
+      },
+      "exclude": {
+        "title": "排除未擁有的卡牌",
+        "description": "過濾掉您沒有的卡牌，實時更新等級列表以顯示您擁有的卡牌",
+        "free": "✅",
+        "premium": "✅"
+      },
+      "matchups": {
+        "title": "牌組優勢/劣勢",
+        "description": "查看每個牌組對哪些牌組有優勢或劣勢，包括勝率",
+        "free": "🚫",
+        "premium": "✅"
+      },
+      "filters": {
+        "title": "牌組篩選",
+        "description": "按能量類型或無EX卡牌篩選牌組，有助於擊敗單人戰鬥",
+        "free": "🚫",
+        "premium": "✅"
+      },
+      "updated": {
+        "title": "等級列表更新",
+        "description": "等級列表更新新數據的頻率。更快的更新幫助您領先於環境。",
+        "free": "每週",
+        "premium": "每小時"
+      },
+      "decks": {
+        "title": "等級列表牌組數量",
+        "description": "等級列表中顯示的牌組數量。更多牌組意味著更多選擇。發現尚未流行的強力牌組。",
+        "free": "30",
+        "premium": "100"
+      }
+    }
+  },
+  "userAccount": {
+    "title": "用戶帳戶",
+    "signOut": "登出"
   }
 }

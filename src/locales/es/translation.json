@@ -66,5 +66,59 @@
       "title": "Código Abierto",
       "description": "Este sitio web es de código abierto, puedes encontrar el código fuente en <0>GitHub</0>"
     }
+  },
+  "premium": {
+    "title": "Top Pocket Decks Premium",
+    "description": "Obtén Premium para desbloquear todas las funciones y apoyar el proyecto.",
+    "signIn": "Inicia sesión para obtener Premium",
+    "getPremium": "Obtener Premium",
+    "getPremiumMonthly": "Obtener Premium $1/mes",
+    "getPremiumYearly": "Obtener Premium $6/año (¡50% de descuento!)",
+    "manageSubscription": "Gestionar Suscripción",
+    "features": {
+      "title": "Características",
+      "free": "Gratis",
+      "premium": "Premium",
+      "bestDeckFinder": {
+        "title": "Buscador de Mejores Mazos",
+        "description": "Encuentra el mazo más fuerte que puedes construir con tus cartas",
+        "free": "✅",
+        "premium": "✅"
+      },
+      "exclude": {
+        "title": "Excluir Cartas que No Tienes",
+        "description": "Filtra las cartas que no posees para actualizar la lista de niveles en vivo con lo que tienes",
+        "free": "✅",
+        "premium": "✅"
+      },
+      "matchups": {
+        "title": "Fortalezas/Debilidades de Mazos",
+        "description": "Para cada mazo, ve contra cuáles es fuerte o débil, incluyendo tasas de victoria",
+        "free": "🚫",
+        "premium": "✅"
+      },
+      "filters": {
+        "title": "Filtros de Mazos",
+        "description": "Filtra mazos por Energía o sin cartas Ex, útil para ayudarte a ganar algunos Combates en Solitario",
+        "free": "🚫",
+        "premium": "✅"
+      },
+      "updated": {
+        "title": "Lista de Niveles Actualizada",
+        "description": "Con qué frecuencia se actualiza la lista de niveles con nuevos datos. Actualizaciones más rápidas te ayudan a mantenerte al día con el meta.",
+        "free": "Semanalmente",
+        "premium": "Cada hora"
+      },
+      "decks": {
+        "title": "Mazos en la Lista de Niveles",
+        "description": "Número de mazos mostrados en la lista de niveles. Más mazos significa más opciones para elegir. Descubre mazos fuertes que aún no se han vuelto populares.",
+        "free": "30",
+        "premium": "100"
+      }
+    }
+  },
+  "userAccount": {
+    "title": "Cuenta de Usuario",
+    "signOut": "Cerrar sesión"
   }
 }

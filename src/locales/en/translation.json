@@ -6,7 +6,48 @@
     "getPremium": "Get Premium",
     "getPremiumMonthly": "Get Premium $1/month",
     "getPremiumYearly": "Get Premium $6/year (50% off!)",
-    "manageSubscription": "Manage Subscription"
+    "manageSubscription": "Manage Subscription",
+    "features": {
+      "title": "Features",
+      "free": "Free",
+      "premium": "Premium",
+      "bestDeckFinder": {
+        "title": "Best Deck Finder",
+        "description": "Find the strongest deck you can build with your cards",
+        "free": "✅",
+        "premium": "✅"
+      },
+      "exclude": {
+        "title": "Exclude Cards You Don't Have",
+        "description": "Filter out cards you don't own to live update the tier list with what you have",
+        "free": "✅",
+        "premium": "✅"
+      },
+      "matchups": {
+        "title": "Deck Strengths/Weaknesses",
+        "description": "For each deck, see which decks it is strong against and weak against, including winrates",
+        "free": "🚫",
+        "premium": "✅"
+      },
+      "filters": {
+        "title": "Deck Filters",
+        "description": "Filter decks by Energy or no Ex cards, useful for helping beat some of those Solo Battles",
+        "free": "🚫",
+        "premium": "✅"
+      },
+      "updated": {
+        "title": "Tier List Updated",
+        "description": "How often the tier list is updated with new data. Faster updates help you stay ahead of the meta.",
+        "free": "Weekly",
+        "premium": "Hourly"
+      },
+      "decks": {
+        "title": "Decks on Tier List",
+        "description": "Number of decks shown in the tier list. More decks means more options for you to choose from. Discover strong decks that haven't yet become popular.",
+        "free": "30",
+        "premium": "100"
+      }
+    }
   },
   "userAccount": {
     "title": "User Account",

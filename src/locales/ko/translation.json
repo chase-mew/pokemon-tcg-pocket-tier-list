@@ -66,5 +66,59 @@
       "title": "오픈소스",
       "description": "이 웹사이트는 오픈소스입니다. 소스 코드는 <0>GitHub</0>에서 찾을 수 있습니다"
     }
+  },
+  "premium": {
+    "title": "Top Pocket Decks Premium",
+    "description": "모든 기능을 잠금 해제하고 프로젝트를 지원하려면 프리미엄을 구독하세요.",
+    "signIn": "프리미엄을 구독하려면 로그인하세요",
+    "getPremium": "프리미엄 구독",
+    "getPremiumMonthly": "프리미엄 월 $1",
+    "getPremiumYearly": "프리미엄 연 $6 (50% 할인!)",
+    "manageSubscription": "구독 관리",
+    "features": {
+      "title": "기능",
+      "free": "무료",
+      "premium": "프리미엄",
+      "bestDeckFinder": {
+        "title": "최고의 덱 찾기",
+        "description": "보유한 카드로 만들 수 있는 가장 강력한 덱을 찾으세요",
+        "free": "✅",
+        "premium": "✅"
+      },
+      "exclude": {
+        "title": "보유하지 않은 카드 제외",
+        "description": "보유하지 않은 카드를 필터링하여 보유한 카드에 따라 티어 리스트를 실시간으로 업데이트",
+        "free": "✅",
+        "premium": "✅"
+      },
+      "matchups": {
+        "title": "덱 강점/약점",
+        "description": "각 덱에 대해 어떤 덱에 강하고 약한지, 승률을 포함하여 확인",
+        "free": "🚫",
+        "premium": "✅"
+      },
+      "filters": {
+        "title": "덱 필터",
+        "description": "에너지 타입이나 EX 카드 없이 덱을 필터링하여 솔로 배틀 공략에 도움",
+        "free": "🚫",
+        "premium": "✅"
+      },
+      "updated": {
+        "title": "티어 리스트 업데이트",
+        "description": "티어 리스트가 새로운 데이터로 업데이트되는 빈도. 더 빠른 업데이트로 메타를 앞서나갈 수 있습니다.",
+        "free": "주간",
+        "premium": "시간별"
+      },
+      "decks": {
+        "title": "티어 리스트의 덱 수",
+        "description": "티어 리스트에 표시되는 덱의 수. 더 많은 덱은 더 많은 선택지를 의미합니다. 아직 인기화되지 않은 강력한 덱을 발견하세요.",
+        "free": "30",
+        "premium": "100"
+      }
+    }
+  },
+  "userAccount": {
+    "title": "사용자 계정",
+    "signOut": "로그아웃"
   }
 }

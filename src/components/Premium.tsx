@@ -121,59 +121,65 @@ const Premium = ({ showUpsell = false }: Props) => {
         <ComparisonTable>
           <thead>
             <tr>
-              <TableHeader $isFirst>Feature</TableHeader>
-              <TableHeader>Free</TableHeader>
-              <TableHeader>Premium</TableHeader>
+              <TableHeader $isFirst>{t("premium.features.title")}</TableHeader>
+              <TableHeader>{t("premium.features.free")}</TableHeader>
+              <TableHeader>{t("premium.features.premium")}</TableHeader>
             </tr>
           </thead>
           <tbody>
             <tr>
               <FeatureCell>
-                Best Deck Finder
-                <Tooltip text="Find the strongest deck you can build with your cards" />
+                {t("premium.features.bestDeckFinder.title")}
+                <Tooltip
+                  text={t("premium.features.bestDeckFinder.description")}
+                />
               </FeatureCell>
-              <CommonCell>✅</CommonCell>
-              <CommonCell>✅</CommonCell>
+              <CommonCell>
+                {t("premium.features.bestDeckFinder.free")}
+              </CommonCell>
+              <CommonCell>
+                {t("premium.features.bestDeckFinder.premium")}
+              </CommonCell>
             </tr>
             <tr>
               <FeatureCell>
-                Exclude Cards You Don't Have
-                <Tooltip text="Filter out cards you don't own to live update the tier list with what you have" />
+                {t("premium.features.exclude.title")}
+                <Tooltip text={t("premium.features.exclude.description")} />
               </FeatureCell>
-              <CommonCell>✅</CommonCell>
-              <CommonCell>✅</CommonCell>
+              <CommonCell>{t("premium.features.exclude.free")}</CommonCell>
+              <CommonCell>{t("premium.features.exclude.premium")}</CommonCell>
             </tr>
             <tr>
               <FeatureCell>
-                Deck Strengths/Weaknesses
-                <Tooltip text="For each deck, see which decks it is strong against and weak against, including winrates" />
+                {t("premium.features.matchups.title")}
+                <Tooltip text={t("premium.features.matchups.description")} />
               </FeatureCell>
-              <FreeCell>🚫</FreeCell>
-              <CommonCell>✅</CommonCell>
+              <FreeCell>{t("premium.features.matchups.free")}</FreeCell>
+              <CommonCell>{t("premium.features.matchups.premium")}</CommonCell>
             </tr>
             <tr>
               <TableCell>
-                Deck Filters
-                <Tooltip text="Filter decks by Energy or no Ex cards, useful for helping beat some of those Solo Battles" />
+                {t("premium.features.filters.title")}
+                <Tooltip text={t("premium.features.filters.description")} />
               </TableCell>
-              <FreeCell>🚫</FreeCell>
-              <PremiumCell>✅</PremiumCell>
+              <FreeCell>{t("premium.features.filters.free")}</FreeCell>
+              <PremiumCell>{t("premium.features.filters.premium")}</PremiumCell>
             </tr>
             <tr>
               <FeatureCell>
-                Tier List Updated
-                <Tooltip text="How often the tier list is updated with new data. Faster updates help you stay ahead of the meta." />
+                {t("premium.features.updated.title")}
+                <Tooltip text={t("premium.features.updated.description")} />
               </FeatureCell>
-              <FreeCell>Weekly</FreeCell>
-              <PremiumCell>Hourly</PremiumCell>
+              <FreeCell>{t("premium.features.updated.free")}</FreeCell>
+              <PremiumCell>{t("premium.features.updated.premium")}</PremiumCell>
             </tr>
             <tr>
               <FeatureCell>
-                Decks on Tier List
-                <Tooltip text="Number of decks shown in the tier list. More decks means more options for you to choose from." />
+                {t("premium.features.decks.title")}
+                <Tooltip text={t("premium.features.decks.description")} />
               </FeatureCell>
-              <FreeCell>{FREE_DECK_AMOUNT}</FreeCell>
-              <PremiumCell>Up to 100</PremiumCell>
+              <FreeCell>{t("premium.features.decks.free")}</FreeCell>
+              <PremiumCell>{t("premium.features.decks.premium")}</PremiumCell>
             </tr>
           </tbody>
         </ComparisonTable>

@@ -66,5 +66,59 @@
       "title": "Open Source",
       "description": "Ce site est open source, vous pouvez trouver le code source sur <0>GitHub</0>"
     }
+  },
+  "premium": {
+    "title": "Top Pocket Decks Premium",
+    "description": "Obtenez Premium pour débloquer toutes les fonctionnalités et soutenir le projet.",
+    "signIn": "Connectez-vous pour obtenir Premium",
+    "getPremium": "Obtenir Premium",
+    "getPremiumMonthly": "Obtenir Premium 1€/mois",
+    "getPremiumYearly": "Obtenir Premium 6€/an (50% de réduction !)",
+    "manageSubscription": "Gérer l'Abonnement",
+    "features": {
+      "title": "Fonctionnalités",
+      "free": "Gratuit",
+      "premium": "Premium",
+      "bestDeckFinder": {
+        "title": "Trouveur de Meilleur Deck",
+        "description": "Trouvez le deck le plus puissant que vous pouvez construire avec vos cartes",
+        "free": "✅",
+        "premium": "✅"
+      },
+      "exclude": {
+        "title": "Exclure les Cartes que Vous N'Avez Pas",
+        "description": "Filtrez les cartes que vous ne possédez pas pour mettre à jour la liste des niveaux en direct avec ce que vous avez",
+        "free": "✅",
+        "premium": "✅"
+      },
+      "matchups": {
+        "title": "Forces/Faiblesses des Decks",
+        "description": "Pour chaque deck, voyez contre quels decks il est fort ou faible, y compris les taux de victoire",
+        "free": "🚫",
+        "premium": "✅"
+      },
+      "filters": {
+        "title": "Filtres de Decks",
+        "description": "Filtrez les decks par Énergie ou sans cartes Ex, utile pour vous aider à gagner certains Combats en Solo",
+        "free": "🚫",
+        "premium": "✅"
+      },
+      "updated": {
+        "title": "Liste des Niveaux Mise à Jour",
+        "description": "À quelle fréquence la liste des niveaux est mise à jour avec de nouvelles données. Des mises à jour plus rapides vous aident à rester à jour avec la méta.",
+        "free": "Hebdomadaire",
+        "premium": "Horaire"
+      },
+      "decks": {
+        "title": "Decks dans la Liste des Niveaux",
+        "description": "Nombre de decks affichés dans la liste des niveaux. Plus de decks signifie plus d'options à choisir. Découvrez des decks puissants qui ne sont pas encore devenus populaires.",
+        "free": "30",
+        "premium": "100"
+      }
+    }
+  },
+  "userAccount": {
+    "title": "Compte Utilisateur",
+    "signOut": "Se déconnecter"
   }
 }
