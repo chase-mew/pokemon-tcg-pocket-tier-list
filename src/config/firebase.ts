@@ -1,3 +1,4 @@
+import { getStripePayments } from "@invertase/firestore-stripe-payments";
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 
@@ -13,6 +14,11 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+export const payments = getStripePayments(app, {
+  productsCollection: "products",
+  customersCollection: "customers",
+});
+
 export const auth = getAuth(app);
 export const googleProvider = new GoogleAuthProvider();
 
