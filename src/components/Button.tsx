@@ -30,7 +30,18 @@ const Spinner = styled.div`
   animation: ${spinAnimation} 1s linear infinite;
 `;
 
+const Icon = styled.img`
+  width: 3.2rem;
+  height: 3.2rem;
+  object-fit: contain;
+  margin-right: -0.4rem;
+`;
+
 const StyledButton = styled.button<{ $isLoading: boolean; $wide: boolean }>`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
   height: 5.4rem;
   padding: 0 3.2rem;
   border-radius: 0.8rem;
@@ -71,6 +82,7 @@ interface Props {
   children: React.ReactNode;
   isLoading?: boolean;
   wide?: boolean;
+  icon?: string;
 }
 
 const Button = ({
@@ -78,6 +90,7 @@ const Button = ({
   children,
   isLoading = false,
   wide = false,
+  icon,
 }: Props) => {
   return (
     <StyledButton
@@ -86,7 +99,12 @@ const Button = ({
       $isLoading={isLoading}
       $wide={wide}
     >
-      {!isLoading && children}
+      {!isLoading && (
+        <>
+          {children}
+          {icon && <Icon src={icon} alt="" />}
+        </>
+      )}
       {isLoading && <Spinner />}
     </StyledButton>
   );
