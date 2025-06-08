@@ -20,7 +20,8 @@
     "Colorless": "노말"
   },
   "filter": {
-    "includeEx": "EX 카드 포함하기"
+    "includeEx": "EX 카드 포함",
+    "deckAmount": "덱 수"
   },
   "bestDeckFinder": {
     "title": "최고의 덱 찾기",

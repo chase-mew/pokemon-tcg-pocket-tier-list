@@ -76,7 +76,7 @@ const cardToId = (card: BestDecksCardType): string => {
 
 const useDecks = (): FullDeckType[] | null => {
   const { missing } = useMissing();
-  const { energy, includeEx } = useFilters();
+  const { energy, includeEx, deckAmount } = useFilters();
 
   const { data: cards } = useQuery({
     queryKey: ["cards"],
@@ -183,15 +183,9 @@ const useDecks = (): FullDeckType[] | null => {
       return bestDeck;
     })
     .filter((deck) => deck)
-    .filter((deck) => {
-      if (energy !== null) return true;
-      let percentToQualify = MIN_PERCENT_TO_QUALIFY;
-      if (!includeEx) {
-        percentToQualify /= 6;
-      }
-      const isAboveMin = deck.percentOfGames > percentToQualify;
-      return DEBUG || isAboveMin;
-    })
+    .sort((a, b) => b.percentOfGames - a.percentOfGames)
+    .slice(0, deckAmount)
+    .sort((a, b) => b.score - a.score)
     .map((oldDeck, index) => {
       const deckCards = [];
       for (const oldCard of oldDeck.cards) {

@@ -1,10 +1,13 @@
 import { createContext, useState } from "react";
+import { FREE_DECK_AMOUNT } from "../app/constants";
 
 interface FilterContextType {
   energy: string | null;
   setEnergy: (energy: string | null) => void;
   includeEx: boolean;
   setIncludeEx: (include: boolean) => void;
+  deckAmount: number;
+  setDeckAmount: (deckAmount: number) => void;
 }
 
 export const FilterContext = createContext<FilterContextType>({
@@ -12,6 +15,8 @@ export const FilterContext = createContext<FilterContextType>({
   setEnergy: () => {},
   includeEx: true,
   setIncludeEx: () => {},
+  deckAmount: FREE_DECK_AMOUNT,
+  setDeckAmount: () => {},
 });
 
 interface Props {
@@ -21,6 +26,7 @@ interface Props {
 const FilterContextProvider = ({ children }: Props) => {
   const [energy, setEnergy] = useState<string | null>(null);
   const [includeEx, setIncludeEx] = useState<boolean>(true);
+  const [deckAmount, setDeckAmount] = useState<number>(FREE_DECK_AMOUNT);
 
   return (
     <FilterContext.Provider
@@ -32,6 +38,10 @@ const FilterContextProvider = ({ children }: Props) => {
         includeEx,
         setIncludeEx: (include) => {
           setIncludeEx(include);
+        },
+        deckAmount,
+        setDeckAmount: (deckAmount) => {
+          setDeckAmount(deckAmount);
         },
       }}
     >

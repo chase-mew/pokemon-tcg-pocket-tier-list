@@ -20,7 +20,8 @@
     "Colorless": "Incolora"
   },
   "filter": {
-    "includeEx": "Incluir cartas EX"
+    "includeEx": "Incluir cartas EX",
+    "deckAmount": "Número de Mazos"
   },
   "bestDeckFinder": {
     "title": "Encuentra Tu Mejor Mazo",

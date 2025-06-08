@@ -20,7 +20,8 @@
     "Colorless": "ノーマル"
   },
   "filter": {
-    "includeEx": "EXカードを含める"
+    "includeEx": "EXカードを含める",
+    "deckAmount": "デッキ数"
   },
   "bestDeckFinder": {
     "title": "最適なデッキを見つけよう",

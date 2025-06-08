@@ -20,7 +20,8 @@
     "Colorless": "Farblos"
   },
   "filter": {
-    "includeEx": "EX-Karten einbeziehen"
+    "includeEx": "EX-Karten einbeziehen",
+    "deckAmount": "Anzahl der Decks"
   },
   "bestDeckFinder": {
     "title": "Finde Dein Bestes Deck",

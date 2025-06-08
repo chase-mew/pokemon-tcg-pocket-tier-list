@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import { CardType, FullDeckType } from "../app/use-decks";
-import { DEBUG, MIN_PERCENT_TO_QUALIFY } from "../app/config";
+import { DEBUG } from "../app/config";
 
 const Container = styled.div`
   position: relative;
@@ -80,8 +80,6 @@ const DeckCard = ({ deck }: Props) => {
     return exactCard || mainCard || deck.cards[0];
   });
 
-  const isAboveMin = deck.percentOfGames > MIN_PERCENT_TO_QUALIFY;
-
   const round = (num: number, decimals = 2) => {
     return Math.round(num * 10 ** decimals) / 10 ** decimals;
   };
@@ -90,16 +88,13 @@ const DeckCard = ({ deck }: Props) => {
     <Container>
       <StyledDeckCard
         onClick={() => navigate(`/deck/${deck.id}`)}
-        $disabled={!isAboveMin && DEBUG}
+        $disabled={false}
       >
         <DeckImage key={cards[0].id} src={cards[0].image} alt={cards[0].name} />
         {DEBUG && <Percent>{round(deck.percentOfGames, 5)}%</Percent>}
       </StyledDeckCard>
       {cards.length > 1 && (
-        <SubCard
-          onClick={() => navigate(`/deck/${deck.id}`)}
-          $disabled={!isAboveMin && DEBUG}
-        >
+        <SubCard onClick={() => navigate(`/deck/${deck.id}`)} $disabled={false}>
           <DeckImage
             key={cards[1].id}
             src={cards[1].image}

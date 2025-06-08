@@ -28,6 +28,7 @@ const FilterContainer = styled.div`
   top: 2rem;
   right: 2rem;
   gap: 1.5rem;
+  z-index: 10;
 
   @media (max-width: 900px) {
     position: relative;
@@ -82,6 +83,18 @@ const IncludeExCheckbox = styled.input.attrs({ type: "checkbox" })`
   border-radius: 0.3rem;
   margin-left: 0.8rem;
   cursor: pointer;
+`;
+
+const DeckAmountContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  font-size: 1.4rem;
+  color: var(--main);
+`;
+
+const DeckAmountSelect = styled(EnergySelect)`
+  min-width: 8rem;
 `;
 
 const DeckRow = styled.div`
@@ -151,7 +164,14 @@ const ENERGY_TYPES = [
 
 const LandingPage = () => {
   const decks = useDecks();
-  const { energy, setEnergy, includeEx, setIncludeEx } = useFilters();
+  const {
+    energy,
+    setEnergy,
+    includeEx,
+    setIncludeEx,
+    deckAmount,
+    setDeckAmount,
+  } = useFilters();
   const { t } = useTranslation();
   const isPremium = useIsPremium();
 
@@ -216,6 +236,19 @@ const LandingPage = () => {
                 onChange={(e) => setIncludeEx(e.target.checked)}
               />
             </IncludeExContainer>
+            <DeckAmountContainer>
+              {t("filter.deckAmount")}
+              <DeckAmountSelect
+                value={deckAmount}
+                onChange={(e) => setDeckAmount(Number(e.target.value))}
+              >
+                {[10, 20, 30, 40, 50, 60, 70, 80, 90, 100].map((amount) => (
+                  <option key={amount} value={amount}>
+                    {amount}
+                  </option>
+                ))}
+              </DeckAmountSelect>
+            </DeckAmountContainer>
           </>
         )}
       </FilterContainer>

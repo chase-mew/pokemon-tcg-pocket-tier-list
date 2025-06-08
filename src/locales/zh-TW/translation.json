@@ -20,7 +20,8 @@
     "Colorless": "無色"
   },
   "filter": {
-    "includeEx": "包含EX卡牌"
+    "includeEx": "包含EX卡牌",
+    "deckAmount": "牌組數量"
   },
   "bestDeckFinder": {
     "title": "尋找您的最佳牌組",
