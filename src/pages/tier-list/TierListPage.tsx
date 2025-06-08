@@ -4,6 +4,7 @@ import DeckCard from "../../components/DeckCard";
 import useFilters from "../../app/use-filters";
 import ArrowDown from "../../assets/arrow-down.svg";
 import { useTranslation } from "react-i18next";
+import Premium from "../../components/Premium";
 
 const StyledTierListPage = styled.div`
   width: 100%;
@@ -188,6 +189,7 @@ const LandingPage = () => {
   return (
     <StyledTierListPage>
       <FilterContainer>
+        <Premium />
         <EnergySelect
           value={energy ?? ""}
           onChange={(e) => {
