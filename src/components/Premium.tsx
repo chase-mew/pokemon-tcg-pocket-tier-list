@@ -20,6 +20,58 @@ const PremiumIcon = styled.img`
   border-radius: 50%;
 `;
 
+const ComparisonTable = styled.table`
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 2.2rem;
+`;
+
+const TableHeader = styled.th<{ $isFirst?: boolean }>`
+  padding: 1.2rem;
+  text-align: center;
+  border-bottom: 2px solid var(--main);
+  color: var(--main);
+  font-weight: 600;
+  width: ${(props) => (props.$isFirst ? "50%" : "25%")};
+  font-size: 2.4rem;
+
+  &:first-child {
+    text-align: left;
+  }
+`;
+
+const TableCell = styled.td`
+  padding: 1.2rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--main);
+  font-size: 2.2rem;
+
+  &:first-child {
+    text-align: left;
+  }
+`;
+
+const PremiumCell = styled(TableCell)`
+  color: var(--e);
+  font-weight: 500;
+`;
+
+const FreeCell = styled(TableCell)`
+  color: var(--s);
+`;
+
+const CommonCell = styled(TableCell)`
+  color: var(--main);
+`;
+
+const TableSection = styled.tbody`
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+`;
+
 interface Props {
   showUpsell?: boolean;
 }
@@ -54,12 +106,56 @@ const Premium = ({ showUpsell = false }: Props) => {
         </Button>
       )}
       <Popup
+        width="80rem"
         isOpen={isOpen}
         header="premium.title"
         close={() => {
           setIsOpen(false);
         }}
       >
+        <ComparisonTable>
+          <thead>
+            <tr>
+              <TableHeader $isFirst>Feature</TableHeader>
+              <TableHeader>Free</TableHeader>
+              <TableHeader>Premium</TableHeader>
+            </tr>
+          </thead>
+          <TableSection>
+            <tr>
+              <CommonCell>Best Deck Finder</CommonCell>
+              <CommonCell>✅</CommonCell>
+              <CommonCell>✅</CommonCell>
+            </tr>
+            <tr>
+              <CommonCell>Exclude Cards You Don't Have</CommonCell>
+              <CommonCell>✅</CommonCell>
+              <CommonCell>✅</CommonCell>
+            </tr>
+          </TableSection>
+          <tr>
+            <CommonCell>Deck Strengths/Weaknesses</CommonCell>
+            <FreeCell>🚫</FreeCell>
+            <CommonCell>✅</CommonCell>
+          </tr>
+          <TableSection>
+            <tr>
+              <TableCell>Tier List Update Frequency</TableCell>
+              <FreeCell>Weekly</FreeCell>
+              <PremiumCell>Hourly</PremiumCell>
+            </tr>
+            <tr>
+              <TableCell>Filters</TableCell>
+              <FreeCell>🚫</FreeCell>
+              <PremiumCell>✅</PremiumCell>
+            </tr>
+            <tr>
+              <TableCell>Decks on Tier List</TableCell>
+              <FreeCell>20 Max</FreeCell>
+              <PremiumCell>Up to 100</PremiumCell>
+            </tr>
+          </TableSection>
+        </ComparisonTable>
         {!user ? (
           <Button wide action={signInWithGoogle}>
             {t("premium.signIn")}
