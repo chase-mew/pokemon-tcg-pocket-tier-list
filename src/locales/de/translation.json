@@ -103,6 +103,12 @@
         "free": "🚫",
         "premium": "✅"
       },
+      "contact": {
+        "title": "Entwickler Kontaktieren",
+        "description": "Kontaktieren Sie die Entwickler per E-Mail, um Feedback zur Website zu geben, neue Funktionen anzufordern oder Fehler zu melden. Funktionsanfragen sind nicht garantiert, werden aber alle berücksichtigt.",
+        "free": "🚫",
+        "premium": "✅"
+      },
       "updated": {
         "title": "Tier-Liste aktualisiert",
         "description": "Wie oft die Tier-Liste mit neuen Daten aktualisiert wird. Schnellere Updates helfen Ihnen, dem Meta voraus zu sein.",
@@ -111,7 +117,7 @@
       },
       "decks": {
         "title": "Decks in der Tier-Liste",
-        "description": "Anzahl der in der Tier-Liste angezeigten Decks. Mehr Decks bedeutet mehr Auswahlmöglichkeiten. Entdecken Sie starke Decks, die noch nicht populär geworden sind.",
+        "description": "Anzahl der Decks in der Tier-Liste. Mehr Decks bedeutet mehr Auswahlmöglichkeiten. Entdecken Sie starke Decks, die noch nicht populär sind.",
         "free": "30",
         "premium": "100"
       }

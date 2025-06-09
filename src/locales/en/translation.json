@@ -35,6 +35,12 @@
         "free": "🚫",
         "premium": "✅"
       },
+      "contact": {
+        "title": "Contact Developers",
+        "description": "Contact the developers via email to give any feedback on the site, request new features to be added, or report any bugs. Feature requests are not gauranteed to be completed, but all will be considered.",
+        "free": "🚫",
+        "premium": "✅"
+      },
       "updated": {
         "title": "Tier List Updated",
         "description": "How often the tier list is updated with new data. Faster updates help you stay ahead of the meta.",

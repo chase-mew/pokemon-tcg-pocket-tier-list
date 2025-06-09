@@ -103,6 +103,12 @@
         "free": "🚫",
         "premium": "✅"
       },
+      "contact": {
+        "title": "Contactar con los Desarrolladores",
+        "description": "Contacta con los desarrolladores por correo electrónico para dar cualquier comentario sobre el sitio, solicitar nuevas funciones o informar de errores. Las solicitudes de funciones no están garantizadas, pero todas serán consideradas.",
+        "free": "🚫",
+        "premium": "✅"
+      },
       "updated": {
         "title": "Lista de Niveles Actualizada",
         "description": "Con qué frecuencia se actualiza la lista de niveles con nuevos datos. Actualizaciones más rápidas te ayudan a mantenerte al día con el meta.",

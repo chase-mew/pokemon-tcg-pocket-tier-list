@@ -103,6 +103,12 @@
         "free": "🚫",
         "premium": "✅"
       },
+      "contact": {
+        "title": "Contacter les Développeurs",
+        "description": "Contactez les développeurs par e-mail pour donner votre avis sur le site, demander de nouvelles fonctionnalités ou signaler des bugs. Les demandes de fonctionnalités ne sont pas garanties, mais toutes seront examinées.",
+        "free": "🚫",
+        "premium": "✅"
+      },
       "updated": {
         "title": "Liste des Niveaux Mise à Jour",
         "description": "À quelle fréquence la liste des niveaux est mise à jour avec de nouvelles données. Des mises à jour plus rapides vous aident à rester à jour avec la méta.",
@@ -111,7 +117,7 @@
       },
       "decks": {
         "title": "Decks dans la Liste des Niveaux",
-        "description": "Nombre de decks affichés dans la liste des niveaux. Plus de decks signifie plus d'options à choisir. Découvrez des decks puissants qui ne sont pas encore devenus populaires.",
+        "description": "Nombre de decks affichés dans la liste des niveaux. Plus de decks signifie plus d'options à choisir. Découvrez des decks puissants qui ne sont pas encore populaires.",
         "free": "30",
         "premium": "100"
       }
