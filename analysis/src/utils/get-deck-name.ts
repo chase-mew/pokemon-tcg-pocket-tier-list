@@ -159,7 +159,9 @@ const DECK_NAMES: DeckNameType[] = [
   ["Wigglytuff A2b 61", "Oricorio A3 66"],
   ["Oricorio A3 66", "Greninja A1 89"],
   ["Solgaleo ex A3 122", "Snorlax A2a 63"],
+  ["Incineroar ex A3 33", "Charizard ex A2b 10"],
   ["Incineroar ex A3 33", "Turtonator A3 37"],
+  ["Incineroar ex A3 33", "Oricorio A3 66"],
   ["Pachirisu A2b 25", "Oricorio A3 66"],
   ["Decidueye ex A3 12", "Lurantis A3 15"],
   ["Decidueye ex A3 12", "Lurantis A3 15"],
@@ -192,6 +194,7 @@ const DECK_NAMES: DeckNameType[] = [
   ["Guzzlord ex A3a 43", "Nihilego A3a 42"],
   ["Guzzlord ex A3a 43", "Celesteela A3a 62"],
   ["Tapu Koko ex A3a 19", "Zeraora A3a 21"],
+  ["Tapu Koko ex A3a 19", "Oricorio A3 66"],
   ["Decidueye ex A3 12", "Pheromosa A3a 7"],
   ["Naganadel A3a 45", "Darkrai ex A2 110"],
   ["Naganadel A3a 45", "Nihilego A3a 42"],
@@ -202,6 +205,18 @@ const DECK_NAMES: DeckNameType[] = [
   ["Silvally A3a 61", "Greninja A1 89"],
   ["Weezing A1 177", "Nihilego A3a 42"],
   ["Silvally A3a 61", "Tapu Lele A3 84"],
+  ["Silvally A3a 61", "Oricorio A3 66"],
+  ["Charizard ex A2b 10", "Silvally A3a 61"],
+  ["Stoutland A3a 56", "Giratina ex A2b 35"],
+  ["Stoutland A3a 56", "Tapu Lele A3 84"],
+  ["Gallade ex A2 95", "Stoutland A3a 56"],
+  ["Silvally A3a 61", "Blacephalon A3a 9"],
+  ["Garchomp A2 123", "Stoutland A3a 56"],
+  ["Decidueye ex A3 12", "Pheromosa A3a 7"],
+  ["Dusk Mane Necrozma PA 79", "Stakataka A3a 53"],
+  ["Dusk Mane Necrozma PA 79", "Celesteela A3a 62"],
+  ["Stakataka A3a 53", "Celesteela A3a 62"],
+  ["Silvally A3a 61", "Articuno ex A1 84"],
 
   // Main Card (never side card)
   "Bronzong A2a 59",
@@ -237,6 +252,8 @@ const DECK_NAMES: DeckNameType[] = [
   "Pawmot A2b 28",
   "Incineroar ex A3 33",
   "Gengar A1 122",
+  "Stoutland A3a 56",
+  "Decidueye ex A3 12",
 
   // Stage 1 (can be side card)
   "Abomasnow A2a 21",
@@ -303,6 +320,9 @@ const DECK_NAMES: DeckNameType[] = [
   "Kartana A3a 8",
   "Nihilego A3a 42",
   "Zeraora A3a 21",
+  "Blacephalon A3a 9",
+  "Dusk Mane Necrozma PA 79",
+  "Stakataka A3a 53",
 ];
 
 /**
