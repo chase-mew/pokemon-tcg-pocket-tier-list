@@ -6,7 +6,6 @@ import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
 import UserAccount from "./UserAccount";
 
-import Premium from "./Premium";
 const StyledHeader = styled.div<{ $footer?: boolean }>`
   width: 100%;
   display: flex;
@@ -58,16 +57,6 @@ const RightSection = styled.div`
   }
 `;
 
-const RightSectionItem = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-
-  @media (max-width: 900px) {
-    gap: 1rem;
-  }
-`;
-
 interface Props {
   footer?: boolean;
 }
@@ -90,10 +79,7 @@ const Header = ({ footer }: Props) => {
       <RightSection>
         {footer && <LanguageSwitcher />}
         <Socials />
-        <RightSectionItem>
-          <UserAccount />
-          <Premium />
-        </RightSectionItem>
+        <UserAccount />
       </RightSection>
     </StyledHeader>
   );

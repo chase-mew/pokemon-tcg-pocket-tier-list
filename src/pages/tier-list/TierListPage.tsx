@@ -4,8 +4,8 @@ import DeckCard from "../../components/DeckCard";
 import useFilters from "../../app/use-filters";
 import ArrowDown from "../../assets/arrow-down.svg";
 import { useTranslation } from "react-i18next";
-import Premium from "../../components/Premium";
 import useIsPremium from "../../app/use-is-premium";
+import UserAccount from "../../components/UserAccount";
 
 const StyledTierListPage = styled.div`
   width: 100%;
@@ -210,7 +210,7 @@ const LandingPage = () => {
   return (
     <StyledTierListPage>
       <FilterContainer>
-        <Premium showUpsell />
+        <UserAccount showUpsell />
         {isPremium && (
           <>
             <EnergySelect

@@ -4,6 +4,18 @@ import Popup from "./Popup";
 import { useState } from "react";
 import Button from "./Button";
 import { useTranslation } from "react-i18next";
+import Premium from "./Premium";
+import useIsPremium from "../app/use-is-premium";
+
+const StyledUserAccount = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  @media (max-width: 900px) {
+    gap: 1rem;
+  }
+`;
 
 const UserInfo = styled.button`
   display: flex;
@@ -53,45 +65,55 @@ const ButtonContainer = styled.div`
   margin-top: 3rem;
 `;
 
-const UserAccount = () => {
+interface Props {
+  showUpsell?: boolean;
+}
+
+const UserAccount = ({ showUpsell = false }: Props) => {
   const { t } = useTranslation();
   const { user, signOut } = useAuth();
   const [isOpen, setIsOpen] = useState(false);
-
-  if (!user) return null;
+  const isPremium = useIsPremium();
 
   return (
     <>
-      <UserInfo onClick={() => setIsOpen(true)}>
-        <UserAvatar
-          src={user.photoURL || undefined}
-          alt={user.displayName || "User"}
-        />
-      </UserInfo>
-      <Popup
-        width="40rem"
-        isOpen={isOpen}
-        header="userAccount.title"
-        close={() => {
-          setIsOpen(false);
-        }}
-      >
-        <UserInfoContainer>
-          <ProfilePicture
-            src={user.photoURL || undefined}
-            alt={user.displayName || "User"}
-          />
-          <DetailsContainer>
-            <Text>{user.displayName}</Text>
-            <Text>{user.email}</Text>
-          </DetailsContainer>
-        </UserInfoContainer>
-        <ButtonContainer>
-          <Button wide action={signOut}>
-            {t("userAccount.signOut")}
-          </Button>
-        </ButtonContainer>
-      </Popup>
+      <StyledUserAccount>
+        {!(showUpsell && !isPremium) && user && (
+          <UserInfo onClick={() => setIsOpen(true)}>
+            <UserAvatar
+              src={user.photoURL || undefined}
+              alt={user.displayName || "User"}
+            />
+          </UserInfo>
+        )}
+        <Premium showUpsell={showUpsell} />
+      </StyledUserAccount>
+      {user && (
+        <Popup
+          width="40rem"
+          isOpen={isOpen}
+          header="userAccount.title"
+          close={() => {
+            setIsOpen(false);
+          }}
+        >
+          <UserInfoContainer>
+            <ProfilePicture
+              src={user.photoURL || undefined}
+              alt={user.displayName || "User"}
+            />
+            <DetailsContainer>
+              <Text>{user.displayName}</Text>
+              <Text>{user.email}</Text>
+            </DetailsContainer>
+          </UserInfoContainer>
+          <ButtonContainer>
+            <Button wide action={signOut}>
+              {t("userAccount.signOut")}
+            </Button>
+          </ButtonContainer>
+        </Popup>
+      )}
     </>
   );
 };
