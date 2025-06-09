@@ -5,6 +5,7 @@ import Socials from "./Socials";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
 import UserAccount from "./UserAccount";
+import { useAuth } from "../contexts/AuthContext";
 
 const StyledHeader = styled.div<{ $footer?: boolean }>`
   width: 100%;
@@ -64,6 +65,7 @@ interface Props {
 const Header = ({ footer }: Props) => {
   const location = useLocation();
   const { t } = useTranslation();
+  const { user } = useAuth();
 
   return (
     <StyledHeader $footer={footer}>
@@ -78,8 +80,8 @@ const Header = ({ footer }: Props) => {
       </Nav>
       <RightSection>
         {footer && <LanguageSwitcher />}
-        <Socials />
-        <UserAccount />
+        {(!user || footer) && <Socials />}
+        {!footer && <UserAccount />}
       </RightSection>
     </StyledHeader>
   );
