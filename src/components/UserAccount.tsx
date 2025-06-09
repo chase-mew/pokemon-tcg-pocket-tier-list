@@ -6,6 +6,7 @@ import Button from "./Button";
 import { useTranslation } from "react-i18next";
 import Premium from "./Premium";
 import useIsPremium from "../app/use-is-premium";
+import contactIcon from "../assets/contact.svg";
 
 const StyledUserAccount = styled.div`
   display: flex;
@@ -65,6 +66,33 @@ const ButtonContainer = styled.div`
   margin-top: 3rem;
 `;
 
+const ContactButton = styled.button`
+  cursor: pointer;
+`;
+
+const ContactIcon = styled.img`
+  width: 3.4rem;
+  height: 3.4rem;
+  transform: translateY(0.1rem);
+
+  @media (max-width: 900px) {
+    width: 2.6rem;
+    height: 2.6rem;
+  }
+`;
+
+const ContactText = styled.p`
+  font-size: 1.8rem;
+  margin: 0;
+  color: var(--main);
+  text-align: center;
+`;
+
+const EmailText = styled(ContactText)`
+  margin-top: 1rem;
+  color: var(--e);
+`;
+
 interface Props {
   showUpsell?: boolean;
 }
@@ -73,11 +101,17 @@ const UserAccount = ({ showUpsell = false }: Props) => {
   const { t } = useTranslation();
   const { user, signOut } = useAuth();
   const [isOpen, setIsOpen] = useState(false);
+  const [isContactOpen, setIsContactOpen] = useState(false);
   const isPremium = useIsPremium();
 
   return (
     <>
       <StyledUserAccount>
+        {isPremium && (
+          <ContactButton onClick={() => setIsContactOpen(true)}>
+            <ContactIcon src={contactIcon} alt="Contact" />
+          </ContactButton>
+        )}
         {!(showUpsell && !isPremium) && user && (
           <UserInfo onClick={() => setIsOpen(true)}>
             <UserAvatar
@@ -114,6 +148,17 @@ const UserAccount = ({ showUpsell = false }: Props) => {
           </ButtonContainer>
         </Popup>
       )}
+      <Popup
+        width="40rem"
+        isOpen={isContactOpen}
+        header="premium.features.contact.title"
+        close={() => {
+          setIsContactOpen(false);
+        }}
+      >
+        <ContactText>{t("premium.features.contact.description")}</ContactText>
+        <EmailText>chase@manning.dev</EmailText>
+      </Popup>
     </>
   );
 };
