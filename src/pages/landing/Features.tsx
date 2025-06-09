@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import filters from "../../assets/features/filters.png";
-import openSource from "../../assets/features/open-source.png";
-import matchups from "../../assets/features/matchups.png";
-import tournament from "../../assets/features/tournament.png";
-import weeklyUpdates from "../../assets/features/weekly.png";
-import missingCards from "../../assets/features/missing.png";
+import filters from "../../assets/features/filters.jpg";
+import openSource from "../../assets/features/open-source.jpg";
+import matchups from "../../assets/features/matchups.jpg";
+import tournament from "../../assets/features/tournament.jpg";
+import weeklyUpdates from "../../assets/features/weekly.jpg";
+import missingCards from "../../assets/features/missing.jpg";
 import { useTranslation } from "react-i18next";
 import { Trans } from "react-i18next";
 import { GITHUB_URL } from "../../app/constants";

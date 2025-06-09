@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import bestDeck from "../../assets/best-deck.png";
+import bestDeck from "../../assets/best-deck.jpg";
 import Button from "../../components/Button";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
