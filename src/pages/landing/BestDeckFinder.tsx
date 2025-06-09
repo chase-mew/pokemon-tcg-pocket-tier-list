@@ -107,6 +107,15 @@ const Image = styled.img`
   display: block;
 `;
 
+const ButtonContainer = styled.div`
+  display: flex;
+
+  @media (max-width: 900px) {
+    align-items: center;
+    justify-content: center;
+  }
+`;
+
 const BestDeckFinder = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
@@ -118,11 +127,11 @@ const BestDeckFinder = () => {
           <Title>{t("bestDeckFinder.title")}</Title>
           <Description>{t("bestDeckFinder.description1")}</Description>
           <Description>{t("bestDeckFinder.description2")}</Description>
-          <div>
+          <ButtonContainer>
             <Button action={() => navigate("/deck")}>
               {t("bestDeckFinder.button")}
             </Button>
-          </div>
+          </ButtonContainer>
         </TextSection>
         <ImageSection>
           <ImageContainer>
