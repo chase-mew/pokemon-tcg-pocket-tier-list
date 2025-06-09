@@ -102,6 +102,20 @@ const DeckRow = styled.div`
   flex: 1;
   border-bottom: 0.4rem solid var(--border);
 
+  /* Gradient on right side */
+  @media (min-width: 900px) {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100px;
+      height: 100%;
+      background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--bg));
+    }
+  }
+
   @media (max-width: 900px) {
     flex-direction: column;
   }
@@ -130,6 +144,11 @@ const RowContent = styled.div`
   padding: 1.5rem 2rem;
   display: flex;
   gap: 2rem;
+  width: 100%;
+
+  @media (min-width: 900px) {
+    overflow-x: auto;
+  }
 
   @media (max-width: 900px) {
     display: grid;
