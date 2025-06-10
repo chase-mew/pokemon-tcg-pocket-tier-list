@@ -7,12 +7,12 @@ import { calculateCardScores } from "./utils/calculate-card-scores";
 import { calculateMatchupResults } from "./utils/calculate-matchup-results";
 import { Deck, MatchupData } from "./utils/types";
 
-// Global Variables
 const decks = getDecks();
 const allGames = decks.reduce(
   (acc: number, deck: Deck) => acc + deck.totalGames,
   0
 );
+
 const uniqueDeckNames = decks
   .map((deck: Deck) => deck.name)
   .filter(
