@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components";
+import { Link } from "react-router-dom";
 
 const rainbowAnimation = keyframes`
   0% {
@@ -65,6 +66,7 @@ const StyledButton = styled.button<{ $isLoading: boolean; $wide: boolean }>`
   border: 2px solid transparent;
   position: relative;
   width: ${(props) => (props.$wide ? "100%" : "auto")};
+  text-decoration: none;
 
   &:hover {
     transform: ${(props) => (props.$isLoading ? "none" : "scale(1.02)")};
@@ -77,28 +79,96 @@ const StyledButton = styled.button<{ $isLoading: boolean; $wide: boolean }>`
   }
 `;
 
-interface Props {
-  action: () => void;
+const StyledLink = styled(Link)<{ $isLoading: boolean; $wide: boolean }>`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  height: 5.4rem;
+  padding: 0 3.2rem;
+  border-radius: 0.8rem;
+  background: linear-gradient(
+    45deg,
+    var(--s),
+    var(--a),
+    var(--b),
+    var(--c),
+    var(--d),
+    var(--e),
+    var(--s)
+  );
+  background-size: 300% 300%;
+  animation: ${rainbowAnimation} 8s ease infinite;
+  color: var(--bg);
+  font-size: 2.1rem;
+  font-weight: 600;
+  cursor: ${(props) => (props.$isLoading ? "not-allowed" : "pointer")};
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+  position: relative;
+  width: ${(props) => (props.$wide ? "100%" : "auto")};
+  text-decoration: none;
+
+  &:hover {
+    transform: ${(props) => (props.$isLoading ? "none" : "scale(1.02)")};
+    box-shadow: ${(props) =>
+      props.$isLoading ? "none" : "0 0 15px rgba(255, 255, 255, 0.3)"};
+  }
+
+  &:disabled {
+    opacity: 0.7;
+  }
+`;
+
+interface ButtonProps {
   children: React.ReactNode;
   isLoading?: boolean;
   wide?: boolean;
   icon?: string;
 }
 
+interface ActionButtonProps extends ButtonProps {
+  action: () => void;
+  to?: never;
+}
+
+interface LinkButtonProps extends ButtonProps {
+  to: string;
+  action?: never;
+}
+
+type Props = ActionButtonProps | LinkButtonProps;
+
 const Button = ({
   action,
+  to,
   children,
   isLoading = false,
   wide = false,
   icon,
 }: Props) => {
+  const commonProps = {
+    disabled: isLoading,
+    $isLoading: isLoading,
+    $wide: wide,
+  };
+
+  if (to) {
+    return (
+      <StyledLink to={to} {...commonProps}>
+        {!isLoading && (
+          <>
+            {children}
+            {icon && <Icon src={icon} alt="" />}
+          </>
+        )}
+        {isLoading && <Spinner />}
+      </StyledLink>
+    );
+  }
+
   return (
-    <StyledButton
-      onClick={action}
-      disabled={isLoading}
-      $isLoading={isLoading}
-      $wide={wide}
-    >
+    <StyledButton onClick={action} {...commonProps}>
       {!isLoading && (
         <>
           {children}
