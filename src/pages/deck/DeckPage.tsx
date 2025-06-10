@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
 import useDecks, { FullDeckType, MatchupType } from "../../app/use-decks";
@@ -137,7 +137,7 @@ const Overlay = styled.div`
   font-weight: 500;
 `;
 
-const Link = styled.button`
+const StyledLink = styled(Link)`
   color: var(--main);
   font-weight: 500;
   font-size: 2rem;
@@ -230,7 +230,6 @@ const MatchupLabel = styled.div<{ $winRate: number }>`
 const DeckPage = () => {
   const deckId = useParams().deckId;
   const decks = useDecks();
-  const navigate = useNavigate();
   const { addMissing } = useMissing();
   const { t } = useTranslation();
   const [bestScore, setBestScore] = useState<number | null>(null);
@@ -259,8 +258,7 @@ const DeckPage = () => {
   if (!deck) {
     return (
       <Overlay>
-        Not enough cards,{" "}
-        <Link onClick={() => navigate("/")}>try another deck</Link>
+        Not enough cards, <StyledLink to="/">try another deck</StyledLink>
       </Overlay>
     );
   }

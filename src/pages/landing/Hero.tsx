@@ -2,9 +2,9 @@ import styled, { keyframes } from "styled-components";
 import Header from "../../components/Header";
 import tierList from "../../assets/tier-list.jpeg";
 import Button from "../../components/Button";
-import { useNavigate } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const rainbowAnimation = keyframes`
   0% {
@@ -97,7 +97,7 @@ const ImageSection = styled.div`
   }
 `;
 
-const ImageContainer = styled.button<{ $rotateX: number; $rotateY: number }>`
+const ImageContainer = styled(Link)<{ $rotateX: number; $rotateY: number }>`
   padding: 4px;
   border-radius: 16px;
   background: linear-gradient(
@@ -140,7 +140,6 @@ const Image = styled.img`
 `;
 
 const Hero = () => {
-  const navigate = useNavigate();
   const { t } = useTranslation();
   const [rotateX, setRotateX] = useState(0);
   const [rotateY, setRotateY] = useState(0);
@@ -173,17 +172,11 @@ const Hero = () => {
           <StyledHeader>{t("hero.title")}</StyledHeader>
           <StyledSubheader>{t("hero.subtitle")}</StyledSubheader>
           <div>
-            <Button action={() => navigate("/tier-list")}>
-              {t("hero.button")}
-            </Button>
+            <Button to="/tier-list">{t("hero.button")}</Button>
           </div>
         </TextSection>
         <ImageSection ref={containerRef}>
-          <ImageContainer
-            $rotateX={rotateX}
-            $rotateY={rotateY}
-            onClick={() => navigate("/tier-list")}
-          >
+          <ImageContainer $rotateX={rotateX} $rotateY={rotateY} to="/tier-list">
             <Image src={tierList} alt={t("hero.title")} />
           </ImageContainer>
         </ImageSection>

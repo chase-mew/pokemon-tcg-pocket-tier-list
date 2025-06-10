@@ -1,7 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import bestDeck from "../../assets/best-deck.jpg";
 import Button from "../../components/Button";
-import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const rainbowAnimation = keyframes`
@@ -117,7 +116,6 @@ const ButtonContainer = styled.div`
 `;
 
 const BestDeckFinder = () => {
-  const navigate = useNavigate();
   const { t } = useTranslation();
 
   return (
@@ -128,9 +126,7 @@ const BestDeckFinder = () => {
           <Description>{t("bestDeckFinder.description1")}</Description>
           <Description>{t("bestDeckFinder.description2")}</Description>
           <ButtonContainer>
-            <Button action={() => navigate("/deck")}>
-              {t("bestDeckFinder.button")}
-            </Button>
+            <Button to="/deck">{t("bestDeckFinder.button")}</Button>
           </ButtonContainer>
         </TextSection>
         <ImageSection>

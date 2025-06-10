@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { CardType, FullDeckType } from "../app/use-decks";
 import { DEBUG } from "../app/config";
 
@@ -68,8 +68,6 @@ interface Props {
 }
 
 const DeckCard = ({ deck }: Props) => {
-  const navigate = useNavigate();
-
   const cardIds = deck.name.split("&");
 
   const cards: CardType[] = cardIds.map((cardId) => {
