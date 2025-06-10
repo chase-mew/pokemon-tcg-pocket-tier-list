@@ -1,6 +1,19 @@
 export type Oponent = string | string[];
 
 const OPPONENTS: Oponent[] = [
+  ["Charizard ex A2b 10", "Silvally A3a 61"],
+  ["Solgaleo ex A3 122", "Shiinotic A3a 27"],
+  ["Solgaleo ex A3 122", "Skarmory A2 111"],
+  ["Rampardos A2 89", "Silvally A3a 61"],
+  ["Incineroar ex A3 33", "Charizard ex A2b 10"],
+  ["Solgaleo ex A3 122", "Shiinotic A3a 27"],
+  ["Rampardos A2 89", "Silvally A3a 61"],
+  ["Rampardos A2 89", "Silvally A3a 61"],
+  ["Garchomp ex A2a 47", "Rampardos A2 89"],
+  ["Rampardos A2 89", "Silvally A3a 61"],
+  ["Solgaleo ex A3 122", "Skarmory A2 111"],
+  ["Tapu Koko ex A3a 19", "Oricorio A3 66"],
+  ["Tapu Koko ex A3a 19", "Zeraora A3a 21"],
   ["Rampardos A2 89", "Silvally A3a 61"],
   ["Charizard ex A2b 10", "Silvally A3a 61"],
   ["Solgaleo ex A3 122", "Shiinotic A3a 27"],
