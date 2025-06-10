@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { CardType, FullDeckType } from "../app/use-decks";
 import { DEBUG } from "../app/config";
 
@@ -14,10 +14,11 @@ const Container = styled.div`
   }
 `;
 
-const StyledDeckCard = styled.button<{ $disabled: boolean }>`
+const StyledDeckCard = styled(Link)<{ $disabled: boolean }>`
   position: relative;
   border-radius: 1.2rem;
   color: var(--bg);
+  display: flex;
   height: 100%;
   aspect-ratio: 1 / 1;
   overflow: hidden;
@@ -27,7 +28,7 @@ const StyledDeckCard = styled.button<{ $disabled: boolean }>`
   opacity: ${(props) => (props.$disabled ? 0.5 : 1)};
 `;
 
-const SubCard = styled.div<{ $disabled: boolean }>`
+const SubCard = styled(Link)<{ $disabled: boolean }>`
   position: absolute;
   bottom: -1rem;
   right: -1rem;
@@ -86,15 +87,12 @@ const DeckCard = ({ deck }: Props) => {
 
   return (
     <Container>
-      <StyledDeckCard
-        onClick={() => navigate(`/deck/${deck.id}`)}
-        $disabled={false}
-      >
+      <StyledDeckCard to={`/deck/${deck.id}`} $disabled={false}>
         <DeckImage key={cards[0].id} src={cards[0].image} alt={cards[0].name} />
         {DEBUG && <Percent>{round(deck.percentOfGames, 5)}%</Percent>}
       </StyledDeckCard>
       {cards.length > 1 && (
-        <SubCard onClick={() => navigate(`/deck/${deck.id}`)} $disabled={false}>
+        <SubCard to={`/deck/${deck.id}`} $disabled={false}>
           <DeckImage
             key={cards[1].id}
             src={cards[1].image}
