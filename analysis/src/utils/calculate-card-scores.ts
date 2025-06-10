@@ -25,7 +25,8 @@ const calculateSingleCardScore = (
   const winRate = winCount / totalGames;
   const popularity = totalGames / totalMatchingGames;
   const isRedCard = cardName.toLowerCase().includes("red card");
-  const multiplier = isRedCard ? RED_CARD_MULTIPLIER : 1;
+  const isMars = cardName.toLowerCase().includes("mars ");
+  const multiplier = isRedCard || isMars ? RED_CARD_MULTIPLIER : 1;
 
   return (
     (winRate * WINRATE_IMPORTANCE + popularity * POPULARITY_IMPORTANCE) *
