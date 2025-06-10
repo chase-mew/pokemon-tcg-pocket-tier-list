@@ -323,6 +323,7 @@ const DECK_NAMES: DeckNameType[] = [
   "Blacephalon A3a 9",
   "Dusk Mane Necrozma PA 79",
   "Stakataka A3a 53",
+  "Magearna A3 123",
 ];
 
 /**
