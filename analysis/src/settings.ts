@@ -1,5 +1,6 @@
 export const DEBUG: boolean = false;
 export const NOEX: boolean = false;
+export const OPPONENT_BATTLE: boolean = false;
 export const WINRATE_IMPORTANCE: number = 0.6;
 export const POPULARITY_IMPORTANCE: number = 1 - WINRATE_IMPORTANCE;
 export const OLD_MULTIPLIER: number = 1;
