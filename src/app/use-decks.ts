@@ -113,7 +113,7 @@ const useDecks = (): FullDeckType[] | null => {
     },
   });
 
-  if (!cards || !decksData) return null;
+  if (!cards || !decksData || isPremium === null) return null;
 
   const { decks, matchupData } = decksData;
 

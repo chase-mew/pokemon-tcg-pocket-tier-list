@@ -123,6 +123,8 @@ const Premium = ({ showUpsell = false }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
+  if (isPremium === null) return null;
+
   return (
     <>
       {isPremium && (

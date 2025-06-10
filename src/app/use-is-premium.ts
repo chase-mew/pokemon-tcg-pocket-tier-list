@@ -4,11 +4,15 @@ import { payments } from "../config/firebase";
 import { useAuth } from "../contexts/AuthContext";
 
 const useIsPremium = () => {
-  const [isPremium, setIsPremium] = useState(false);
-  const { user } = useAuth();
+  const [isPremium, setIsPremium] = useState<boolean | null>(null);
+  const { user, loading } = useAuth();
 
   useEffect(() => {
-    if (!user) return;
+    if (loading) return;
+    if (!user) {
+      setIsPremium(false);
+      return;
+    }
     getCurrentUserSubscriptions(payments, {
       status: "active", // Optional: filter by status
     })
@@ -18,7 +22,7 @@ const useIsPremium = () => {
       .catch((error) => {
         console.error(error);
       });
-  }, [user]);
+  }, [user, loading]);
 
   return isPremium;
 };
