@@ -1,11 +1,11 @@
 import fs from "fs";
 import { Tournament } from "./types";
+import { MIN_GAMES_IN_TOURNAMENT } from "../settings";
 
 const API_KEY = process.env.API_KEY;
 const GAME = "POCKET";
 const append = `?key=${API_KEY}`;
 const BASE = "https://play.limitlesstcg.com/api";
-const MIN_GAMES = 100;
 
 const processedTournaments = () => {
   return JSON.parse(
@@ -23,7 +23,8 @@ export const getTournaments = async () => {
   );
   return tournaments
     .filter(
-      (tournament) => tournament.players && tournament.players >= MIN_GAMES
+      (tournament) =>
+        tournament.players && tournament.players >= MIN_GAMES_IN_TOURNAMENT
     )
     .filter((tournament) => !processedTournamentIds.includes(tournament.id));
 };
