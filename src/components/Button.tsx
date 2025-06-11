@@ -39,7 +39,7 @@ const Icon = styled.img`
 `;
 
 const StyledButton = styled.button<{ $isLoading: boolean; $wide: boolean }>`
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.8rem;
@@ -80,7 +80,7 @@ const StyledButton = styled.button<{ $isLoading: boolean; $wide: boolean }>`
 `;
 
 const StyledLink = styled(Link)<{ $isLoading: boolean; $wide: boolean }>`
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.8rem;
