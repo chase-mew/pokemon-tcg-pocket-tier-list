@@ -12,3 +12,4 @@ export const POST_EXPANSION_PERCENT: number = 0.95;
 export const NOEX_PERCENT_CUTOFF: number = 0.2;
 export const WIGGLYTUFF_PERCENT_CUTOFF: number = 0.1;
 export const NO_TRAINER_PERCENT_CUTOFF: number = 0.1;
+export const MIN_GAMES_IN_TOURNAMENT: number = 50;
