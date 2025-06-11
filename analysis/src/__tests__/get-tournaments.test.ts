@@ -11,8 +11,8 @@ describe("getTournaments", () => {
 
   it("should filter tournaments based on minimum games", async () => {
     const mockTournaments = [
-      { id: "1", players: 50 },
-      { id: "2", players: 150 },
+      { id: "1", players: 25 },
+      { id: "2", players: 75 },
       { id: "3", players: 200 },
     ];
 
@@ -24,7 +24,7 @@ describe("getTournaments", () => {
     expect(result).toHaveLength(2);
     expect(result).toEqual(
       expect.arrayContaining([
-        expect.objectContaining({ id: "2", players: 150 }),
+        expect.objectContaining({ id: "2", players: 75 }),
         expect.objectContaining({ id: "3", players: 200 }),
       ])
     );
