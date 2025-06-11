@@ -164,7 +164,6 @@ const DECK_NAMES: DeckNameType[] = [
   ["Incineroar ex A3 33", "Oricorio A3 66"],
   ["Pachirisu A2b 25", "Oricorio A3 66"],
   ["Decidueye ex A3 12", "Lurantis A3 15"],
-  ["Decidueye ex A3 12", "Lurantis A3 15"],
   ["Giratina ex A2b 35", "Greninja A1 89"],
   ["Dragonite A1 185", "Oricorio A3 66"],
   ["Garchomp A2 123", "Greninja A1 89"],
@@ -306,6 +305,7 @@ const DECK_NAMES: DeckNameType[] = [
   "Buzzwole ex A3a 6",
   "Guzzlord ex A3a 43",
   "Tapu Koko ex A3a 19",
+  "Alolan Dugtrio ex A3a 47",
 
   // Basic (can be side card)
   "Lt. Surge A1 226",
