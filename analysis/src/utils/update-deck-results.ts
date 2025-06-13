@@ -13,7 +13,7 @@ export const updateDeckResults = (
 ): Deck[] => {
   // If it's an opponent battle, we update the winCount and lossCount to only match the local opponents
   if (OPPONENT_BATTLE) {
-    const opponents = OPPONENTS.map((opponent: Oponent) => {
+    const opponents = OPPONENTS.slice(0, 100).map((opponent: Oponent) => {
       const match = Array.isArray(opponent) ? opponent : [opponent];
       return formatMatch(match);
     });
