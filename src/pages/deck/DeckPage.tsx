@@ -29,7 +29,7 @@ const CardSection = styled.div`
   align-items: center;
   gap: 2.4rem;
   flex: 1;
-  width: calc(100% - 40rem - 3rem);
+  width: calc(100% - 35rem - 3rem);
 
   @media (max-width: 900px) {
     width: 100%;
@@ -41,7 +41,7 @@ const PannelSection = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 2.4rem;
-  width: 40rem;
+  width: 35rem;
 
   @media (max-width: 900px) {
     width: 100%;
@@ -203,11 +203,11 @@ const MatchupSection = styled.div`
 
 const MatchupList = styled.div<{ $blur?: boolean }>`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
   gap: 1.2rem;
   flex: 1;
   width: 100%;
-  filter: ${(props) => (props.$blur ? "blur(13px)" : "none")};
+  filter: ${(props) => (props.$blur ? "blur(10px) saturate(1.2)" : "none")};
 
   @media (max-width: 900px) {
     grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
@@ -224,7 +224,7 @@ const MatchupContainer = styled.div`
 
 const DeckCardContainer = styled.div`
   position: relative;
-  height: 11rem;
+  height: 10rem;
   aspect-ratio: 1 / 1;
 
   @media (max-width: 900px) {
@@ -255,6 +255,11 @@ const KeyStats = styled.div`
 `;
 
 const KeyStat = styled.div`
+  font-size: 2.4rem;
+  font-weight: 400;
+`;
+
+const KeyStatValue = styled.span`
   font-size: 2.4rem;
   font-weight: 500;
 `;
@@ -349,19 +354,26 @@ const DeckPage = () => {
               </SubHeader>
               <KeyStats>
                 <KeyStat>
-                  {t("deckPage.strength")}: {(deck.strength * 100).toFixed(0)}%
+                  {t("deckPage.strength")}:{" "}
+                  <KeyStatValue>
+                    {(deck.strength * 100).toFixed(0)}%
+                  </KeyStatValue>
                 </KeyStat>
                 <KeyStat>
                   {t("deckPage.popularity")}:{" "}
-                  {(deck.popularity * 100).toFixed(0)}%
+                  <KeyStatValue>
+                    {(deck.popularity * 100).toFixed(0)}%
+                  </KeyStatValue>
                 </KeyStat>
                 <KeyStat>
                   {t("deckPage.winRate")}:{" "}
-                  {(
-                    deck.matchups.find((matchup) => matchup.name === "Total")!
-                      .winRate * 100
-                  ).toFixed(0)}
-                  %
+                  <KeyStatValue>
+                    {(
+                      deck.matchups.find((matchup) => matchup.name === "Total")!
+                        .winRate * 100
+                    ).toFixed(0)}
+                    %
+                  </KeyStatValue>
                 </KeyStat>
               </KeyStats>
             </MatchupSection>
