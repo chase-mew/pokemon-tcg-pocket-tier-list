@@ -37,6 +37,7 @@ describe("calculateDeckScore", () => {
       matchingGames,
       allGames
     );
-    expect(score).toBeGreaterThan(0);
+    expect(score.score).toBeGreaterThan(0);
+    expect(score.popularity).toBeGreaterThan(0);
   });
 });
