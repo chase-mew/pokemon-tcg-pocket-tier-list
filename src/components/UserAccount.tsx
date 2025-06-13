@@ -95,14 +95,19 @@ const EmailText = styled(ContactText)`
 
 interface Props {
   showUpsell?: boolean;
+  hideIfPremium?: boolean;
 }
 
-const UserAccount = ({ showUpsell = false }: Props) => {
+const UserAccount = ({ showUpsell = false, hideIfPremium = false }: Props) => {
   const { t } = useTranslation();
   const { user, signOut } = useAuth();
   const [isOpen, setIsOpen] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
   const isPremium = useIsPremium();
+
+  if (hideIfPremium && isPremium) {
+    return null;
+  }
 
   return (
     <>
