@@ -7,6 +7,7 @@ import DeckCard from "../../components/DeckCard";
 import { MIN_MATCHUP_GAMES, WINRATE_THRESHOLD } from "../../app/config";
 import { useEffect, useState } from "react";
 import useIsPremium from "../../app/use-is-premium";
+import UserAccount from "../../components/UserAccount";
 
 const StyledDeckPage = styled.div`
   width: 100%;
@@ -200,12 +201,13 @@ const MatchupSection = styled.div`
   }
 `;
 
-const MatchupList = styled.div`
+const MatchupList = styled.div<{ $blur?: boolean }>`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
   gap: 1.2rem;
   flex: 1;
   width: 100%;
+  filter: ${(props) => (props.$blur ? "blur(13px)" : "none")};
 
   @media (max-width: 900px) {
     grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
@@ -337,8 +339,9 @@ const DeckPage = () => {
           ))}
         </CardList>
       </CardSection>
-      {!isDeckFinderMode && isPremium && (
+      {!isDeckFinderMode && (
         <PannelSection>
+          <UserAccount showUpsell hideIfPremium />
           <Matchups>
             <MatchupSection>
               <SubHeader $backgroundColor="var(--c)">
@@ -366,7 +369,7 @@ const DeckPage = () => {
               <SubHeader $backgroundColor="var(--e)">
                 {t("deckPage.strongAgainst")}
               </SubHeader>
-              <MatchupList>
+              <MatchupList $blur={!isPremium}>
                 {deck.matchups
                   .filter((matchup) => matchup.totalGames > MIN_MATCHUP_GAMES)
                   .filter((matchup) => matchup.winRate > WINRATE_THRESHOLD)
@@ -401,7 +404,7 @@ const DeckPage = () => {
               <SubHeader $backgroundColor="var(--s)">
                 {t("deckPage.weakAgainst")}
               </SubHeader>
-              <MatchupList>
+              <MatchupList $blur={!isPremium}>
                 {deck.matchups
                   .filter((matchup) => !!matchup)
                   .filter((matchup) => matchup.totalGames > MIN_MATCHUP_GAMES)
