@@ -4,7 +4,11 @@
     "strongAgainst": "Stark gegen",
     "weakAgainst": "Schwach gegen",
     "deckFinderHeader": "Klicken Sie auf die Karten, die Sie nicht haben. Das Deck wird aktualisiert, um das Beste mit Ihren verfügbaren Karten anzuzeigen.",
-    "relativeStrength": "Relative Stärke"
+    "relativeStrength": "Relative Stärke",
+    "keyStats": "Wichtige Statistiken",
+    "popularity": "Beliebtheit",
+    "strength": "Stärke",
+    "winRate": "Gewinnrate"
   },
   "energyDropdown": {
     "all": "Alle Energietypen",

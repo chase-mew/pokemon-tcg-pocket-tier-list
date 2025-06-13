@@ -4,7 +4,11 @@
     "strongAgainst": "Fort contre",
     "weakAgainst": "Faible contre",
     "deckFinderHeader": "Cliquez sur les cartes que vous n'avez pas. Le deck sera mis à jour pour montrer le meilleur avec vos cartes disponibles.",
-    "relativeStrength": "Force Relative"
+    "relativeStrength": "Force Relative",
+    "keyStats": "Statistiques Clés",
+    "popularity": "Popularité",
+    "strength": "Force",
+    "winRate": "Taux de Victoire"
   },
   "energyDropdown": {
     "all": "Tous les types d'énergie",

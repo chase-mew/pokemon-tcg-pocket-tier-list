@@ -1,10 +1,14 @@
 {
   "deckPage": {
-    "matchups": "对战情况",
-    "strongAgainst": "优势对局",
-    "weakAgainst": "劣势对局",
-    "deckFinderHeader": "点击您没有的卡牌。牌组将更新为显示您可用卡牌中的最佳组合。",
-    "relativeStrength": "相对强度"
+    "matchups": "对战",
+    "strongAgainst": "强势对抗",
+    "weakAgainst": "弱势对抗",
+    "deckFinderHeader": "点击您没有的卡牌。卡组将更新以显示您可用卡牌中的最佳组合。",
+    "relativeStrength": "相对强度",
+    "keyStats": "关键数据",
+    "popularity": "流行度",
+    "strength": "强度",
+    "winRate": "胜率"
   },
   "energyDropdown": {
     "all": "所有能量类型",
