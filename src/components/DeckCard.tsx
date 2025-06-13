@@ -53,7 +53,7 @@ const DeckImage = styled.img`
 `;
 
 const Percent = styled.div`
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 700;
   position: absolute;
   bottom: 0.5rem;
