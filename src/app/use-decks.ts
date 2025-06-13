@@ -44,6 +44,8 @@ export interface FullDeckType {
   name: string;
   cards: CardType[];
   score: number;
+  popularity: number;
+  strength: number;
   place: number;
   percentOfGames: number;
   matchups: MatchupType[];
@@ -129,7 +131,7 @@ const useDecks = (): FullDeckType[] | null => {
 
   const uniqueMissing = [...new Set(missing)];
 
-  const bestDecks = uniqueDeckNames
+  const bestDecksFiltered = uniqueDeckNames
     .map((name) => {
       const matchingDecks = decks
         .filter((deck: PartialDeckType) => deck.name === name)
@@ -197,34 +199,44 @@ const useDecks = (): FullDeckType[] | null => {
     .filter((deck) => deck)
     .sort((a, b) => b.percentOfGames - a.percentOfGames)
     .slice(0, deckAmount)
-    .sort((a, b) => b.score - a.score)
-    .map((oldDeck, index) => {
-      const deckCards = [];
-      for (const oldCard of oldDeck.cards) {
-        const amount = oldCard.count;
-        const id = cardToId(oldCard);
-        const card = cardsMapping[id];
-        if (!card) {
-          throw new Error(`Card not found: ${id}`);
-        }
-        for (let i = 0; i < amount; i++) {
-          deckCards.push(card);
-        }
-      }
-      const matchups = matchupData[oldDeck.name];
+    .sort((a, b) => b.score - a.score);
 
-      const deck: FullDeckType = {
-        id: oldDeck.name.toLowerCase().replace(/\s/g, "-"),
-        name: oldDeck.name,
-        cards: deckCards,
-        score: oldDeck.score,
-        place: index + 1,
-        percentOfGames: oldDeck.percentOfGames,
-        date: new Date(oldDeck.date),
-        matchups,
-      };
-      return deck;
-    });
+  const highestPopularity = bestDecksFiltered.sort(
+    (a, b) => b.popularity - a.popularity
+  )[0].popularity;
+  const highestStrength = bestDecksFiltered.sort(
+    (a, b) => b.strength - a.strength
+  )[0].strength;
+
+  const bestDecks = bestDecksFiltered.map((oldDeck, index) => {
+    const deckCards = [];
+    for (const oldCard of oldDeck.cards) {
+      const amount = oldCard.count;
+      const id = cardToId(oldCard);
+      const card = cardsMapping[id];
+      if (!card) {
+        throw new Error(`Card not found: ${id}`);
+      }
+      for (let i = 0; i < amount; i++) {
+        deckCards.push(card);
+      }
+    }
+    const matchups = matchupData[oldDeck.name];
+
+    const deck: FullDeckType = {
+      id: oldDeck.name.toLowerCase().replace(/\s/g, "-"),
+      name: oldDeck.name,
+      cards: deckCards,
+      score: oldDeck.score,
+      popularity: oldDeck.popularity / highestPopularity,
+      strength: oldDeck.strength / highestStrength,
+      place: index + 1,
+      percentOfGames: oldDeck.percentOfGames,
+      date: new Date(oldDeck.date),
+      matchups,
+    };
+    return deck;
+  });
 
   // return bestDecks;
 

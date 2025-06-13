@@ -65,17 +65,25 @@ for (const deckName of uniqueDeckNames) {
 
   const sortedDecks = matchingDecks.sort(
     (a, b) =>
-      calculateDeckScore(b, scoredCards, matchingGames, allGames) -
-      calculateDeckScore(a, scoredCards, matchingGames, allGames)
+      calculateDeckScore(b, scoredCards, matchingGames, allGames).score -
+      calculateDeckScore(a, scoredCards, matchingGames, allGames).score
   );
 
   for (const deck of sortedDecks) {
     const id = getId(deck);
     if (idExists[id]) continue;
+    const deckScore = calculateDeckScore(
+      deck,
+      scoredCards,
+      matchingGames,
+      allGames
+    );
     const formattedDeck = {
       name: deckName,
       cards: deck.cards,
-      score: calculateDeckScore(deck, scoredCards, matchingGames, allGames),
+      score: deckScore.score,
+      popularity: deckScore.popularity,
+      strength: deckScore.strength,
       percentOfGames,
       date: deck.date,
       id,
@@ -101,6 +109,21 @@ for (const deckName of Object.keys(matchupResults)) {
       };
     }
   );
+  const totalWinRate = Object.values(matchupResults[deckName]).reduce(
+    (acc, matchup) => acc + matchup.wins,
+    0
+  );
+  const totalLosses = Object.values(matchupResults[deckName]).reduce(
+    (acc, matchup) => acc + matchup.losses,
+    0
+  );
+  const totalGames = totalWinRate + totalLosses;
+  const winRate = totalWinRate / totalGames;
+  matchupData[deckName].push({
+    name: "Total",
+    winRate,
+    totalGames,
+  });
 }
 
 fs.writeFileSync("./data/best-decks.json", JSON.stringify(bestDecks, null, 2));

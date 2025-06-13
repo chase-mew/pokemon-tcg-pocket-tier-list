@@ -12,22 +12,39 @@ const StyledDeckPage = styled.div`
   width: 100%;
   min-height: 100dvh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 4.8rem;
-  gap: 8rem;
+  padding: 3rem;
+  gap: 3rem;
 
   @media (max-width: 900px) {
     padding: 2.4rem;
+    flex-direction: column;
+    align-items: center;
   }
 `;
 
-const Section = styled.div`
+const CardSection = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
   gap: 2.4rem;
+  flex: 1;
+  width: calc(100% - 40rem - 3rem);
+
+  @media (max-width: 900px) {
+    width: 100%;
+  }
+`;
+
+const PannelSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+  width: 40rem;
+
+  @media (max-width: 900px) {
+    width: 100%;
+  }
 `;
 
 const DeckFinderHeader = styled.div`
@@ -84,7 +101,7 @@ const RelativeStrength = styled.div<{ $relativeScore: number }>`
 
 const CardList = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
   gap: 2.4rem;
   width: 100%;
   max-width: 160rem;
@@ -148,6 +165,7 @@ const StyledLink = styled(Link)`
 const Matchups = styled.div`
   position: relative;
   display: flex;
+  flex-direction: column;
   width: 100%;
   gap: 2.4rem;
 
@@ -161,10 +179,10 @@ const SubHeader = styled.div<{ $backgroundColor: string }>`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 8rem;
+  padding: 1rem 0;
   background: ${(props) => props.$backgroundColor};
   color: var(--bg);
-  font-size: 4rem;
+  font-size: 2.8rem;
   font-weight: 500;
   opacity: 0.9;
 `;
@@ -184,8 +202,8 @@ const MatchupSection = styled.div`
 
 const MatchupList = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-  gap: 2.4rem;
+  grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+  gap: 1.2rem;
   flex: 1;
   width: 100%;
 
@@ -204,7 +222,7 @@ const MatchupContainer = styled.div`
 
 const DeckCardContainer = styled.div`
   position: relative;
-  height: 15rem;
+  height: 11rem;
   aspect-ratio: 1 / 1;
 
   @media (max-width: 900px) {
@@ -225,6 +243,18 @@ const MatchupLabel = styled.div<{ $winRate: number }>`
   @media (max-width: 900px) {
     font-size: 2rem;
   }
+`;
+
+const KeyStats = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+`;
+
+const KeyStat = styled.div`
+  font-size: 2.4rem;
+  font-weight: 500;
 `;
 
 const DeckPage = () => {
@@ -273,7 +303,7 @@ const DeckPage = () => {
 
   return (
     <StyledDeckPage>
-      <Section>
+      <CardSection>
         {isDeckFinderMode && (
           <>
             <DeckFinderHeader>
@@ -306,10 +336,32 @@ const DeckPage = () => {
             </CardContainer>
           ))}
         </CardList>
-      </Section>
+      </CardSection>
       {!isDeckFinderMode && isPremium && (
-        <Section>
+        <PannelSection>
           <Matchups>
+            <MatchupSection>
+              <SubHeader $backgroundColor="var(--c)">
+                {t("deckPage.keyStats")}
+              </SubHeader>
+              <KeyStats>
+                <KeyStat>
+                  {t("deckPage.strength")}: {(deck.strength * 100).toFixed(0)}%
+                </KeyStat>
+                <KeyStat>
+                  {t("deckPage.popularity")}:{" "}
+                  {(deck.popularity * 100).toFixed(0)}%
+                </KeyStat>
+                <KeyStat>
+                  {t("deckPage.winRate")}:{" "}
+                  {(
+                    deck.matchups.find((matchup) => matchup.name === "Total")!
+                      .winRate * 100
+                  ).toFixed(0)}
+                  %
+                </KeyStat>
+              </KeyStats>
+            </MatchupSection>
             <MatchupSection>
               <SubHeader $backgroundColor="var(--e)">
                 {t("deckPage.strongAgainst")}
@@ -328,7 +380,7 @@ const DeckPage = () => {
                       decks.find((deck) => deck.name === a.name)!.place -
                       decks.find((deck) => deck.name === b.name)!.place
                   )
-                  .slice(0, 8)
+                  .slice(0, 6)
                   .map((matchup: MatchupType) => (
                     <MatchupContainer key={matchup.name}>
                       <DeckCardContainer>
@@ -359,7 +411,7 @@ const DeckPage = () => {
                     decks.some((deck) => deck.name === matchup.name)
                   )
                   .sort((a, b) => a.winRate - b.winRate)
-                  .slice(0, 8)
+                  .slice(0, 6)
                   .map((matchup: MatchupType) => (
                     <MatchupContainer key={matchup.name}>
                       <DeckCardContainer>
@@ -377,7 +429,7 @@ const DeckPage = () => {
               </MatchupList>
             </MatchupSection>
           </Matchups>
-        </Section>
+        </PannelSection>
       )}
     </StyledDeckPage>
   );

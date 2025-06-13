@@ -31,6 +31,12 @@ const calculateCardScore = (
   );
 };
 
+export interface DeckScore {
+  score: number;
+  popularity: number;
+  strength: number;
+}
+
 /**
  * Calculates a deck's overall score based on card performance and popularity
  * @param deck - The deck to score
@@ -44,7 +50,7 @@ export const calculateDeckScore = (
   cardStats: Record<string, CardStats>,
   matchingGames: number,
   totalGames: number
-): number => {
+): DeckScore => {
   if (totalGames <= 0) {
     throw new Error("Total games must be greater than 0");
   }
@@ -52,5 +58,9 @@ export const calculateDeckScore = (
   const popularity = matchingGames / totalGames;
   const cardScore = calculateCardScore(deck.cards, cardStats);
 
-  return cardScore * WINRATE_IMPORTANCE + popularity * POPULARITY_IMPORTANCE;
+  return {
+    score: cardScore * WINRATE_IMPORTANCE + popularity * POPULARITY_IMPORTANCE,
+    popularity,
+    strength: cardScore,
+  };
 };
