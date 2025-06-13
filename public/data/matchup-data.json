@@ -821,8 +821,8 @@
     },
     {
       "name": "Incineroar ex-A3-033",
-      "winRate": 0.5342465753424658,
-      "totalGames": 73
+      "winRate": 0.5211267605633803,
+      "totalGames": 71
     },
     {
       "name": "Solgaleo ex-A3-122",
@@ -1665,6 +1665,11 @@
       "totalGames": 2
     },
     {
+      "name": "Incineroar ex-A3-033&Silvally-A3a-061",
+      "winRate": 1,
+      "totalGames": 2
+    },
+    {
       "name": "Tapu Koko ex-A3a-019&Zeraora-A3a-021",
       "winRate": 0,
       "totalGames": 5
@@ -1809,12 +1814,12 @@
     {
       "name": "Giratina ex-A2b-035&Darkrai ex-A2-110",
       "winRate": 0.5,
-      "totalGames": 4120
+      "totalGames": 4132
     },
     {
       "name": "Charizard ex-A2b-010&Turtonator-A3-037",
-      "winRate": 0.5657894736842105,
-      "totalGames": 152
+      "winRate": 0.5620915032679739,
+      "totalGames": 153
     },
     {
       "name": "Garchomp ex-A2a-047&Rampardos-A2-089",
@@ -1823,13 +1828,13 @@
     },
     {
       "name": "Charizard ex-A2b-010",
-      "winRate": 0.4796573875802998,
-      "totalGames": 467
+      "winRate": 0.4807692307692308,
+      "totalGames": 468
     },
     {
       "name": "Solgaleo ex-A3-122",
-      "winRate": 0.75,
-      "totalGames": 36
+      "winRate": 0.7567567567567568,
+      "totalGames": 37
     },
     {
       "name": "Crobat-A2a-050&Arceus ex-A2a-071",
@@ -1853,8 +1858,8 @@
     },
     {
       "name": "Magnezone-A2-053&Oricorio-A3-066",
-      "winRate": 0.4147465437788018,
-      "totalGames": 217
+      "winRate": 0.41284403669724773,
+      "totalGames": 218
     },
     {
       "name": "Exeggutor ex-A1-023",
@@ -1883,8 +1888,8 @@
     },
     {
       "name": "Incineroar ex-A3-033",
-      "winRate": 0.6435643564356436,
-      "totalGames": 101
+      "winRate": 0.6565656565656566,
+      "totalGames": 99
     },
     {
       "name": "Rampardos-A2-089&Lucario-A2-092",
@@ -2708,23 +2713,23 @@
     },
     {
       "name": "Buzzwole ex-A3a-006&Celesteela-A3a-062",
-      "winRate": 0.4040114613180516,
-      "totalGames": 349
+      "winRate": 0.4011142061281337,
+      "totalGames": 359
     },
     {
       "name": "Guzzlord ex-A3a-043&Naganadel-A3a-045",
-      "winRate": 0.47368421052631576,
-      "totalGames": 19
+      "winRate": 0.5,
+      "totalGames": 20
     },
     {
       "name": "Solgaleo ex-A3-122&Shiinotic-A3a-027",
-      "winRate": 0.50625,
-      "totalGames": 160
+      "winRate": 0.5119047619047619,
+      "totalGames": 168
     },
     {
       "name": "Silvally-A3a-061&Zeraora-A3a-021",
-      "winRate": 0.43902439024390244,
-      "totalGames": 41
+      "winRate": 0.4888888888888889,
+      "totalGames": 45
     },
     {
       "name": "Guzzlord ex-A3a-043&Nihilego-A3a-042",
@@ -2797,19 +2802,24 @@
       "totalGames": 2
     },
     {
+      "name": "Incineroar ex-A3-033&Silvally-A3a-061",
+      "winRate": 0.5,
+      "totalGames": 4
+    },
+    {
       "name": "Tapu Koko ex-A3a-019&Oricorio-A3-066",
       "winRate": 0.42857142857142855,
       "totalGames": 7
     },
     {
       "name": "Silvally-A3a-061",
-      "winRate": 0.8235294117647058,
-      "totalGames": 17
+      "winRate": 0.8333333333333334,
+      "totalGames": 18
     },
     {
       "name": "Charizard ex-A2b-010&Silvally-A3a-061",
-      "winRate": 0.625,
-      "totalGames": 48
+      "winRate": 0.62,
+      "totalGames": 50
     },
     {
       "name": "Tapu Koko ex-A3a-019&Zeraora-A3a-021",
@@ -2828,8 +2838,8 @@
     },
     {
       "name": "Celesteela-A3a-062",
-      "winRate": 0.5714285714285714,
-      "totalGames": 7
+      "winRate": 0.625,
+      "totalGames": 8
     },
     {
       "name": "Kartana-A3a-008",
@@ -2838,8 +2848,8 @@
     },
     {
       "name": "Silvally-A3a-061&Blacephalon-A3a-009",
-      "winRate": 0.6470588235294118,
-      "totalGames": 34
+      "winRate": 0.6388888888888888,
+      "totalGames": 36
     },
     {
       "name": "Guzzlord ex-A3a-043",
@@ -3627,8 +3637,8 @@
     },
     {
       "name": "Incineroar ex-A3-033",
-      "winRate": 0.4857142857142857,
-      "totalGames": 35
+      "winRate": 0.47058823529411764,
+      "totalGames": 34
     },
     {
       "name": "Rampardos-A2-089&Aerodactyl ex-A1a-046",
@@ -4116,6 +4126,11 @@
       "totalGames": 3
     },
     {
+      "name": "Incineroar ex-A3-033&Silvally-A3a-061",
+      "winRate": 1,
+      "totalGames": 1
+    },
+    {
       "name": "Guzzlord ex-A3a-043&Nihilego-A3a-042",
       "winRate": 0.6666666666666666,
       "totalGames": 3
@@ -4259,8 +4274,8 @@
     },
     {
       "name": "Giratina ex-A2b-035&Darkrai ex-A2-110",
-      "winRate": 0.5852534562211982,
-      "totalGames": 217
+      "winRate": 0.5871559633027523,
+      "totalGames": 218
     },
     {
       "name": "Charizard ex-A1-036&Moltres ex-A1-047",
@@ -4409,8 +4424,8 @@
     },
     {
       "name": "Charizard ex-A2b-010&Turtonator-A3-037",
-      "winRate": 0.2,
-      "totalGames": 40
+      "winRate": 0.21951219512195122,
+      "totalGames": 41
     },
     {
       "name": "Solgaleo ex-A3-122&Escavalier-A3-120",
@@ -4714,8 +4729,8 @@
     },
     {
       "name": "Buzzwole ex-A3a-006&Celesteela-A3a-062",
-      "winRate": 0.5588235294117647,
-      "totalGames": 68
+      "winRate": 0.5555555555555556,
+      "totalGames": 72
     },
     {
       "name": "Solgaleo ex-A3-122&Shiinotic-A3a-027",
@@ -4764,8 +4779,8 @@
     },
     {
       "name": "Charizard ex-A2b-010&Silvally-A3a-061",
-      "winRate": 0.42857142857142855,
-      "totalGames": 14
+      "winRate": 0.4,
+      "totalGames": 15
     },
     {
       "name": "Guzzlord ex-A3a-043&Naganadel-A3a-045",
@@ -5553,8 +5568,8 @@
     },
     {
       "name": "Giratina ex-A2b-035&Darkrai ex-A2-110",
-      "winRate": 0.5203426124197003,
-      "totalGames": 467
+      "winRate": 0.5192307692307693,
+      "totalGames": 468
     },
     {
       "name": "Magnezone-A2-053&Oricorio-A3-066",
@@ -5568,8 +5583,8 @@
     },
     {
       "name": "Incineroar ex-A3-033",
-      "winRate": 0.5185185185185185,
-      "totalGames": 54
+      "winRate": 0.5283018867924528,
+      "totalGames": 53
     },
     {
       "name": "Meowscarada-A2b-007",
@@ -5594,7 +5609,7 @@
     {
       "name": "Charizard ex-A2b-010",
       "winRate": 0.5,
-      "totalGames": 292
+      "totalGames": 294
     },
     {
       "name": "Solgaleo ex-A3-122",
@@ -5663,8 +5678,8 @@
     },
     {
       "name": "Charizard ex-A2b-010&Turtonator-A3-037",
-      "winRate": 0.49019607843137253,
-      "totalGames": 51
+      "winRate": 0.4807692307692308,
+      "totalGames": 52
     },
     {
       "name": "Darkrai ex-A2-110&Weezing-A1-177",
@@ -5868,8 +5883,8 @@
     },
     {
       "name": "Giratina ex-A2b-035",
-      "winRate": 0.5714285714285714,
-      "totalGames": 14
+      "winRate": 0.5333333333333333,
+      "totalGames": 15
     },
     {
       "name": "Garchomp-A2-123&Greninja-A1-089",
@@ -6098,8 +6113,8 @@
     },
     {
       "name": "Silvally-A3a-061&Zeraora-A3a-021",
-      "winRate": 0.16666666666666666,
-      "totalGames": 12
+      "winRate": 0.14285714285714285,
+      "totalGames": 14
     },
     {
       "name": "Rampardos-A2-089&Silvally-A3a-061",
@@ -6113,8 +6128,8 @@
     },
     {
       "name": "Solgaleo ex-A3-122&Shiinotic-A3a-027",
-      "winRate": 0.5816326530612245,
-      "totalGames": 98
+      "winRate": 0.58,
+      "totalGames": 100
     },
     {
       "name": "Silvally-A3a-061",
@@ -6148,8 +6163,8 @@
     },
     {
       "name": "Guzzlord ex-A3a-043&Naganadel-A3a-045",
-      "winRate": 0.2727272727272727,
-      "totalGames": 11
+      "winRate": 0.25,
+      "totalGames": 12
     },
     {
       "name": "Guzzlord ex-A3a-043&Celesteela-A3a-062",
@@ -6227,14 +6242,19 @@
       "totalGames": 2
     },
     {
+      "name": "Incineroar ex-A3-033&Silvally-A3a-061",
+      "winRate": 0,
+      "totalGames": 2
+    },
+    {
       "name": "Pheromosa-A3a-007",
       "winRate": 1,
       "totalGames": 2
     },
     {
       "name": "Charizard ex-A2b-010&Silvally-A3a-061",
-      "winRate": 0.5185185185185185,
-      "totalGames": 27
+      "winRate": 0.5172413793103449,
+      "totalGames": 29
     },
     {
       "name": "Guzzlord ex-A3a-043",
@@ -6243,8 +6263,8 @@
     },
     {
       "name": "Silvally-A3a-061&Oricorio-A3-066",
-      "winRate": 0.1,
-      "totalGames": 10
+      "winRate": 0.18181818181818182,
+      "totalGames": 11
     },
     {
       "name": "Nihilego-A3a-042",
@@ -6324,7 +6344,7 @@
     {
       "name": "Wigglytuff-A2b-061",
       "winRate": 1,
-      "totalGames": 1
+      "totalGames": 2
     },
     {
       "name": "Pachirisu ex-A2-061",
@@ -7964,8 +7984,8 @@
   "Incineroar ex-A3-033": [
     {
       "name": "Garchomp ex-A2a-047&Rampardos-A2-089",
-      "winRate": 0.5142857142857142,
-      "totalGames": 35
+      "winRate": 0.5294117647058824,
+      "totalGames": 34
     },
     {
       "name": "Magnezone-A2-053&Oricorio-A3-066",
@@ -7974,13 +7994,13 @@
     },
     {
       "name": "Giratina ex-A2b-035&Darkrai ex-A2-110",
-      "winRate": 0.3564356435643564,
-      "totalGames": 101
+      "winRate": 0.3434343434343434,
+      "totalGames": 99
     },
     {
       "name": "Crobat-A2a-050&Arceus ex-A2a-071",
-      "winRate": 0.4657534246575342,
-      "totalGames": 73
+      "winRate": 0.4788732394366197,
+      "totalGames": 71
     },
     {
       "name": "Rampardos-A2-089&Aerodactyl ex-A1a-046",
@@ -8029,8 +8049,8 @@
     },
     {
       "name": "Charizard ex-A2b-010",
-      "winRate": 0.48148148148148145,
-      "totalGames": 54
+      "winRate": 0.4716981132075472,
+      "totalGames": 53
     },
     {
       "name": "Crabominable ex-A3-049",
@@ -8044,8 +8064,8 @@
     },
     {
       "name": "Togekiss-A2-065",
-      "winRate": 0.5625,
-      "totalGames": 16
+      "winRate": 0.5333333333333333,
+      "totalGames": 15
     },
     {
       "name": "Charizard ex-A1-036&Moltres ex-A1-047",
@@ -8059,13 +8079,13 @@
     },
     {
       "name": "Giratina ex-A2b-035&Tapu Lele-A3-084",
-      "winRate": 0.38095238095238093,
-      "totalGames": 21
+      "winRate": 0.35,
+      "totalGames": 20
     },
     {
       "name": "Beedrill ex-A2b-003",
-      "winRate": 0.5714285714285714,
-      "totalGames": 7
+      "winRate": 0.6,
+      "totalGames": 5
     },
     {
       "name": "Lucario-A2-092&Primeape-A1a-042",
@@ -8084,8 +8104,8 @@
     },
     {
       "name": "Solgaleo ex-A3-122",
-      "winRate": 0.5384615384615384,
-      "totalGames": 13
+      "winRate": 0.5833333333333334,
+      "totalGames": 12
     },
     {
       "name": "Gallade ex-A2-095&Lucario-A2-092",
@@ -8119,8 +8139,8 @@
     },
     {
       "name": "Rampardos-A2-089&Lycanroc-A3-101",
-      "winRate": 0.7142857142857143,
-      "totalGames": 14
+      "winRate": 0.7692307692307693,
+      "totalGames": 13
     },
     {
       "name": "Wugtrio ex-A2b-019",
@@ -8165,7 +8185,7 @@
     {
       "name": "Arceus ex-A2a-071",
       "winRate": 0.5,
-      "totalGames": 6
+      "totalGames": 4
     },
     {
       "name": "Incineroar ex-A3-033&Charizard ex-A2b-010",
@@ -8199,8 +8219,8 @@
     },
     {
       "name": "Gallade ex-A2-095&Rampardos-A2-089",
-      "winRate": 0.1,
-      "totalGames": 10
+      "winRate": 0.1111111111111111,
+      "totalGames": 9
     },
     {
       "name": "Celebi ex-A1a-003&Serperior-A1a-006",
@@ -8368,24 +8388,14 @@
       "totalGames": 1
     },
     {
-      "name": "Guzzlord ex-A3a-043&Nihilego-A3a-042",
-      "winRate": 0.375,
-      "totalGames": 8
-    },
-    {
-      "name": "Buzzwole ex-A3a-006&Celesteela-A3a-062",
-      "winRate": 0.5625,
-      "totalGames": 16
-    },
-    {
-      "name": "Rampardos-A2-089&Silvally-A3a-061",
-      "winRate": 0.2608695652173913,
-      "totalGames": 23
-    },
-    {
       "name": "Kartana-A3a-008",
       "winRate": 1,
       "totalGames": 1
+    },
+    {
+      "name": "Rampardos-A2-089&Silvally-A3a-061",
+      "winRate": 0.29411764705882354,
+      "totalGames": 17
     },
     {
       "name": "Lycanroc ex-A3a-033",
@@ -8399,18 +8409,23 @@
     },
     {
       "name": "Solgaleo ex-A3-122&Shiinotic-A3a-027",
-      "winRate": 0.7142857142857143,
-      "totalGames": 7
+      "winRate": 0.75,
+      "totalGames": 8
     },
     {
-      "name": "Buzzwole ex-A3a-006&Pheromosa-A3a-007",
-      "winRate": 0.6666666666666666,
-      "totalGames": 3
+      "name": "Buzzwole ex-A3a-006&Celesteela-A3a-062",
+      "winRate": 0.5,
+      "totalGames": 14
     },
     {
       "name": "Tapu Koko ex-A3a-019&Oricorio-A3-066",
       "winRate": 0,
       "totalGames": 1
+    },
+    {
+      "name": "Guzzlord ex-A3a-043&Nihilego-A3a-042",
+      "winRate": 0.2,
+      "totalGames": 5
     },
     {
       "name": "Paldean Clodsire ex-A2b-048",
@@ -8423,14 +8438,19 @@
       "totalGames": 1
     },
     {
+      "name": "Buzzwole ex-A3a-006&Pheromosa-A3a-007",
+      "winRate": 0.5,
+      "totalGames": 2
+    },
+    {
       "name": "Guzzlord ex-A3a-043",
       "winRate": 0,
       "totalGames": 1
     },
     {
       "name": "Decidueye ex-A3-012&Pheromosa-A3a-007",
-      "winRate": 0.3333333333333333,
-      "totalGames": 3
+      "winRate": 0.5,
+      "totalGames": 2
     },
     {
       "name": "Heatran-A2a-013&Arceus ex-A2a-071",
@@ -8459,8 +8479,8 @@
     },
     {
       "name": "Charizard ex-A2b-010&Silvally-A3a-061",
-      "winRate": 0,
-      "totalGames": 3
+      "winRate": 0.2,
+      "totalGames": 5
     },
     {
       "name": "Silvally-A3a-061&Oricorio-A3-066",
@@ -8494,8 +8514,8 @@
     },
     {
       "name": "Silvally-A3a-061&Zeraora-A3a-021",
-      "winRate": 1,
-      "totalGames": 1
+      "winRate": 0.5,
+      "totalGames": 2
     },
     {
       "name": "Decidueye ex-A3-012",
@@ -9063,8 +9083,8 @@
     },
     {
       "name": "Incineroar ex-A3-033",
-      "winRate": 0.2857142857142857,
-      "totalGames": 14
+      "winRate": 0.23076923076923078,
+      "totalGames": 13
     },
     {
       "name": "Beedrill ex-A2b-003&Beedrill-A1-010",
@@ -9352,6 +9372,11 @@
       "totalGames": 1
     },
     {
+      "name": "Incineroar ex-A3-033&Silvally-A3a-061",
+      "winRate": 1,
+      "totalGames": 1
+    },
+    {
       "name": "Blacephalon-A3a-009",
       "winRate": 0,
       "totalGames": 1
@@ -9455,8 +9480,8 @@
     },
     {
       "name": "Giratina ex-A2b-035&Darkrai ex-A2-110",
-      "winRate": 0.25,
-      "totalGames": 36
+      "winRate": 0.24324324324324326,
+      "totalGames": 37
     },
     {
       "name": "Rampardos-A2-089&Lucario-A2-092",
@@ -9515,8 +9540,8 @@
     },
     {
       "name": "Incineroar ex-A3-033",
-      "winRate": 0.46153846153846156,
-      "totalGames": 13
+      "winRate": 0.4166666666666667,
+      "totalGames": 12
     },
     {
       "name": "Snorlax-A2a-063&Greninja-A1-089",
@@ -9719,6 +9744,11 @@
       "totalGames": 2
     },
     {
+      "name": "Incineroar ex-A3-033&Silvally-A3a-061",
+      "winRate": 1,
+      "totalGames": 1
+    },
+    {
       "name": "Decidueye ex-A3-012&Pheromosa-A3a-007",
       "winRate": 1,
       "totalGames": 1
@@ -9825,8 +9855,8 @@
     },
     {
       "name": "Guzzlord ex-A3a-043&Naganadel-A3a-045",
-      "winRate": 1,
-      "totalGames": 1
+      "winRate": 0.5,
+      "totalGames": 2
     },
     {
       "name": "Celesteela-A3a-062",
@@ -9890,6 +9920,11 @@
     },
     {
       "name": "Dialga ex-A2-119&Skarmory-A2-111",
+      "winRate": 1,
+      "totalGames": 1
+    },
+    {
+      "name": "Lt. Surge-A1-226",
       "winRate": 1,
       "totalGames": 1
     }
@@ -13819,8 +13854,8 @@
   "Giratina ex-A2b-035&Tapu Lele-A3-084": [
     {
       "name": "Incineroar ex-A3-033",
-      "winRate": 0.6190476190476191,
-      "totalGames": 21
+      "winRate": 0.65,
+      "totalGames": 20
     },
     {
       "name": "Snorlax-A2a-063&Greninja-A1-089",
@@ -13899,8 +13934,8 @@
     },
     {
       "name": "Charizard ex-A2b-010&Turtonator-A3-037",
-      "winRate": 0.6037735849056604,
-      "totalGames": 53
+      "winRate": 0.6181818181818182,
+      "totalGames": 55
     },
     {
       "name": "Rampardos-A2-089&Lucario-A2-092",
@@ -14064,8 +14099,8 @@
     },
     {
       "name": "Guzzlord ex-A3a-043&Naganadel-A3a-045",
-      "winRate": 0.5,
-      "totalGames": 8
+      "winRate": 0.5555555555555556,
+      "totalGames": 9
     },
     {
       "name": "Solgaleo ex-A3-122&Shiinotic-A3a-027",
@@ -14074,8 +14109,8 @@
     },
     {
       "name": "Buzzwole ex-A3a-006&Celesteela-A3a-062",
-      "winRate": 0.47058823529411764,
-      "totalGames": 51
+      "winRate": 0.48148148148148145,
+      "totalGames": 54
     },
     {
       "name": "Pheromosa-A3a-007&Kartana-A3a-008",
@@ -14109,8 +14144,13 @@
     },
     {
       "name": "Silvally-A3a-061&Zeraora-A3a-021",
-      "winRate": 0.2857142857142857,
-      "totalGames": 7
+      "winRate": 0.375,
+      "totalGames": 8
+    },
+    {
+      "name": "Incineroar ex-A3-033&Silvally-A3a-061",
+      "winRate": 0,
+      "totalGames": 1
     },
     {
       "name": "Arcanine ex-A1-041",
@@ -14284,8 +14324,8 @@
     },
     {
       "name": "Silvally-A3a-061&Blacephalon-A3a-009",
-      "winRate": 0,
-      "totalGames": 3
+      "winRate": 0.25,
+      "totalGames": 4
     },
     {
       "name": "Silvally-A3a-061&Oricorio-A3-066",
@@ -14653,8 +14693,8 @@
     },
     {
       "name": "Giratina ex-A2b-035&Darkrai ex-A2-110",
-      "winRate": 0.4342105263157895,
-      "totalGames": 152
+      "winRate": 0.43790849673202614,
+      "totalGames": 153
     },
     {
       "name": "Oricorio-A3-066&Greninja-A1-089",
@@ -14668,8 +14708,8 @@
     },
     {
       "name": "Charizard ex-A2b-010",
-      "winRate": 0.5098039215686274,
-      "totalGames": 51
+      "winRate": 0.5192307692307693,
+      "totalGames": 52
     },
     {
       "name": "Tinkaton ex-A2b-054&Skarmory-A2-111",
@@ -14713,8 +14753,8 @@
     },
     {
       "name": "Magnezone-A2-053&Oricorio-A3-066",
-      "winRate": 0.8,
-      "totalGames": 40
+      "winRate": 0.7804878048780488,
+      "totalGames": 41
     },
     {
       "name": "Carnivine-A2a-009&Arceus ex-A2a-071",
@@ -14803,8 +14843,8 @@
     },
     {
       "name": "Giratina ex-A2b-035&Tapu Lele-A3-084",
-      "winRate": 0.39622641509433965,
-      "totalGames": 53
+      "winRate": 0.38181818181818183,
+      "totalGames": 55
     },
     {
       "name": "Alakazam-A1-117&Banette-A3-075",
@@ -14829,7 +14869,7 @@
     {
       "name": "Charizard ex-A2b-010&Turtonator-A3-037",
       "winRate": 0.5,
-      "totalGames": 32
+      "totalGames": 34
     },
     {
       "name": "Articuno ex-A1-084&Greninja-A1-089",
@@ -14983,13 +15023,13 @@
     },
     {
       "name": "Buzzwole ex-A3a-006&Celesteela-A3a-062",
-      "winRate": 0.7,
-      "totalGames": 30
+      "winRate": 0.7272727272727273,
+      "totalGames": 33
     },
     {
       "name": "Solgaleo ex-A3-122&Shiinotic-A3a-027",
-      "winRate": 0.625,
-      "totalGames": 16
+      "winRate": 0.6111111111111112,
+      "totalGames": 18
     },
     {
       "name": "Rampardos-A2-089&Silvally-A3a-061",
@@ -15073,8 +15113,8 @@
     },
     {
       "name": "Charizard ex-A2b-010&Silvally-A3a-061",
-      "winRate": 0.5,
-      "totalGames": 6
+      "winRate": 0.5714285714285714,
+      "totalGames": 7
     },
     {
       "name": "Heatran-A2a-013&Arceus ex-A2a-071",
@@ -15188,6 +15228,11 @@
     },
     {
       "name": "Tapu Koko ex-A3a-019",
+      "winRate": 1,
+      "totalGames": 1
+    },
+    {
+      "name": "Weezing-A1-177",
       "winRate": 1,
       "totalGames": 1
     }
@@ -16579,8 +16624,8 @@
     },
     {
       "name": "Incineroar ex-A3-033",
-      "winRate": 0.9,
-      "totalGames": 10
+      "winRate": 0.8888888888888888,
+      "totalGames": 9
     },
     {
       "name": "Solgaleo ex-A3-122&Snorlax-A2a-063",
@@ -16860,6 +16905,11 @@
     {
       "name": "Silvally-A3a-061",
       "winRate": 0,
+      "totalGames": 1
+    },
+    {
+      "name": "Incineroar ex-A3-033&Silvally-A3a-061",
+      "winRate": 1,
       "totalGames": 1
     },
     {
@@ -19423,7 +19473,7 @@
     {
       "name": "Buzzwole ex-A3a-006&Celesteela-A3a-062",
       "winRate": 0,
-      "totalGames": 2
+      "totalGames": 3
     },
     {
       "name": "Tapu Koko ex-A3a-019&Zeraora-A3a-021",
@@ -19468,7 +19518,7 @@
     {
       "name": "Charizard ex-A2b-010&Silvally-A3a-061",
       "winRate": 1,
-      "totalGames": 1
+      "totalGames": 2
     },
     {
       "name": "Solgaleo ex-A3-122&Shiinotic-A3a-027",
@@ -29063,8 +29113,8 @@
     },
     {
       "name": "Incineroar ex-A3-033",
-      "winRate": 0.42857142857142855,
-      "totalGames": 7
+      "winRate": 0.4,
+      "totalGames": 5
     },
     {
       "name": "Oricorio-A3-066&Greninja-A1-089",
@@ -29499,6 +29549,11 @@
     {
       "name": "Buzzwole ex-A3a-006&Celesteela-A3a-062",
       "winRate": 0,
+      "totalGames": 2
+    },
+    {
+      "name": "Incineroar ex-A3-033&Silvally-A3a-061",
+      "winRate": 0.5,
       "totalGames": 2
     },
     {
@@ -34669,13 +34724,13 @@
     },
     {
       "name": "Silvally-A3a-061&Zeraora-A3a-021",
-      "winRate": 0.8,
-      "totalGames": 5
+      "winRate": 0.6666666666666666,
+      "totalGames": 6
     },
     {
       "name": "Buzzwole ex-A3a-006&Celesteela-A3a-062",
-      "winRate": 0.35294117647058826,
-      "totalGames": 17
+      "winRate": 0.3888888888888889,
+      "totalGames": 18
     },
     {
       "name": "Solgaleo ex-A3-122&Shiinotic-A3a-027",
@@ -34821,6 +34876,11 @@
       "name": "Venusaur ex-A1-004",
       "winRate": 0,
       "totalGames": 1
+    },
+    {
+      "name": "Weezing-A1-177",
+      "winRate": 0,
+      "totalGames": 1
     }
   ],
   "Togekiss-A2-065": [
@@ -34846,8 +34906,8 @@
     },
     {
       "name": "Incineroar ex-A3-033",
-      "winRate": 0.4375,
-      "totalGames": 16
+      "winRate": 0.4666666666666667,
+      "totalGames": 15
     },
     {
       "name": "Crobat-A2a-050&Arceus ex-A2a-071",
@@ -35668,6 +35728,11 @@
       "name": "Buzzwole ex-A3a-006&Celesteela-A3a-062",
       "winRate": 0.375,
       "totalGames": 8
+    },
+    {
+      "name": "Incineroar ex-A3-033&Silvally-A3a-061",
+      "winRate": 0,
+      "totalGames": 1
     },
     {
       "name": "Oricorio-A3-066",
@@ -39090,7 +39155,7 @@
       "totalGames": 2
     },
     {
-      "name": "Stoutland-A3a-056",
+      "name": "Stoutland-A3a-056&Silvally-A3a-061",
       "winRate": 1,
       "totalGames": 1
     },
@@ -39810,7 +39875,7 @@
     {
       "name": "Giratina ex-A2b-035",
       "winRate": 0.5,
-      "totalGames": 292
+      "totalGames": 294
     },
     {
       "name": "Oricorio-A3-066&Greninja-A1-089",
@@ -39869,8 +39934,8 @@
     },
     {
       "name": "Charizard ex-A2b-010",
-      "winRate": 0.42857142857142855,
-      "totalGames": 14
+      "winRate": 0.4666666666666667,
+      "totalGames": 15
     },
     {
       "name": "Magnezone-A2-053&Greninja-A1-089",
@@ -40459,8 +40524,8 @@
     },
     {
       "name": "Buzzwole ex-A3a-006&Celesteela-A3a-062",
-      "winRate": 0.375,
-      "totalGames": 8
+      "winRate": 0.3333333333333333,
+      "totalGames": 9
     },
     {
       "name": "Decidueye ex-A3-012",
@@ -40485,7 +40550,7 @@
     {
       "name": "Silvally-A3a-061&Zeraora-A3a-021",
       "winRate": 0,
-      "totalGames": 2
+      "totalGames": 3
     },
     {
       "name": "Wishiwashi ex-A3-051&Wishiwashi-A3-050",
@@ -40500,7 +40565,7 @@
     {
       "name": "Silvally-A3a-061&Blacephalon-A3a-009",
       "winRate": 0,
-      "totalGames": 1
+      "totalGames": 2
     },
     {
       "name": "Giratina ex-A2b-035&Tapu Lele-A3-084",
@@ -40559,6 +40624,11 @@
     },
     {
       "name": "Gallade ex-A2-095&Stoutland-A3a-056",
+      "winRate": 0,
+      "totalGames": 1
+    },
+    {
+      "name": "Stoutland-A3a-056",
       "winRate": 0,
       "totalGames": 1
     }
@@ -42438,7 +42508,7 @@
       "totalGames": 3
     },
     {
-      "name": "Stoutland-A3a-056",
+      "name": "Stoutland-A3a-056&Silvally-A3a-061",
       "winRate": 0,
       "totalGames": 1
     },
@@ -56612,12 +56682,12 @@
     {
       "name": "Buzzwole ex-A3a-006&Celesteela-A3a-062",
       "winRate": 0,
-      "totalGames": 1
+      "totalGames": 2
     },
     {
       "name": "Rampardos-A2-089&Silvally-A3a-061",
-      "winRate": 0.2,
-      "totalGames": 5
+      "winRate": 0.2857142857142857,
+      "totalGames": 7
     },
     {
       "name": "Solgaleo ex-A3-122&Shiinotic-A3a-027",
@@ -59873,13 +59943,28 @@
       "name": "Lucario-A2-092&Marshadow-A1a-047",
       "winRate": 0,
       "totalGames": 1
+    },
+    {
+      "name": "Buzzwole ex-A3a-006&Celesteela-A3a-062",
+      "winRate": 1,
+      "totalGames": 1
+    },
+    {
+      "name": "Solgaleo ex-A3-122&Shiinotic-A3a-027",
+      "winRate": 0,
+      "totalGames": 2
+    },
+    {
+      "name": "Guzzlord ex-A3a-043&Naganadel-A3a-045",
+      "winRate": 0,
+      "totalGames": 1
     }
   ],
   "Arceus ex-A2a-071": [
     {
       "name": "Incineroar ex-A3-033",
       "winRate": 0.5,
-      "totalGames": 6
+      "totalGames": 4
     },
     {
       "name": "Giratina ex-A2b-035&Greninja-A1-089",
@@ -60473,6 +60558,11 @@
     },
     {
       "name": "Guzzlord ex-A3a-043&Nihilego-A3a-042",
+      "winRate": 0.5,
+      "totalGames": 2
+    },
+    {
+      "name": "Incineroar ex-A3-033&Silvally-A3a-061",
       "winRate": 0.5,
       "totalGames": 2
     },
@@ -78902,7 +78992,7 @@
     {
       "name": "Charizard ex-A2b-010",
       "winRate": 0,
-      "totalGames": 1
+      "totalGames": 2
     },
     {
       "name": "Paldean Clodsire ex-A2b-048&Weezing-A1-177",
@@ -78946,6 +79036,16 @@
     },
     {
       "name": "Giratina ex-A2b-035",
+      "winRate": 0,
+      "totalGames": 1
+    },
+    {
+      "name": "Solgaleo ex-A3-122&Shiinotic-A3a-027",
+      "winRate": 0,
+      "totalGames": 1
+    },
+    {
+      "name": "Buzzwole ex-A3a-006&Celesteela-A3a-062",
       "winRate": 0,
       "totalGames": 1
     }
@@ -85648,6 +85748,26 @@
       "name": "Pikachu ex-A1-096&Electrode-A1-100",
       "winRate": 0,
       "totalGames": 1
+    },
+    {
+      "name": "Gengar-A1-122",
+      "winRate": 1,
+      "totalGames": 1
+    },
+    {
+      "name": "Silvally-A3a-061&Zeraora-A3a-021",
+      "winRate": 1,
+      "totalGames": 1
+    },
+    {
+      "name": "Buzzwole ex-A3a-006&Celesteela-A3a-062",
+      "winRate": 0.5,
+      "totalGames": 2
+    },
+    {
+      "name": "Charizard ex-A2b-010&Turtonator-A3-037",
+      "winRate": 0,
+      "totalGames": 1
     }
   ],
   "Wugtrio ex-A2b-019&Starmie ex-A1-076": [
@@ -88253,6 +88373,21 @@
     },
     {
       "name": "Dialga ex-A2-119",
+      "winRate": 0,
+      "totalGames": 1
+    },
+    {
+      "name": "Solgaleo ex-A3-122",
+      "winRate": 0,
+      "totalGames": 1
+    },
+    {
+      "name": "Silvally-A3a-061&Zeraora-A3a-021",
+      "winRate": 0,
+      "totalGames": 1
+    },
+    {
+      "name": "Guzzlord ex-A3a-043&Nihilego-A3a-042",
       "winRate": 0,
       "totalGames": 1
     }
@@ -113327,12 +113462,12 @@
     {
       "name": "Buzzwole ex-A3a-006&Celesteela-A3a-062",
       "winRate": 0.5,
-      "totalGames": 734
+      "totalGames": 762
     },
     {
       "name": "Rampardos-A2-089&Silvally-A3a-061",
-      "winRate": 0.6239316239316239,
-      "totalGames": 585
+      "winRate": 0.6241496598639455,
+      "totalGames": 588
     },
     {
       "name": "Garchomp ex-A2a-047&Rampardos-A2-089",
@@ -113346,8 +113481,8 @@
     },
     {
       "name": "Giratina ex-A2b-035&Darkrai ex-A2-110",
-      "winRate": 0.5959885386819485,
-      "totalGames": 349
+      "winRate": 0.5988857938718662,
+      "totalGames": 359
     },
     {
       "name": "Charizard ex-A1-036&Moltres ex-A1-047",
@@ -113361,8 +113496,8 @@
     },
     {
       "name": "Giratina ex-A2b-035&Tapu Lele-A3-084",
-      "winRate": 0.5294117647058824,
-      "totalGames": 51
+      "winRate": 0.5185185185185185,
+      "totalGames": 54
     },
     {
       "name": "Naganadel-A3a-045&Nihilego-A3a-042",
@@ -113371,8 +113506,8 @@
     },
     {
       "name": "Solgaleo ex-A3-122&Shiinotic-A3a-027",
-      "winRate": 0.3611111111111111,
-      "totalGames": 432
+      "winRate": 0.36444444444444446,
+      "totalGames": 450
     },
     {
       "name": "Crobat-A2a-050&Arceus ex-A2a-071",
@@ -113396,8 +113531,8 @@
     },
     {
       "name": "Silvally-A3a-061&Zeraora-A3a-021",
-      "winRate": 0.5702479338842975,
-      "totalGames": 121
+      "winRate": 0.5736434108527132,
+      "totalGames": 129
     },
     {
       "name": "Meowscarada-A2b-007",
@@ -113426,8 +113561,8 @@
     },
     {
       "name": "Guzzlord ex-A3a-043&Naganadel-A3a-045",
-      "winRate": 0.6976744186046512,
-      "totalGames": 43
+      "winRate": 0.68,
+      "totalGames": 50
     },
     {
       "name": "Giratina ex-A2b-035&Greninja-A1-089",
@@ -113440,9 +113575,9 @@
       "totalGames": 7
     },
     {
-      "name": "Incineroar ex-A3-033",
-      "winRate": 0.4375,
-      "totalGames": 16
+      "name": "Incineroar ex-A3-033&Silvally-A3a-061",
+      "winRate": 0.5,
+      "totalGames": 4
     },
     {
       "name": "Infernape ex-A2-029",
@@ -113466,8 +113601,8 @@
     },
     {
       "name": "Guzzlord ex-A3a-043&Nihilego-A3a-042",
-      "winRate": 0.6435643564356436,
-      "totalGames": 101
+      "winRate": 0.6470588235294118,
+      "totalGames": 102
     },
     {
       "name": "Gallade ex-A2-095&Rampardos-A2-089",
@@ -113476,8 +113611,8 @@
     },
     {
       "name": "Charizard ex-A2b-010&Turtonator-A3-037",
-      "winRate": 0.3,
-      "totalGames": 30
+      "winRate": 0.2727272727272727,
+      "totalGames": 33
     },
     {
       "name": "Pawmot-A2b-028",
@@ -113486,8 +113621,8 @@
     },
     {
       "name": "Gengar-A1-122",
-      "winRate": 0.6470588235294118,
-      "totalGames": 17
+      "winRate": 0.6111111111111112,
+      "totalGames": 18
     },
     {
       "name": "Solgaleo ex-A3-122",
@@ -113522,7 +113657,7 @@
     {
       "name": "Dragonite-A1-185&Oricorio-A3-066",
       "winRate": 1,
-      "totalGames": 1
+      "totalGames": 2
     },
     {
       "name": "Beedrill ex-A2b-003",
@@ -113536,8 +113671,8 @@
     },
     {
       "name": "Silvally-A3a-061&Blacephalon-A3a-009",
-      "winRate": 0.3956043956043956,
-      "totalGames": 91
+      "winRate": 0.39361702127659576,
+      "totalGames": 94
     },
     {
       "name": "Snorlax-A2a-063&Greninja-A1-089",
@@ -113575,6 +113710,11 @@
       "totalGames": 1
     },
     {
+      "name": "Incineroar ex-A3-033",
+      "winRate": 0.5,
+      "totalGames": 14
+    },
+    {
       "name": "Stoutland-A3a-056&Tapu Lele-A3-084",
       "winRate": 0.5,
       "totalGames": 10
@@ -113586,8 +113726,8 @@
     },
     {
       "name": "Magnezone-A2-053&Oricorio-A3-066",
-      "winRate": 0.4411764705882353,
-      "totalGames": 68
+      "winRate": 0.4444444444444444,
+      "totalGames": 72
     },
     {
       "name": "Pheromosa-A3a-007&Kartana-A3a-008",
@@ -113601,8 +113741,8 @@
     },
     {
       "name": "Stoutland-A3a-056",
-      "winRate": 0.5,
-      "totalGames": 12
+      "winRate": 0.45454545454545453,
+      "totalGames": 11
     },
     {
       "name": "Salazzle-A3-036&Nihilego-A3a-042",
@@ -113706,8 +113846,8 @@
     },
     {
       "name": "Charizard ex-A2b-010&Silvally-A3a-061",
-      "winRate": 0.5206611570247934,
-      "totalGames": 121
+      "winRate": 0.5158730158730159,
+      "totalGames": 126
     },
     {
       "name": "Carnivine-A2a-009&Arceus ex-A2a-071",
@@ -113716,8 +113856,8 @@
     },
     {
       "name": "Celesteela-A3a-062",
-      "winRate": 0.6666666666666666,
-      "totalGames": 9
+      "winRate": 0.5454545454545454,
+      "totalGames": 11
     },
     {
       "name": "Lurantis-A3-015",
@@ -113751,8 +113891,8 @@
     },
     {
       "name": "Silvally-A3a-061&Oricorio-A3-066",
-      "winRate": 0.5454545454545454,
-      "totalGames": 44
+      "winRate": 0.5531914893617021,
+      "totalGames": 47
     },
     {
       "name": "Nihilego-A3a-042",
@@ -113786,8 +113926,8 @@
     },
     {
       "name": "Giratina ex-A2b-035",
-      "winRate": 0.625,
-      "totalGames": 8
+      "winRate": 0.6666666666666666,
+      "totalGames": 9
     },
     {
       "name": "Decidueye ex-A3-012&Lurantis-A3-015",
@@ -113840,6 +113980,11 @@
       "totalGames": 5
     },
     {
+      "name": "Stoutland-A3a-056&Silvally-A3a-061",
+      "winRate": 1,
+      "totalGames": 1
+    },
+    {
       "name": "Alolan Muk ex-A3-111",
       "winRate": 1,
       "totalGames": 2
@@ -113862,7 +114007,7 @@
     {
       "name": "Luxray-A2-060",
       "winRate": 1,
-      "totalGames": 2
+      "totalGames": 3
     },
     {
       "name": "Solgaleo ex-A3-122&Escavalier-A3-120",
@@ -113963,13 +114108,28 @@
       "name": "Marowak ex-A1-153",
       "winRate": 0,
       "totalGames": 1
+    },
+    {
+      "name": "Heatran-A2a-013&Arceus ex-A2a-071",
+      "winRate": 0,
+      "totalGames": 1
+    },
+    {
+      "name": "Wigglytuff-A2b-061",
+      "winRate": 1,
+      "totalGames": 1
+    },
+    {
+      "name": "Weezing-A1-177",
+      "winRate": 0.5,
+      "totalGames": 2
     }
   ],
   "Solgaleo ex-A3-122&Shiinotic-A3a-027": [
     {
       "name": "Rampardos-A2-089&Silvally-A3a-061",
-      "winRate": 0.550561797752809,
-      "totalGames": 356
+      "winRate": 0.5518207282913166,
+      "totalGames": 357
     },
     {
       "name": "Crobat-A2a-050&Arceus ex-A2a-071",
@@ -113978,13 +114138,13 @@
     },
     {
       "name": "Charizard ex-A2b-010",
-      "winRate": 0.41836734693877553,
-      "totalGames": 98
+      "winRate": 0.42,
+      "totalGames": 100
     },
     {
       "name": "Giratina ex-A2b-035&Darkrai ex-A2-110",
-      "winRate": 0.49375,
-      "totalGames": 160
+      "winRate": 0.4880952380952381,
+      "totalGames": 168
     },
     {
       "name": "Garchomp ex-A2a-047&Rampardos-A2-089",
@@ -113993,13 +114153,13 @@
     },
     {
       "name": "Buzzwole ex-A3a-006&Celesteela-A3a-062",
-      "winRate": 0.6388888888888888,
-      "totalGames": 432
+      "winRate": 0.6355555555555555,
+      "totalGames": 450
     },
     {
       "name": "Solgaleo ex-A3-122&Shiinotic-A3a-027",
       "winRate": 0.5,
-      "totalGames": 282
+      "totalGames": 292
     },
     {
       "name": "Incineroar ex-A3-033&Turtonator-A3-037",
@@ -114023,8 +114183,8 @@
     },
     {
       "name": "Silvally-A3a-061&Zeraora-A3a-021",
-      "winRate": 0.26582278481012656,
-      "totalGames": 79
+      "winRate": 0.26506024096385544,
+      "totalGames": 83
     },
     {
       "name": "Magnezone-A2-053",
@@ -114043,8 +114203,8 @@
     },
     {
       "name": "Guzzlord ex-A3a-043&Naganadel-A3a-045",
-      "winRate": 0.44,
-      "totalGames": 25
+      "winRate": 0.46153846153846156,
+      "totalGames": 26
     },
     {
       "name": "Decidueye ex-A3-012&Pheromosa-A3a-007",
@@ -114113,8 +114273,8 @@
     },
     {
       "name": "Incineroar ex-A3-033",
-      "winRate": 0.2857142857142857,
-      "totalGames": 7
+      "winRate": 0.25,
+      "totalGames": 8
     },
     {
       "name": "Pawmot-A2b-028",
@@ -114138,8 +114298,8 @@
     },
     {
       "name": "Charizard ex-A2b-010&Turtonator-A3-037",
-      "winRate": 0.375,
-      "totalGames": 16
+      "winRate": 0.3888888888888889,
+      "totalGames": 18
     },
     {
       "name": "Stoutland-A3a-056&Tapu Lele-A3-084",
@@ -114233,8 +114393,8 @@
     },
     {
       "name": "Stoutland-A3a-056",
-      "winRate": 0.7142857142857143,
-      "totalGames": 7
+      "winRate": 0.75,
+      "totalGames": 8
     },
     {
       "name": "Wishiwashi ex-A3-051&Wishiwashi-A3-050",
@@ -114268,8 +114428,8 @@
     },
     {
       "name": "Charizard ex-A2b-010&Silvally-A3a-061",
-      "winRate": 0.37662337662337664,
-      "totalGames": 77
+      "winRate": 0.3950617283950617,
+      "totalGames": 81
     },
     {
       "name": "Darkrai ex-A2-110",
@@ -114520,6 +114680,21 @@
       "name": "Luxray-A2-060",
       "winRate": 0,
       "totalGames": 1
+    },
+    {
+      "name": "Wigglytuff-A2b-061",
+      "winRate": 1,
+      "totalGames": 1
+    },
+    {
+      "name": "Heatran-A2a-013&Arceus ex-A2a-071",
+      "winRate": 1,
+      "totalGames": 2
+    },
+    {
+      "name": "Incineroar ex-A3-033&Silvally-A3a-061",
+      "winRate": 0,
+      "totalGames": 1
     }
   ],
   "Rampardos-A2-089&Silvally-A3a-061": [
@@ -114540,8 +114715,8 @@
     },
     {
       "name": "Buzzwole ex-A3a-006&Celesteela-A3a-062",
-      "winRate": 0.37606837606837606,
-      "totalGames": 585
+      "winRate": 0.3758503401360544,
+      "totalGames": 588
     },
     {
       "name": "Giratina ex-A2b-035&Darkrai ex-A2-110",
@@ -114555,8 +114730,8 @@
     },
     {
       "name": "Solgaleo ex-A3-122&Shiinotic-A3a-027",
-      "winRate": 0.449438202247191,
-      "totalGames": 356
+      "winRate": 0.4481792717086835,
+      "totalGames": 357
     },
     {
       "name": "Guzzlord ex-A3a-043&Naganadel-A3a-045",
@@ -114675,8 +114850,8 @@
     },
     {
       "name": "Silvally-A3a-061",
-      "winRate": 0.5757575757575758,
-      "totalGames": 33
+      "winRate": 0.5588235294117647,
+      "totalGames": 34
     },
     {
       "name": "Incineroar ex-A3-033&Turtonator-A3-037",
@@ -114699,9 +114874,9 @@
       "totalGames": 17
     },
     {
-      "name": "Incineroar ex-A3-033",
-      "winRate": 0.7391304347826086,
-      "totalGames": 23
+      "name": "Incineroar ex-A3-033&Silvally-A3a-061",
+      "winRate": 0.8333333333333334,
+      "totalGames": 6
     },
     {
       "name": "Crabominable ex-A3-049",
@@ -114749,6 +114924,11 @@
       "totalGames": 41
     },
     {
+      "name": "Incineroar ex-A3-033",
+      "winRate": 0.7058823529411765,
+      "totalGames": 17
+    },
+    {
       "name": "Infernape ex-A2-029",
       "winRate": 0.42857142857142855,
       "totalGames": 7
@@ -114790,8 +114970,8 @@
     },
     {
       "name": "Dragonite-A1-185&Oricorio-A3-066",
-      "winRate": 0.8,
-      "totalGames": 5
+      "winRate": 0.7142857142857143,
+      "totalGames": 7
     },
     {
       "name": "Rampardos-A2-089",
@@ -114905,8 +115085,8 @@
     },
     {
       "name": "Stoutland-A3a-056",
-      "winRate": 0.7,
-      "totalGames": 10
+      "winRate": 0.6666666666666666,
+      "totalGames": 9
     },
     {
       "name": "Leafeon ex-A2a-010",
@@ -114935,8 +115115,8 @@
     },
     {
       "name": "Charizard ex-A2b-010&Silvally-A3a-061",
-      "winRate": 0.5157894736842106,
-      "totalGames": 95
+      "winRate": 0.5208333333333334,
+      "totalGames": 96
     },
     {
       "name": "Carnivine-A2a-009&Arceus ex-A2a-071",
@@ -115055,6 +115235,11 @@
     },
     {
       "name": "Banette-A3-075",
+      "winRate": 1,
+      "totalGames": 1
+    },
+    {
+      "name": "Stoutland-A3a-056&Silvally-A3a-061",
       "winRate": 1,
       "totalGames": 1
     },
@@ -115192,13 +115377,13 @@
     },
     {
       "name": "Buzzwole ex-A3a-006&Celesteela-A3a-062",
-      "winRate": 0.3023255813953488,
-      "totalGames": 43
+      "winRate": 0.32,
+      "totalGames": 50
     },
     {
       "name": "Solgaleo ex-A3-122&Shiinotic-A3a-027",
-      "winRate": 0.56,
-      "totalGames": 25
+      "winRate": 0.5384615384615384,
+      "totalGames": 26
     },
     {
       "name": "Crobat-A2a-050&Arceus ex-A2a-071",
@@ -115207,8 +115392,8 @@
     },
     {
       "name": "Giratina ex-A2b-035&Darkrai ex-A2-110",
-      "winRate": 0.5263157894736842,
-      "totalGames": 19
+      "winRate": 0.5,
+      "totalGames": 20
     },
     {
       "name": "Gengar-A1-122",
@@ -115217,8 +115402,8 @@
     },
     {
       "name": "Charizard ex-A2b-010",
-      "winRate": 0.7272727272727273,
-      "totalGames": 11
+      "winRate": 0.75,
+      "totalGames": 12
     },
     {
       "name": "Incineroar ex-A3-033",
@@ -115242,8 +115427,8 @@
     },
     {
       "name": "Giratina ex-A2b-035&Tapu Lele-A3-084",
-      "winRate": 0.5,
-      "totalGames": 8
+      "winRate": 0.4444444444444444,
+      "totalGames": 9
     },
     {
       "name": "Meowscarada-A2b-007",
@@ -115323,7 +115508,7 @@
     {
       "name": "Silvally-A3a-061&Oricorio-A3-066",
       "winRate": 1,
-      "totalGames": 2
+      "totalGames": 3
     },
     {
       "name": "Gallade ex-A2-095&Stoutland-A3a-056",
@@ -115337,8 +115522,8 @@
     },
     {
       "name": "Silvally-A3a-061&Blacephalon-A3a-009",
-      "winRate": 0.8,
-      "totalGames": 5
+      "winRate": 0.8333333333333334,
+      "totalGames": 6
     },
     {
       "name": "Shiinotic-A3a-027",
@@ -115432,8 +115617,8 @@
     },
     {
       "name": "Solgaleo ex-A3-122",
-      "winRate": 0,
-      "totalGames": 1
+      "winRate": 0.5,
+      "totalGames": 2
     },
     {
       "name": "Pheromosa-A3a-007&Kartana-A3a-008",
@@ -115442,6 +115627,11 @@
     },
     {
       "name": "Oricorio-A3-066&Greninja-A1-089",
+      "winRate": 1,
+      "totalGames": 1
+    },
+    {
+      "name": "Heatran-A2a-013&Arceus ex-A2a-071",
       "winRate": 1,
       "totalGames": 1
     }
@@ -116124,9 +116314,9 @@
       "totalGames": 4
     },
     {
-      "name": "Incineroar ex-A3-033",
-      "winRate": 0.6666666666666666,
-      "totalGames": 3
+      "name": "Incineroar ex-A3-033&Silvally-A3a-061",
+      "winRate": 1,
+      "totalGames": 1
     },
     {
       "name": "Solgaleo ex-A3-122",
@@ -116152,6 +116342,11 @@
       "name": "Buzzwole ex-A3a-006&Pheromosa-A3a-007",
       "winRate": 0.5,
       "totalGames": 4
+    },
+    {
+      "name": "Incineroar ex-A3-033",
+      "winRate": 0.5,
+      "totalGames": 2
     },
     {
       "name": "Kartana-A3a-008",
@@ -116342,8 +116537,8 @@
     },
     {
       "name": "Buzzwole ex-A3a-006&Celesteela-A3a-062",
-      "winRate": 0.3564356435643564,
-      "totalGames": 101
+      "winRate": 0.35294117647058826,
+      "totalGames": 102
     },
     {
       "name": "Zeraora-A3a-021",
@@ -116372,8 +116567,8 @@
     },
     {
       "name": "Silvally-A3a-061&Zeraora-A3a-021",
-      "winRate": 0.6842105263157895,
-      "totalGames": 19
+      "winRate": 0.65,
+      "totalGames": 20
     },
     {
       "name": "Charizard ex-A2b-010&Turtonator-A3-037",
@@ -116411,9 +116606,9 @@
       "totalGames": 9
     },
     {
-      "name": "Incineroar ex-A3-033",
-      "winRate": 0.625,
-      "totalGames": 8
+      "name": "Incineroar ex-A3-033&Silvally-A3a-061",
+      "winRate": 0.3333333333333333,
+      "totalGames": 3
     },
     {
       "name": "Incineroar ex-A3-033&Turtonator-A3-037",
@@ -116443,6 +116638,11 @@
     {
       "name": "Meowscarada-A2b-007",
       "winRate": 0.6,
+      "totalGames": 5
+    },
+    {
+      "name": "Incineroar ex-A3-033",
+      "winRate": 0.8,
       "totalGames": 5
     },
     {
@@ -116562,8 +116762,8 @@
     },
     {
       "name": "Charizard ex-A2b-010&Silvally-A3a-061",
-      "winRate": 0.875,
-      "totalGames": 24
+      "winRate": 0.84,
+      "totalGames": 25
     },
     {
       "name": "Rampardos-A2-089",
@@ -116663,6 +116863,11 @@
     {
       "name": "Luxray-A2-060",
       "winRate": 0,
+      "totalGames": 1
+    },
+    {
+      "name": "Lt. Surge-A1-226",
+      "winRate": 1,
       "totalGames": 1
     }
   ],
@@ -116781,13 +116986,13 @@
     },
     {
       "name": "Buzzwole ex-A3a-006&Celesteela-A3a-062",
-      "winRate": 0.4297520661157025,
-      "totalGames": 121
+      "winRate": 0.4263565891472868,
+      "totalGames": 129
     },
     {
       "name": "Giratina ex-A2b-035&Tapu Lele-A3-084",
-      "winRate": 0.7142857142857143,
-      "totalGames": 7
+      "winRate": 0.625,
+      "totalGames": 8
     },
     {
       "name": "Magnezone-A2-053",
@@ -116801,8 +117006,8 @@
     },
     {
       "name": "Charizard ex-A2b-010",
-      "winRate": 0.8333333333333334,
-      "totalGames": 12
+      "winRate": 0.8571428571428571,
+      "totalGames": 14
     },
     {
       "name": "Decidueye ex-A3-012&Pheromosa-A3a-007",
@@ -116811,18 +117016,18 @@
     },
     {
       "name": "Giratina ex-A2b-035&Darkrai ex-A2-110",
-      "winRate": 0.5609756097560976,
-      "totalGames": 41
+      "winRate": 0.5111111111111111,
+      "totalGames": 45
     },
     {
       "name": "Solgaleo ex-A3-122&Shiinotic-A3a-027",
-      "winRate": 0.7341772151898734,
-      "totalGames": 79
+      "winRate": 0.7349397590361446,
+      "totalGames": 83
     },
     {
       "name": "Guzzlord ex-A3a-043&Nihilego-A3a-042",
-      "winRate": 0.3157894736842105,
-      "totalGames": 19
+      "winRate": 0.35,
+      "totalGames": 20
     },
     {
       "name": "Snorlax-A2a-063&Greninja-A1-089",
@@ -116831,8 +117036,8 @@
     },
     {
       "name": "Gengar-A1-122",
-      "winRate": 0.2,
-      "totalGames": 5
+      "winRate": 0.3333333333333333,
+      "totalGames": 6
     },
     {
       "name": "Decidueye ex-A3-012",
@@ -116877,7 +117082,7 @@
     {
       "name": "Silvally-A3a-061&Zeraora-A3a-021",
       "winRate": 0.5,
-      "totalGames": 36
+      "totalGames": 38
     },
     {
       "name": "Naganadel-A3a-045&Nihilego-A3a-042",
@@ -116916,13 +117121,13 @@
     },
     {
       "name": "Charizard ex-A2b-010&Silvally-A3a-061",
-      "winRate": 0.6,
-      "totalGames": 25
+      "winRate": 0.5769230769230769,
+      "totalGames": 26
     },
     {
       "name": "Silvally-A3a-061&Oricorio-A3-066",
-      "winRate": 0.8,
-      "totalGames": 5
+      "winRate": 0.6666666666666666,
+      "totalGames": 6
     },
     {
       "name": "Gallade ex-A2-095&Stoutland-A3a-056",
@@ -116947,7 +117152,7 @@
     {
       "name": "Giratina ex-A2b-035",
       "winRate": 1,
-      "totalGames": 2
+      "totalGames": 3
     },
     {
       "name": "Solgaleo ex-A3-122",
@@ -117051,8 +117256,8 @@
     },
     {
       "name": "Celesteela-A3a-062",
-      "winRate": 1,
-      "totalGames": 2
+      "winRate": 0.75,
+      "totalGames": 4
     },
     {
       "name": "Tapu Koko ex-A3a-019&Oricorio-A3-066",
@@ -117101,8 +117306,8 @@
     },
     {
       "name": "Incineroar ex-A3-033",
-      "winRate": 0,
-      "totalGames": 1
+      "winRate": 0.5,
+      "totalGames": 2
     },
     {
       "name": "Togekiss-A2-065",
@@ -117121,6 +117326,21 @@
     },
     {
       "name": "Stakataka-A3a-053&Celesteela-A3a-062",
+      "winRate": 0,
+      "totalGames": 1
+    },
+    {
+      "name": "Lt. Surge-A1-226",
+      "winRate": 1,
+      "totalGames": 1
+    },
+    {
+      "name": "Incineroar ex-A3-033&Silvally-A3a-061",
+      "winRate": 0,
+      "totalGames": 1
+    },
+    {
+      "name": "Weezing-A1-177",
       "winRate": 0,
       "totalGames": 1
     }
@@ -117289,14 +117509,19 @@
       "totalGames": 1
     },
     {
-      "name": "Incineroar ex-A3-033",
-      "winRate": 0.3333333333333333,
-      "totalGames": 3
+      "name": "Incineroar ex-A3-033&Silvally-A3a-061",
+      "winRate": 0,
+      "totalGames": 1
     },
     {
       "name": "Giratina ex-A2b-035&Magnezone-A2-053",
       "winRate": 1,
       "totalGames": 1
+    },
+    {
+      "name": "Incineroar ex-A3-033",
+      "winRate": 0.5,
+      "totalGames": 2
     },
     {
       "name": "Solgaleo ex-A3-122&Shiinotic-A3a-027",
@@ -117523,6 +117748,98 @@
     {
       "name": "Paldean Clodsire ex-A2b-048&Weezing-A1-177",
       "winRate": 0,
+      "totalGames": 1
+    }
+  ],
+  "Incineroar ex-A3-033&Silvally-A3a-061": [
+    {
+      "name": "Guzzlord ex-A3a-043&Nihilego-A3a-042",
+      "winRate": 0.6666666666666666,
+      "totalGames": 3
+    },
+    {
+      "name": "Beedrill ex-A2b-003",
+      "winRate": 0.5,
+      "totalGames": 2
+    },
+    {
+      "name": "Buzzwole ex-A3a-006&Celesteela-A3a-062",
+      "winRate": 0.5,
+      "totalGames": 4
+    },
+    {
+      "name": "Giratina ex-A2b-035&Tapu Lele-A3-084",
+      "winRate": 1,
+      "totalGames": 1
+    },
+    {
+      "name": "Rampardos-A2-089&Silvally-A3a-061",
+      "winRate": 0.16666666666666666,
+      "totalGames": 6
+    },
+    {
+      "name": "Garchomp ex-A2a-047&Rampardos-A2-089",
+      "winRate": 0,
+      "totalGames": 1
+    },
+    {
+      "name": "Buzzwole ex-A3a-006&Pheromosa-A3a-007",
+      "winRate": 1,
+      "totalGames": 1
+    },
+    {
+      "name": "Crobat-A2a-050&Arceus ex-A2a-071",
+      "winRate": 0,
+      "totalGames": 2
+    },
+    {
+      "name": "Giratina ex-A2b-035&Darkrai ex-A2-110",
+      "winRate": 0.5,
+      "totalGames": 4
+    },
+    {
+      "name": "Arceus ex-A2a-071",
+      "winRate": 0.5,
+      "totalGames": 2
+    },
+    {
+      "name": "Charizard ex-A2b-010",
+      "winRate": 1,
+      "totalGames": 2
+    },
+    {
+      "name": "Togekiss-A2-065",
+      "winRate": 1,
+      "totalGames": 1
+    },
+    {
+      "name": "Gallade ex-A2-095&Rampardos-A2-089",
+      "winRate": 0,
+      "totalGames": 1
+    },
+    {
+      "name": "Decidueye ex-A3-012&Pheromosa-A3a-007",
+      "winRate": 0,
+      "totalGames": 1
+    },
+    {
+      "name": "Solgaleo ex-A3-122",
+      "winRate": 0,
+      "totalGames": 1
+    },
+    {
+      "name": "Rampardos-A2-089&Lycanroc-A3-101",
+      "winRate": 0,
+      "totalGames": 1
+    },
+    {
+      "name": "Solgaleo ex-A3-122&Shiinotic-A3a-027",
+      "winRate": 1,
+      "totalGames": 1
+    },
+    {
+      "name": "Silvally-A3a-061&Zeraora-A3a-021",
+      "winRate": 1,
       "totalGames": 1
     }
   ],
@@ -118129,8 +118446,8 @@
     },
     {
       "name": "Buzzwole ex-A3a-006&Celesteela-A3a-062",
-      "winRate": 0.5,
-      "totalGames": 12
+      "winRate": 0.5454545454545454,
+      "totalGames": 11
     },
     {
       "name": "Giratina ex-A2b-035&Darkrai ex-A2-110",
@@ -118149,13 +118466,13 @@
     },
     {
       "name": "Rampardos-A2-089&Silvally-A3a-061",
-      "winRate": 0.3,
-      "totalGames": 10
+      "winRate": 0.3333333333333333,
+      "totalGames": 9
     },
     {
       "name": "Solgaleo ex-A3-122&Shiinotic-A3a-027",
-      "winRate": 0.2857142857142857,
-      "totalGames": 7
+      "winRate": 0.25,
+      "totalGames": 8
     },
     {
       "name": "Giratina ex-A2b-035&Tapu Lele-A3-084",
@@ -118179,16 +118496,6 @@
     },
     {
       "name": "Naganadel-A3a-045&Nihilego-A3a-042",
-      "winRate": 0,
-      "totalGames": 1
-    },
-    {
-      "name": "Incineroar ex-A3-033&Charizard ex-A2b-010",
-      "winRate": 1,
-      "totalGames": 1
-    },
-    {
-      "name": "Dialga ex-A2-119",
       "winRate": 0,
       "totalGames": 1
     },
@@ -118245,6 +118552,11 @@
     {
       "name": "Zeraora-A3a-021",
       "winRate": 0,
+      "totalGames": 1
+    },
+    {
+      "name": "Giratina ex-A2b-035",
+      "winRate": 1,
       "totalGames": 1
     }
   ],
@@ -118654,8 +118966,8 @@
     },
     {
       "name": "Rampardos-A2-089&Silvally-A3a-061",
-      "winRate": 0.42424242424242425,
-      "totalGames": 33
+      "winRate": 0.4411764705882353,
+      "totalGames": 34
     },
     {
       "name": "Charizard ex-A2b-010",
@@ -118744,8 +119056,8 @@
     },
     {
       "name": "Giratina ex-A2b-035&Darkrai ex-A2-110",
-      "winRate": 0.17647058823529413,
-      "totalGames": 17
+      "winRate": 0.16666666666666666,
+      "totalGames": 18
     },
     {
       "name": "Solgaleo ex-A3-122&Shiinotic-A3a-027",
@@ -119202,8 +119514,8 @@
     },
     {
       "name": "Buzzwole ex-A3a-006&Celesteela-A3a-062",
-      "winRate": 0.6043956043956044,
-      "totalGames": 91
+      "winRate": 0.6063829787234043,
+      "totalGames": 94
     },
     {
       "name": "Golem-A1a-045",
@@ -119222,8 +119534,8 @@
     },
     {
       "name": "Giratina ex-A2b-035&Darkrai ex-A2-110",
-      "winRate": 0.35294117647058826,
-      "totalGames": 34
+      "winRate": 0.3611111111111111,
+      "totalGames": 36
     },
     {
       "name": "Decidueye ex-A3-012",
@@ -119252,8 +119564,8 @@
     },
     {
       "name": "Guzzlord ex-A3a-043&Naganadel-A3a-045",
-      "winRate": 0.2,
-      "totalGames": 5
+      "winRate": 0.16666666666666666,
+      "totalGames": 6
     },
     {
       "name": "Silvally-A3a-061&Zeraora-A3a-021",
@@ -119392,8 +119704,8 @@
     },
     {
       "name": "Giratina ex-A2b-035&Tapu Lele-A3-084",
-      "winRate": 1,
-      "totalGames": 3
+      "winRate": 0.75,
+      "totalGames": 4
     },
     {
       "name": "Silvally-A3a-061&Blacephalon-A3a-009",
@@ -119448,7 +119760,7 @@
     {
       "name": "Giratina ex-A2b-035",
       "winRate": 1,
-      "totalGames": 1
+      "totalGames": 2
     },
     {
       "name": "Gengar-A1-122",
@@ -119665,8 +119977,8 @@
     },
     {
       "name": "Giratina ex-A2b-035&Darkrai ex-A2-110",
-      "winRate": 0.42857142857142855,
-      "totalGames": 7
+      "winRate": 0.375,
+      "totalGames": 8
     },
     {
       "name": "Oricorio-A3-066",
@@ -119675,8 +119987,8 @@
     },
     {
       "name": "Buzzwole ex-A3a-006&Celesteela-A3a-062",
-      "winRate": 0.3333333333333333,
-      "totalGames": 9
+      "winRate": 0.45454545454545453,
+      "totalGames": 11
     },
     {
       "name": "Dragonite-A1-185&Giratina ex-A2b-035",
@@ -119740,8 +120052,8 @@
     },
     {
       "name": "Silvally-A3a-061&Zeraora-A3a-021",
-      "winRate": 0,
-      "totalGames": 2
+      "winRate": 0.25,
+      "totalGames": 4
     },
     {
       "name": "Solgaleo ex-A3-122",
@@ -120048,8 +120360,8 @@
   "Charizard ex-A2b-010&Silvally-A3a-061": [
     {
       "name": "Rampardos-A2-089&Silvally-A3a-061",
-      "winRate": 0.4842105263157895,
-      "totalGames": 95
+      "winRate": 0.4791666666666667,
+      "totalGames": 96
     },
     {
       "name": "Guzzlord ex-A3a-043&Celesteela-A3a-062",
@@ -120063,13 +120375,13 @@
     },
     {
       "name": "Charizard ex-A2b-010&Turtonator-A3-037",
-      "winRate": 0.5,
-      "totalGames": 6
+      "winRate": 0.42857142857142855,
+      "totalGames": 7
     },
     {
       "name": "Giratina ex-A2b-035&Darkrai ex-A2-110",
-      "winRate": 0.375,
-      "totalGames": 48
+      "winRate": 0.38,
+      "totalGames": 50
     },
     {
       "name": "Pheromosa-A3a-007",
@@ -120083,18 +120395,18 @@
     },
     {
       "name": "Buzzwole ex-A3a-006&Celesteela-A3a-062",
-      "winRate": 0.4793388429752066,
-      "totalGames": 121
+      "winRate": 0.48412698412698413,
+      "totalGames": 126
     },
     {
       "name": "Charizard ex-A2b-010",
-      "winRate": 0.48148148148148145,
-      "totalGames": 27
+      "winRate": 0.4827586206896552,
+      "totalGames": 29
     },
     {
       "name": "Magnezone-A2-053&Oricorio-A3-066",
-      "winRate": 0.5714285714285714,
-      "totalGames": 14
+      "winRate": 0.6,
+      "totalGames": 15
     },
     {
       "name": "Decidueye ex-A3-012&Pheromosa-A3a-007",
@@ -120108,8 +120420,8 @@
     },
     {
       "name": "Solgaleo ex-A3-122&Shiinotic-A3a-027",
-      "winRate": 0.6233766233766234,
-      "totalGames": 77
+      "winRate": 0.6049382716049383,
+      "totalGames": 81
     },
     {
       "name": "Solgaleo ex-A3-122&Skarmory-A2-111",
@@ -120143,8 +120455,8 @@
     },
     {
       "name": "Incineroar ex-A3-033",
-      "winRate": 1,
-      "totalGames": 3
+      "winRate": 0.8,
+      "totalGames": 5
     },
     {
       "name": "Gallade ex-A2-095&Hitmonlee-A1-154",
@@ -120168,8 +120480,8 @@
     },
     {
       "name": "Silvally-A3a-061&Zeraora-A3a-021",
-      "winRate": 0.4,
-      "totalGames": 25
+      "winRate": 0.4230769230769231,
+      "totalGames": 26
     },
     {
       "name": "Alakazam-A1-117",
@@ -120278,8 +120590,8 @@
     },
     {
       "name": "Guzzlord ex-A3a-043&Nihilego-A3a-042",
-      "winRate": 0.125,
-      "totalGames": 24
+      "winRate": 0.16,
+      "totalGames": 25
     },
     {
       "name": "Shiinotic-A3a-027",
@@ -120394,7 +120706,7 @@
     {
       "name": "Luxray-A2-060",
       "winRate": 0,
-      "totalGames": 1
+      "totalGames": 2
     }
   ],
   "Lurantis-A3-015": [
@@ -120808,18 +121120,18 @@
     },
     {
       "name": "Buzzwole ex-A3a-006&Celesteela-A3a-062",
-      "winRate": 0.45454545454545453,
-      "totalGames": 44
+      "winRate": 0.44680851063829785,
+      "totalGames": 47
     },
     {
       "name": "Guzzlord ex-A3a-043&Naganadel-A3a-045",
       "winRate": 0,
-      "totalGames": 2
+      "totalGames": 3
     },
     {
       "name": "Charizard ex-A2b-010",
-      "winRate": 0.9,
-      "totalGames": 10
+      "winRate": 0.8181818181818182,
+      "totalGames": 11
     },
     {
       "name": "Tapu Koko ex-A3a-019&Zeraora-A3a-021",
@@ -120853,8 +121165,8 @@
     },
     {
       "name": "Silvally-A3a-061&Zeraora-A3a-021",
-      "winRate": 0.2,
-      "totalGames": 5
+      "winRate": 0.3333333333333333,
+      "totalGames": 6
     },
     {
       "name": "Rampardos-A2-089&Lycanroc-A3-101",
@@ -121109,6 +121421,28 @@
       "name": "Giratina ex-A2b-035&Darkrai ex-A2-110",
       "winRate": 0,
       "totalGames": 2
+    }
+  ],
+  "Stoutland-A3a-056&Silvally-A3a-061": [
+    {
+      "name": "Incineroar ex-A3-033&Charizard ex-A2b-010",
+      "winRate": 1,
+      "totalGames": 1
+    },
+    {
+      "name": "Buzzwole ex-A3a-006&Celesteela-A3a-062",
+      "winRate": 0,
+      "totalGames": 1
+    },
+    {
+      "name": "Dialga ex-A2-119",
+      "winRate": 0,
+      "totalGames": 1
+    },
+    {
+      "name": "Rampardos-A2-089&Silvally-A3a-061",
+      "winRate": 0,
+      "totalGames": 1
     }
   ],
   "Stakataka-A3a-053&Celesteela-A3a-062": [

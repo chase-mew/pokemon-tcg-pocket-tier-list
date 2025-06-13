@@ -159,6 +159,7 @@ const DECK_NAMES: DeckNameType[] = [
   ["Wigglytuff A2b 61", "Oricorio A3 66"],
   ["Oricorio A3 66", "Greninja A1 89"],
   ["Solgaleo ex A3 122", "Snorlax A2a 63"],
+  ["Incineroar ex A3 33", "Silvally A3a 61"],
   ["Incineroar ex A3 33", "Charizard ex A2b 10"],
   ["Incineroar ex A3 33", "Turtonator A3 37"],
   ["Incineroar ex A3 33", "Oricorio A3 66"],
@@ -216,6 +217,9 @@ const DECK_NAMES: DeckNameType[] = [
   ["Dusk Mane Necrozma PA 79", "Celesteela A3a 62"],
   ["Stakataka A3a 53", "Celesteela A3a 62"],
   ["Silvally A3a 61", "Articuno ex A1 84"],
+  ["Stoutland A3a 56", "Silvally A3a 61"],
+  ["Rampardos A2 89", "Passimian A3a 34"],
+  ["Solgaleo ex A3 122", "Silvally A3a 617"],
 
   // Main Card (never side card)
   "Bronzong A2a 59",
