@@ -25,7 +25,12 @@
   },
   "filter": {
     "includeEx": "EXカードを含める",
-    "deckAmount": "デッキ数"
+    "deckAmount": "デッキ数",
+    "sortBy": "並び替え",
+    "score": "総合最強",
+    "popularity": "人気度",
+    "strength": "強さ",
+    "winRate": "勝率"
   },
   "bestDeckFinder": {
     "title": "最適なデッキを見つけよう",

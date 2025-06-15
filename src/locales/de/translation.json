@@ -25,7 +25,12 @@
   },
   "filter": {
     "includeEx": "EX-Karten einbeziehen",
-    "deckAmount": "Anzahl der Decks"
+    "deckAmount": "Anzahl der Decks",
+    "sortBy": "Sortieren nach",
+    "score": "Gesamtbeste",
+    "popularity": "Beliebtheit",
+    "strength": "Stärke",
+    "winRate": "Gewinnrate"
   },
   "bestDeckFinder": {
     "title": "Finde Dein Bestes Deck",

@@ -25,7 +25,12 @@
   },
   "filter": {
     "includeEx": "包含EX卡牌",
-    "deckAmount": "卡组数量"
+    "deckAmount": "卡组数量",
+    "sortBy": "排序方式",
+    "score": "综合最佳",
+    "popularity": "流行度",
+    "strength": "强度",
+    "winRate": "胜率"
   },
   "bestDeckFinder": {
     "title": "寻找您的最佳卡组",

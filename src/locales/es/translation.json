@@ -25,7 +25,12 @@
   },
   "filter": {
     "includeEx": "Incluir cartas EX",
-    "deckAmount": "Número de Mazos"
+    "deckAmount": "Número de Mazos",
+    "sortBy": "Ordenar por",
+    "score": "Mejor General",
+    "popularity": "Popularidad",
+    "strength": "Fuerza",
+    "winRate": "Tasa de Victoria"
   },
   "bestDeckFinder": {
     "title": "Encuentra Tu Mejor Mazo",

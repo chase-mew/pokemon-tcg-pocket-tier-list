@@ -25,7 +25,12 @@
   },
   "filter": {
     "includeEx": "Inclure les cartes EX",
-    "deckAmount": "Nombre de Decks"
+    "deckAmount": "Nombre de Decks",
+    "sortBy": "Trier par",
+    "score": "Meilleur Global",
+    "popularity": "Popularité",
+    "strength": "Force",
+    "winRate": "Taux de Victoire"
   },
   "bestDeckFinder": {
     "title": "Trouvez Votre Meilleur Deck",

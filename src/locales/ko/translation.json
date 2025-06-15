@@ -25,7 +25,12 @@
   },
   "filter": {
     "includeEx": "EX 카드 포함",
-    "deckAmount": "덱 수"
+    "deckAmount": "덱 수",
+    "sortBy": "정렬 기준",
+    "score": "종합 최고",
+    "popularity": "인기도",
+    "strength": "강도",
+    "winRate": "승률"
   },
   "bestDeckFinder": {
     "title": "최고의 덱 찾기",
