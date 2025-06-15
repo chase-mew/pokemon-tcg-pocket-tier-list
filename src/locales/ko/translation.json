@@ -1,14 +1,16 @@
 {
   "deckPage": {
     "matchups": "매치업",
-    "strongAgainst": "강한 상대",
-    "weakAgainst": "약한 상대",
-    "deckFinderHeader": "가지고 있지 않은 카드를 클릭하세요. 덱은 사용 가능한 카드로 최적의 덱을 보여주도록 업데이트됩니다.",
+    "strongAgainst": "강점",
+    "weakAgainst": "약점",
+    "deckFinderHeader": "가지고 있지 않은 카드를 클릭하세요. 덱이 보유한 카드로 최고의 덱을 보여줍니다.",
     "relativeStrength": "상대적 강도",
     "keyStats": "주요 통계",
     "popularity": "인기도",
     "strength": "강도",
-    "winRate": "승률"
+    "winRate": "승률",
+    "notEnoughCards": "카드가 부족합니다",
+    "tryAnotherDeck": "다른 덱을 시도해보세요"
   },
   "energyDropdown": {
     "all": "모든 에너지 타입",

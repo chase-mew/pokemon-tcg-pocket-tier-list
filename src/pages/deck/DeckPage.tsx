@@ -295,7 +295,8 @@ const DeckPage = () => {
   if (!deck) {
     return (
       <Overlay>
-        Not enough cards, <StyledLink to="/">try another deck</StyledLink>
+        {t("deckPage.notEnoughCards")},{" "}
+        <StyledLink to="/tier-list">{t("deckPage.tryAnotherDeck")}</StyledLink>
       </Overlay>
     );
   }

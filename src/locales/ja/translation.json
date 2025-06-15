@@ -3,12 +3,14 @@
     "matchups": "マッチアップ",
     "strongAgainst": "強い相手",
     "weakAgainst": "弱い相手",
-    "deckFinderHeader": "持っていないカードをクリックしてください。デッキは、あなたが持っているカードで最適なものを表示するように更新されます。",
+    "deckFinderHeader": "持っていないカードをクリックしてください。デッキは利用可能なカードで最適なデッキを表示するように更新されます。",
     "relativeStrength": "相対的な強さ",
-    "keyStats": "主要統計",
+    "keyStats": "主要な統計",
     "popularity": "人気度",
     "strength": "強さ",
-    "winRate": "勝率"
+    "winRate": "勝率",
+    "notEnoughCards": "カードが足りません",
+    "tryAnotherDeck": "別のデッキを試してください"
   },
   "energyDropdown": {
     "all": "すべてのエネルギータイプ",

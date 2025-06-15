@@ -74,7 +74,9 @@
     "keyStats": "Key Stats",
     "popularity": "Popularity",
     "strength": "Strength",
-    "winRate": "Win Rate"
+    "winRate": "Win Rate",
+    "notEnoughCards": "Not enough cards",
+    "tryAnotherDeck": "try another deck"
   },
   "energyDropdown": {
     "all": "All Energy Types",

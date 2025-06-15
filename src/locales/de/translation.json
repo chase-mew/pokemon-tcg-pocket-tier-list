@@ -1,14 +1,16 @@
 {
   "deckPage": {
-    "matchups": "Deck-Duelle",
-    "strongAgainst": "Stark gegen",
-    "weakAgainst": "Schwach gegen",
-    "deckFinderHeader": "Klicken Sie auf die Karten, die Sie nicht haben. Das Deck wird aktualisiert, um das Beste mit Ihren verfügbaren Karten anzuzeigen.",
+    "matchups": "Matchups",
+    "strongAgainst": "Stark Gegen",
+    "weakAgainst": "Schwach Gegen",
+    "deckFinderHeader": "Klicken Sie auf die Karten, die Sie nicht haben. Das Deck wird aktualisiert, um das Beste mit Ihren verfügbaren Karten zu zeigen.",
     "relativeStrength": "Relative Stärke",
     "keyStats": "Wichtige Statistiken",
     "popularity": "Beliebtheit",
     "strength": "Stärke",
-    "winRate": "Gewinnrate"
+    "winRate": "Gewinnrate",
+    "notEnoughCards": "Nicht genug Karten",
+    "tryAnotherDeck": "versuchen Sie ein anderes Deck"
   },
   "energyDropdown": {
     "all": "Alle Energietypen",
