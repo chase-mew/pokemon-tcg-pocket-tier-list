@@ -355,14 +355,12 @@ const DeckPage = () => {
               <KeyStats>
                 <KeyStat>
                   {t("deckPage.strength")}:{" "}
-                  <KeyStatValue>
-                    {(deck.strength * 100).toFixed(0)}%
-                  </KeyStatValue>
+                  <KeyStatValue>{(deck.strength * 10).toFixed(1)}</KeyStatValue>
                 </KeyStat>
                 <KeyStat>
                   {t("deckPage.popularity")}:{" "}
                   <KeyStatValue>
-                    {(deck.popularity * 100).toFixed(0)}%
+                    {(deck.popularity * 10).toFixed(1)}
                   </KeyStatValue>
                 </KeyStat>
                 <KeyStat>
