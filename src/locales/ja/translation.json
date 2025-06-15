@@ -74,6 +74,12 @@
     "openSource": {
       "title": "オープンソース",
       "description": "このウェブサイトはオープンソースです。ソースコードは<0>GitHub</0>で見つけることができます"
+    },
+    "sortBy": {
+      "title": "代替ランキング",
+      "description": "ティアリストを人気度や強さで並び替えることができます",
+      "free": "🚫",
+      "premium": "✅"
     }
   },
   "premium": {
@@ -109,6 +115,12 @@
       "filters": {
         "title": "デッキフィルター",
         "description": "エネルギータイプやEXカードなしでデッキをフィルタリングし、ソロバトル攻略に役立ちます",
+        "free": "🚫",
+        "premium": "✅"
+      },
+      "sortBy": {
+        "title": "代替ランキング",
+        "description": "ティアリストを人気度や強さで並び替えることができます",
         "free": "🚫",
         "premium": "✅"
       },

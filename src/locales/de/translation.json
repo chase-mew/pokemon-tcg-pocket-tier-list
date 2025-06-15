@@ -112,6 +112,12 @@
         "free": "🚫",
         "premium": "✅"
       },
+      "sortBy": {
+        "title": "Alternative Ranglisten",
+        "description": "Ändern Sie die Tier-Liste, um sie nach Beliebtheit oder Stärke zu sortieren",
+        "free": "🚫",
+        "premium": "✅"
+      },
       "contact": {
         "title": "Entwickler Kontaktieren",
         "description": "Kontaktieren Sie die Entwickler per E-Mail, um Feedback zur Website zu geben, neue Funktionen anzufordern oder Fehler zu melden. Funktionsanfragen sind nicht garantiert, werden aber alle berücksichtigt.",

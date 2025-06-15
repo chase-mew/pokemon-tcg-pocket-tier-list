@@ -112,6 +112,12 @@
         "free": "🚫",
         "premium": "✅"
       },
+      "sortBy": {
+        "title": "Classements Alternatifs",
+        "description": "Changez la liste des niveaux pour qu'elle soit classée par Popularité ou Force",
+        "free": "🚫",
+        "premium": "✅"
+      },
       "contact": {
         "title": "Contacter les Développeurs",
         "description": "Contactez les développeurs par e-mail pour donner votre avis sur le site, demander de nouvelles fonctionnalités ou signaler des bugs. Les demandes de fonctionnalités ne sont pas garanties, mais toutes seront examinées.",

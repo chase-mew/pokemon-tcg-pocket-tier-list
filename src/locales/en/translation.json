@@ -35,6 +35,12 @@
         "free": "🚫",
         "premium": "✅"
       },
+      "sortBy": {
+        "title": "Alternative Rankings",
+        "description": "Change the tier list to be ranked by Popularity or Strength",
+        "free": "🚫",
+        "premium": "✅"
+      },
       "contact": {
         "title": "Contact Developers",
         "description": "Contact the developers via email to give any feedback on the site, request new features to be added, or report any bugs. Feature requests are not gauranteed to be completed, but all will be considered.",

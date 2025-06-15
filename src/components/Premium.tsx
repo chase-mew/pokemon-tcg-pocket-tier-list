@@ -203,6 +203,15 @@ const Premium = ({ showUpsell = false }: Props) => {
               <PremiumCell>{t("premium.features.filters.premium")}</PremiumCell>
             </tr>
             <tr>
+              <TableCell>
+                {t("premium.features.sortBy.title")}
+                <Tooltip text={t("premium.features.sortBy.description")} />
+              </TableCell>
+              <FreeCell>{t("premium.features.sortBy.free")}</FreeCell>
+              <PremiumCell>{t("premium.features.filters.premium")}</PremiumCell>
+            </tr>
+
+            <tr>
               <FeatureCell>
                 {t("premium.features.contact.title")}
                 <Tooltip text={t("premium.features.contact.description")} />
