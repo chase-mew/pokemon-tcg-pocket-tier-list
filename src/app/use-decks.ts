@@ -3,6 +3,7 @@ import useMissing from "./use-missing";
 import useFilters from "./use-filters";
 import { useMemo } from "react";
 import useIsPremium from "./use-is-premium";
+import { getSortValue } from "./sorting-helper";
 
 const CARDS_URL =
   "https://raw.githubusercontent.com/chase-manning/pokemon-tcg-pocket-cards/refs/heads/main/v4.json";
@@ -80,7 +81,7 @@ const cardToId = (card: BestDecksCardType): string => {
 
 const useDecks = (): FullDeckType[] | null => {
   const { missing } = useMissing();
-  const { energy, includeEx, deckAmount } = useFilters();
+  const { energy, includeEx, deckAmount, sortBy } = useFilters();
   const isPremium = useIsPremium();
 
   const { data: cards } = useQuery({
@@ -198,45 +199,49 @@ const useDecks = (): FullDeckType[] | null => {
     })
     .filter((deck) => deck)
     .sort((a, b) => b.percentOfGames - a.percentOfGames)
-    .slice(0, deckAmount)
-    .sort((a, b) => b.score - a.score);
+    .slice(0, deckAmount);
 
-  const highestPopularity = bestDecksFiltered.sort(
-    (a, b) => b.popularity - a.popularity
-  )[0].popularity;
-  const highestStrength = bestDecksFiltered.sort(
-    (a, b) => b.strength - a.strength
-  )[0].strength;
+  const highestPopularity =
+    bestDecksFiltered.length > 0
+      ? bestDecksFiltered.sort((a, b) => b.popularity - a.popularity)[0]
+          .popularity
+      : 0;
+  const highestStrength =
+    bestDecksFiltered.length > 0
+      ? bestDecksFiltered.sort((a, b) => b.strength - a.strength)[0].strength
+      : 0;
 
-  const bestDecks = bestDecksFiltered.map((oldDeck, index) => {
-    const deckCards = [];
-    for (const oldCard of oldDeck.cards) {
-      const amount = oldCard.count;
-      const id = cardToId(oldCard);
-      const card = cardsMapping[id];
-      if (!card) {
-        throw new Error(`Card not found: ${id}`);
+  const bestDecks = bestDecksFiltered
+    .map((oldDeck, index) => {
+      const deckCards = [];
+      for (const oldCard of oldDeck.cards) {
+        const amount = oldCard.count;
+        const id = cardToId(oldCard);
+        const card = cardsMapping[id];
+        if (!card) {
+          throw new Error(`Card not found: ${id}`);
+        }
+        for (let i = 0; i < amount; i++) {
+          deckCards.push(card);
+        }
       }
-      for (let i = 0; i < amount; i++) {
-        deckCards.push(card);
-      }
-    }
-    const matchups = matchupData[oldDeck.name];
+      const matchups = matchupData[oldDeck.name];
 
-    const deck: FullDeckType = {
-      id: oldDeck.name.toLowerCase().replace(/\s/g, "-"),
-      name: oldDeck.name,
-      cards: deckCards,
-      score: oldDeck.score,
-      popularity: oldDeck.popularity / highestPopularity,
-      strength: oldDeck.strength / highestStrength,
-      place: index + 1,
-      percentOfGames: oldDeck.percentOfGames,
-      date: new Date(oldDeck.date),
-      matchups,
-    };
-    return deck;
-  });
+      const deck: FullDeckType = {
+        id: oldDeck.name.toLowerCase().replace(/\s/g, "-"),
+        name: oldDeck.name,
+        cards: deckCards,
+        score: oldDeck.score,
+        popularity: oldDeck.popularity / highestPopularity,
+        strength: oldDeck.strength / highestStrength,
+        place: index + 1,
+        percentOfGames: oldDeck.percentOfGames,
+        date: new Date(oldDeck.date),
+        matchups,
+      };
+      return deck;
+    })
+    .sort((a, b) => getSortValue(b, sortBy) - getSortValue(a, sortBy));
 
   // return bestDecks;
 
@@ -256,7 +261,8 @@ const useDecks = (): FullDeckType[] | null => {
   }
 
   return includedDecks.sort(
-    (a: FullDeckType, b: FullDeckType) => a.place - b.place
+    (a: FullDeckType, b: FullDeckType) =>
+      getSortValue(b, sortBy) - getSortValue(a, sortBy)
   );
 };
 
