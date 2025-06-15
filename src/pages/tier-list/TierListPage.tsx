@@ -6,6 +6,8 @@ import ArrowDown from "../../assets/arrow-down.svg";
 import { useTranslation } from "react-i18next";
 import useIsPremium from "../../app/use-is-premium";
 import UserAccount from "../../components/UserAccount";
+import { SortBy } from "../../components/FilterContext";
+import { getSortValue } from "../../app/sorting-helper";
 
 const StyledTierListPage = styled.div`
   width: 100%;
@@ -189,42 +191,46 @@ const LandingPage = () => {
     setIncludeEx,
     deckAmount,
     setDeckAmount,
+    sortBy,
+    setSortBy,
   } = useFilters();
   const { t } = useTranslation();
   const isPremium = useIsPremium();
 
   if (!decks) return <Loading>Loading...</Loading>;
 
-  const bestScore = decks.reduce(
-    (best, deck) => (deck.score > best ? deck.score : best),
-    0
-  );
+  const bestScore = getSortValue(decks[0], sortBy);
 
-  const worstScore = decks.reduce(
-    (worst, deck) => (deck.score < worst ? deck.score : worst),
-    1000000
-  );
+  const worstScore = getSortValue(decks[decks.length - 1], sortBy);
 
   const steps = (bestScore - worstScore) / 6;
 
-  const sTier = decks.filter((deck) => deck.score >= bestScore - steps);
+  const sTier = decks.filter(
+    (deck) => getSortValue(deck, sortBy) >= bestScore - steps
+  );
   const aTier = decks.filter(
     (deck) =>
-      deck.score < bestScore - steps && deck.score >= bestScore - steps * 2
+      getSortValue(deck, sortBy) < bestScore - steps &&
+      getSortValue(deck, sortBy) >= bestScore - steps * 2
   );
   const bTier = decks.filter(
     (deck) =>
-      deck.score < bestScore - steps * 2 && deck.score >= bestScore - steps * 3
+      getSortValue(deck, sortBy) < bestScore - steps * 2 &&
+      getSortValue(deck, sortBy) >= bestScore - steps * 3
   );
   const cTier = decks.filter(
     (deck) =>
-      deck.score < bestScore - steps * 3 && deck.score >= bestScore - steps * 4
+      getSortValue(deck, sortBy) < bestScore - steps * 3 &&
+      getSortValue(deck, sortBy) >= bestScore - steps * 4
   );
   const dTier = decks.filter(
     (deck) =>
-      deck.score < bestScore - steps * 4 && deck.score >= bestScore - steps * 5
+      getSortValue(deck, sortBy) < bestScore - steps * 4 &&
+      getSortValue(deck, sortBy) >= bestScore - steps * 5
   );
-  const eTier = decks.filter((deck) => deck.score < bestScore - steps * 5);
+  const eTier = decks.filter(
+    (deck) => getSortValue(deck, sortBy) < bestScore - steps * 5
+  );
 
   return (
     <StyledTierListPage>
@@ -265,6 +271,21 @@ const LandingPage = () => {
                     {amount}
                   </option>
                 ))}
+              </DeckAmountSelect>
+            </DeckAmountContainer>
+            <DeckAmountContainer>
+              {t("filter.sortBy")}
+              <DeckAmountSelect
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value as SortBy)}
+              >
+                {[SortBy.SCORE, SortBy.POPULARITY, SortBy.STRENGTH].map(
+                  (sortByOption) => (
+                    <option key={sortByOption} value={sortByOption}>
+                      {t(`filter.${sortByOption}`)}
+                    </option>
+                  )
+                )}
               </DeckAmountSelect>
             </DeckAmountContainer>
           </>

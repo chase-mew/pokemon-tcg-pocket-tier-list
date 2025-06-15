@@ -85,7 +85,12 @@
   },
   "filter": {
     "includeEx": "Include EX cards",
-    "deckAmount": "Number of Decks"
+    "deckAmount": "Number of Decks",
+    "sortBy": "Sort By",
+    "score": "Overall Best",
+    "popularity": "Popularity",
+    "strength": "Strength",
+    "winRate": "Win Rate"
   },
   "bestDeckFinder": {
     "title": "Find Your Best Deck",
