@@ -4,9 +4,7 @@ import useFilters from "./use-filters";
 import { useMemo } from "react";
 import useIsPremium from "./use-is-premium";
 import { getSortValue } from "./sorting-helper";
-
-const CARDS_URL =
-  "https://raw.githubusercontent.com/chase-manning/pokemon-tcg-pocket-cards/refs/heads/main/v4.json";
+import { CARDS_URL } from "./constants";
 
 export interface CardType {
   id: string;
@@ -60,7 +58,7 @@ interface BestDecksCardType {
   number: string;
 }
 
-const setCode = (set: string): string => {
+export const setCode = (set: string): string => {
   if (set === "A1") return "a1";
   if (set === "A1a") return "a1a";
   if (set === "A2") return "a2";
