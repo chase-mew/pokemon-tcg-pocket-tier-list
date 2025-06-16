@@ -1,6 +1,8 @@
 import github from "../assets/github.svg";
 import twitter from "../assets/twitter.svg";
 
+export const CARDS_URL =
+  "https://raw.githubusercontent.com/chase-manning/pokemon-tcg-pocket-cards/refs/heads/main/v4.json";
 export const GITHUB_URL =
   "https://github.com/chase-manning/pokemon-tcg-pocket-tier-list";
 export const TWITTER_URL = "https://x.com/pocketdecks";
