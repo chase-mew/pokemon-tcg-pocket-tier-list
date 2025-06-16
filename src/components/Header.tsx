@@ -77,6 +77,9 @@ const Header = ({ footer }: Props) => {
         <NavItem to="/deck" $active={location.pathname === "/deck"}>
           {t("header.bestDeckFinder")}
         </NavItem>
+        <NavItem to="/cards-list" $active={location.pathname === "/cards-list"}>
+          {t("header.bestCards")}
+        </NavItem>
       </Nav>
       <RightSection>
         {footer && <LanguageSwitcher />}

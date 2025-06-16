@@ -22,8 +22,13 @@ const StyledText = styled.p`
   font-weight: 600;
   color: var(--main);
 
+  @media (max-width: 1156px) {
+    display: none;
+    font-size: 2rem;
+  }
   @media (max-width: 900px) {
     font-size: 2rem;
+    display: flex;
   }
 `;
 

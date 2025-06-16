@@ -43,8 +43,9 @@
   "header": {
     "tierList": "ティアリスト",
     "bestDeckFinder": "ベストデッキファインダー",
-    "signIn": "Googleでサインイン",
-    "signOut": "サインアウト"
+    "signIn": "Googleでログイン",
+    "signOut": "ログアウト",
+    "bestCards": "ベストカード"
   },
   "hero": {
     "title": "ポケモンカードゲーム ポケット 最強デッキとティアリスト",

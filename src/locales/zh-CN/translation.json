@@ -41,10 +41,11 @@
     "button": "试用最佳卡组搜索器"
   },
   "header": {
-    "tierList": "等级列表",
+    "tierList": "卡组等级表",
     "bestDeckFinder": "最佳卡组查找器",
-    "signIn": "使用Google登录",
-    "signOut": "退出登录"
+    "signIn": "使用谷歌登录",
+    "signOut": "退出登录",
+    "bestCards": "最佳卡牌"
   },
   "hero": {
     "title": "宝可梦卡牌游戏 Pocket 最强卡组和等级列表",
