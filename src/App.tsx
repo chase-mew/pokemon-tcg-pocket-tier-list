@@ -5,6 +5,7 @@ import TierListPage from "./pages/tier-list/TierListPage";
 import DeckPage from "./pages/deck/DeckPage";
 import LandingPage from "./pages/landing/LandingPage";
 import { AuthProvider } from "./contexts/AuthContext";
+import CardsListPage from "./pages/cards-list/CardsListPage";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -39,6 +40,7 @@ const App = () => {
           <Route path="/" element={<Layout />}>
             <Route index element={<LandingPage />} />
             <Route path="tier-list" element={<TierListPage />} />
+            <Route path="cards-list" element={<CardsListPage />} />
 
             <Route path="deck">
               <Route index element={<DeckPage />} />
