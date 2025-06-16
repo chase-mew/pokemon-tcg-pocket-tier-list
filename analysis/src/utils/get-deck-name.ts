@@ -220,6 +220,10 @@ const DECK_NAMES: DeckNameType[] = [
   ["Stoutland A3a 56", "Silvally A3a 61"],
   ["Rampardos A2 89", "Passimian A3a 34"],
   ["Solgaleo ex A3 122", "Silvally A3a 617"],
+  ["Magnezone A2 53", "Shiinotic A3a 27"],
+  ["Infernape ex A2 29", "Silvally A3a 617"],
+  ["Incineroar ex A3 33", "Greninja A1 89"],
+  ["Stoutland A3a 56", "Rampardos A2 89"],
 
   // Main Card (never side card)
   "Bronzong A2a 59",

@@ -159,6 +159,10 @@ const cardScoresList: { name: string; score: number; popularity: number }[] =
   }));
 cardScoresList.sort((a, b) => b.score - a.score);
 
+const mostRecent95PercentDecks = bestDecks
+  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+  .slice(0, bestDecks.length * 0.95);
+
 fs.writeFileSync(
   "./data/card-scores.json",
   JSON.stringify(cardScoresList, null, 2)
@@ -167,10 +171,13 @@ fs.writeFileSync(
   "../public/data/card-scores.json",
   JSON.stringify(cardScoresList, null, 2)
 );
-fs.writeFileSync("./data/best-decks.json", JSON.stringify(bestDecks, null, 2));
+fs.writeFileSync(
+  "./data/best-decks.json",
+  JSON.stringify(mostRecent95PercentDecks, null, 2)
+);
 fs.writeFileSync(
   "../public/data/best-decks.json",
-  JSON.stringify(bestDecks, null, 2)
+  JSON.stringify(mostRecent95PercentDecks, null, 2)
 );
 fs.writeFileSync(
   "../public/data/matchup-data.json",
