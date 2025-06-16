@@ -12,6 +12,7 @@ interface CardData {
 
 interface CardScore extends Omit<CardData, "score"> {
   score: number;
+  popularity: number;
 }
 
 /**
@@ -21,17 +22,19 @@ const calculateSingleCardScore = (
   cardName: string,
   { winCount, totalGames }: CardData,
   totalMatchingGames: number
-): number => {
+): { score: number; popularity: number } => {
   const winRate = winCount / totalGames;
   const popularity = totalGames / totalMatchingGames;
   const isRedCard = cardName.toLowerCase().includes("red card");
   const isMars = cardName.toLowerCase().includes("mars ");
   const multiplier = isRedCard || isMars ? RED_CARD_MULTIPLIER : 1;
 
-  return (
-    (winRate * WINRATE_IMPORTANCE + popularity * POPULARITY_IMPORTANCE) *
-    multiplier
-  );
+  return {
+    score:
+      (winRate * WINRATE_IMPORTANCE + popularity * POPULARITY_IMPORTANCE) *
+      multiplier,
+    popularity,
+  };
 };
 
 /**
@@ -52,7 +55,7 @@ export const calculateCardScores = (
     (result, [cardName, cardData]) => {
       result[cardName] = {
         ...cardData,
-        score: calculateSingleCardScore(cardName, cardData, matchingGames),
+        ...calculateSingleCardScore(cardName, cardData, matchingGames),
       };
       return result;
     },

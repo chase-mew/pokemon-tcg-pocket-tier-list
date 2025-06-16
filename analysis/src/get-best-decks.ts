@@ -6,6 +6,7 @@ import { calculateDeckScore } from "./utils/calculate-deck-score";
 import { calculateCardScores } from "./utils/calculate-card-scores";
 import { calculateMatchupResults } from "./utils/calculate-matchup-results";
 import { Deck, MatchupData } from "./utils/types";
+import { EXPANSION_RELEASE_DATE } from "./settings";
 
 const decks = getDecks();
 const allGames = decks.reduce(
@@ -126,6 +127,46 @@ for (const deckName of Object.keys(matchupResults)) {
   });
 }
 
+// Card scores for all games
+const decksSinceLastExpansion = decks.filter(
+  (deck) => new Date(deck.date) > EXPANSION_RELEASE_DATE
+);
+const allCards: Record<string, { winCount: number; totalGames: number }> = {};
+for (const deck of decksSinceLastExpansion) {
+  for (const card of deck.cards) {
+    const cardName = cardToString(card);
+    if (allCards[cardName]) {
+      allCards[cardName].winCount += deck.winCount;
+      allCards[cardName].totalGames += deck.totalGames;
+    } else {
+      allCards[cardName] = {
+        winCount: deck.winCount,
+        totalGames: deck.totalGames,
+      };
+    }
+  }
+}
+const totalGamesSinceLastExpansion = decksSinceLastExpansion.reduce(
+  (acc, deck) => acc + deck.totalGames,
+  0
+);
+const cardScores = calculateCardScores(allCards, totalGamesSinceLastExpansion);
+const cardScoresList: { name: string; score: number; popularity: number }[] =
+  Object.entries(cardScores).map(([cardName, { score, popularity }]) => ({
+    name: cardName,
+    score,
+    popularity,
+  }));
+cardScoresList.sort((a, b) => b.score - a.score);
+
+fs.writeFileSync(
+  "./data/card-scores.json",
+  JSON.stringify(cardScoresList, null, 2)
+);
+fs.writeFileSync(
+  "../public/data/card-scores.json",
+  JSON.stringify(cardScoresList, null, 2)
+);
 fs.writeFileSync("./data/best-decks.json", JSON.stringify(bestDecks, null, 2));
 fs.writeFileSync(
   "../public/data/best-decks.json",
