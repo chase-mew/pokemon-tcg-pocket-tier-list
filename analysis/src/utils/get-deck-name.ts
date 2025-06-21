@@ -74,7 +74,7 @@ const DECK_NAMES: DeckNameType[] = [
   ["Lucario A2 92", "Primeape A1 142"],
   ["Vaporeon A1a 19", "Articuno ex A1 84"],
   ["Dialga ex A2 119", "Skarmory A2 111"],
-  ["Charizard ex A1 36", "Moltres ex A1 47"],
+  // ["Charizard ex A1 36", "Moltres ex A1 47"],
   ["Luxray A2 60", "Electivire A2 57"],
   ["Luxray A2 60", "Oricorio A3 66"],
   ["Bastiodon A2 114", "Skarmory A2 111"],
