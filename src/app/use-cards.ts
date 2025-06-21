@@ -1,11 +1,23 @@
 import { useQuery } from "@tanstack/react-query";
 import { CARDS_URL } from "./constants";
-import { CardType, setCode } from "./use-decks";
+import { CardType } from "./use-decks";
 
 export interface CardScoreType extends CardType {
   score: number;
   popularity: number;
 }
+
+export const setCode = (set: string): string => {
+  if (set === "A1") return "a1";
+  if (set === "A1a") return "a1a";
+  if (set === "A2") return "a2";
+  if (set === "A2a") return "a2a";
+  if (set === "A2b") return "a2b";
+  if (set === "P-A") return "pa";
+  if (set === "A3") return "a3";
+  if (set === "A3a") return "a3a";
+  throw new Error(`Unknown set code: ${set}`);
+};
 
 const cardNameToId = (name: string): string => {
   const parts = name.split(" ");
