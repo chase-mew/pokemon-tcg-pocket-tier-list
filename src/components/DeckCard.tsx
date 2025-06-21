@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { CardType, FullDeckType } from "../app/use-decks";
+import { CardType, FullDeckType } from "../contexts/DecksContext";
 import { DEBUG } from "../app/config";
 
 const Container = styled.div`

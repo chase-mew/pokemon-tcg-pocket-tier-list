@@ -1,7 +1,11 @@
 import { Link, useParams } from "react-router-dom";
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
-import useDecks, { FullDeckType, MatchupType } from "../../app/use-decks";
+import {
+  useDecks,
+  FullDeckType,
+  MatchupType,
+} from "../../contexts/DecksContext";
 import useMissing from "../../app/use-missing";
 import DeckCard from "../../components/DeckCard";
 import { MIN_MATCHUP_GAMES, WINRATE_THRESHOLD } from "../../app/config";
@@ -266,7 +270,7 @@ const KeyStatValue = styled.span`
 
 const DeckPage = () => {
   const deckId = useParams().deckId;
-  const decks = useDecks();
+  const { decks, loading } = useDecks();
   const { addMissing } = useMissing();
   const { t } = useTranslation();
   const [bestScore, setBestScore] = useState<number | null>(null);
@@ -280,7 +284,7 @@ const DeckPage = () => {
     setBestScore(bestDeck.score);
   }, [deckId, decks, bestScore]);
 
-  if (!decks) return <Overlay>Loading...</Overlay>;
+  if (loading || !decks) return <Overlay>Loading...</Overlay>;
 
   let deck: FullDeckType | undefined = undefined;
 

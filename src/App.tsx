@@ -5,6 +5,7 @@ import TierListPage from "./pages/tier-list/TierListPage";
 import DeckPage from "./pages/deck/DeckPage";
 import LandingPage from "./pages/landing/LandingPage";
 import { AuthProvider } from "./contexts/AuthContext";
+import { DecksProvider } from "./contexts/DecksContext";
 import CardsListPage from "./pages/cards-list/CardsListPage";
 
 const queryClient = new QueryClient({
@@ -36,20 +37,22 @@ const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <AuthProvider>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<LandingPage />} />
-            <Route path="tier-list" element={<TierListPage />} />
-            <Route path="cards-list" element={<CardsListPage />} />
+        <DecksProvider>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route index element={<LandingPage />} />
+              <Route path="tier-list" element={<TierListPage />} />
+              <Route path="cards-list" element={<CardsListPage />} />
 
-            <Route path="deck">
-              <Route index element={<DeckPage />} />
-              <Route path=":deckId" element={<DeckPage />} />
+              <Route path="deck">
+                <Route index element={<DeckPage />} />
+                <Route path=":deckId" element={<DeckPage />} />
+              </Route>
+
+              <Route path="*" element={<LandingPage />} />
             </Route>
-
-            <Route path="*" element={<LandingPage />} />
-          </Route>
-        </Routes>
+          </Routes>
+        </DecksProvider>
       </AuthProvider>
     </QueryClientProvider>
   );

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import useDecks from "../../app/use-decks";
+import { useDecks } from "../../contexts/DecksContext";
 import DeckCard from "../../components/DeckCard";
 import useFilters from "../../app/use-filters";
 import ArrowDown from "../../assets/arrow-down.svg";
@@ -183,7 +183,7 @@ const ENERGY_TYPES = [
 ];
 
 const LandingPage = () => {
-  const decks = useDecks();
+  const { decks, loading } = useDecks();
   const {
     energy,
     setEnergy,
@@ -197,7 +197,7 @@ const LandingPage = () => {
   const { t } = useTranslation();
   const isPremium = useIsPremium();
 
-  if (!decks) return <Loading>Loading...</Loading>;
+  if (loading || !decks) return <Loading>Loading...</Loading>;
 
   const bestScore = getSortValue(decks[0], sortBy);
 

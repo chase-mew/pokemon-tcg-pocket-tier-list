@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { CARDS_URL } from "./constants";
-import { CardType } from "./use-decks";
+import { CardType } from "../contexts/DecksContext";
 
 export interface CardScoreType extends CardType {
   score: number;
