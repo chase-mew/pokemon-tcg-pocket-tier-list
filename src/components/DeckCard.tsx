@@ -71,12 +71,14 @@ const DeckCard = ({ deck }: Props) => {
   const cardIds = deck.name.split("&");
 
   const cards: CardType[] = cardIds.map((cardId) => {
-    const exactCard = deck.cards.find(
+    const exactCard = deck.bestList.cards.find(
       (card) => `${card.name}-${card.id}`.toLowerCase() === cardId.toLowerCase()
     );
-    let mainCard = deck.cards.find((card) => card.name.includes(cardId));
+    let mainCard = deck.bestList.cards.find((card) =>
+      card.name.includes(cardId)
+    );
 
-    return exactCard || mainCard || deck.cards[0];
+    return exactCard || mainCard || deck.bestList.cards[0];
   });
 
   const round = (num: number, decimals = 2) => {

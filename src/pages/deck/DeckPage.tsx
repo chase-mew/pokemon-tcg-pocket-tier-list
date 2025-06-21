@@ -303,7 +303,7 @@ const DeckPage = () => {
 
   const uniqueCards =
     deck &&
-    deck.cards.filter(
+    deck.bestList.cards.filter(
       (card, index, self) => self.findIndex((c) => c.id === card.id) === index
     );
 
@@ -329,7 +329,9 @@ const DeckPage = () => {
               key={card.id}
               onClick={() => {
                 if (!deck) return;
-                const count = deck.cards.filter((c) => c.id === card.id).length;
+                const count = deck.bestList.cards.filter(
+                  (c) => c.id === card.id
+                ).length;
                 if (count === 1) {
                   addMissing([card.id, card.id]);
                 } else {
@@ -339,7 +341,8 @@ const DeckPage = () => {
             >
               <CardImage src={card.image} alt={card.name} />
               <CardNumber>
-                {deck && deck.cards.filter((c) => c.id === card.id).length}
+                {deck &&
+                  deck.bestList.cards.filter((c) => c.id === card.id).length}
               </CardNumber>
             </CardContainer>
           ))}
@@ -391,8 +394,8 @@ const DeckPage = () => {
                   .sort((a, b) => b.winRate - a.winRate)
                   .sort(
                     (a, b) =>
-                      decks.find((deck) => deck.name === a.name)!.place -
-                      decks.find((deck) => deck.name === b.name)!.place
+                      decks.find((deck) => deck.name === b.name)!.score -
+                      decks.find((deck) => deck.name === a.name)!.score
                   )
                   .slice(0, 6)
                   .map((matchup: MatchupType) => (

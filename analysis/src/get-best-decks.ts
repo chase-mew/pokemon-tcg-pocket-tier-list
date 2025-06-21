@@ -7,6 +7,7 @@ import { calculateCardScores } from "./utils/calculate-card-scores";
 import { calculateMatchupResults } from "./utils/calculate-matchup-results";
 import { Deck, MatchupData } from "./utils/types";
 import { EXPANSION_RELEASE_DATE } from "./settings";
+import { convertCardsToIds } from "./utils/convert-cards";
 
 const decks = getDecks();
 const allGames = decks.reduce(
@@ -64,13 +65,8 @@ for (const deckName of uniqueDeckNames) {
   // Calculate matchup results
   matchupResults[deckName] = calculateMatchupResults(decks, deckName);
 
-  const sortedDecks = matchingDecks.sort(
-    (a, b) =>
-      calculateDeckScore(b, scoredCards, matchingGames, allGames).score -
-      calculateDeckScore(a, scoredCards, matchingGames, allGames).score
-  );
-
-  for (const deck of sortedDecks) {
+  const lists: any = [];
+  for (const deck of matchingDecks) {
     const id = getId(deck);
     if (idExists[id]) continue;
     const deckScore = calculateDeckScore(
@@ -79,22 +75,30 @@ for (const deckName of uniqueDeckNames) {
       matchingGames,
       allGames
     );
-    const formattedDeck = {
-      name: deckName,
-      cards: deck.cards,
+    const formattedList = {
+      cards: convertCardsToIds(deck.cards),
       score: deckScore.score,
-      popularity: deckScore.popularity,
       strength: deckScore.strength,
-      percentOfGames,
-      date: deck.date,
-      id,
     };
-    bestDecks.push(formattedDeck);
+    lists.push(formattedList);
     idExists[id] = true;
   }
+
+  const deckScore = calculateDeckScore(
+    matchingDecks[0],
+    scoredCards,
+    matchingGames,
+    allGames
+  );
+  bestDecks.push({
+    name: deckName,
+    lists,
+    popularity: deckScore.popularity,
+    percentOfGames,
+  });
 }
 
-bestDecks.sort((a, b) => b.score - a.score);
+console.log(bestDecks[0]);
 
 const matchupData: Record<string, MatchupData[]> = {};
 for (const deckName of Object.keys(matchupResults)) {
@@ -159,10 +163,6 @@ const cardScoresList: { name: string; score: number; popularity: number }[] =
   }));
 cardScoresList.sort((a, b) => b.score - a.score);
 
-const mostRecent95PercentDecks = bestDecks
-  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-  .slice(0, bestDecks.length * 0.95);
-
 fs.writeFileSync(
   "./data/card-scores.json",
   JSON.stringify(cardScoresList, null, 2)
@@ -171,13 +171,10 @@ fs.writeFileSync(
   "../public/data/card-scores.json",
   JSON.stringify(cardScoresList, null, 2)
 );
-fs.writeFileSync(
-  "./data/best-decks.json",
-  JSON.stringify(mostRecent95PercentDecks, null, 2)
-);
+fs.writeFileSync("./data/best-decks.json", JSON.stringify(bestDecks, null, 2));
 fs.writeFileSync(
   "../public/data/best-decks.json",
-  JSON.stringify(mostRecent95PercentDecks, null, 2)
+  JSON.stringify(bestDecks, null, 2)
 );
 fs.writeFileSync(
   "../public/data/matchup-data.json",
