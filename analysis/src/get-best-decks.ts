@@ -98,8 +98,6 @@ for (const deckName of uniqueDeckNames) {
   });
 }
 
-console.log(bestDecks[0]);
-
 const matchupData: Record<string, MatchupData[]> = {};
 for (const deckName of Object.keys(matchupResults)) {
   matchupData[deckName] = Object.keys(matchupResults[deckName]).map(
