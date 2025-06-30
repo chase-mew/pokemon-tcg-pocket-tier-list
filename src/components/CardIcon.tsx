@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { CardScoreType } from "../app/use-cards";
+import useMissing from "../app/use-missing";
 
 const Container = styled.div`
   position: relative;
@@ -12,7 +13,7 @@ const Container = styled.div`
   }
 `;
 
-const StyledCardIcon = styled.div<{ $disabled: boolean }>`
+const StyledCardIcon = styled.button<{ $disabled: boolean }>`
   position: relative;
   border-radius: 1.2rem;
   color: var(--bg);
@@ -39,9 +40,16 @@ interface Props {
 }
 
 const CardIcon = ({ card }: Props) => {
+  const { addMissing } = useMissing();
+
   return (
     <Container>
-      <StyledCardIcon $disabled={false}>
+      <StyledCardIcon
+        $disabled={false}
+        onClick={() => {
+          addMissing([card.id]);
+        }}
+      >
         <CardImage key={card.id} src={card.image} alt={card.name} />
       </StyledCardIcon>
     </Container>
