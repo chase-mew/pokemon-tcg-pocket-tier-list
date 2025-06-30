@@ -224,6 +224,21 @@ const DECK_NAMES: DeckNameType[] = [
   ["Infernape ex A2 29", "Silvally A3a 617"],
   ["Incineroar ex A3 33", "Greninja A1 89"],
   ["Stoutland A3a 56", "Rampardos A2 89"],
+  ["Greninja A1 89", "Sylveon ex A3b 34"],
+  ["Flareon ex A3b 9", "Turtonator A3 37"],
+  ["Magnezone A2 53", "Sylveon ex A3b 34"],
+  ["Solgaleo ex A3 122", "Sylveon ex A3b 34"],
+  ["Zeraora A3a 21", "Oricorio A3 66"],
+  ["Magnezone A2 53", "Tapu Koko ex A3a 19"],
+  ["Magnezone A2 53", "Oricorio A3 66"],
+  ["Incineroar ex A3 33", "Sylveon ex A3b 34"],
+  ["Magnezone A2 53", "Shiinotic A3a 27"],
+  ["Charizard ex A2b 10", "Sylveon ex A3b 34"],
+  ["Flareon ex A3b 9", "Salazzle A3 36"],
+  ["Stoutland A3a 56", "Sylveon ex A3b 34"],
+  ["Slurpuff A3b 32", "Alcremie A3v 37"],
+  ["Primarina ex A3b 24", "Pyukumuku A3 54"],
+  ["Sylveon A3b 33", "Sylveon ex A3b 34"],
 
   // Main Card (never side card)
   "Bronzong A2a 59",
@@ -261,6 +276,8 @@ const DECK_NAMES: DeckNameType[] = [
   "Gengar A1 122",
   "Stoutland A3a 56",
   "Decidueye ex A3 12",
+  "Dragonite ex A3b 53",
+  "Primarina ex A3b 24",
 
   // Stage 1 (can be side card)
   "Abomasnow A2a 21",
@@ -299,6 +316,7 @@ const DECK_NAMES: DeckNameType[] = [
   "Naganadel A3a 45",
   "Lycanroc ex A3a 33",
   "Salazzle A3 36",
+  "Flareon ex A3b 9",
 
   // Basic ex (can be side card)
   "Pachirisu ex A2 61",
@@ -314,6 +332,7 @@ const DECK_NAMES: DeckNameType[] = [
   "Guzzlord ex A3a 43",
   "Tapu Koko ex A3a 19",
   "Alolan Dugtrio ex A3a 47",
+  "Snorlax ex A3b 57",
 
   // Basic (can be side card)
   "Lt. Surge A1 226",
