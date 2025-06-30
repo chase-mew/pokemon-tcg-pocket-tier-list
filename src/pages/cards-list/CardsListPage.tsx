@@ -187,7 +187,7 @@ const CardsListPage = () => {
         <RowHeader $backgroundColor="var(--s)">S</RowHeader>
         <RowContent>
           {sTier.map((card) => (
-            <CardIcon key={card.name} card={card} />
+            <CardIcon key={card.id} card={card} />
           ))}
         </RowContent>
       </DeckRow>
@@ -195,7 +195,7 @@ const CardsListPage = () => {
         <RowHeader $backgroundColor="var(--a)">A</RowHeader>
         <RowContent>
           {aTier.map((card) => (
-            <CardIcon key={card.name} card={card} />
+            <CardIcon key={card.id} card={card} />
           ))}
         </RowContent>
       </DeckRow>
@@ -203,7 +203,7 @@ const CardsListPage = () => {
         <RowHeader $backgroundColor="var(--b)">B</RowHeader>
         <RowContent>
           {bTier.map((card) => (
-            <CardIcon key={card.name} card={card} />
+            <CardIcon key={card.id} card={card} />
           ))}
         </RowContent>
       </DeckRow>
@@ -211,7 +211,7 @@ const CardsListPage = () => {
         <RowHeader $backgroundColor="var(--c)">C</RowHeader>
         <RowContent>
           {cTier.map((card) => (
-            <CardIcon key={card.name} card={card} />
+            <CardIcon key={card.id} card={card} />
           ))}
         </RowContent>
       </DeckRow>
@@ -219,7 +219,7 @@ const CardsListPage = () => {
         <RowHeader $backgroundColor="var(--d)">D</RowHeader>
         <RowContent>
           {dTier.map((card) => (
-            <CardIcon key={card.name} card={card} />
+            <CardIcon key={card.id} card={card} />
           ))}
         </RowContent>
       </DeckRow>
@@ -227,7 +227,7 @@ const CardsListPage = () => {
         <RowHeader $backgroundColor="var(--e)">E</RowHeader>
         <RowContent>
           {eTier.map((card) => (
-            <CardIcon key={card.name} card={card} />
+            <CardIcon key={card.id} card={card} />
           ))}
         </RowContent>
       </DeckRow>
