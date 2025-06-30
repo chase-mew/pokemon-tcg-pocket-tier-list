@@ -18,6 +18,7 @@ export interface CardType {
   craftingCost: number | null;
   image: string;
   ex: string;
+  set: string;
 }
 
 export interface MatchupType {

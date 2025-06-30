@@ -17,6 +17,8 @@ interface FilterContextType {
   setDeckAmount: (deckAmount: number) => void;
   sortBy: SortBy;
   setSortBy: (sortBy: SortBy) => void;
+  expansion: string | null;
+  setExpansion: (expansion: string | null) => void;
 }
 
 export const FilterContext = createContext<FilterContextType>({
@@ -28,6 +30,8 @@ export const FilterContext = createContext<FilterContextType>({
   setDeckAmount: () => {},
   sortBy: SortBy.SCORE,
   setSortBy: (sortBy: SortBy) => {},
+  expansion: null,
+  setExpansion: (expansion: string | null) => {},
 });
 
 interface Props {
@@ -39,6 +43,7 @@ const FilterContextProvider = ({ children }: Props) => {
   const [includeEx, setIncludeEx] = useState<boolean>(true);
   const [deckAmount, setDeckAmount] = useState<number>(FREE_DECK_AMOUNT);
   const [sortBy, setSortBy] = useState<SortBy>(SortBy.SCORE);
+  const [expansion, setExpansion] = useState<string | null>(null);
 
   return (
     <FilterContext.Provider
@@ -58,6 +63,10 @@ const FilterContextProvider = ({ children }: Props) => {
         sortBy,
         setSortBy: (sortBy: SortBy) => {
           setSortBy(sortBy);
+        },
+        expansion,
+        setExpansion: (expansion) => {
+          setExpansion(expansion);
         },
       }}
     >

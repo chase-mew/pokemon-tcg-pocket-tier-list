@@ -1,5 +1,6 @@
 # Today
 
+- Create Dropdown component and refactor to use that
 - Add card pairs
 
 # Sorted

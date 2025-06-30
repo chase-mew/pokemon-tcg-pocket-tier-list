@@ -2,6 +2,9 @@ import styled from "styled-components";
 import UserAccount from "../../components/UserAccount";
 import useCards from "../../app/use-cards";
 import CardIcon from "../../components/CardIcon";
+import ArrowDown from "../../assets/arrow-down.svg";
+import useFilters from "../../app/use-filters";
+import { EXPANSION_CODES, getExpansionName } from "../../app/expansion-names";
 
 const StyledCardsListPage = styled.div`
   width: 100%;
@@ -108,8 +111,31 @@ const Loading = styled.div`
   font-weight: 500;
 `;
 
+const Dropdown = styled.select`
+  padding: 0.8rem 4rem 0.8rem 1.2rem;
+  font-size: 1.6rem;
+  border-radius: 0.4rem;
+  background: var(--bg);
+  color: var(--main);
+  border: 1px solid var(--main);
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url(${ArrowDown});
+  background-repeat: no-repeat;
+  background-position: right 1.2rem center;
+  background-size: 1.2em 1.2em;
+
+  &:hover {
+    border-color: var(--a);
+  }
+`;
+
 const CardsListPage = () => {
   const cards = useCards();
+  const { expansion, setExpansion } = useFilters();
 
   if (!cards) return <Loading>Loading...</Loading>;
 
@@ -142,6 +168,20 @@ const CardsListPage = () => {
     <StyledCardsListPage>
       <FilterContainer>
         <UserAccount showUpsell />
+        <Dropdown
+          value={expansion ?? ""}
+          onChange={(e) => {
+            const value = e.target.value;
+            setExpansion(value === "" ? null : value);
+          }}
+        >
+          <option value="">All</option>
+          {EXPANSION_CODES.map((code) => (
+            <option key={code} value={code}>
+              {getExpansionName(code)}
+            </option>
+          ))}
+        </Dropdown>
       </FilterContainer>
       <DeckRow>
         <RowHeader $backgroundColor="var(--s)">S</RowHeader>
