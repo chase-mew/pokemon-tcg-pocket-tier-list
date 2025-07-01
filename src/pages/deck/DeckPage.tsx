@@ -12,6 +12,7 @@ import { MIN_MATCHUP_GAMES, WINRATE_THRESHOLD } from "../../app/config";
 import { useEffect, useState } from "react";
 import useIsPremium from "../../app/use-is-premium";
 import UserAccount from "../../components/UserAccount";
+import arrowRight from "../../assets/arrow-right.svg";
 
 const StyledDeckPage = styled.div`
   width: 100%;
@@ -268,6 +269,26 @@ const KeyStatValue = styled.span`
   font-weight: 500;
 `;
 
+const AlternativeContainer = styled.div`
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 4.8rem;
+`;
+
+const AlternativeCard = styled.img`
+  width: calc(50% - 2.4rem);
+`;
+
+const ArrowRight = styled.img`
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  height: 5rem;
+`;
+
 const DeckPage = () => {
   const deckId = useParams().deckId;
   const { decks, loading } = useDecks();
@@ -312,6 +333,37 @@ const DeckPage = () => {
     );
 
   const isDeckFinderMode = !deckId;
+
+  const listsWithOneCardDifferenceFromBestList = deck.lists.filter((list) => {
+    if (!deck) return false;
+    let differenceCount = 0;
+
+    const uniqueListCards = list.cards.filter(
+      (card, index, self) => self.findIndex((c) => c.id === card.id) === index
+    );
+
+    const uniqueTotalCards = new Set([...uniqueListCards, ...uniqueCards]);
+
+    for (const card of uniqueTotalCards) {
+      const thisListCount = list.cards.filter((c) => c.id === card.id).length;
+      const bestListCount = deck.bestList.cards.filter(
+        (c) => c.id === card.id
+      ).length;
+
+      if (thisListCount !== bestListCount) {
+        if (differenceCount === 2) return false;
+        differenceCount++;
+      }
+    }
+
+    return differenceCount === 2;
+  });
+
+  const sortedAlternatives = listsWithOneCardDifferenceFromBestList
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 3);
+
+  console.log(sortedAlternatives);
 
   return (
     <StyledDeckPage>
@@ -383,6 +435,64 @@ const DeckPage = () => {
                 </KeyStat>
               </KeyStats>
             </MatchupSection>
+            {sortedAlternatives.length > 0 && (
+              <MatchupSection>
+                <SubHeader $backgroundColor="var(--c)">
+                  {t("deckPage.alternatives")}
+                </SubHeader>
+                {sortedAlternatives.map((list) => {
+                  if (!deck) return null;
+                  const missingCards = [];
+                  const newCards = [];
+
+                  const uniqueListCards = list.cards.filter(
+                    (card, index, self) =>
+                      self.findIndex((c) => c.id === card.id) === index
+                  );
+
+                  const uniqueTotalCards = new Set([
+                    ...uniqueListCards,
+                    ...uniqueCards,
+                  ]);
+
+                  for (const card of uniqueTotalCards) {
+                    const thisListCount = list.cards.filter(
+                      (c) => c.id === card.id
+                    ).length;
+                    const bestListCount = deck.bestList.cards.filter(
+                      (c) => c.id === card.id
+                    ).length;
+
+                    if (thisListCount === bestListCount) continue;
+
+                    if (thisListCount < bestListCount) {
+                      missingCards.push(card);
+                    } else {
+                      newCards.push(card);
+                    }
+                  }
+
+                  if (missingCards.length !== 1) {
+                    throw new Error("Missing cards");
+                  }
+
+                  if (newCards.length !== 1) {
+                    throw new Error("New cards");
+                  }
+
+                  const missingCard = missingCards[0];
+                  const newCard = newCards[0];
+
+                  return (
+                    <AlternativeContainer key={list.cards.join(",")}>
+                      <AlternativeCard src={missingCard.image} />
+                      <AlternativeCard src={newCard.image} />
+                      <ArrowRight src={arrowRight} />
+                    </AlternativeContainer>
+                  );
+                })}
+              </MatchupSection>
+            )}
             <MatchupSection>
               <SubHeader $backgroundColor="var(--e)">
                 {t("deckPage.strongAgainst")}

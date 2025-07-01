@@ -10,7 +10,8 @@
     "strength": "強さ",
     "winRate": "勝率",
     "notEnoughCards": "カードが足りません",
-    "tryAnotherDeck": "別のデッキを試してください"
+    "tryAnotherDeck": "別のデッキを試してください",
+    "alternatives": "代替案"
   },
   "energyDropdown": {
     "all": "すべてのエネルギータイプ",
