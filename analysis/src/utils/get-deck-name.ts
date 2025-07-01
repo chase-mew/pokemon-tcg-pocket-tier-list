@@ -239,6 +239,7 @@ const DECK_NAMES: DeckNameType[] = [
   ["Slurpuff A3b 32", "Alcremie A3v 37"],
   ["Primarina ex A3b 24", "Pyukumuku A3 54"],
   ["Sylveon A3b 33", "Sylveon ex A3b 34"],
+  ["Rampardos A2 89", "Sylveon ex A3b 34"],
 
   // Main Card (never side card)
   "Bronzong A2a 59",
