@@ -240,6 +240,10 @@ const DECK_NAMES: DeckNameType[] = [
   ["Primarina ex A3b 24", "Pyukumuku A3 54"],
   ["Sylveon A3b 33", "Sylveon ex A3b 34"],
   ["Rampardos A2 89", "Sylveon ex A3b 34"],
+  ["Leafeon ex A2a 10", "Flareon ex A3b 9"],
+  ["Leafeon ex A2a 10", "Sylveon ex A3b 34"],
+  ["Flareon ex A3b 9", "Flareon A3b 8"],
+  ["Decidueye ex A3 12", "Leafeon ex A2a 10"],
 
   // Main Card (never side card)
   "Bronzong A2a 59",
