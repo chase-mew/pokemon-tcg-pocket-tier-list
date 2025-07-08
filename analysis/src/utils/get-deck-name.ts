@@ -236,7 +236,7 @@ const DECK_NAMES: DeckNameType[] = [
   ["Charizard ex A2b 10", "Sylveon ex A3b 34"],
   ["Flareon ex A3b 9", "Salazzle A3 36"],
   ["Stoutland A3a 56", "Sylveon ex A3b 34"],
-  ["Slurpuff A3b 32", "Alcremie A3v 37"],
+  ["Slurpuff A3b 32", "Alcremie A3b 37"],
   ["Primarina ex A3b 24", "Pyukumuku A3 54"],
   ["Sylveon A3b 33", "Sylveon ex A3b 34"],
   ["Rampardos A2 89", "Sylveon ex A3b 34"],
@@ -244,6 +244,11 @@ const DECK_NAMES: DeckNameType[] = [
   ["Leafeon ex A2a 10", "Sylveon ex A3b 34"],
   ["Flareon ex A3b 9", "Flareon A3b 8"],
   ["Decidueye ex A3 12", "Leafeon ex A2a 10"],
+  ["Charizard ex A2b 10", "Oricorio A3 66"],
+  ["Gengar ex A1 123", "Sylveon ex A3b 34"],
+  ["Umbreon A3b 43", "Darkrai ex A2 110"],
+  ["Gengar ex A1 123", "Shiinotic A3a 27"],
+  ["Stoutland A3a 56", "Sylveon ex A3b 34"],
 
   // Main Card (never side card)
   "Bronzong A2a 59",
