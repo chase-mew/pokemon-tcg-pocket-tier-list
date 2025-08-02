@@ -1,13 +1,13 @@
 export const DEBUG: boolean = false;
 export const NOEX: boolean = false;
 export const OPPONENT_BATTLE: boolean = false;
-export const WINRATE_IMPORTANCE: number = 0.7;
+export const WINRATE_IMPORTANCE: number = 0.6;
 export const POPULARITY_IMPORTANCE: number = 1 - WINRATE_IMPORTANCE;
 export const OLD_MULTIPLIER: number = 1;
 export const NEW_MULTIPLIER: number = 3;
 export const CARDS_IN_DECK: number = 20;
 export const RED_CARD_MULTIPLIER: number = 0.9;
-export const EXPANSION_RELEASE_DATE: Date = new Date("2025-06-27");
+export const EXPANSION_RELEASE_DATE: Date = new Date("2025-07-30");
 export const POST_EXPANSION_PERCENT: number = 0.95;
 export const NOEX_PERCENT_CUTOFF: number = 0.2;
 export const WIGGLYTUFF_PERCENT_CUTOFF: number = 0.1;
