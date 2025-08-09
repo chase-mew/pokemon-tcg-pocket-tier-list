@@ -293,6 +293,16 @@ const DECK_NAMES: DeckNameType[] = [
   ["Tsareena A3 20", "Alolan Exeggutor ex A3 2"],
   ["Donphan ex A4 100", "Marshadow A1a 47"],
   ["Alolan Exeggutor ex A3 2", "Leafeon ex A2a 10"],
+  ["Flareon ex A3b 9", "Silvally A3a 61"],
+  ["Gallade ex A2 95", "Hitmontop A4 102"],
+  ["Umbreon ex A4 112", "Greninja A1 89"],
+  ["Darkrai ex A2 110", "Silvally A3a 61"],
+  ["Togekiss A2 65", "Cleffa A4 77"],
+  ["Flareon ex A3b 9", "Magby A4 32"],
+  ["Ho-Oh ex A4 34", "Pichu A4 66"],
+  ["Alolan Exeggutor ex A3 2", "Pichu A4 66"],
+  ["Leafeon ex A2a 10", "Alolan Exeggutor ex A3 2"],
+  ["Magcargo A4 31", "Silvally A3a 61"],
 
   // Main Card (never side card)
   "Bronzong A2a 59",
