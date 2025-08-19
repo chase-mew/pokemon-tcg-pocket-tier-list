@@ -292,7 +292,7 @@ const DECK_NAMES: DeckNameType[] = [
   ["Primarina ex A3b 24", "Greninja A1 89"],
   ["Tsareena A3 20", "Alolan Exeggutor ex A3 2"],
   ["Donphan ex A4 100", "Marshadow A1a 47"],
-  ["Alolan Exeggutor ex A3 2", "Leafeon ex A2a 10"],
+  ["Alolan Exeggutor A3 2", "Leafeon ex A2a 10"],
   ["Flareon ex A3b 9", "Silvally A3a 61"],
   ["Gallade ex A2 95", "Hitmontop A4 102"],
   ["Umbreon ex A4 112", "Greninja A1 89"],
