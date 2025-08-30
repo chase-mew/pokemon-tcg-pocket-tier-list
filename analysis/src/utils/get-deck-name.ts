@@ -303,6 +303,29 @@ const DECK_NAMES: DeckNameType[] = [
   ["Alolan Exeggutor ex A3 2", "Pichu A4 66"],
   ["Leafeon ex A2a 10", "Alolan Exeggutor ex A3 2"],
   ["Magcargo A4 31", "Silvally A3a 61"],
+  ["Suicune ex A4a 20", "Greninja A1 89"],
+  ["Suicune ex A4a 20", "Silvally A3a 61"],
+  ["Suicune ex A4a 20", "Wugtrio ex A2b 19"],
+  ["Suicune ex A4a 20", "Giratina ex A2b 35"],
+  ["Suicune ex A4a 20", "Oricorio A3 66"],
+  ["Suicune ex A4a 20", "Sylveon ex A3b 34"],
+  ["Raikou ex A4a 25", "Magnezone A2 53"],
+  ["Raikou ex A4a 25", "Arceus ex A2a 71"],
+  ["Raikou ex A4a 25", "Electivire A2 57"],
+  ["Raikou ex A4a 25", "Oricorio A3 66"],
+  ["Milotic A4a 22", "Suicune ex A4a 20"],
+  ["Milotic A4a 22", "Palkia ex A2 49"],
+  ["Poliwrath ex A4a 42", "Lucario A2 92"],
+  ["Gyarados A4 45", "Suicune ex A4a 20"],
+  ["Gyarados A4 45", "Corsola A4 54"],
+  ["Gyarados A4 45", "Mantyke A4a 23"],
+  ["Altaria A4a 55", "Silvally A3a 61"],
+  ["Altaria A4a 55", "Lugia ex A4 149"],
+  ["Jumpluff ex A4a 3", "Darkrai ex A2 110"],
+  ["Jumpluff ex A4a 3", "Oricorio A3 66"],
+  ["Jumpluff ex A4a 3", "Zangoose A4a 65"],
+  ["Porygon-Z A4 129", "Stoutland A3a 56"],
+  ["Silvally A3a 61", "Palkia ex A2 49"],
 
   // Main Card (never side card)
   "Bronzong A2a 59",
@@ -344,6 +367,8 @@ const DECK_NAMES: DeckNameType[] = [
   "Primarina ex A3b 24",
   "Crobat ex A4 109",
   "Porygon-Z A4 129",
+  "Jumpluff ex A4a 3",
+  "Poliwrath ex A4a 42",
 
   // Stage 1 (can be side card)
   "Abomasnow A2a 21",
@@ -392,6 +417,10 @@ const DECK_NAMES: DeckNameType[] = [
   "Scizor A4 123",
   "Tyranitar A4 119",
   "Typhlosion A4 29",
+  "Milotic A4a 22",
+  "Gyarados A4 45",
+  "Altaria A4a 55",
+  "Electivire A2 57",
 
   // Basic ex (can be side card)
   "Pachirisu ex A2 61",
@@ -412,6 +441,9 @@ const DECK_NAMES: DeckNameType[] = [
   "Ho-Oh ex A4 34",
   "Skarmory ex A4 124",
   "Lugia ex A4 149",
+  "Entei ex A4a 10",
+  "Suicune ex A4a 20",
+  "Raikou ex A4a 25",
 
   // Basic (can be side card)
   "Lt. Surge A1 226",
