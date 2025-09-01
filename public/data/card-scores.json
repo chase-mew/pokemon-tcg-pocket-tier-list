@@ -1,1827 +1,2327 @@
 [
   {
     "name": "2 Professor's Research P-A 7",
-    "score": 0.7181505557766958,
-    "popularity": 0.9987165871485454
+    "score": 0.71878737208273,
+    "popularity": 0.9989255114756049
   },
   {
     "name": "2 Poké Ball P-A 5",
-    "score": 0.7070618427400204,
-    "popularity": 0.9725606332359011
+    "score": 0.7067012057965993,
+    "popularity": 0.9663937575481824
   },
   {
     "name": "1 Cyrus A2 150",
-    "score": 0.5911370729408774,
-    "popularity": 0.672578921869035
-  },
-  {
-    "name": "1 Sabrina A1 225",
-    "score": 0.5452448486618715,
-    "popularity": 0.5865517584360345
+    "score": 0.5954792938403293,
+    "popularity": 0.6728862877842184
   },
   {
     "name": "1 Giant Cape A2 147",
-    "score": 0.5235595660603672,
-    "popularity": 0.48627229528763
+    "score": 0.5597042887175048,
+    "popularity": 0.5650067426585029
+  },
+  {
+    "name": "1 Sabrina A1 225",
+    "score": 0.5316009134817005,
+    "popularity": 0.5403624224120709
   },
   {
     "name": "1 Mars A2 155",
-    "score": 0.5191329677223635,
-    "popularity": 0.6037238223884969
-  },
-  {
-    "name": "2 Origin Forme Palkia A2a 23",
-    "score": 0.4805903699116691,
-    "popularity": 0.0014759247791727836
+    "score": 0.5313361295872314,
+    "popularity": 0.6370327417415371
   },
   {
     "name": "1 Guzma A3 151",
-    "score": 0.47311838993798605,
-    "popularity": 0.3560957297645916
+    "score": 0.4829448941381126,
+    "popularity": 0.3827504588260399
+  },
+  {
+    "name": "2 Origin Forme Palkia A2a 23",
+    "score": 0.48021684180380975,
+    "popularity": 0.0005421045095243997
   },
   {
     "name": "2 Rare Candy A3 144",
-    "score": 0.44743436114196233,
-    "popularity": 0.3240007828818409
-  },
-  {
-    "name": "2 Silver A4 158",
-    "score": 0.43020346379511,
-    "popularity": 0.008829880418007611
-  },
-  {
-    "name": "1 Hoppip A4 13",
-    "score": 0.4297123825963716,
-    "popularity": 0.002852385062357837
-  },
-  {
-    "name": "1 Red A2b 71",
-    "score": 0.42709202185285616,
-    "popularity": 0.24721740051144173
+    "score": 0.4744974974536973,
+    "popularity": 0.3833920114731738
   },
   {
     "name": "2 Froakie A1 87",
-    "score": 0.4245589031958991,
-    "popularity": 0.18932906384658194
+    "score": 0.4545633797119662,
+    "popularity": 0.2707056817412831
   },
   {
     "name": "2 Greninja A1 89",
-    "score": 0.4245589031958991,
-    "popularity": 0.18932906384658194
+    "score": 0.4545633797119662,
+    "popularity": 0.2707056817412831
   },
   {
-    "name": "2 Cyrus A2 150",
-    "score": 0.4225579546097572,
-    "popularity": 0.21501336353631698
+    "name": "1 Jolteon A1 102",
+    "score": 0.4506631869788241,
+    "popularity": 0.0016579674470603711
   },
   {
     "name": "1 Leaf A1a 68",
-    "score": 0.41070678109878733,
-    "popularity": 0.20436103686924398
-  },
-  {
-    "name": "2 Zangoose A4a 65",
-    "score": 0.407932136938377,
-    "popularity": 0.01134857813898725
+    "score": 0.4435959919618817,
+    "popularity": 0.269894643546344
   },
   {
     "name": "2 Suicune ex A4a 20",
-    "score": 0.40746248384767386,
-    "popularity": 0.17271528448450216
+    "score": 0.4407145992055013,
+    "popularity": 0.23789215809063438
   },
   {
-    "name": "2 Oricorio A3 66",
-    "score": 0.4049161075581345,
-    "popularity": 0.21320375141576595
-  },
-  {
-    "name": "2 Darkrai ex A2 110",
-    "score": 0.4027737114219643,
-    "popularity": 0.12564932668953335
-  },
-  {
-    "name": "1 Corsola A4 54",
-    "score": 0.4009779605928084,
-    "popularity": 0.002444901482021003
-  },
-  {
-    "name": "1 Fisher A4 159",
-    "score": 0.4009779605928084,
-    "popularity": 0.002444901482021003
-  },
-  {
-    "name": "1 Snorlax A1 211",
-    "score": 0.4009240572530473,
-    "popularity": 0.0023101431326182703
-  },
-  {
-    "name": "1 Phanpy A4 99",
-    "score": 0.4009240572530473,
-    "popularity": 0.0023101431326182703
-  },
-  {
-    "name": "1 Hiker A4 161",
-    "score": 0.4009240572530473,
-    "popularity": 0.0023101431326182703
-  },
-  {
-    "name": "2 Wiglett A2b 18",
-    "score": 0.4009240572530473,
-    "popularity": 0.0023101431326182703
-  },
-  {
-    "name": "2 Wugtrio ex A2b 19",
-    "score": 0.4009240572530473,
-    "popularity": 0.0023101431326182703
-  },
-  {
-    "name": "1 Pikachu ex A2b 22",
-    "score": 0.39785701892949443,
-    "popularity": 0.01254536062296866
-  },
-  {
-    "name": "2 Pichu A4 66",
-    "score": 0.3897713679705723,
-    "popularity": 0.17418158366728884
-  },
-  {
-    "name": "1 Electrical Cord A3a 65",
-    "score": 0.3895629364123053,
-    "popularity": 0.016687575601038365
-  },
-  {
-    "name": "2 Giratina ex A2b 35",
-    "score": 0.38952847257346696,
-    "popularity": 0.09495650834699679
-  },
-  {
-    "name": "2 Red Card P-A 6",
-    "score": 0.38888057373431956,
-    "popularity": 0.00469408250419518
-  },
-  {
-    "name": "1 Silver A4 158",
-    "score": 0.3871548429965018,
-    "popularity": 0.2066005922950321
-  },
-  {
-    "name": "1 Red Card P-A 6",
-    "score": 0.3870183988412308,
-    "popularity": 0.27342469093814437
-  },
-  {
-    "name": "2 Eevee ex A3b 56",
-    "score": 0.38674367049448943,
-    "popularity": 0.1485742887486411
-  },
-  {
-    "name": "1 Sylveon A3b 33",
-    "score": 0.38582874733315636,
-    "popularity": 0.12710279174380573
-  },
-  {
-    "name": "1 Giovanni A1 223",
-    "score": 0.3853891347899501,
-    "popularity": 0.16538378857056765
-  },
-  {
-    "name": "1 Espeon A3b 28",
-    "score": 0.3842161772339921,
-    "popularity": 0.10211153499385615
-  },
-  {
-    "name": "1 Giratina ex A2b 35",
-    "score": 0.3834499235325255,
-    "popularity": 0.08501647581248101
-  },
-  {
-    "name": "2 Espeon ex A4 83",
-    "score": 0.3834090539816577,
-    "popularity": 0.12712846000083483
+    "name": "1 Red A2b 71",
+    "score": 0.43170446124081685,
+    "popularity": 0.2770378362777069
   },
   {
     "name": "2 Irida A2a 72",
-    "score": 0.3803797310430314,
-    "popularity": 0.11054355742791279
+    "score": 0.4306594909500388,
+    "popularity": 0.21020906166943404
   },
   {
-    "name": "1 Irida A2a 72",
-    "score": 0.37982848783384415,
-    "popularity": 0.07288180730197782
+    "name": "1 Hoppip A4 13",
+    "score": 0.42894828467184276,
+    "popularity": 0.0009421402510355086
   },
   {
-    "name": "2 Eevee A4 134",
-    "score": 0.37982061401739714,
-    "popularity": 0.18254622692664435
+    "name": "2 Giratina ex A2b 35",
+    "score": 0.424647821877836,
+    "popularity": 0.18568051500676036
   },
   {
-    "name": "2 Rocky Helmet A2 148",
-    "score": 0.3791609990862723,
-    "popularity": 0.10910934356641229
+    "name": "2 Popplio A3 46",
+    "score": 0.42286858033015007,
+    "popularity": 0.0021400042844949407
   },
   {
-    "name": "2 Komala A3 141",
-    "score": 0.3788379664519505,
-    "popularity": 0.007726145365756659
-  },
-  {
-    "name": "2 Swirlix A3b 31",
-    "score": 0.37630394745707785,
-    "popularity": 0.0032598686426946705
-  },
-  {
-    "name": "2 Slurpuff A3b 32",
-    "score": 0.37630394745707785,
-    "popularity": 0.0032598686426946705
-  },
-  {
-    "name": "2 Milcery A3b 36",
-    "score": 0.37630394745707785,
-    "popularity": 0.0032598686426946705
-  },
-  {
-    "name": "2 Alcremie A3b 37",
-    "score": 0.37630394745707785,
-    "popularity": 0.0032598686426946705
-  },
-  {
-    "name": "1 Cherubi A4 23",
-    "score": 0.37630394745707785,
-    "popularity": 0.0032598686426946705
-  },
-  {
-    "name": "1 Luxio A2 59",
-    "score": 0.37630394745707785,
-    "popularity": 0.0032598686426946705
-  },
-  {
-    "name": "2 Sylveon ex A3b 34",
-    "score": 0.3761739097898258,
-    "popularity": 0.16606078884971004
-  },
-  {
-    "name": "1 Potion P-A 1",
-    "score": 0.37221836354904536,
-    "popularity": 0.07861545421585124
-  },
-  {
-    "name": "1 Pokémon Center Lady A2b 70",
-    "score": 0.37078479395860425,
-    "popularity": 0.13500219784450876
-  },
-  {
-    "name": "2 Type: Null A3a 60",
-    "score": 0.3672942829595913,
-    "popularity": 0.12315950575771151
-  },
-  {
-    "name": "2 Silvally A3a 61",
-    "score": 0.3672942829595913,
-    "popularity": 0.12315950575771151
-  },
-  {
-    "name": "2 Arceus ex A2a 71",
-    "score": 0.3661823792142766,
-    "popularity": 0.08431701580843826
-  },
-  {
-    "name": "1 Mantyke A4a 23",
-    "score": 0.36484699731228964,
-    "popularity": 0.08003362541670851
-  },
-  {
-    "name": "1 Palkia ex A2 49",
-    "score": 0.36380845045690957,
-    "popularity": 0.03529385341500135
-  },
-  {
-    "name": "2 Zeraora A3a 21",
-    "score": 0.36351883694825166,
-    "popularity": 0.10552862171085403
-  },
-  {
-    "name": "2 Gladion A3a 67",
-    "score": 0.3634432337796601,
-    "popularity": 0.11712746535587491
-  },
-  {
-    "name": "1 Skiploom A4a 2",
-    "score": 0.3631033896135894,
-    "popularity": 0.007225614353689368
-  },
-  {
-    "name": "1 Rocky Helmet A2 148",
-    "score": 0.3625568577278255,
-    "popularity": 0.1065457263956318
-  },
-  {
-    "name": "1 Guzzlord ex A3a 43",
-    "score": 0.3615400954217455,
-    "popularity": 0.0038502385543637842
-  },
-  {
-    "name": "1 Oricorio A3 66",
-    "score": 0.3612446167655151,
-    "popularity": 0.07064866894044682
-  },
-  {
-    "name": "2 Eevee Bag A3b 66",
-    "score": 0.35960079244212156,
-    "popularity": 0.06175461787986647
-  },
-  {
-    "name": "2 Pokémon Center Lady A2b 70",
-    "score": 0.3561765856750303,
-    "popularity": 0.05485627380329802
-  },
-  {
-    "name": "2 Elemental Switch A4 151",
-    "score": 0.35561701527870526,
-    "popularity": 0.09933936323471426
-  },
-  {
-    "name": "1 Eevee Bag A3b 66",
-    "score": 0.3544107002144743,
-    "popularity": 0.08912981400139294
-  },
-  {
-    "name": "2 Lusamine A3a 69",
-    "score": 0.35295290993374245,
-    "popularity": 0.070488242334015
-  },
-  {
-    "name": "2 Potion P-A 1",
-    "score": 0.35255678813551505,
-    "popularity": 0.014585987056781468
-  },
-  {
-    "name": "1 Celesteela A3a 62",
-    "score": 0.3520981869615494,
-    "popularity": 0.03038800779031616
-  },
-  {
-    "name": "1 Phanpy A4a 43",
-    "score": 0.35123207633739645,
-    "popularity": 0.003080190843491027
-  },
-  {
-    "name": "1 Gladion A3a 67",
-    "score": 0.3483702629692453,
-    "popularity": 0.006032040401836594
-  },
-  {
-    "name": "1 Elemental Switch A4 151",
-    "score": 0.34673566487050633,
-    "popularity": 0.04753440348574956
-  },
-  {
-    "name": "1 Emolga A4 72",
-    "score": 0.3442558956480778,
-    "popularity": 0.004158257638712887
-  },
-  {
-    "name": "2 Pikachu ex A2b 22",
-    "score": 0.34404301633188694,
-    "popularity": 0.002964683686860113
-  },
-  {
-    "name": "2 Shaymin A2a 69",
-    "score": 0.34404301633188694,
-    "popularity": 0.002964683686860113
-  },
-  {
-    "name": "1 Comfey A3 80",
-    "score": 0.34404301633188694,
-    "popularity": 0.002964683686860113
-  },
-  {
-    "name": "2 Porygon A1 209",
-    "score": 0.34404301633188694,
-    "popularity": 0.002964683686860113
-  },
-  {
-    "name": "2 Porygon2 A4 136",
-    "score": 0.34404301633188694,
-    "popularity": 0.002964683686860113
-  },
-  {
-    "name": "2 Porygon-Z A4 137",
-    "score": 0.34404301633188694,
-    "popularity": 0.002964683686860113
-  },
-  {
-    "name": "2 Lillipup A3a 54",
-    "score": 0.34404301633188694,
-    "popularity": 0.002964683686860113
-  },
-  {
-    "name": "2 Stoutland A3a 56",
-    "score": 0.34404301633188694,
-    "popularity": 0.002964683686860113
-  },
-  {
-    "name": "1 Oranguru A3 140",
-    "score": 0.34404301633188694,
-    "popularity": 0.002964683686860113
-  },
-  {
-    "name": "2 Zorua A4a 49",
-    "score": 0.34399809688208594,
-    "popularity": 0.002852385062357837
-  },
-  {
-    "name": "2 Zoroark A4a 50",
-    "score": 0.34399809688208594,
-    "popularity": 0.002852385062357837
-  },
-  {
-    "name": "1 Igglybuff A4a 59",
-    "score": 0.34399809688208594,
-    "popularity": 0.002852385062357837
-  },
-  {
-    "name": "1 Druddigon A1a 56",
-    "score": 0.34357585405395735,
-    "popularity": 0.0017967779920364324
-  },
-  {
-    "name": "1 Pikachu A3 57",
-    "score": 0.34357585405395735,
-    "popularity": 0.0017967779920364324
-  },
-  {
-    "name": "1 Alolan Raichu ex A3 58",
-    "score": 0.34357585405395735,
-    "popularity": 0.0017967779920364324
-  },
-  {
-    "name": "1 Shaymin A2 22",
-    "score": 0.34357585405395735,
-    "popularity": 0.0017967779920364324
-  },
-  {
-    "name": "2 Pheromosa A3a 7",
-    "score": 0.34250029745141214,
-    "popularity": 0.034979417266394974
-  },
-  {
-    "name": "1 Raikou A4 71",
-    "score": 0.34227121234632046,
-    "popularity": 0.015763518347991053
-  },
-  {
-    "name": "2 Raikou ex A4a 25",
-    "score": 0.3417418529389496,
-    "popularity": 0.033734506800484024
-  },
-  {
-    "name": "2 Poipole A3a 44",
-    "score": 0.34091732442314393,
-    "popularity": 0.0360991949792891
-  },
-  {
-    "name": "2 Naganadel A3a 45",
-    "score": 0.34091732442314393,
-    "popularity": 0.0360991949792891
-  },
-  {
-    "name": "2 Giant Cape A2 147",
-    "score": 0.3403285036298267,
-    "popularity": 0.09936824002387197
-  },
-  {
-    "name": "2 Leaf A1a 68",
-    "score": 0.3396675752695382,
-    "popularity": 0.04269914556789437
-  },
-  {
-    "name": "2 Buzzwole ex A3a 6",
-    "score": 0.33946338715693464,
-    "popularity": 0.03780292553959508
-  },
-  {
-    "name": "1 Frogadier A1 88",
-    "score": 0.3387757359475589,
-    "popularity": 0.027583750709887864
-  },
-  {
-    "name": "2 Magby A4 32",
-    "score": 0.33865838526174974,
-    "popularity": 0.03764570746529189
-  },
-  {
-    "name": "1 Traveling Merchant A4a 70",
-    "score": 0.3385668257029092,
-    "popularity": 0.006417064257272973
-  },
-  {
-    "name": "1 Leaf Cape A3 147",
-    "score": 0.3380149476536236,
-    "popularity": 0.04989267460029738
-  },
-  {
-    "name": "2 Phanpy A4a 43",
-    "score": 0.33700899708702464,
-    "popularity": 0.009246989594730354
-  },
-  {
-    "name": "2 Mantyke A4a 23",
-    "score": 0.3368526627869293,
-    "popularity": 0.06318883174136701
-  },
-  {
-    "name": "1 Magby A4 32",
-    "score": 0.336631399813379,
-    "popularity": 0.038977248298676034
-  },
-  {
-    "name": "1 Poké Ball P-A 5",
-    "score": 0.33537233977298314,
-    "popularity": 0.02225437884422267
-  },
-  {
-    "name": "2 Misty A1 220",
-    "score": 0.3350813537421492,
-    "popularity": 0.03577513323429682
-  },
-  {
-    "name": "2 Hoppip A4 13",
-    "score": 0.3346786199420605,
-    "popularity": 0.006025623337579322
-  },
-  {
-    "name": "2 Jumpluff ex A4a 3",
-    "score": 0.334378192978314,
-    "popularity": 0.023573085549092265
-  },
-  {
-    "name": "2 Poison Barb A3 146",
-    "score": 0.33389315031256717,
-    "popularity": 0.03829383095527647
-  },
-  {
-    "name": "1 Arceus ex A2a 71",
-    "score": 0.3332459584934629,
-    "popularity": 0.025992318774084172
-  },
-  {
-    "name": "1 Beastite A3a 66",
-    "score": 0.33321292367761124,
-    "popularity": 0.0023871479037055458
-  },
-  {
-    "name": "1 Kirlia A2 69",
-    "score": 0.33321292367761124,
-    "popularity": 0.0023871479037055458
-  },
-  {
-    "name": "2 Guzzlord ex A3a 43",
-    "score": 0.3327182126261468,
-    "popularity": 0.033609374047467194
-  },
-  {
-    "name": "2 Celesteela A3a 62",
-    "score": 0.33265707022763563,
-    "popularity": 0.04410448264023714
-  },
-  {
-    "name": "2 Nihilego A3a 42",
-    "score": 0.33219038507859155,
-    "popularity": 0.03446926065794177
-  },
-  {
-    "name": "1 Origin Forme Palkia A2a 23",
-    "score": 0.33056811020802684,
-    "popularity": 0.003016020200918297
-  },
-  {
-    "name": "1 Suicune A4 59",
-    "score": 0.3304645468067395,
-    "popularity": 0.0035807218555583185
-  },
-  {
-    "name": "2 Lugia ex A4 149",
-    "score": 0.329714527222549,
-    "popularity": 0.010215966297578573
-  },
-  {
-    "name": "1 Marshadow A1a 47",
-    "score": 0.32964579958972107,
-    "popularity": 0.005621348289371123
-  },
-  {
-    "name": "1 X Speed P-A 2",
-    "score": 0.3296164188806152,
-    "popularity": 0.05709903776121494
-  },
-  {
-    "name": "1 Suicune ex A4a 20",
-    "score": 0.32930438352776653,
-    "popularity": 0.026155953912644633
-  },
-  {
-    "name": "2 Shinx A2 58",
-    "score": 0.32906565502620927,
-    "popularity": 0.004482319383705172
-  },
-  {
-    "name": "2 Luxray A2 60",
-    "score": 0.32906565502620927,
-    "popularity": 0.004482319383705172
-  },
-  {
-    "name": "1 Nihilego A3a 42",
-    "score": 0.32817887863993306,
-    "popularity": 0.009471586843734905
-  },
-  {
-    "name": "2 Erika A1 219",
-    "score": 0.32767338225893355,
-    "popularity": 0.043263847222534395
-  },
-  {
-    "name": "2 Magnemite A1 97",
-    "score": 0.32757128517869577,
-    "popularity": 0.025745261800179168
-  },
-  {
-    "name": "2 Magneton A1 98",
-    "score": 0.32731953508757067,
-    "popularity": 0.02677199208134284
-  },
-  {
-    "name": "2 Magnezone A2 53",
-    "score": 0.32731953508757067,
-    "popularity": 0.02677199208134284
-  },
-  {
-    "name": "1 Eevee A4 134",
-    "score": 0.327213381554567,
-    "popularity": 0.003426712313383767
-  },
-  {
-    "name": "2 Ho-Oh ex A4 34",
-    "score": 0.3267574745982228,
-    "popularity": 0.004347561034302439
-  },
-  {
-    "name": "2 Red A2b 71",
-    "score": 0.3263982272568305,
-    "popularity": 0.020541022687530785
-  },
-  {
-    "name": "2 Pokémon Flute A1a 64",
-    "score": 0.32519583769467464,
-    "popularity": 0.00529728654437884
-  },
-  {
-    "name": "1 Dragonair A1 184",
-    "score": 0.32519583769467464,
-    "popularity": 0.00529728654437884
-  },
-  {
-    "name": "1 Ilima A3 149",
-    "score": 0.32352788155057044,
-    "popularity": 0.025180560145539144
-  },
-  {
-    "name": "1 Zangoose A4a 65",
-    "score": 0.32336430687757267,
-    "popularity": 0.006808505176966625
-  },
-  {
-    "name": "1 Floragato A2b 6",
-    "score": 0.323152651620077,
-    "popularity": 0.017326073494637027
-  },
-  {
-    "name": "1 Misty A1 220",
-    "score": 0.3215678649427566,
-    "popularity": 0.02664365079619738
-  },
-  {
-    "name": "1 Shaymin A2a 69",
-    "score": 0.3203738243896064,
-    "popularity": 0.011460876763489529
-  },
-  {
-    "name": "1 Cranidos A2 88",
-    "score": 0.31956395529545356,
-    "popularity": 0.015080101004591485
-  },
-  {
-    "name": "2 Ralts A2 68",
-    "score": 0.3175963221398343,
-    "popularity": 0.0049283053495856426
-  },
-  {
-    "name": "2 Gallade ex A2 95",
-    "score": 0.3175963221398343,
-    "popularity": 0.0049283053495856426
-  },
-  {
-    "name": "2 Giovanni A1 223",
-    "score": 0.31585840654919994,
-    "popularity": 0.035589038370835914
-  },
-  {
-    "name": "2 Sprigatito A2b 5",
-    "score": 0.31570643569992335,
-    "popularity": 0.020290757181497136
-  },
-  {
-    "name": "2 Meowscarada A2b 7",
-    "score": 0.31570643569992335,
-    "popularity": 0.020290757181497136
-  },
-  {
-    "name": "2 Rampardos A2 89",
-    "score": 0.31426510585602413,
-    "popularity": 0.018391306161344337
-  },
-  {
-    "name": "2 Skull Fossil A2 144",
-    "score": 0.31426510585602413,
-    "popularity": 0.018391306161344337
-  },
-  {
-    "name": "2 Dratini A3b 51",
-    "score": 0.31252720747020585,
-    "popularity": 0.007613846741254383
-  },
-  {
-    "name": "1 Celebi A4a 6",
-    "score": 0.3117686401809187,
-    "popularity": 0.022299298294023585
-  },
-  {
-    "name": "2 Dragonite ex A3b 53",
-    "score": 0.31120053278213305,
-    "popularity": 0.010058748223275387
-  },
-  {
-    "name": "1 Sylveon ex A3b 34",
-    "score": 0.31004950955189897,
-    "popularity": 0.030756988985109354
-  },
-  {
-    "name": "1 Pichu A4 66",
-    "score": 0.3089282675924666,
-    "popularity": 0.0450317484254131
-  },
-  {
-    "name": "1 Pokémon Communication A2 146",
-    "score": 0.3083219740939931,
-    "popularity": 0.05586696142381853
-  },
-  {
-    "name": "1 Lyra A4 157",
-    "score": 0.3082215427264181,
-    "popularity": 0.020553856816045334
-  },
-  {
-    "name": "2 Donphan ex A4 100",
-    "score": 0.3081957502930253,
-    "popularity": 0.018686491117178898
-  },
-  {
-    "name": "2 Memory Light A4a 68",
-    "score": 0.30793801450730823,
-    "popularity": 0.015497210181314228
-  },
-  {
-    "name": "2 Hoppip A4a 1",
-    "score": 0.30771209199503324,
-    "popularity": 0.014695077149155106
-  },
-  {
-    "name": "1 Eevee A3b 55",
-    "score": 0.3067328849094691,
-    "popularity": 0.006558239670932978
-  },
-  {
-    "name": "2 Swablu A4a 64",
-    "score": 0.3058892910172654,
-    "popularity": 0.01794211166333523
-  },
-  {
-    "name": "2 Altaria A4a 55",
-    "score": 0.3058892910172654,
-    "popularity": 0.01794211166333523
-  },
-  {
-    "name": "1 Iono A2b 69",
-    "score": 0.30480981678374197,
-    "popularity": 0.03301579560366944
-  },
-  {
-    "name": "1 Tyrogue A4 101",
-    "score": 0.3046342782993522,
-    "popularity": 0.030513140543332984
-  },
-  {
-    "name": "1 Raikou ex A4a 25",
-    "score": 0.3039336195538449,
-    "popularity": 0.023470412520975897
-  },
-  {
-    "name": "2 X Speed P-A 2",
-    "score": 0.30299239401720746,
-    "popularity": 0.02806182199705471
-  },
-  {
-    "name": "1 Dragonite A1 185",
-    "score": 0.30272226382065087,
-    "popularity": 0.008261970231238954
-  },
-  {
-    "name": "2 Pikachu ex A1 96",
-    "score": 0.3024051156836259,
-    "popularity": 0.006012789209064775
-  },
-  {
-    "name": "2 Dratini A1 183",
-    "score": 0.3019559211856168,
-    "popularity": 0.004889802964042006
-  },
-  {
-    "name": "1 Passimian ex A3 104",
-    "score": 0.3016556025783764,
-    "popularity": 0.004139006445941068
-  },
-  {
-    "name": "2 Pikachu A2a 25",
-    "score": 0.3014271550908175,
-    "popularity": 0.0035678877270437725
-  },
-  {
-    "name": "2 Alolan Raichu ex A3 58",
-    "score": 0.3014271550908175,
-    "popularity": 0.0035678877270437725
-  },
-  {
-    "name": "1 Raichu A1 95",
-    "score": 0.3014271550908175,
-    "popularity": 0.0035678877270437725
-  },
-  {
-    "name": "2 Fishing Net A3 143",
-    "score": 0.30123114336652673,
-    "popularity": 0.006680163891821164
-  },
-  {
-    "name": "1 Donphan A4a 44",
-    "score": 0.30101646297835205,
-    "popularity": 0.002541157445880097
-  },
-  {
-    "name": "2 Hitmontop A4 102",
-    "score": 0.30101646297835205,
-    "popularity": 0.002541157445880097
-  },
-  {
-    "name": "2 Crobat A2a 50",
-    "score": 0.30101646297835205,
-    "popularity": 0.002541157445880097
-  },
-  {
-    "name": "1 Espeon ex A4 83",
-    "score": 0.30101646297835205,
-    "popularity": 0.002541157445880097
-  },
-  {
-    "name": "2 Penny A3b 69",
-    "score": 0.30101646297835205,
-    "popularity": 0.002541157445880097
-  },
-  {
-    "name": "1 Leftovers A3b 67",
-    "score": 0.30101646297835205,
-    "popularity": 0.002541157445880097
-  },
-  {
-    "name": "2 Dragonite A1 185",
-    "score": 0.3009779605928084,
-    "popularity": 0.002444901482021003
-  },
-  {
-    "name": "1 Dragonite ex A3b 53",
-    "score": 0.3009779605928084,
-    "popularity": 0.002444901482021003
-  },
-  {
-    "name": "2 Regirock A2 87",
-    "score": 0.3009779605928084,
-    "popularity": 0.002444901482021003
-  },
-  {
-    "name": "1 Glaceon ex A2a 22",
-    "score": 0.30085218613336584,
-    "popularity": 0.002130465333414627
-  },
-  {
-    "name": "1 Pikachu ex A1 96",
-    "score": 0.300677641985568,
-    "popularity": 0.0016941049639200647
-  },
-  {
-    "name": "2 Cyndaquil A4 27",
-    "score": 0.30041069211246546,
-    "popularity": 0.0010267302811636757
-  },
-  {
-    "name": "2 Typhlosion A4 29",
-    "score": 0.30041069211246546,
-    "popularity": 0.0010267302811636757
-  },
-  {
-    "name": "2 Magnemite A2 51",
-    "score": 0.30041069211246546,
-    "popularity": 0.0010267302811636757
-  },
-  {
-    "name": "2 Galarian Corsola A4a 34",
-    "score": 0.30041069211246546,
-    "popularity": 0.0010267302811636757
-  },
-  {
-    "name": "2 Galarian Cursola A4a 35",
-    "score": 0.30041069211246546,
-    "popularity": 0.0010267302811636757
-  },
-  {
-    "name": "2 Flareon ex A3b 9",
-    "score": 0.3002557803873537,
-    "popularity": 0.020188084153380775
-  },
-  {
-    "name": "2 Guzma A3 151",
-    "score": 0.30023614796466763,
-    "popularity": 0.0005903699116691135
-  },
-  {
-    "name": "2 Celebi A4a 6",
-    "score": 0.30023614796466763,
-    "popularity": 0.0005903699116691135
-  },
-  {
-    "name": "1 Buzzwole ex A3a 6",
-    "score": 0.30023614796466763,
-    "popularity": 0.0005903699116691135
-  },
-  {
-    "name": "2 Ilima A3 149",
-    "score": 0.2989919732072945,
-    "popularity": 0.005618139757242488
-  },
-  {
-    "name": "2 Lyra A4 157",
-    "score": 0.29856992461494647,
-    "popularity": 0.012625573926184576
-  },
-  {
-    "name": "2 Eevee A3b 55",
-    "score": 0.29645828260919554,
-    "popularity": 0.01707580798860338
-  },
-  {
-    "name": "2 Tapu Koko ex A3a 19",
-    "score": 0.29484415401164676,
-    "popularity": 0.003991413968023789
-  },
-  {
-    "name": "2 Riolu A2 91",
-    "score": 0.2945030897077844,
-    "popularity": 0.009664098771453099
-  },
-  {
-    "name": "2 Lucario A2 92",
-    "score": 0.2945030897077844,
-    "popularity": 0.009664098771453099
-  },
-  {
-    "name": "2 Flareon A1 45",
-    "score": 0.28993766558961825,
-    "popularity": 0.010729331438160409
-  },
-  {
-    "name": "1 Pyukumuku A3 54",
-    "score": 0.2895029377897224,
-    "popularity": 0.014521816414208735
-  },
-  {
-    "name": "1 Komala A3 141",
-    "score": 0.28897883053024237,
-    "popularity": 0.007989245000304852
-  },
-  {
-    "name": "1 Feebas A4a 21",
-    "score": 0.28753268505563484,
-    "popularity": 0.006622410313505707
-  },
-  {
-    "name": "1 Milotic A4a 22",
-    "score": 0.28753268505563484,
-    "popularity": 0.006622410313505707
-  },
-  {
-    "name": "1 Vaporeon A1a 19",
-    "score": 0.286415867124277,
-    "popularity": 0.007636306466154837
-  },
-  {
-    "name": "2 Cosmog A3 85",
-    "score": 0.28606750435838346,
-    "popularity": 0.004851300578498367
-  },
-  {
-    "name": "2 Solgaleo ex A3 122",
-    "score": 0.28606750435838346,
-    "popularity": 0.004851300578498367
-  },
-  {
-    "name": "1 Magearna A3 123",
-    "score": 0.28606750435838346,
-    "popularity": 0.004851300578498367
-  },
-  {
-    "name": "2 Volkner A2 153",
-    "score": 0.2840336940666902,
-    "popularity": 0.007023476829585269
-  },
-  {
-    "name": "1 Flareon ex A3b 9",
-    "score": 0.28354236014060635,
-    "popularity": 0.004241679474057436
-  },
-  {
-    "name": "2 Magikarp A1a 17",
-    "score": 0.28345074135911247,
-    "popularity": 0.00986302776342856
-  },
-  {
-    "name": "2 Palkia ex A2 49",
-    "score": 0.2831830255442456,
-    "popularity": 0.00528766094799293
-  },
-  {
-    "name": "1 Dawn A2 154",
-    "score": 0.2820751451094656,
-    "popularity": 0.01830146726174252
-  },
-  {
-    "name": "2 Gyarados A4 45",
-    "score": 0.28185045125787006,
-    "popularity": 0.00770689417298484
-  },
-  {
-    "name": "2 Turtonator A3 37",
-    "score": 0.2808372809829599,
-    "popularity": 0.0037283143334755978
-  },
-  {
-    "name": "2 Kiawe A3 150",
-    "score": 0.2808372809829599,
-    "popularity": 0.0037283143334755978
-  },
-  {
-    "name": "1 Pheromosa A3a 7",
-    "score": 0.2788091602965041,
-    "popularity": 0.0034138781848692215
-  },
-  {
-    "name": "2 Leaf Cape A3 147",
-    "score": 0.2783491509664646,
-    "popularity": 0.010049122626889475
-  },
-  {
-    "name": "2 Zubat A4 107",
-    "score": 0.27806866810921277,
-    "popularity": 0.0033112051567528535
-  },
-  {
-    "name": "2 Tyrogue A4 101",
-    "score": 0.2767333782448298,
-    "popularity": 0.009837359506399468
-  },
-  {
-    "name": "1 Will A4 156",
-    "score": 0.2762270864397828,
-    "popularity": 0.011762478783581361
-  },
-  {
-    "name": "1 Hoppip A4a 1",
-    "score": 0.2759230327082327,
-    "popularity": 0.005393542508237934
-  },
-  {
-    "name": "2 Electrical Cord A3a 65",
-    "score": 0.2756775660269486,
-    "popularity": 0.008226676377823951
-  },
-  {
-    "name": "1 Zeraora A3a 21",
-    "score": 0.2753986950817563,
-    "popularity": 0.009009558217211253
-  },
-  {
-    "name": "1 Ditto A1 205",
-    "score": 0.27459078818758476,
-    "popularity": 0.004658788650780178
-  },
-  {
-    "name": "1 Flareon A1 45",
-    "score": 0.27327355345977977,
-    "popularity": 0.016613779362079726
-  },
-  {
-    "name": "1 Lillie A3 155",
-    "score": 0.27233155273673904,
-    "popularity": 0.043334434929364396
-  },
-  {
-    "name": "1 Darkrai ex A2 110",
-    "score": 0.2720604366573624,
-    "popularity": 0.028199788878586075
-  },
-  {
-    "name": "1 Poison Barb A3 146",
-    "score": 0.27149009433765064,
-    "popularity": 0.010164629783520387
-  },
-  {
-    "name": "2 Entei ex A4a 10",
-    "score": 0.26864558156951085,
-    "popularity": 0.010793502080733142
-  },
-  {
-    "name": "1 Poliwhirl A4a 14",
-    "score": 0.26323104486406773,
-    "popularity": 0.005903699116691134
-  },
-  {
-    "name": "2 Poliwrath ex A4a 42",
-    "score": 0.26323104486406773,
-    "popularity": 0.005903699116691134
-  },
-  {
-    "name": "2 Charmander A2b 8",
-    "score": 0.2603927753820339,
-    "popularity": 0.004017082225052881
-  },
-  {
-    "name": "1 Manaphy A2 50",
-    "score": 0.25966217498536104,
-    "popularity": 0.009266240787502171
-  },
-  {
-    "name": "2 Poliwag A4a 13",
-    "score": 0.2590198962427074,
-    "popularity": 0.0073218703175484635
-  },
-  {
-    "name": "2 Fisher A4 159",
-    "score": 0.25826168746491823,
-    "popularity": 0.0035678877270437725
-  },
-  {
-    "name": "1 Lusamine A3a 69",
-    "score": 0.25556034683342355,
-    "popularity": 0.008791378032463973
-  },
-  {
-    "name": "1 Memory Light A4a 68",
-    "score": 0.24715292590266563,
-    "popularity": 0.012619156861927302
-  },
-  {
-    "name": "1 Politoed A4 40",
-    "score": 0.2463832526914449,
-    "popularity": 0.008348600598712138
+    "name": "1 Giratina ex A2b 35",
+    "score": 0.4154947414152853,
+    "popularity": 0.14220510418189314
   },
   {
     "name": "1 Inflatable Boat A4a 67",
-    "score": 0.24601933461460718,
-    "popularity": 0.005878030859662043
+    "score": 0.41313360804932264,
+    "popularity": 0.016571075571487116
   },
   {
-    "name": "1 Pokémon Flute A1a 64",
-    "score": 0.24297096197815138,
-    "popularity": 0.005210656176905654
+    "name": "2 Darkrai ex A2 110",
+    "score": 0.41226252727002266,
+    "popularity": 0.1600336129720242
   },
   {
-    "name": "1 Tapu Koko ex A3a 19",
-    "score": 0.24169410496392005,
-    "popularity": 0.004235262409800162
+    "name": "2 Dawn A2 154",
+    "score": 0.4111287304893217,
+    "popularity": 0.003846449583096689
   },
   {
-    "name": "1 Lugia ex A4 149",
-    "score": 0.24081496716067366,
-    "popularity": 0.002037417901684169
+    "name": "2 Cyrus A2 150",
+    "score": 0.4041899778415718,
+    "popularity": 0.19367474950721347
   },
   {
-    "name": "2 Gible A2a 45",
-    "score": 0.2405133651405818,
-    "popularity": 0.0012834128514545946
+    "name": "1 Red Card P-A 6",
+    "score": 0.4032659348682171,
+    "popularity": 0.29450967768708897
   },
   {
-    "name": "2 Garchomp ex A2a 47",
-    "score": 0.2405133651405818,
-    "popularity": 0.0012834128514545946
+    "name": "2 Rocky Helmet A2 148",
+    "score": 0.40204868540580746,
+    "popularity": 0.15151945662933294
   },
   {
-    "name": "2 Litten A3b 11",
-    "score": 0.2405133651405818,
-    "popularity": 0.0012834128514545946
+    "name": "1 Snorlax A1 211",
+    "score": 0.4003580132953935,
+    "popularity": 0.000895033238483733
   },
   {
-    "name": "1 Torracat A3b 12",
-    "score": 0.2405133651405818,
-    "popularity": 0.0012834128514545946
+    "name": "1 Phanpy A4 99",
+    "score": 0.4003580132953935,
+    "popularity": 0.000895033238483733
   },
   {
-    "name": "2 Incineroar ex A3 33",
-    "score": 0.2405133651405818,
-    "popularity": 0.0012834128514545946
+    "name": "2 Wiglett A2b 18",
+    "score": 0.4003580132953935,
+    "popularity": 0.000895033238483733
   },
   {
-    "name": "1 Steel Apron A4 153",
-    "score": 0.2405133651405818,
-    "popularity": 0.0012834128514545946
+    "name": "2 Wugtrio ex A2b 19",
+    "score": 0.4003580132953935,
+    "popularity": 0.000895033238483733
   },
   {
-    "name": "2 Feebas A4a 21",
-    "score": 0.23887884574164045,
-    "popularity": 0.008701539132862151
+    "name": "1 Corsola A4 54",
+    "score": 0.4003230195146408,
+    "popularity": 0.0008075487866018644
   },
   {
-    "name": "2 Milotic A4a 22",
-    "score": 0.23887884574164045,
-    "popularity": 0.008701539132862151
+    "name": "1 Pokémon Center Lady A2b 70",
+    "score": 0.39501463650560814,
+    "popularity": 0.16884499213200635
   },
   {
-    "name": "1 Kartana A3a 8",
-    "score": 0.23330741224711818,
-    "popularity": 0.006981765911912993
+    "name": "1 Cherubi A4 23",
+    "score": 0.387871914690833,
+    "popularity": 0.002077194934425907
   },
   {
-    "name": "2 Sabrina A1 225",
-    "score": 0.23312280694129262,
-    "popularity": 0.009246989594730354
+    "name": "1 Potion P-A 1",
+    "score": 0.3859652586878348,
+    "popularity": 0.11244232039174033
   },
   {
-    "name": "1 Whitney A4a 69",
-    "score": 0.23246851738487817,
-    "popularity": 0.001860948634609162
+    "name": "1 Beastite A3a 66",
+    "score": 0.38325272319443077,
+    "popularity": 0.0060954978781281475
   },
   {
-    "name": "2 Lillie A3 155",
-    "score": 0.23019913481627788,
-    "popularity": 0.011537881534576806
+    "name": "2 Oricorio A3 66",
+    "score": 0.3805002466253665,
+    "popularity": 0.16121290836826077
   },
   {
-    "name": "2 Phanpy A4 99",
-    "score": 0.2291343716187584,
-    "popularity": 0.007129358389830273
+    "name": "2 Eevee ex A3b 56",
+    "score": 0.3788382757195022,
+    "popularity": 0.13169114299682536
   },
   {
-    "name": "2 Primarina A3 48",
-    "score": 0.2274641526747928,
-    "popularity": 0.006160381686982054
+    "name": "2 Eevee A4 134",
+    "score": 0.3774904196188464,
+    "popularity": 0.1619461826059715
   },
   {
-    "name": "1 Erika A1 219",
-    "score": 0.22664276844986186,
-    "popularity": 0.004106921124654703
+    "name": "2 Kartana A3a 8",
+    "score": 0.37569628650933673,
+    "popularity": 0.0017407162733417967
   },
   {
-    "name": "2 Snorlax ex A3b 57",
-    "score": 0.22595947411056744,
-    "popularity": 0.0033079966246242175
+    "name": "1 Gyarados ex A1a 18",
+    "score": 0.37563886081784503,
+    "popularity": 0.0015971520446125763
   },
   {
-    "name": "1 Morty A4a 71",
-    "score": 0.2255578203290268,
-    "popularity": 0.008861965739293976
+    "name": "1 Luxio A2 59",
+    "score": 0.3754306926861877,
+    "popularity": 0.0010767317154691527
   },
   {
-    "name": "2 Leafeon ex A2a 10",
-    "score": 0.22426138218875988,
-    "popularity": 0.0049539736066147345
+    "name": "1 Espeon A3b 28",
+    "score": 0.37030380954990333,
+    "popularity": 0.08153177050211174
   },
   {
-    "name": "2 Gyarados ex A1a 18",
-    "score": 0.22301760962153547,
-    "popularity": 0.0034395464418983134
+    "name": "2 Espeon ex A4 83",
+    "score": 0.3696950912787298,
+    "popularity": 0.09672116499380642
   },
   {
-    "name": "2 Miltank A4a 62",
-    "score": 0.21808151221644087,
-    "popularity": 0.009112231245327623
+    "name": "2 Komala A3 141",
+    "score": 0.3674377350081613,
+    "popularity": 0.010579636834842388
   },
   {
-    "name": "1 Cleffa A4 77",
-    "score": 0.21698127539302955,
-    "popularity": 0.0032759113033378534
+    "name": "1 Sylveon A3b 33",
+    "score": 0.36479241618116276,
+    "popularity": 0.09337133299012461
   },
   {
-    "name": "1 Eevee ex A3b 56",
-    "score": 0.21495264691088017,
-    "popularity": 0.0038245702973346914
+    "name": "2 Pichu A4 66",
+    "score": 0.3647386611515295,
+    "popularity": 0.1260105108456412
   },
   {
-    "name": "1 Primarina ex A3b 24",
-    "score": 0.2135101473603312,
-    "popularity": 0.004363603694945622
+    "name": "2 Sylveon ex A3b 34",
+    "score": 0.36469203984613646,
+    "popularity": 0.12544472820811464
   },
   {
-    "name": "1 Leafeon A2 20",
-    "score": 0.2135101473603312,
-    "popularity": 0.004363603694945622
+    "name": "2 Eevee Bag A3b 66",
+    "score": 0.3644241484687638,
+    "popularity": 0.06809480672603362
   },
   {
-    "name": "2 Whitney A4a 69",
-    "score": 0.21290051304428742,
-    "popularity": 0.007251282610718458
+    "name": "1 Silver A4 158",
+    "score": 0.364148666310826,
+    "popularity": 0.15869903890478354
   },
   {
-    "name": "2 Eevee A1a 61",
-    "score": 0.21049406963950917,
-    "popularity": 0.0024256502892491837
+    "name": "2 Zangoose A4a 65",
+    "score": 0.36400816611726794,
+    "popularity": 0.007023555874088655
   },
   {
-    "name": "1 Rescue Scarf A4 155",
-    "score": 0.20769210768293916,
-    "popularity": 0.00272083524508374
+    "name": "2 Potion P-A 1",
+    "score": 0.3607283261933073,
+    "popularity": 0.022329471679899515
   },
   {
-    "name": "2 Charizard ex A2b 10",
-    "score": 0.20705289050459724,
-    "popularity": 0.009664098771453095
+    "name": "1 Guzzlord ex A3a 43",
+    "score": 0.3605966888256558,
+    "popularity": 0.001491722064139555
   },
   {
-    "name": "2 Cleffa A4 77",
-    "score": 0.20128597967715747,
-    "popularity": 0.00321494919289376
+    "name": "1 Raikou A4 71",
+    "score": 0.35717628670830437,
+    "popularity": 0.013616169818536993
   },
   {
-    "name": "1 Repel A3a 64",
-    "score": 0.2011055420464647,
-    "popularity": 0.007738979494271205
+    "name": "2 Silver A4 158",
+    "score": 0.35586412853622884,
+    "popularity": 0.005044936725187759
   },
   {
-    "name": "2 Chinchou A4 64",
-    "score": 0.20101646297835205,
-    "popularity": 0.002541157445880097
+    "name": "1 Oricorio A3 66",
+    "score": 0.3558433913397265,
+    "popularity": 0.07238939603700381
   },
   {
-    "name": "2 Lanturn ex A4 65",
-    "score": 0.20101646297835205,
-    "popularity": 0.002541157445880097
+    "name": "2 Red Card P-A 6",
+    "score": 0.35421587525306614,
+    "popularity": 0.004669576085489484
   },
   {
-    "name": "2 Electabuzz A1a 27",
-    "score": 0.20101646297835205,
-    "popularity": 0.002541157445880097
+    "name": "1 Giovanni A1 223",
+    "score": 0.3534619096656833,
+    "popularity": 0.12464764764652428
   },
   {
-    "name": "2 Electivire A2 57",
-    "score": 0.20101646297835205,
-    "popularity": 0.002541157445880097
+    "name": "2 Red A2b 71",
+    "score": 0.3526015764604719,
+    "popularity": 0.038729815486318014
   },
   {
-    "name": "2 Rowlet A3 10",
-    "score": 0.2009779605928084,
-    "popularity": 0.002444901482021003
+    "name": "1 Pikachu ex A1 96",
+    "score": 0.3520619740950756,
+    "popularity": 0.0035479805485424502
   },
   {
-    "name": "2 Dartrix A3a 4",
-    "score": 0.2009779605928084,
-    "popularity": 0.002444901482021003
+    "name": "2 Pokémon Center Lady A2b 70",
+    "score": 0.35171969142431103,
+    "popularity": 0.06063507480979891
   },
   {
-    "name": "2 Decidueye ex A3 12",
-    "score": 0.2009779605928084,
-    "popularity": 0.002444901482021003
+    "name": "1 Phanpy A4a 43",
+    "score": 0.3504773510605247,
+    "popularity": 0.0011933776513116442
   },
   {
-    "name": "1 Poliwrath ex A4a 42",
-    "score": 0.2009779605928084,
-    "popularity": 0.002444901482021003
+    "name": "2 Magby A4 32",
+    "score": 0.35003297756164753,
+    "popularity": 0.04505536507124663
   },
   {
-    "name": "2 Pokémon Communication A2 146",
-    "score": 0.2009779605928084,
-    "popularity": 0.002444901482021003
+    "name": "1 Rocky Helmet A2 148",
+    "score": 0.3496933831494923,
+    "popularity": 0.09993515931579133
   },
   {
-    "name": "1 Mew ex A1a 32",
-    "score": 0.2009779605928084,
-    "popularity": 0.002444901482021003
+    "name": "1 Electrical Cord A3a 65",
+    "score": 0.3483221127457526,
+    "popularity": 0.018981758245565274
   },
   {
-    "name": "1 Budding Expeditioner A1a 66",
-    "score": 0.2009779605928084,
-    "popularity": 0.002444901482021003
+    "name": "1 Irida A2a 72",
+    "score": 0.3479050127285754,
+    "popularity": 0.06435640417966285
+  },
+  {
+    "name": "1 Eevee Bag A3b 66",
+    "score": 0.3473203297323075,
+    "popularity": 0.06748104472387094
+  },
+  {
+    "name": "1 Will A4 156",
+    "score": 0.34723512852253546,
+    "popularity": 0.014769170030518546
+  },
+  {
+    "name": "2 Magnemite A1 97",
+    "score": 0.3463366336011968,
+    "popularity": 0.019612219559055833
+  },
+  {
+    "name": "2 Flareon ex A3b 9",
+    "score": 0.34539450271896777,
+    "popularity": 0.035717957604436246
+  },
+  {
+    "name": "2 Arceus ex A2a 71",
+    "score": 0.34537567528681495,
+    "popularity": 0.0682077140100863
+  },
+  {
+    "name": "2 Flareon A1 45",
+    "score": 0.3452295202950007,
+    "popularity": 0.020816190057105312
+  },
+  {
+    "name": "2 Zorua A4a 49",
+    "score": 0.34424732313867074,
+    "popularity": 0.003475450703819876
+  },
+  {
+    "name": "2 Zoroark A4a 50",
+    "score": 0.34424732313867074,
+    "popularity": 0.003475450703819876
+  },
+  {
+    "name": "2 Magneton A1 98",
+    "score": 0.3439420824963474,
+    "popularity": 0.02131554931449939
+  },
+  {
+    "name": "2 Magnezone A2 53",
+    "score": 0.3439420824963474,
+    "popularity": 0.02131554931449939
+  },
+  {
+    "name": "2 Cranidos A2 88",
+    "score": 0.3438202195582014,
+    "popularity": 0.0024076917526462994
+  },
+  {
+    "name": "2 Sneasel A4 115",
+    "score": 0.34343743146361394,
+    "popularity": 0.0014507215161778247
+  },
+  {
+    "name": "2 Weavile ex A2 99",
+    "score": 0.34343743146361394,
+    "popularity": 0.0014507215161778247
+  },
+  {
+    "name": "1 Weavile A4 116",
+    "score": 0.34343743146361394,
+    "popularity": 0.0014507215161778247
+  },
+  {
+    "name": "1 Miltank A4a 62",
+    "score": 0.34343743146361394,
+    "popularity": 0.0014507215161778247
+  },
+  {
+    "name": "1 Exeggutor A1a 2",
+    "score": 0.34341614607275733,
+    "popularity": 0.0013975080390360042
+  },
+  {
+    "name": "2 Magikarp A4 44",
+    "score": 0.34326121634258694,
+    "popularity": 0.0010101837136102952
+  },
+  {
+    "name": "2 Pikachu ex A2b 22",
+    "score": 0.3432444671825685,
+    "popularity": 0.0009683108135642726
+  },
+  {
+    "name": "2 Shaymin A2a 69",
+    "score": 0.3432444671825685,
+    "popularity": 0.0009683108135642726
+  },
+  {
+    "name": "1 Comfey A3 80",
+    "score": 0.3432444671825685,
+    "popularity": 0.0009683108135642726
+  },
+  {
+    "name": "2 Porygon-Z A4 137",
+    "score": 0.3432444671825685,
+    "popularity": 0.0009683108135642726
+  },
+  {
+    "name": "2 Lillipup A3a 54",
+    "score": 0.3432444671825685,
+    "popularity": 0.0009683108135642726
+  },
+  {
+    "name": "2 Stoutland A3a 56",
+    "score": 0.3432444671825685,
+    "popularity": 0.0009683108135642726
+  },
+  {
+    "name": "1 Oranguru A3 140",
+    "score": 0.3432444671825685,
+    "popularity": 0.0009683108135642726
+  },
+  {
+    "name": "1 Pikachu A3 57",
+    "score": 0.34313559764244883,
+    "popularity": 0.0006961369632651257
+  },
+  {
+    "name": "1 Alolan Raichu ex A3 58",
+    "score": 0.34313559764244883,
+    "popularity": 0.0006961369632651257
+  },
+  {
+    "name": "2 Zeraora A3a 21",
+    "score": 0.3422334209484801,
+    "popularity": 0.08384923612489698
+  },
+  {
+    "name": "2 Poison Barb A3 146",
+    "score": 0.34212797090898117,
+    "popularity": 0.023774086731487294
+  },
+  {
+    "name": "2 Eevee A3b 55",
+    "score": 0.3403294903709517,
+    "popularity": 0.0128924914537535
+  },
+  {
+    "name": "2 Guzzlord ex A3a 43",
+    "score": 0.33986493225567055,
+    "popularity": 0.031143841761313594
+  },
+  {
+    "name": "1 Palkia ex A2 49",
+    "score": 0.3398328300931385,
+    "popularity": 0.02569027039549814
   },
   {
     "name": "1 Gyarados A4 45",
-    "score": 0.20050823148917604,
-    "popularity": 0.0012705787229400484
+    "score": 0.33971232629956516,
+    "popularity": 0.002012142393282979
   },
   {
-    "name": "2 Horsea A4 41",
-    "score": 0.20050823148917604,
-    "popularity": 0.0012705787229400484
+    "name": "1 Elemental Switch A4 151",
+    "score": 0.33948194163375695,
+    "popularity": 0.036895383674777994
   },
   {
-    "name": "2 Kingdra ex A4 43",
-    "score": 0.20050823148917604,
-    "popularity": 0.0012705787229400484
+    "name": "1 Traveling Merchant A4a 70",
+    "score": 0.33937973535768773,
+    "popularity": 0.003496387153842887
   },
   {
-    "name": "2 Inflatable Boat A4a 67",
-    "score": 0.20050823148917604,
-    "popularity": 0.0012705787229400484
+    "name": "2 Gladion A3a 67",
+    "score": 0.339365711151154,
+    "popularity": 0.08191809785372682
   },
   {
-    "name": "1 Jumpluff A4 15",
-    "score": 0.20050823148917604,
-    "popularity": 0.0012705787229400484
+    "name": "2 Lusamine A3a 69",
+    "score": 0.3392419473081617,
+    "popularity": 0.06406217228380373
   },
   {
-    "name": "2 Latias A4a 36",
-    "score": 0.20050823148917604,
-    "popularity": 0.0012705787229400484
+    "name": "2 Mars A2 155",
+    "score": 0.3376290170565892,
+    "popularity": 0.006368419458785259
   },
   {
-    "name": "2 Latios A4a 37",
-    "score": 0.20050823148917604,
-    "popularity": 0.0012705787229400484
+    "name": "2 Tapu Koko ex A3a 19",
+    "score": 0.33749042206710345,
+    "popularity": 0.005224516632825612
+  },
+  {
+    "name": "1 Suicune A4 59",
+    "score": 0.3371678450513,
+    "popularity": 0.0013100235871541359
+  },
+  {
+    "name": "1 Frogadier A1 88",
+    "score": 0.33662533527217553,
+    "popularity": 0.027063103332721303
+  },
+  {
+    "name": "2 Type: Null A3a 60",
+    "score": 0.3365389926807778,
+    "popularity": 0.0880327874777094
+  },
+  {
+    "name": "2 Silvally A3a 61",
+    "score": 0.3365389926807778,
+    "popularity": 0.0880327874777094
+  },
+  {
+    "name": "1 Celesteela A3a 62",
+    "score": 0.3352480593236997,
+    "popularity": 0.023531198986875095
+  },
+  {
+    "name": "2 Hoppip A4 13",
+    "score": 0.33347414759357014,
+    "popularity": 0.0021175723737560004
+  },
+  {
+    "name": "1 Arceus ex A2a 71",
+    "score": 0.33086460330249534,
+    "popularity": 0.027582152822875124
+  },
+  {
+    "name": "2 Raikou ex A4a 25",
+    "score": 0.3305040624295994,
+    "popularity": 0.03516015075739459
+  },
+  {
+    "name": "2 Misty A1 220",
+    "score": 0.32996340206743885,
+    "popularity": 0.028933176957990994
+  },
+  {
+    "name": "1 Origin Forme Palkia A2a 23",
+    "score": 0.3290175659223846,
+    "popularity": 0.0011387933351802218
+  },
+  {
+    "name": "1 Shaymin A2 22",
+    "score": 0.3288463654759684,
+    "popularity": 0.0033447225129023825
+  },
+  {
+    "name": "2 Shinx A2 58",
+    "score": 0.32786492971623526,
+    "popularity": 0.0014805061087700849
+  },
+  {
+    "name": "2 Luxray A2 60",
+    "score": 0.32786492971623526,
+    "popularity": 0.0014805061087700849
+  },
+  {
+    "name": "1 Shaymin A2a 69",
+    "score": 0.3274702871099913,
+    "popularity": 0.005021757084090853
+  },
+  {
+    "name": "2 Elemental Switch A4 151",
+    "score": 0.32743077342746524,
+    "popularity": 0.08138845551683521
+  },
+  {
+    "name": "1 Skiploom A4a 2",
+    "score": 0.3252402448490068,
+    "popularity": 0.003093360490899919
+  },
+  {
+    "name": "1 Nihilego A3a 42",
+    "score": 0.3250240779857212,
+    "popularity": 0.010535022256817161
+  },
+  {
+    "name": "2 Riolu A2b 42",
+    "score": 0.32453376725519106,
+    "popularity": 0.002648585549637257
+  },
+  {
+    "name": "1 Lucario ex A2b 43",
+    "score": 0.32453376725519106,
+    "popularity": 0.002648585549637257
+  },
+  {
+    "name": "1 Druddigon A1a 56",
+    "score": 0.3239385964330575,
+    "popularity": 0.0012733847996138658
+  },
+  {
+    "name": "2 Pokémon Flute A1a 64",
+    "score": 0.323776798691978,
+    "popularity": 0.0017496890376373728
+  },
+  {
+    "name": "1 Mantyke A4a 23",
+    "score": 0.32375007265832734,
+    "popularity": 0.053831227039225556
+  },
+  {
+    "name": "1 Tapu Koko ex A3a 19",
+    "score": 0.3237435051026106,
+    "popularity": 0.01248423067830478
+  },
+  {
+    "name": "2 Celesteela A3a 62",
+    "score": 0.32325814227852373,
+    "popularity": 0.04183289647187149
+  },
+  {
+    "name": "1 Dragonite A1 185",
+    "score": 0.32313548090395205,
+    "popularity": 0.005566229406415474
+  },
+  {
+    "name": "1 Cleffa A4 77",
+    "score": 0.3225762677925747,
+    "popularity": 0.004337583806553163
+  },
+  {
+    "name": "2 Primarina A3 48",
+    "score": 0.32154229297821213,
+    "popularity": 0.004127471575965084
+  },
+  {
+    "name": "1 Pikachu ex A2b 22",
+    "score": 0.32097749176320234,
+    "popularity": 0.010037283081865333
+  },
+  {
+    "name": "2 Nihilego A3a 42",
+    "score": 0.3204745143614374,
+    "popularity": 0.024096358515770078
+  },
+  {
+    "name": "2 Giant Cape A2 147",
+    "score": 0.32013489937175416,
+    "popularity": 0.06418679401013118
+  },
+  {
+    "name": "2 Pheromosa A3a 7",
+    "score": 0.3193356575549512,
+    "popularity": 0.0314303471101404
+  },
+  {
+    "name": "1 X Speed P-A 2",
+    "score": 0.318683539489488,
+    "popularity": 0.04490856067763293
+  },
+  {
+    "name": "2 Ralts A2 68",
+    "score": 0.31781430090288343,
+    "popularity": 0.0017429594644156907
+  },
+  {
+    "name": "2 Leaf A1a 68",
+    "score": 0.3176652186733892,
+    "popularity": 0.04941214062365423
+  },
+  {
+    "name": "1 Suicune ex A4a 20",
+    "score": 0.31615103319172144,
+    "popularity": 0.027806098065085563
+  },
+  {
+    "name": "1 Poké Ball P-A 5",
+    "score": 0.31574582978907034,
+    "popularity": 0.02455210016894955
+  },
+  {
+    "name": "2 Pikachu ex A1 96",
+    "score": 0.3153660402023387,
+    "popularity": 0.004863985978560304
+  },
+  {
+    "name": "1 Repel A3a 64",
+    "score": 0.315293673730226,
+    "popularity": 0.01761602874674277
+  },
+  {
+    "name": "1 Flareon A1 45",
+    "score": 0.31527739229806845,
+    "popularity": 0.01830032664600679
+  },
+  {
+    "name": "2 Poipole A3a 44",
+    "score": 0.31489884242637645,
+    "popularity": 0.018110029269904775
+  },
+  {
+    "name": "2 Naganadel A3a 45",
+    "score": 0.31489884242637645,
+    "popularity": 0.018110029269904775
+  },
+  {
+    "name": "1 Floragato A2b 6",
+    "score": 0.31489804410069155,
+    "popularity": 0.012474385561924914
+  },
+  {
+    "name": "2 Buzzwole ex A3a 6",
+    "score": 0.3146518917429289,
+    "popularity": 0.034624028090733915
+  },
+  {
+    "name": "1 Ilima A3 149",
+    "score": 0.3145036305560366,
+    "popularity": 0.020508748258255497
+  },
+  {
+    "name": "1 Sylveon ex A3b 34",
+    "score": 0.3133417545625518,
+    "popularity": 0.045094122428134466
+  },
+  {
+    "name": "1 Leaf Cape A3 147",
+    "score": 0.31284454731371797,
+    "popularity": 0.04292981690700568
   },
   {
     "name": "2 Larvitar A4 103",
-    "score": 0.2004889802964042,
-    "popularity": 0.0012224507410105016
+    "score": 0.3124950407534159,
+    "popularity": 0.0018544959094787567
   },
   {
     "name": "2 Tyranitar A4 119",
-    "score": 0.2004889802964042,
-    "popularity": 0.0012224507410105016
+    "score": 0.3124950407534159,
+    "popularity": 0.0018544959094787567
   },
   {
-    "name": "2 Druddigon A1a 56",
-    "score": 0.2004889802964042,
-    "popularity": 0.0012224507410105016
+    "name": "2 Ilima A3 149",
+    "score": 0.312308344699645,
+    "popularity": 0.006064217824819957
   },
   {
-    "name": "2 Tinkatink A2b 52",
-    "score": 0.2004889802964042,
-    "popularity": 0.0012224507410105016
+    "name": "2 Erika A1 219",
+    "score": 0.3114392110408293,
+    "popularity": 0.04082570367969305
   },
   {
-    "name": "2 Tinkaton ex A2b 54",
-    "score": 0.2004889802964042,
-    "popularity": 0.0012224507410105016
-  },
-  {
-    "name": "2 Joltik A3b 26",
-    "score": 0.2004889802964042,
-    "popularity": 0.0012224507410105016
-  },
-  {
-    "name": "2 Galvantula A3b 27",
-    "score": 0.2004889802964042,
-    "popularity": 0.0012224507410105016
-  },
-  {
-    "name": "1 Donphan ex A4 100",
-    "score": 0.2003080190843491,
-    "popularity": 0.0007700477108727568
-  },
-  {
-    "name": "2 Crobat ex A4 109",
-    "score": 0.2003080190843491,
-    "popularity": 0.0007700477108727568
-  },
-  {
-    "name": "2 Crabrawler A3 97",
-    "score": 0.2003080190843491,
-    "popularity": 0.0007700477108727568
-  },
-  {
-    "name": "2 Crabominable ex A3 49",
-    "score": 0.2003080190843491,
-    "popularity": 0.0007700477108727568
-  },
-  {
-    "name": "2 Yamper A4a 30",
-    "score": 0.2003080190843491,
-    "popularity": 0.0007700477108727568
-  },
-  {
-    "name": "2 Boltund A4a 31",
-    "score": 0.2003080190843491,
-    "popularity": 0.0007700477108727568
-  },
-  {
-    "name": "1 Dark Pendant A4 154",
-    "score": 0.2003080190843491,
-    "popularity": 0.0007700477108727568
-  },
-  {
-    "name": "2 Aerodactyl ex A1a 46",
-    "score": 0.2003080190843491,
-    "popularity": 0.0007700477108727568
-  },
-  {
-    "name": "2 Old Amber A1a 63",
-    "score": 0.2003080190843491,
-    "popularity": 0.0007700477108727568
-  },
-  {
-    "name": "1 Mismagius A4a 33",
-    "score": 0.2003080190843491,
-    "popularity": 0.0007700477108727568
-  },
-  {
-    "name": "1 Mismagius ex A2 67",
-    "score": 0.2003080190843491,
-    "popularity": 0.0007700477108727568
-  },
-  {
-    "name": "2 Morty A4a 71",
-    "score": 0.2003080190843491,
-    "popularity": 0.0007700477108727568
-  },
-  {
-    "name": "2 Popplio A3 45",
-    "score": 0.19292757188057663,
-    "popularity": 0.008605283169003058
-  },
-  {
-    "name": "1 Gabite A2a 46",
-    "score": 0.1899841105744257,
-    "popularity": 0.0029775178153746596
-  },
-  {
-    "name": "1 Leafeon ex A2a 10",
-    "score": 0.17710419926025778,
-    "popularity": 0.004081252867625611
-  },
-  {
-    "name": "1 Blacephalon A3a 9",
-    "score": 0.17214728262538598,
-    "popularity": 0.0017967779920364324
-  },
-  {
-    "name": "2 Pyukumuku A3 54",
-    "score": 0.17214728262538598,
-    "popularity": 0.0017967779920364324
-  },
-  {
-    "name": "2 Dark Pendant A4 154",
-    "score": 0.17214728262538598,
-    "popularity": 0.0017967779920364324
-  },
-  {
-    "name": "2 Misdreavus A4a 32",
-    "score": 0.17214728262538598,
-    "popularity": 0.0017967779920364324
-  },
-  {
-    "name": "2 Will A4 156",
-    "score": 0.17007082975982374,
-    "popularity": 0.0074309604099221035
-  },
-  {
-    "name": "1 Charmeleon A2b 9",
-    "score": 0.16682393157161632,
-    "popularity": 0.00433793543791653
-  },
-  {
-    "name": "2 Manaphy A2 50",
-    "score": 0.16549987909667568,
-    "popularity": 0.004658788650780178
-  },
-  {
-    "name": "2 Inkay A4a 51",
-    "score": 0.1647657669456437,
-    "popularity": 0.002823508273200108
-  },
-  {
-    "name": "2 Malamar A4a 52",
-    "score": 0.1647657669456437,
-    "popularity": 0.002823508273200108
-  },
-  {
-    "name": "2 Umbreon ex A4 112",
-    "score": 0.16154009542174552,
-    "popularity": 0.0038502385543637834
-  },
-  {
-    "name": "2 Moltres ex A1 47",
-    "score": 0.1589811119253499,
-    "popularity": 0.0035678877270437725
-  },
-  {
-    "name": "2 Gible A2 121",
-    "score": 0.1510883340980335,
-    "popularity": 0.00272083524508374
-  },
-  {
-    "name": "1 Charmander A1 33",
-    "score": 0.15082138422493094,
-    "popularity": 0.0020534605623273514
-  },
-  {
-    "name": "1 Charmander A2b 8",
-    "score": 0.15082138422493094,
-    "popularity": 0.0020534605623273514
-  },
-  {
-    "name": "2 Squirtle A1 53",
-    "score": 0.15067764198556802,
-    "popularity": 0.0016941049639200647
-  },
-  {
-    "name": "2 Blastoise ex A1 56",
-    "score": 0.15067764198556802,
-    "popularity": 0.0016941049639200647
-  },
-  {
-    "name": "1 Garchomp A2 123",
-    "score": 0.15067764198556802,
-    "popularity": 0.0016941049639200647
-  },
-  {
-    "name": "1 Garchomp ex A2a 47",
-    "score": 0.15067764198556802,
-    "popularity": 0.0016941049639200647
-  },
-  {
-    "name": "2 Cynthia A2 152",
-    "score": 0.15067764198556802,
-    "popularity": 0.0016941049639200647
-  },
-  {
-    "name": "1 Gabite A2 122",
-    "score": 0.15041069211246547,
-    "popularity": 0.0010267302811636757
-  },
-  {
-    "name": "2 Garchomp A2 123",
-    "score": 0.15041069211246547,
-    "popularity": 0.0010267302811636757
-  },
-  {
-    "name": "1 Poliwag A4a 13",
-    "score": 0.15041069211246547,
-    "popularity": 0.0010267302811636757
-  },
-  {
-    "name": "1 Poliwag A1 59",
-    "score": 0.15041069211246547,
-    "popularity": 0.0010267302811636757
-  },
-  {
-    "name": "1 Elekid A4 70",
-    "score": 0.15041069211246547,
-    "popularity": 0.0010267302811636757
-  },
-  {
-    "name": "2 Mismagius ex A2 67",
-    "score": 0.15041069211246547,
-    "popularity": 0.0010267302811636757
-  },
-  {
-    "name": "1 Fishing Net A3 143",
-    "score": 0.15041069211246547,
-    "popularity": 0.0010267302811636757
-  },
-  {
-    "name": "2 Delibird A4 57",
-    "score": 0.15041069211246547,
-    "popularity": 0.0010267302811636757
-  },
-  {
-    "name": "2 Suicune A4 59",
-    "score": 0.15041069211246547,
-    "popularity": 0.0010267302811636757
-  },
-  {
-    "name": "1 Rowlet A3 9",
-    "score": 0.15041069211246547,
-    "popularity": 0.0010267302811636757
-  },
-  {
-    "name": "1 Decidueye ex A3 12",
-    "score": 0.15041069211246547,
-    "popularity": 0.0010267302811636757
-  },
-  {
-    "name": "1 Hau A3b 68",
-    "score": 0.1496840968177276,
-    "popularity": 0.0037283143334755978
-  },
-  {
-    "name": "2 Charmander A1 33",
-    "score": 0.1442948895560816,
-    "popularity": 0.006134713429952962
-  },
-  {
-    "name": "2 Hitmonchan A1 155",
-    "score": 0.12084705248196001,
-    "popularity": 0.002117631204900081
-  },
-  {
-    "name": "1 Hitmontop A4 102",
-    "score": 0.12084705248196001,
-    "popularity": 0.002117631204900081
-  },
-  {
-    "name": "1 Magikarp A1a 17",
-    "score": 0.12051336514058182,
-    "popularity": 0.0012834128514545946
-  },
-  {
-    "name": "1 Professor's Research P-A 7",
-    "score": 0.12051336514058182,
-    "popularity": 0.0012834128514545946
-  },
-  {
-    "name": "1 Eevee A1 206",
-    "score": 0.10101646297835204,
-    "popularity": 0.002541157445880097
-  },
-  {
-    "name": "1 Jumpluff ex A4a 3",
-    "score": 0.10101646297835204,
-    "popularity": 0.002541157445880097
-  },
-  {
-    "name": "2 Charizard ex A1 36",
-    "score": 0.10101646297835204,
-    "popularity": 0.002541157445880097
-  },
-  {
-    "name": "1 Charizard A1 35",
-    "score": 0.10101646297835204,
-    "popularity": 0.002541157445880097
-  },
-  {
-    "name": "2 Mareep A4 67",
-    "score": 0.10101646297835204,
-    "popularity": 0.002541157445880097
-  },
-  {
-    "name": "1 Flaaffy A4 68",
-    "score": 0.10101646297835204,
-    "popularity": 0.002541157445880097
-  },
-  {
-    "name": "2 Ampharos A4 69",
-    "score": 0.10101646297835204,
-    "popularity": 0.002541157445880097
-  },
-  {
-    "name": "2 Goldeen A1 72",
-    "score": 0.10097796059280839,
-    "popularity": 0.002444901482021003
-  },
-  {
-    "name": "2 Seaking A1 73",
-    "score": 0.10097796059280839,
-    "popularity": 0.002444901482021003
-  },
-  {
-    "name": "2 Primarina ex A3b 24",
-    "score": 0.10097796059280839,
-    "popularity": 0.002444901482021003
+    "name": "1 Pichu A4 66",
+    "score": 0.31121755191215617,
+    "popularity": 0.0499122476114063
   },
   {
     "name": "1 Zapdos ex A1 104",
-    "score": 0.10097796059280839,
-    "popularity": 0.002444901482021003
+    "score": 0.30756770441479164,
+    "popularity": 0.0039278275703885125
+  },
+  {
+    "name": "2 Giovanni A1 223",
+    "score": 0.30681610871081755,
+    "popularity": 0.022157119832388657
+  },
+  {
+    "name": "2 Exeggcute A1a 1",
+    "score": 0.30633695791951954,
+    "popularity": 0.007216345684717216
+  },
+  {
+    "name": "2 Alolan Exeggutor A3 2",
+    "score": 0.30633695791951954,
+    "popularity": 0.007216345684717216
+  },
+  {
+    "name": "1 Pyukumuku A3 54",
+    "score": 0.30562324319242773,
+    "popularity": 0.00624280075864719
+  },
+  {
+    "name": "2 Dratini A1 183",
+    "score": 0.3054553323531187,
+    "popularity": 0.00513030260772206
+  },
+  {
+    "name": "2 Sprigatito A2b 5",
+    "score": 0.30528797768473515,
+    "popularity": 0.014019944211837927
+  },
+  {
+    "name": "2 Meowscarada A2b 7",
+    "score": 0.30528797768473515,
+    "popularity": 0.014019944211837927
+  },
+  {
+    "name": "2 Jumpluff ex A4a 3",
+    "score": 0.30513698623341545,
+    "popularity": 0.01399763692282531
+  },
+  {
+    "name": "2 Leaf Cape A3 147",
+    "score": 0.3040390605414477,
+    "popularity": 0.0125170061923289
+  },
+  {
+    "name": "1 Tyrogue A4 101",
+    "score": 0.30221671134177036,
+    "popularity": 0.01757602517259166
+  },
+  {
+    "name": "2 Jolteon A1 102",
+    "score": 0.30095829122676754,
+    "popularity": 0.0023957280669188647
+  },
+  {
+    "name": "2 Magnemite A2 51",
+    "score": 0.30068133190217744,
+    "popularity": 0.0017033297554435618
+  },
+  {
+    "name": "1 Passimian ex A3 104",
+    "score": 0.3005443477005983,
+    "popularity": 0.0013608692514957346
+  },
+  {
+    "name": "1 Poison Barb A3 146",
+    "score": 0.30051322071179154,
+    "popularity": 0.012252558889062055
+  },
+  {
+    "name": "2 Pikachu A2a 25",
+    "score": 0.3004911092991112,
+    "popularity": 0.0012277732477780198
+  },
+  {
+    "name": "1 Raichu A1 95",
+    "score": 0.3004911092991112,
+    "popularity": 0.0012277732477780198
+  },
+  {
+    "name": "1 Donphan A4a 44",
+    "score": 0.3003319922789363,
+    "popularity": 0.0008299806973408051
+  },
+  {
+    "name": "2 Hitmontop A4 102",
+    "score": 0.3003319922789363,
+    "popularity": 0.0008299806973408051
+  },
+  {
+    "name": "2 Crobat A2a 50",
+    "score": 0.3003319922789363,
+    "popularity": 0.0008299806973408051
+  },
+  {
+    "name": "2 Penny A3b 69",
+    "score": 0.3003319922789363,
+    "popularity": 0.0008299806973408051
+  },
+  {
+    "name": "1 Swablu A4a 64",
+    "score": 0.3003315934894121,
+    "popularity": 0.0008289837235301856
+  },
+  {
+    "name": "1 Altaria A4a 55",
+    "score": 0.3003315934894121,
+    "popularity": 0.0008289837235301856
+  },
+  {
+    "name": "1 Glaceon ex A2a 22",
+    "score": 0.3003254122517862,
+    "popularity": 0.000813530629465582
+  },
+  {
+    "name": "1 Dragonite ex A3b 53",
+    "score": 0.30032301951464074,
+    "popularity": 0.0008075487866018644
+  },
+  {
+    "name": "2 Regirock A2 87",
+    "score": 0.30032301951464074,
+    "popularity": 0.0008075487866018644
+  },
+  {
+    "name": "2 Cyndaquil A4 27",
+    "score": 0.3001591170201749,
+    "popularity": 0.0003977925504372147
+  },
+  {
+    "name": "2 Typhlosion A4 29",
+    "score": 0.3001591170201749,
+    "popularity": 0.0003977925504372147
+  },
+  {
+    "name": "2 Galarian Corsola A4a 34",
+    "score": 0.3001591170201749,
+    "popularity": 0.0003977925504372147
+  },
+  {
+    "name": "2 Galarian Cursola A4a 35",
+    "score": 0.3001591170201749,
+    "popularity": 0.0003977925504372147
+  },
+  {
+    "name": "1 Horsea A4 41",
+    "score": 0.30014608290520833,
+    "popularity": 0.002973848255351896
+  },
+  {
+    "name": "1 Seadra A4 42",
+    "score": 0.30014608290520833,
+    "popularity": 0.002973848255351896
+  },
+  {
+    "name": "1 Kingdra ex A4 43",
+    "score": 0.30014608290520833,
+    "popularity": 0.002973848255351896
+  },
+  {
+    "name": "1 Corphish A4 60",
+    "score": 0.30014608290520833,
+    "popularity": 0.002973848255351896
+  },
+  {
+    "name": "1 Crawdaunt A4 61",
+    "score": 0.30014608290520833,
+    "popularity": 0.002973848255351896
+  },
+  {
+    "name": "2 Misdreavus A2 66",
+    "score": 0.3001333950958609,
+    "popularity": 0.0003334877396522514
+  },
+  {
+    "name": "2 Guzma A3 151",
+    "score": 0.3000867367215239,
+    "popularity": 0.0002168418038097599
+  },
+  {
+    "name": "2 Celebi A4a 6",
+    "score": 0.3000867367215239,
+    "popularity": 0.0002168418038097599
+  },
+  {
+    "name": "1 Buzzwole ex A3a 6",
+    "score": 0.3000867367215239,
+    "popularity": 0.0002168418038097599
+  },
+  {
+    "name": "1 Magby A4 32",
+    "score": 0.2995552918552608,
+    "popularity": 0.03175872535901323
+  },
+  {
+    "name": "2 Memory Light A4a 68",
+    "score": 0.29931936270828996,
+    "popularity": 0.013067958844422547
+  },
+  {
+    "name": "1 Eevee ex A3b 56",
+    "score": 0.29872579951962924,
+    "popularity": 0.007135840049509685
+  },
+  {
+    "name": "2 Lugia ex A4 149",
+    "score": 0.29837377837121876,
+    "popularity": 0.005469647568511702
+  },
+  {
+    "name": "1 Emolga A4 72",
+    "score": 0.298161033237185,
+    "popularity": 0.0024032053704985115
+  },
+  {
+    "name": "1 Manaphy A2 50",
+    "score": 0.29724458632058876,
+    "popularity": 0.004866229169634198
+  },
+  {
+    "name": "2 Riolu A2 91",
+    "score": 0.29686302005306964,
+    "popularity": 0.01072320106357161
+  },
+  {
+    "name": "2 Lucario A2 92",
+    "score": 0.29686302005306964,
+    "popularity": 0.01072320106357161
+  },
+  {
+    "name": "1 Lyra A4 157",
+    "score": 0.2967695351402864,
+    "popularity": 0.02477853784568652
+  },
+  {
+    "name": "2 Mantyke A4a 23",
+    "score": 0.29558793493675145,
+    "popularity": 0.04686923429794267
+  },
+  {
+    "name": "1 Fishing Net A3 143",
+    "score": 0.2947376019450311,
+    "popularity": 0.0016307999107209872
+  },
+  {
+    "name": "2 Electrical Cord A3a 65",
+    "score": 0.2944763311803713,
+    "popularity": 0.006066336394167524
+  },
+  {
+    "name": "2 Phanpy A4a 43",
+    "score": 0.29420018548008553,
+    "popularity": 0.008331087026716241
+  },
+  {
+    "name": "1 Raikou ex A4a 25",
+    "score": 0.2937228658226821,
+    "popularity": 0.013725338450799837
+  },
+  {
+    "name": "2 Fisher A4 159",
+    "score": 0.2935781096138236,
+    "popularity": 0.002237956961388315
+  },
+  {
+    "name": "1 Whitney A4a 69",
+    "score": 0.29348744224147566,
+    "popularity": 0.004677925741153423
+  },
+  {
+    "name": "1 Iono A2b 69",
+    "score": 0.2931115156405545,
+    "popularity": 0.02863520641034206
+  },
+  {
+    "name": "1 Dragonair A1 184",
+    "score": 0.29262999283435426,
+    "popularity": 0.002348621054367089
+  },
+  {
+    "name": "2 Lyra A4 157",
+    "score": 0.2922253582779387,
+    "popularity": 0.008684763486033538
+  },
+  {
+    "name": "1 Feebas A4a 21",
+    "score": 0.29056468792113693,
+    "popularity": 0.0022566502203374326
+  },
+  {
+    "name": "1 Milotic A4a 22",
+    "score": 0.29056468792113693,
+    "popularity": 0.0022566502203374326
+  },
+  {
+    "name": "2 Donphan ex A4 100",
+    "score": 0.29042939876461343,
+    "popularity": 0.015525000800694515
+  },
+  {
+    "name": "1 Pokémon Flute A1a 64",
+    "score": 0.29024475924159865,
+    "popularity": 0.006782662077097697
+  },
+  {
+    "name": "1 Celebi A4a 6",
+    "score": 0.28970708407186746,
+    "popularity": 0.012085565775783274
+  },
+  {
+    "name": "1 Misty A1 220",
+    "score": 0.2894459153015115,
+    "popularity": 0.016435860998421835
+  },
+  {
+    "name": "2 Volkner A2 153",
+    "score": 0.286876570047265,
+    "popularity": 0.0029774622854153924
+  },
+  {
+    "name": "1 Lusamine A3a 69",
+    "score": 0.2864264306150826,
+    "popularity": 0.004648764257192801
+  },
+  {
+    "name": "2 Hoppip A4a 1",
+    "score": 0.28639273856470576,
+    "popularity": 0.0109379242980338
+  },
+  {
+    "name": "1 Ditto A1 205",
+    "score": 0.2858279685949347,
+    "popularity": 0.002719495311917575
+  },
+  {
+    "name": "2 Swirlix A3b 31",
+    "score": 0.28547462279649943,
+    "popularity": 0.0036743469790384833
+  },
+  {
+    "name": "2 Slurpuff A3b 32",
+    "score": 0.28547462279649943,
+    "popularity": 0.0036743469790384833
+  },
+  {
+    "name": "2 Milcery A3b 36",
+    "score": 0.28547462279649943,
+    "popularity": 0.0036743469790384833
+  },
+  {
+    "name": "2 Alcremie A3b 37",
+    "score": 0.28547462279649943,
+    "popularity": 0.0036743469790384833
+  },
+  {
+    "name": "1 Vaporeon A1a 19",
+    "score": 0.2851558081576083,
+    "popularity": 0.0026118221403706593
+  },
+  {
+    "name": "2 Snorlax ex A3b 57",
+    "score": 0.28419279132160635,
+    "popularity": 0.0019216670199692515
+  },
+  {
+    "name": "2 X Speed P-A 2",
+    "score": 0.28401602606874593,
+    "popularity": 0.014432566747708103
+  },
+  {
+    "name": "1 Zeraora A3a 21",
+    "score": 0.2828217873125681,
+    "popularity": 0.012480492026514956
+  },
+  {
+    "name": "1 Darkrai ex A2 110",
+    "score": 0.2823931017353726,
+    "popularity": 0.017257865905277687
+  },
+  {
+    "name": "1 Pokémon Communication A2 146",
+    "score": 0.28114986806195624,
+    "popularity": 0.04195340568123015
+  },
+  {
+    "name": "2 Leafeon ex A2a 10",
+    "score": 0.2797438069227689,
+    "popularity": 0.0049066066089642904
+  },
+  {
+    "name": "2 Rampardos A2 89",
+    "score": 0.27964570193529714,
+    "popularity": 0.021344586176733696
+  },
+  {
+    "name": "2 Skull Fossil A2 144",
+    "score": 0.27964570193529714,
+    "popularity": 0.021344586176733696
+  },
+  {
+    "name": "1 Leftovers A3b 67",
+    "score": 0.2793648147389449,
+    "popularity": 0.004591812128261157
+  },
+  {
+    "name": "2 Zubat A4 107",
+    "score": 0.2792510695391051,
+    "popularity": 0.006328914371539458
+  },
+  {
+    "name": "1 Dark Pendant A4 154",
+    "score": 0.27659620529683027,
+    "popularity": 0.003524177798813908
+  },
+  {
+    "name": "1 Kartana A3a 8",
+    "score": 0.27631063754601487,
+    "popularity": 0.010843710272930253
+  },
+  {
+    "name": "2 Cosmog A3 85",
+    "score": 0.2758886384625188,
+    "popularity": 0.005087557355591746
+  },
+  {
+    "name": "2 Solgaleo ex A3 122",
+    "score": 0.2758886384625188,
+    "popularity": 0.005087557355591746
+  },
+  {
+    "name": "1 Magearna A3 123",
+    "score": 0.2758886384625188,
+    "popularity": 0.005087557355591746
+  },
+  {
+    "name": "1 Erika A1 219",
+    "score": 0.27556091380003517,
+    "popularity": 0.008364111784193013
+  },
+  {
+    "name": "2 Crobat ex A4 109",
+    "score": 0.2754052391920591,
+    "popularity": 0.005498933674198652
+  },
+  {
+    "name": "1 Hoppip A4a 1",
+    "score": 0.27539239268314797,
+    "popularity": 0.0017721209483763138
+  },
+  {
+    "name": "1 Leafeon ex A2a 10",
+    "score": 0.27522844854003736,
+    "popularity": 0.004022041595492063
+  },
+  {
+    "name": "2 Lillie A3 155",
+    "score": 0.27495099919125393,
+    "popularity": 0.012023005669166895
+  },
+  {
+    "name": "1 Cranidos A2 88",
+    "score": 0.2745821750237606,
+    "popularity": 0.015973763637199656
+  },
+  {
+    "name": "1 Eevee A3b 55",
+    "score": 0.2742062673798584,
+    "popularity": 0.005925763086870163
+  },
+  {
+    "name": "1 Dawn A2 154",
+    "score": 0.273998554475215,
+    "popularity": 0.014686670447689777
+  },
+  {
+    "name": "2 Sabrina A1 225",
+    "score": 0.27354609746998704,
+    "popularity": 0.007577499447614161
+  },
+  {
+    "name": "2 Sylveon A3b 33",
+    "score": 0.27346094575450763,
+    "popularity": 0.0018341825680873826
+  },
+  {
+    "name": "1 Cynthia A2 152",
+    "score": 0.27336224534725634,
+    "popularity": 0.0015874315499590356
+  },
+  {
+    "name": "2 Charmander A2b 8",
+    "score": 0.27108994509267975,
+    "popularity": 0.001705572946517456
+  },
+  {
+    "name": "2 Feebas A4a 21",
+    "score": 0.27079772329037566,
+    "popularity": 0.007047358623817196
+  },
+  {
+    "name": "2 Milotic A4a 22",
+    "score": 0.27079772329037566,
+    "popularity": 0.007047358623817196
+  },
+  {
+    "name": "2 Dragonite ex A3b 53",
+    "score": 0.2703462670485527,
+    "popularity": 0.008995819314946848
+  },
+  {
+    "name": "1 Flareon ex A3b 9",
+    "score": 0.26978780009443065,
+    "popularity": 0.0030268124890410622
+  },
+  {
+    "name": "1 Komala A3 141",
+    "score": 0.2684468389607566,
+    "popularity": 0.0040504553490947216
+  },
+  {
+    "name": "2 Alolan Raichu ex A3 58",
+    "score": 0.26794312582254476,
+    "popularity": 0.0018267052645077361
+  },
+  {
+    "name": "2 Ho-Oh ex A4 34",
+    "score": 0.2671979372183407,
+    "popularity": 0.00452376866568637
+  },
+  {
+    "name": "1 Lillie A3 155",
+    "score": 0.26288243484068446,
+    "popularity": 0.04087792018302424
+  },
+  {
+    "name": "2 Poliwrath ex A4a 42",
+    "score": 0.26254154561060683,
+    "popularity": 0.005893984546656664
+  },
+  {
+    "name": "2 Magikarp A1a 17",
+    "score": 0.26244745266892694,
+    "popularity": 0.0068843534057808934
+  },
+  {
+    "name": "1 Marshadow A1a 47",
+    "score": 0.2621735812534239,
+    "popularity": 0.0061429787558589044
+  },
+  {
+    "name": "2 Poliwag A4a 13",
+    "score": 0.2619485765574794,
+    "popularity": 0.0063037407828213125
+  },
+  {
+    "name": "1 Hiker A4 161",
+    "score": 0.2615823785462329,
+    "popularity": 0.0022925412775197376
+  },
+  {
+    "name": "2 Phanpy A4 99",
+    "score": 0.2614939111885568,
+    "popularity": 0.006298880535494542
+  },
+  {
+    "name": "2 Will A4 156",
+    "score": 0.26101566658162917,
+    "popularity": 0.014359289172627568
+  },
+  {
+    "name": "2 Swablu A4a 64",
+    "score": 0.26041636795973433,
+    "popularity": 0.012201962468173108
+  },
+  {
+    "name": "2 Altaria A4a 55",
+    "score": 0.26041636795973433,
+    "popularity": 0.012201962468173108
+  },
+  {
+    "name": "2 Gallade ex A2 95",
+    "score": 0.2603911475097659,
+    "popularity": 0.0024645192598516156
+  },
+  {
+    "name": "2 Repel A3a 64",
+    "score": 0.2583111110541412,
+    "popularity": 0.0029206347782100763
+  },
+  {
+    "name": "2 Chimchar A2 27",
+    "score": 0.25775210783852676,
+    "popularity": 0.001523126739174072
+  },
+  {
+    "name": "2 Infernape ex A2 29",
+    "score": 0.25775210783852676,
+    "popularity": 0.001523126739174072
+  },
+  {
+    "name": "1 Bounsweet A3 18",
+    "score": 0.25775210783852676,
+    "popularity": 0.001523126739174072
+  },
+  {
+    "name": "1 Tsareena A3 20",
+    "score": 0.25775210783852676,
+    "popularity": 0.001523126739174072
+  },
+  {
+    "name": "1 Dartrix A3 11",
+    "score": 0.2577018603584716,
+    "popularity": 0.0013975080390360042
+  },
+  {
+    "name": "1 Decidueye A3a 5",
+    "score": 0.2577018603584716,
+    "popularity": 0.0013975080390360042
+  },
+  {
+    "name": "2 Togepi A4 78",
+    "score": 0.25754693062830125,
+    "popularity": 0.0010101837136102952
+  },
+  {
+    "name": "1 Togetic A2 64",
+    "score": 0.25754693062830125,
+    "popularity": 0.0010101837136102952
+  },
+  {
+    "name": "2 Togekiss A2 65",
+    "score": 0.25754693062830125,
+    "popularity": 0.0010101837136102952
+  },
+  {
+    "name": "1 Oricorio A3 77",
+    "score": 0.25754693062830125,
+    "popularity": 0.0010101837136102952
+  },
+  {
+    "name": "2 Skarmory A2 111",
+    "score": 0.25754693062830125,
+    "popularity": 0.0010101837136102952
+  },
+  {
+    "name": "1 Type: Null A3a 60",
+    "score": 0.25754693062830125,
+    "popularity": 0.0010101837136102952
+  },
+  {
+    "name": "1 Silvally A3a 61",
+    "score": 0.25754693062830125,
+    "popularity": 0.0010101837136102952
+  },
+  {
+    "name": "1 Skarmory ex A4 124",
+    "score": 0.25754693062830125,
+    "popularity": 0.0010101837136102952
+  },
+  {
+    "name": "2 Jasmine A4 160",
+    "score": 0.25754693062830125,
+    "popularity": 0.0010101837136102952
+  },
+  {
+    "name": "2 Steel Apron A4 153",
+    "score": 0.25754693062830125,
+    "popularity": 0.0010101837136102952
+  },
+  {
+    "name": "2 Palkia ex A2 49",
+    "score": 0.2574406721608186,
+    "popularity": 0.0025228422277728617
+  },
+  {
+    "name": "2 Tyrogue A4 101",
+    "score": 0.25709086217772287,
+    "popularity": 0.00787060974793632
+  },
+  {
+    "name": "1 Eevee A4 134",
+    "score": 0.2544827142530665,
+    "popularity": 0.008749940648902794
+  },
+  {
+    "name": "1 Dartrix A3a 4",
+    "score": 0.25162975637081625,
+    "popularity": 0.0022312273881666326
+  },
+  {
+    "name": "1 Pheromosa A3a 7",
+    "score": 0.2510302857593023,
+    "popularity": 0.00480803082343928
+  },
+  {
+    "name": "1 Espeon ex A4 83",
+    "score": 0.25095401846809956,
+    "popularity": 0.0017407162733417967
+  },
+  {
+    "name": "2 Entei ex A4a 10",
+    "score": 0.24798467983106842,
+    "popularity": 0.005172050886041756
+  },
+  {
+    "name": "2 Fishing Net A3 143",
+    "score": 0.24675938796189562,
+    "popularity": 0.005159339469956356
+  },
+  {
+    "name": "2 Miltank A4a 62",
+    "score": 0.24620603895198184,
+    "popularity": 0.005788928431362625
+  },
+  {
+    "name": "2 Rowlet A3 10",
+    "score": 0.24529381252253513,
+    "popularity": 0.004436284213804501
+  },
+  {
+    "name": "2 Electabuzz A1a 27",
+    "score": 0.24515422702610268,
+    "popularity": 0.0014969561766453078
+  },
+  {
+    "name": "2 Electivire A2 57",
+    "score": 0.24515422702610268,
+    "popularity": 0.0014969561766453078
+  },
+  {
+    "name": "2 Porygon A1 209",
+    "score": 0.2428875595731363,
+    "popularity": 0.004369985455398299
+  },
+  {
+    "name": "2 Porygon2 A4 136",
+    "score": 0.2428875595731363,
+    "popularity": 0.004369985455398299
+  },
+  {
+    "name": "1 Relicanth A4a 45",
+    "score": 0.24043517906833542,
+    "popularity": 0.001087947670838623
+  },
+  {
+    "name": "1 Riolu A2b 42",
+    "score": 0.24041449186176508,
+    "popularity": 0.001036229654412732
+  },
+  {
+    "name": "1 Lucario A2 92",
+    "score": 0.24041449186176508,
+    "popularity": 0.001036229654412732
+  },
+  {
+    "name": "2 Cubone A1 151",
+    "score": 0.24041449186176508,
+    "popularity": 0.001036229654412732
+  },
+  {
+    "name": "2 Marowak ex A1 153",
+    "score": 0.24041449186176508,
+    "popularity": 0.001036229654412732
+  },
+  {
+    "name": "2 Heatran A2a 13",
+    "score": 0.24033348773965224,
+    "popularity": 0.0008337193491306284
+  },
+  {
+    "name": "2 Fomantis A3 14",
+    "score": 0.24033348773965224,
+    "popularity": 0.0008337193491306284
+  },
+  {
+    "name": "2 Lurantis A3 15",
+    "score": 0.24033348773965224,
+    "popularity": 0.0008337193491306284
+  },
+  {
+    "name": "2 Rayquaza ex P-A 65",
+    "score": 0.24033348773965224,
+    "popularity": 0.0008337193491306284
+  },
+  {
+    "name": "1 Ho-Oh ex A4 34",
+    "score": 0.24033348773965224,
+    "popularity": 0.0008337193491306284
+  },
+  {
+    "name": "1 Team Rocket Grunt A2b 72",
+    "score": 0.24033348773965224,
+    "popularity": 0.0008337193491306284
+  },
+  {
+    "name": "2 Litten A3b 11",
+    "score": 0.2401988962752186,
+    "popularity": 0.0004972406880465183
+  },
+  {
+    "name": "1 Torracat A3b 12",
+    "score": 0.2401988962752186,
+    "popularity": 0.0004972406880465183
+  },
+  {
+    "name": "1 Steel Apron A4 153",
+    "score": 0.2401988962752186,
+    "popularity": 0.0004972406880465183
+  },
+  {
+    "name": "2 Gyarados A4 45",
+    "score": 0.24013996798576773,
+    "popularity": 0.005557132020393572
+  },
+  {
+    "name": "1 Kirlia A2 69",
+    "score": 0.23944613015510488,
+    "popularity": 0.001634538562510811
+  },
+  {
+    "name": "1 Memory Light A4a 68",
+    "score": 0.23911142305323937,
+    "popularity": 0.013188468053781191
+  },
+  {
+    "name": "2 Turtonator A3 37",
+    "score": 0.23872945476017107,
+    "popularity": 0.0025744356224724255
+  },
+  {
+    "name": "2 Kiawe A3 150",
+    "score": 0.23872945476017107,
+    "popularity": 0.0025744356224724255
+  },
+  {
+    "name": "2 Decidueye ex A3 12",
+    "score": 0.2384694474777814,
+    "popularity": 0.0030387761747684974
+  },
+  {
+    "name": "1 Decidueye ex A3 12",
+    "score": 0.2341208690904332,
+    "popularity": 0.001795300589473219
+  },
+  {
+    "name": "1 Gladion A3a 67",
+    "score": 0.2331351515190994,
+    "popularity": 0.0061146896239825735
+  },
+  {
+    "name": "2 Dark Pendant A4 154",
+    "score": 0.2302216263802096,
+    "popularity": 0.0012733847996138658
+  },
+  {
+    "name": "2 Corsola A4 54",
+    "score": 0.2281378983128672,
+    "popularity": 0.0020981313844489185
+  },
+  {
+    "name": "1 Garchomp ex A2a 47",
+    "score": 0.22703952890779863,
+    "popularity": 0.00113056830124261
+  },
+  {
+    "name": "2 Hiker A4 161",
+    "score": 0.22538952671873316,
+    "popularity": 0.002190102218478575
+  },
+  {
+    "name": "2 Dratini A3b 51",
+    "score": 0.22411501288866903,
+    "popularity": 0.005340040973131156
+  },
+  {
+    "name": "2 Staryu A1 74",
+    "score": 0.22385072234175127,
+    "popularity": 0.0014326513658603445
+  },
+  {
+    "name": "2 Starmie ex A1 76",
+    "score": 0.22385072234175127,
+    "popularity": 0.0014326513658603445
+  },
+  {
+    "name": "2 Gyarados ex A1a 18",
+    "score": 0.22091795822204813,
+    "popularity": 0.0012374937424315608
+  },
+  {
+    "name": "2 Hau A3b 68",
+    "score": 0.21906025180635508,
+    "popularity": 0.0021960840613422924
+  },
+  {
+    "name": "2 Diglett A4a 40",
+    "score": 0.21729728616934854,
+    "popularity": 0.0029206347782100763
+  },
+  {
+    "name": "2 Dugtrio A4a 41",
+    "score": 0.21729728616934854,
+    "popularity": 0.0029206347782100763
+  },
+  {
+    "name": "1 Professor's Research P-A 7",
+    "score": 0.21713125678762865,
+    "popularity": 0.0010744885243952585
+  },
+  {
+    "name": "2 Charizard ex A2b 10",
+    "score": 0.2156081734297995,
+    "popularity": 0.007751845242746261
+  },
+  {
+    "name": "2 Team Rocket Grunt A2b 72",
+    "score": 0.21544629149865654,
+    "popularity": 0.0029014430323556495
+  },
+  {
+    "name": "2 Whitney A4a 69",
+    "score": 0.2138092781238858,
+    "popularity": 0.0025617242063870256
+  },
+  {
+    "name": "2 Porygon-Z A2 129",
+    "score": 0.21354560537842177,
+    "popularity": 0.0034016746418340264
+  },
+  {
+    "name": "1 Morty A4a 71",
+    "score": 0.2117908928305381,
+    "popularity": 0.004361511178008032
+  },
+  {
+    "name": "1 Leafeon A2 20",
+    "score": 0.20995483827304995,
+    "popularity": 0.0021908499488365396
+  },
+  {
+    "name": "2 Eevee A1a 61",
+    "score": 0.20620819667094234,
+    "popularity": 0.000921951531370462
+  },
+  {
+    "name": "2 Dragonite A1 185",
+    "score": 0.20321335899946094,
+    "popularity": 0.002902440006166269
+  },
+  {
+    "name": "2 Inkay A4a 51",
+    "score": 0.20090833944494002,
+    "popularity": 0.002092149541585201
+  },
+  {
+    "name": "2 Malamar A4a 52",
+    "score": 0.20090833944494002,
+    "popularity": 0.002092149541585201
+  },
+  {
+    "name": "2 Pokémon Communication A2 146",
+    "score": 0.2005625923213326,
+    "popularity": 0.0014064808033315804
+  },
+  {
+    "name": "2 Cleffa A4 77",
+    "score": 0.2004423572797719,
+    "popularity": 0.0011058931994297756
+  },
+  {
+    "name": "2 Mismagius A4a 33",
+    "score": 0.2004001852875827,
+    "popularity": 0.0010004632189567543
+  },
+  {
+    "name": "1 Wartortle A1 54",
+    "score": 0.20034634870180926,
+    "popularity": 0.0008658717545231102
+  },
+  {
+    "name": "2 Dartrix A3a 4",
+    "score": 0.20032301951464077,
+    "popularity": 0.0008075487866018644
+  },
+  {
+    "name": "1 Poliwrath ex A4a 42",
+    "score": 0.20032301951464077,
+    "popularity": 0.0008075487866018644
+  },
+  {
+    "name": "1 Mew ex A1a 32",
+    "score": 0.20032301951464077,
+    "popularity": 0.0008075487866018644
+  },
+  {
+    "name": "1 Budding Expeditioner A1a 66",
+    "score": 0.20032301951464077,
+    "popularity": 0.0008075487866018644
+  },
+  {
+    "name": "1 Smeargle A4 148",
+    "score": 0.20024869511705903,
+    "popularity": 0.0006217377926476392
+  },
+  {
+    "name": "2 Hitmonlee A2b 40",
+    "score": 0.20023957280669186,
+    "popularity": 0.0005989320167297162
+  },
+  {
+    "name": "1 Shuckle ex A4 21",
+    "score": 0.20023957280669186,
+    "popularity": 0.0005989320167297162
+  },
+  {
+    "name": "2 Pikachu A3 57",
+    "score": 0.20023957280669186,
+    "popularity": 0.0005989320167297162
+  },
+  {
+    "name": "1 Umbreon ex A4 112",
+    "score": 0.20017317435090462,
+    "popularity": 0.0004329358772615551
+  },
+  {
+    "name": "2 Horsea A4 41",
+    "score": 0.20016599613946814,
+    "popularity": 0.00041499034867040256
+  },
+  {
+    "name": "2 Kingdra ex A4 43",
+    "score": 0.20016599613946814,
+    "popularity": 0.00041499034867040256
+  },
+  {
+    "name": "2 Inflatable Boat A4a 67",
+    "score": 0.20016599613946814,
+    "popularity": 0.00041499034867040256
+  },
+  {
+    "name": "1 Jumpluff A4 15",
+    "score": 0.20016599613946814,
+    "popularity": 0.00041499034867040256
+  },
+  {
+    "name": "2 Latias A4a 36",
+    "score": 0.20016599613946814,
+    "popularity": 0.00041499034867040256
+  },
+  {
+    "name": "2 Latios A4a 37",
+    "score": 0.20016599613946814,
+    "popularity": 0.00041499034867040256
+  },
+  {
+    "name": "2 Druddigon A1a 56",
+    "score": 0.2001615097573204,
+    "popularity": 0.0004037743933009322
+  },
+  {
+    "name": "2 Tinkatink A2b 52",
+    "score": 0.2001615097573204,
+    "popularity": 0.0004037743933009322
+  },
+  {
+    "name": "2 Tinkaton ex A2b 54",
+    "score": 0.2001615097573204,
+    "popularity": 0.0004037743933009322
+  },
+  {
+    "name": "2 Joltik A3b 26",
+    "score": 0.2001615097573204,
+    "popularity": 0.0004037743933009322
+  },
+  {
+    "name": "2 Galvantula A3b 27",
+    "score": 0.2001615097573204,
+    "popularity": 0.0004037743933009322
+  },
+  {
+    "name": "1 Donphan ex A4 100",
+    "score": 0.20011933776513116,
+    "popularity": 0.00029834441282791105
+  },
+  {
+    "name": "2 Crabrawler A3 97",
+    "score": 0.20011933776513116,
+    "popularity": 0.00029834441282791105
+  },
+  {
+    "name": "2 Crabominable ex A3 49",
+    "score": 0.20011933776513116,
+    "popularity": 0.00029834441282791105
+  },
+  {
+    "name": "2 Yamper A4a 30",
+    "score": 0.20011933776513116,
+    "popularity": 0.00029834441282791105
+  },
+  {
+    "name": "2 Boltund A4a 31",
+    "score": 0.20011933776513116,
+    "popularity": 0.00029834441282791105
+  },
+  {
+    "name": "2 Aerodactyl ex A1a 46",
+    "score": 0.20011933776513116,
+    "popularity": 0.00029834441282791105
+  },
+  {
+    "name": "1 Mismagius A4a 33",
+    "score": 0.20011933776513116,
+    "popularity": 0.00029834441282791105
+  },
+  {
+    "name": "1 Mismagius ex A2 67",
+    "score": 0.20011933776513116,
+    "popularity": 0.00029834441282791105
+  },
+  {
+    "name": "2 Morty A4a 71",
+    "score": 0.20011933776513116,
+    "popularity": 0.00029834441282791105
+  },
+  {
+    "name": "1 Primarina A3 48",
+    "score": 0.19925348401854864,
+    "popularity": 0.0012282717346833295
+  },
+  {
+    "name": "1 Politoed A4 40",
+    "score": 0.19723635971077472,
+    "popularity": 0.004492363990651853
+  },
+  {
+    "name": "1 Poliwhirl A4a 14",
+    "score": 0.19696526378918172,
+    "popularity": 0.004306552996697628
+  },
+  {
+    "name": "1 Lugia ex A4 149",
+    "score": 0.19331970022310688,
+    "popularity": 0.0021960840613422924
+  },
+  {
+    "name": "1 Primarina ex A3b 24",
+    "score": 0.1924511091998709,
+    "popularity": 0.0025196020628883483
+  },
+  {
+    "name": "1 Igglybuff A4a 59",
+    "score": 0.1920475449937941,
+    "popularity": 0.0027725841673330674
+  },
+  {
+    "name": "2 Charmander A1 33",
+    "score": 0.19152086593149242,
+    "popularity": 0.006080667892695181
+  },
+  {
+    "name": "1 Fisher A4 159",
+    "score": 0.18907594773719194,
+    "popularity": 0.0041267238456071205
+  },
+  {
+    "name": "2 Popplio A3 45",
+    "score": 0.18606601194086222,
+    "popularity": 0.004023287812755338
+  },
+  {
+    "name": "2 Incineroar ex A3 33",
+    "score": 0.18505381427790912,
+    "popularity": 0.0012958167103528065
+  },
+  {
+    "name": "1 Rescue Scarf A4 155",
+    "score": 0.18480243971761906,
+    "popularity": 0.0017496890376373728
+  },
+  {
+    "name": "1 Zangoose A4a 65",
+    "score": 0.1840160086887651,
+    "popularity": 0.0063033669176423305
+  },
+  {
+    "name": "1 Blastoise ex A1 56",
+    "score": 0.18057724783634874,
+    "popularity": 0.0014431195908718504
+  },
+  {
+    "name": "1 Blastoise A1 55",
+    "score": 0.18057724783634874,
+    "popularity": 0.0014431195908718504
+  },
+  {
+    "name": "2 Ralts A1 130",
+    "score": 0.1801224449157311,
+    "popularity": 0.0034208663876884532
+  },
+  {
+    "name": "2 Gardevoir A1 132",
+    "score": 0.1801224449157311,
+    "popularity": 0.0034208663876884532
+  },
+  {
+    "name": "2 Mewtwo ex A1 129",
+    "score": 0.1801224449157311,
+    "popularity": 0.0034208663876884532
+  },
+  {
+    "name": "2 Chinchou A4 64",
+    "score": 0.17832106019293584,
+    "popularity": 0.0014969561766453078
+  },
+  {
+    "name": "2 Lanturn ex A4 65",
+    "score": 0.17832106019293584,
+    "popularity": 0.0014969561766453078
+  },
+  {
+    "name": "2 Garchomp A2 123",
+    "score": 0.1769759744909005,
+    "popularity": 0.002062988057624578
+  },
+  {
+    "name": "1 Rare Candy A3 144",
+    "score": 0.1762834612845559,
+    "popularity": 0.0029206347782100763
+  },
+  {
+    "name": "2 Umbreon ex A4 112",
+    "score": 0.17466824748865778,
+    "popularity": 0.004975397801897043
+  },
+  {
+    "name": "2 Squirtle A1 53",
+    "score": 0.17248396928073326,
+    "popularity": 0.00199644005576572
+  },
+  {
+    "name": "1 Charmeleon A2b 9",
+    "score": 0.1722909958148548,
+    "popularity": 0.001526117660605931
+  },
+  {
+    "name": "1 Rayquaza ex P-A 65",
+    "score": 0.1720378221242411,
+    "popularity": 0.001523126739174072
+  },
+  {
+    "name": "1 Blacephalon A3a 9",
+    "score": 0.17170702621387746,
+    "popularity": 0.0006961369632651257
+  },
+  {
+    "name": "2 Gible A2 121",
+    "score": 0.17166670060249117,
+    "popularity": 0.002616308522518448
+  },
+  {
+    "name": "2 Moltres ex A1 47",
+    "score": 0.1652901348776739,
+    "popularity": 0.0012277732477780198
+  },
+  {
+    "name": "1 Hau A3b 68",
+    "score": 0.16414299901589927,
+    "popularity": 0.00393530487396816
+  },
+  {
+    "name": "2 Misdreavus A4a 32",
+    "score": 0.16148874470275468,
+    "popularity": 0.0013631124425696286
+  },
+  {
+    "name": "2 Pyukumuku A3 54",
+    "score": 0.1601492710710007,
+    "popularity": 0.0015664950999360239
+  },
+  {
+    "name": "1 Umbreon A3b 43",
+    "score": 0.15878412219940094,
+    "popularity": 0.0028286639441804195
+  },
+  {
+    "name": "2 Primarina ex A3b 24",
+    "score": 0.1527453866139076,
+    "popularity": 0.003438064185921641
+  },
+  {
+    "name": "2 Cherubi A4 23",
+    "score": 0.15063886081784503,
+    "popularity": 0.0015971520446125763
+  },
+  {
+    "name": "1 Flareon A3b 8",
+    "score": 0.15034814325466836,
+    "popularity": 0.0008703581366708983
+  },
+  {
+    "name": "1 Azurill A4a 63",
+    "score": 0.15033159348941208,
+    "popularity": 0.0008289837235301856
+  },
+  {
+    "name": "2 Litten A3 31",
+    "score": 0.1503194304089225,
+    "popularity": 0.0007985760223062882
+  },
+  {
+    "name": "1 Torracat A3 32",
+    "score": 0.1503194304089225,
+    "popularity": 0.0007985760223062882
+  },
+  {
+    "name": "1 Penny A3b 69",
+    "score": 0.1503194304089225,
+    "popularity": 0.0007985760223062882
+  },
+  {
+    "name": "1 Charmander A1 33",
+    "score": 0.15031823404034977,
+    "popularity": 0.0007955851008744294
+  },
+  {
+    "name": "1 Charmander A2b 8",
+    "score": 0.15031823404034977,
+    "popularity": 0.0007955851008744294
+  },
+  {
+    "name": "1 Hitmonlee A1 154",
+    "score": 0.1502667901917218,
+    "popularity": 0.0006669754793045028
+  },
+  {
+    "name": "2 Dragonair A1 184",
+    "score": 0.1502667901917218,
+    "popularity": 0.0006669754793045028
+  },
+  {
+    "name": "2 Blastoise ex A1 56",
+    "score": 0.15022132818595754,
+    "popularity": 0.00055332046489387
+  },
+  {
+    "name": "1 Garchomp A2 123",
+    "score": 0.15022132818595754,
+    "popularity": 0.00055332046489387
+  },
+  {
+    "name": "1 Poliwag A4a 13",
+    "score": 0.15015911702017487,
+    "popularity": 0.0003977925504372147
+  },
+  {
+    "name": "1 Poliwag A1 59",
+    "score": 0.15015911702017487,
+    "popularity": 0.0003977925504372147
+  },
+  {
+    "name": "1 Elekid A4 70",
+    "score": 0.15015911702017487,
+    "popularity": 0.0003977925504372147
+  },
+  {
+    "name": "2 Mismagius ex A2 67",
+    "score": 0.15015911702017487,
+    "popularity": 0.0003977925504372147
+  },
+  {
+    "name": "2 Delibird A4 57",
+    "score": 0.15015911702017487,
+    "popularity": 0.0003977925504372147
+  },
+  {
+    "name": "2 Suicune A4 59",
+    "score": 0.15015911702017487,
+    "popularity": 0.0003977925504372147
+  },
+  {
+    "name": "1 Rowlet A3 9",
+    "score": 0.15015911702017487,
+    "popularity": 0.0003977925504372147
+  },
+  {
+    "name": "2 Manaphy A2 50",
+    "score": 0.14754408782359657,
+    "popularity": 0.0031868267856455055
+  },
+  {
+    "name": "2 Popplio A3b 22",
+    "score": 0.14425710221532026,
+    "popularity": 0.0022312273881666326
+  },
+  {
+    "name": "2 Brionne A3b 23",
+    "score": 0.14425710221532026,
+    "popularity": 0.0022312273881666326
+  },
+  {
+    "name": "1 Gabite A2a 46",
+    "score": 0.13256139016915466,
+    "popularity": 0.002448069191976393
+  },
+  {
+    "name": "2 Cynthia A2 152",
+    "score": 0.1307704024706939,
+    "popularity": 0.001641268135732493
+  },
+  {
+    "name": "1 Gabite A2 122",
+    "score": 0.12862650544935583,
+    "popularity": 0.0014857402212758374
+  },
+  {
+    "name": "2 Gible A2a 45",
+    "score": 0.12696153011435315,
+    "popularity": 0.0018947487270825226
+  },
+  {
+    "name": "2 Garchomp ex A2a 47",
+    "score": 0.12696153011435315,
+    "popularity": 0.0018947487270825226
+  },
+  {
+    "name": "2 Mareep A4 67",
+    "score": 0.12107298705640884,
+    "popularity": 0.0014072285336895454
+  },
+  {
+    "name": "2 Ampharos A4 69",
+    "score": 0.12107298705640884,
+    "popularity": 0.0014072285336895454
+  },
+  {
+    "name": "2 Qwilfish A4 53",
+    "score": 0.12043517906833542,
+    "popularity": 0.001087947670838623
+  },
+  {
+    "name": "1 Ralts A2 68",
+    "score": 0.12028862391817435,
+    "popularity": 0.0007215597954359252
+  },
+  {
+    "name": "1 Ralts A1 130",
+    "score": 0.12028862391817435,
+    "popularity": 0.0007215597954359252
+  },
+  {
+    "name": "2 Hitmonchan A1 155",
+    "score": 0.12027666023244693,
+    "popularity": 0.0006916505811173376
+  },
+  {
+    "name": "1 Hitmontop A4 102",
+    "score": 0.12027666023244693,
+    "popularity": 0.0006916505811173376
+  },
+  {
+    "name": "1 Dragonair A3b 52",
+    "score": 0.12027230440130719,
+    "popularity": 0.002134520928536533
+  },
+  {
+    "name": "1 Magikarp A1a 17",
+    "score": 0.1201988962752186,
+    "popularity": 0.0004972406880465183
+  },
+  {
+    "name": "2 Old Amber A1a 63",
+    "score": 0.11924295124853232,
+    "popularity": 0.0016038816178342585
+  },
+  {
+    "name": "1 Mewtwo A1 128",
+    "score": 0.11659833935822374,
+    "popularity": 0.0018977396485143814
+  },
+  {
+    "name": "1 Tapu Lele A3 84",
+    "score": 0.11659833935822374,
+    "popularity": 0.0018977396485143814
+  },
+  {
+    "name": "1 Eevee A1 206",
+    "score": 0.10033199227893631,
+    "popularity": 0.0008299806973408051
+  },
+  {
+    "name": "1 Jumpluff ex A4a 3",
+    "score": 0.10033199227893631,
+    "popularity": 0.0008299806973408051
+  },
+  {
+    "name": "2 Charizard ex A1 36",
+    "score": 0.10033199227893631,
+    "popularity": 0.0008299806973408051
+  },
+  {
+    "name": "1 Charizard A1 35",
+    "score": 0.10033199227893631,
+    "popularity": 0.0008299806973408051
+  },
+  {
+    "name": "1 Flaaffy A4 68",
+    "score": 0.10033199227893631,
+    "popularity": 0.0008299806973408051
+  },
+  {
+    "name": "2 Goldeen A1 72",
+    "score": 0.10032301951464075,
+    "popularity": 0.0008075487866018644
+  },
+  {
+    "name": "2 Seaking A1 73",
+    "score": 0.10032301951464075,
+    "popularity": 0.0008075487866018644
   },
   {
     "name": "2 Paldean Wooper A2b 47",
-    "score": 0.1006160381686982,
-    "popularity": 0.0015400954217455135
+    "score": 0.10023867553026232,
+    "popularity": 0.0005966888256558221
   },
   {
     "name": "2 Paldean Clodsire ex A2b 48",
-    "score": 0.1006160381686982,
-    "popularity": 0.0015400954217455135
+    "score": 0.10023867553026232,
+    "popularity": 0.0005966888256558221
   },
   {
     "name": "1 Absol A4 120",
-    "score": 0.1006160381686982,
-    "popularity": 0.0015400954217455135
+    "score": 0.10023867553026232,
+    "popularity": 0.0005966888256558221
   },
   {
     "name": "1 Absol A3 112",
-    "score": 0.1006160381686982,
-    "popularity": 0.0015400954217455135
+    "score": 0.10023867553026232,
+    "popularity": 0.0005966888256558221
+  },
+  {
+    "name": "2 Spiritomb A2 104",
+    "score": 0.08627328892990013,
+    "popularity": 0.0013975080390360042
+  },
+  {
+    "name": "1 Entei ex A4a 10",
+    "score": 0.08611835919972982,
+    "popularity": 0.0010101837136102952
   }
 ]
