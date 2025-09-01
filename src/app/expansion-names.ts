@@ -9,6 +9,7 @@ export const EXPANSION_NAMES = {
   a3a: "Extradimensional Crisis",
   a3b: "Eevee Grove",
   a4: "Wisdom of Sea and Sky",
+  a4a: "Secluded Springs",
 };
 
 export const EXPANSION_CODES = Object.keys(EXPANSION_NAMES);
