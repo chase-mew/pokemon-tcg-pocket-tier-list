@@ -165,7 +165,6 @@ const DECK_NAMES: DeckNameType[] = [
   ["Incineroar ex A3 33", "Oricorio A3 66"],
   ["Pachirisu A2b 25", "Oricorio A3 66"],
   ["Decidueye ex A3 12", "Lurantis A3 15"],
-  ["Giratina ex A2b 35", "Greninja A1 89"],
   ["Dragonite A1 185", "Oricorio A3 66"],
   ["Garchomp A2 123", "Greninja A1 89"],
   ["Vikavolt A3 65", "Oricorio A3 66"],
@@ -276,7 +275,6 @@ const DECK_NAMES: DeckNameType[] = [
   ["Dragonite ex A3b 53", "Sylveon ex A3b 34"],
   ["Dragonite ex A3b 53", "Pichu A4 66"],
   ["Dragonite ex A3b 53", "Zeraora A3a 21"],
-  ["Darkrai ex A2 110", "Tyrogue A4 101"],
   ["Ho-Oh ex A4 34", "Magby A4 32"],
   ["Leafeon ex A2a 10", "Leafeon A2a 10"],
   ["Rayquaza ex PA 65", "Ho-Oh ex A4 34"],
@@ -305,6 +303,7 @@ const DECK_NAMES: DeckNameType[] = [
   ["Alolan Exeggutor ex A3 2", "Pichu A4 66"],
   ["Leafeon ex A2a 10", "Alolan Exeggutor ex A3 2"],
   ["Magcargo A4 31", "Silvally A3a 61"],
+  ["Suicune ex A4a 20", "Primarina A3 48"],
   ["Suicune ex A4a 20", "Greninja A1 89"],
   ["Suicune ex A4a 20", "Silvally A3a 61"],
   ["Suicune ex A4a 20", "Wugtrio ex A2b 19"],
@@ -312,6 +311,7 @@ const DECK_NAMES: DeckNameType[] = [
   ["Suicune ex A4a 20", "Giratina ex A2b 35"],
   ["Suicune ex A4a 20", "Oricorio A3 66"],
   ["Suicune ex A4a 20", "Sylveon ex A3b 34"],
+  ["Giratina ex A2b 35", "Greninja A1 89"],
   ["Raikou ex A4a 25", "Alolan Raichu A4 66"],
   ["Raikou ex A4a 25", "Luxray A2 60"],
   ["Raikou ex A4a 25", "Magnezone A2 53"],
@@ -320,7 +320,6 @@ const DECK_NAMES: DeckNameType[] = [
   ["Raikou ex A4a 25", "Tapu Koko ex A3a 19"],
   ["Raikou ex A4a 25", "Oricorio A3 66"],
   ["Raikou ex A4a 25", "Zeraora A3a 21"],
-  ["Milotic A4a 22", "Suicune ex A4a 20"],
   ["Milotic A4a 22", "Palkia ex A2 49"],
   ["Poliwrath ex A4a 42", "Lucario A2 92"],
   ["Gyarados A4 45", "Suicune ex A4a 20"],
@@ -333,6 +332,9 @@ const DECK_NAMES: DeckNameType[] = [
   ["Jumpluff ex A4a 3", "Zangoose A4a 65"],
   ["Porygon-Z A4 129", "Stoutland A3a 56"],
   ["Silvally A3a 61", "Palkia ex A2 49"],
+  ["Zoroark A4a 50", "Silvally A3a 61"],
+  ["Zoroark A4a 50", "Darkrai ex A2 110"],
+  ["Darkrai ex A2 110", "Tyrogue A4 101"],
 
   // Main Card (never side card)
   "Bronzong A2a 59",
@@ -376,6 +378,7 @@ const DECK_NAMES: DeckNameType[] = [
   "Porygon-Z A4 129",
   "Jumpluff ex A4a 3",
   "Poliwrath ex A4a 42",
+  "Primarina A3 48",
 
   // Stage 1 (can be side card)
   "Abomasnow A2a 21",
@@ -428,6 +431,7 @@ const DECK_NAMES: DeckNameType[] = [
   "Gyarados A4 45",
   "Altaria A4a 55",
   "Electivire A2 57",
+  "Zoroark A4a 50",
 
   // Basic ex (can be side card)
   "Pachirisu ex A2 61",
