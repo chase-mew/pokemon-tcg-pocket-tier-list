@@ -10,7 +10,7 @@
     "strength": "Force",
     "winRate": "Taux de Victoire",
     "notEnoughCards": "Pas assez de cartes",
-    "tryAnotherDeck": "essayez un autre deck",
+    "tryAnotherDeck": "Essayez un autre deck",
     "alternatives": "Alternatives"
   },
   "energyDropdown": {
@@ -37,21 +37,21 @@
   },
   "bestDeckFinder": {
     "title": "Trouvez Votre Meilleur Deck",
-    "description1": "Découvrez le deck le plus puissant que vous pouvez construire avec votre collection. Le Meilleur Deck Finder commence par vous montrer le meilleur deck du jeu, mais vous pouvez cliquer sur les cartes que vous n'avez pas. Il vous montrera ensuite le prochain meilleur deck qui n'utilise pas ces cartes.",
+    "description1": "Découvrez le deck le plus puissant que vous pouvez construire avec votre collection. L'outil \"Trouvez Votre Meilleur Deck\" commence par vous montrer le meilleur deck du jeu, mais vous pouvez cliquer sur les cartes que vous n'avez pas. Il vous montrera ensuite le meilleur deck qui n'utilise pas ces cartes.",
     "description2": "Continuez à retirer des cartes jusqu'à ce que vous trouviez un deck où vous avez tout. L'indicateur de force relative vous montre à quel point votre deck est puissant par rapport au meilleur deck du jeu.",
     "button": "Essayer le Meilleur Deck Finder"
   },
   "header": {
-    "tierList": "Liste des Niveaux",
-    "bestDeckFinder": "Trouveur de Meilleur Deck",
+    "tierList": "Tier List des Decks",
+    "bestDeckFinder": "Trouvez Votre Meilleur Deck",
     "signIn": "Se connecter avec Google",
     "signOut": "Se déconnecter",
     "bestCards": "Meilleures Cartes"
   },
   "hero": {
-    "title": "Meilleurs Decks et Liste des Tiers Pokemon TCG Pocket",
-    "subtitle": "Restez à la pointe de la méta Pokemon TCG Pocket avec une liste de tiers basée sur les données. Construite à partir des résultats des tournois, trouvez des listes complètes, marquez les cartes qui vous manquent et découvrez les constructions les plus fortes que vous pouvez créer maintenant.",
-    "button": "Voir la Liste des Tiers"
+    "title": "Meilleurs Decks et Tier List Pokemon TCG Pocket",
+    "subtitle": "Restez à la pointe de la méta Pokemon TCG Pocket avec une tier list basée sur les données. Construite à partir des résultats des tournois, trouvez des decks complets, marquez les cartes qui vous manquent et découvrez les decks les plus forts que vous pouvez créer maintenant.",
+    "button": "Voir la Tier List"
   },
   "features": {
     "title": "Fonctionnalités",
@@ -93,7 +93,7 @@
       "free": "Gratuit",
       "premium": "Premium",
       "bestDeckFinder": {
-        "title": "Trouveur de Meilleur Deck",
+        "title": "Trouvez Votre Meilleur Deck",
         "description": "Trouvez le deck le plus puissant que vous pouvez construire avec vos cartes",
         "free": "✅",
         "premium": "✅"
@@ -129,13 +129,13 @@
         "premium": "✅"
       },
       "updated": {
-        "title": "Liste des Niveaux Mise à Jour",
+        "title": "Tier List Mise à Jour",
         "description": "À quelle fréquence la liste des niveaux est mise à jour avec de nouvelles données. Des mises à jour plus rapides vous aident à rester à jour avec la méta.",
         "free": "Hebdomadaire",
         "premium": "Horaire"
       },
       "decks": {
-        "title": "Decks dans la Liste des Niveaux",
+        "title": "Decks dans la Tier List",
         "description": "Nombre de decks affichés dans la liste des niveaux. Plus de decks signifie plus d'options à choisir. Découvrez des decks puissants qui ne sont pas encore populaires.",
         "free": "30",
         "premium": "100"
