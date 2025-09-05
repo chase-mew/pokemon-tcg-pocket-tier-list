@@ -39,7 +39,7 @@
     "title": "Trouvez Votre Meilleur Deck",
     "description1": "Découvrez le deck le plus puissant que vous pouvez construire avec votre collection. L'outil \"Trouvez Votre Meilleur Deck\" commence par vous montrer le meilleur deck du jeu, mais vous pouvez cliquer sur les cartes que vous n'avez pas. Il vous montrera ensuite le meilleur deck qui n'utilise pas ces cartes.",
     "description2": "Continuez à retirer des cartes jusqu'à ce que vous trouviez un deck où vous avez tout. L'indicateur de force relative vous montre à quel point votre deck est puissant par rapport au meilleur deck du jeu.",
-    "button": "Essayer le Meilleur Deck Finder"
+    "button": "Essayer l'outil \"Trouvez Votre Meilleur Deck\""
   },
   "header": {
     "tierList": "Tier List des Decks",
@@ -65,11 +65,11 @@
     },
     "filters": {
       "title": "Filtres",
-      "description": "Filtrez les decks par type d'Énergie ou sans cartes Ex, utile pour aider à battre certains Combats en Solo"
+      "description": "Filtrez les decks par type d'Énergie ou sans cartes EX, utile pour aider à battre certains Combats en Solo"
     },
     "missingCards": {
       "title": "Cartes Manquantes",
-      "description": "Cliquez sur les cartes qui vous manquent, et la liste des tiers se mettra à jour automatiquement pour ce que vous avez"
+      "description": "Cliquez sur les cartes qui vous manquent, et la tier list se mettra à jour automatiquement pour ce que vous avez"
     },
     "matchups": {
       "title": "Matchups",
