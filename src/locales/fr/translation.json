@@ -27,40 +27,40 @@
     "Colorless": "Incolore"
   },
   "filter": {
-    "includeEx": "Inclure les cartes EX",
-    "deckAmount": "Nombre de Decks",
-    "sortBy": "Trier par",
-    "score": "Meilleur Global",
-    "popularity": "Popularité",
-    "strength": "Force",
-    "winRate": "Taux de Victoire"
+  "includeEx": "Inclure les cartes EX",
+  "deckAmount": "Nombre de decks",
+  "sortBy": "Trier par",
+  "score": "Meilleur global",
+  "popularity": "Popularité",
+  "strength": "Force",
+  "winRate": "Taux de victoire"
   },
   "bestDeckFinder": {
-    "title": "Trouvez Votre Meilleur Deck",
-    "description1": "Découvrez le deck le plus puissant que vous pouvez construire avec votre collection. L'outil \"Trouvez Votre Meilleur Deck\" commence par vous montrer le meilleur deck du jeu, mais vous pouvez cliquer sur les cartes que vous n'avez pas. Il vous montrera ensuite le meilleur deck qui n'utilise pas ces cartes.",
+    "title": "Trouver votre meilleur deck",
+    "description1": "Découvrez le deck le plus puissant que vous pouvez construire avec votre collection. L'outil \"Trouver votre meilleur deck\" commence par vous montrer le meilleur deck du jeu, mais vous pouvez cliquer sur les cartes que vous n'avez pas. Il vous montrera ensuite le meilleur deck qui n'utilise pas ces cartes.",
     "description2": "Continuez à retirer des cartes jusqu'à ce que vous trouviez un deck où vous avez tout. L'indicateur de force relative vous montre à quel point votre deck est puissant par rapport au meilleur deck du jeu.",
-    "button": "Essayer l'outil \"Trouvez Votre Meilleur Deck\""
+    "button": "Essayer l'outil \"Trouver votre meilleur deck\""
   },
   "header": {
-    "tierList": "Tier List des Decks",
-    "bestDeckFinder": "Trouvez Votre Meilleur Deck",
+    "tierList": "Tier list des decks",
+    "bestDeckFinder": "Trouver votre meilleur deck",
     "signIn": "Se connecter avec Google",
     "signOut": "Se déconnecter",
-    "bestCards": "Meilleures Cartes"
+    "bestCards": "Meilleures cartes"
   },
   "hero": {
-    "title": "Meilleurs Decks et Tier List Pokemon TCG Pocket",
+    "title": "Meilleurs decks et Tier list Pokemon TCG Pocket",
     "subtitle": "Restez à la pointe de la méta Pokemon TCG Pocket avec une tier list basée sur les données. Construite à partir des résultats des tournois, trouvez des decks complets, marquez les cartes qui vous manquent et découvrez les decks les plus forts que vous pouvez créer maintenant.",
     "button": "Voir la Tier List"
   },
   "features": {
     "title": "Fonctionnalités",
     "tournamentResults": {
-      "title": "Résultats des Tournois",
+      "title": "Résultats des tournois",
       "description": "La liste des tiers est basée sur les résultats des tournois, avec un algorithme pour déterminer le tier et la liste de deck"
     },
     "weeklyUpdates": {
-      "title": "Mises à Jour Hebdomadaires",
+      "title": "Mises à jour hebdomadaires",
       "description": "La liste des tiers est mise à jour chaque semaine, avec de nouveaux decks et matchups ajoutés tous les lundis"
     },
     "filters": {
@@ -68,7 +68,7 @@
       "description": "Filtrez les decks par type d'Énergie ou sans cartes EX, utile pour aider à battre certains Combats en Solo"
     },
     "missingCards": {
-      "title": "Cartes Manquantes",
+      "title": "Cartes manquantes",
       "description": "Cliquez sur les cartes qui vous manquent, et la tier list se mettra à jour automatiquement pour ce que vous avez"
     },
     "matchups": {
@@ -76,7 +76,7 @@
       "description": "Consultez les données de matchup pour voir quels decks sont forts contre d'autres, et leurs taux de victoire"
     },
     "openSource": {
-      "title": "Open Source",
+      "title": "Open source",
       "description": "Ce site est open source, vous pouvez trouver le code source sur <0>GitHub</0>"
     }
   },
@@ -87,55 +87,55 @@
     "getPremium": "Obtenir Premium",
     "getPremiumMonthly": "Obtenir Premium 1€/mois",
     "getPremiumYearly": "Obtenir Premium 6€/an (50% de réduction !)",
-    "manageSubscription": "Gérer l'Abonnement",
+    "manageSubscription": "Gérer l'abonnement",
     "features": {
       "title": "Fonctionnalités",
       "free": "Gratuit",
       "premium": "Premium",
       "bestDeckFinder": {
-        "title": "Trouvez Votre Meilleur Deck",
+        "title": "Trouver votre meilleur deck",
         "description": "Trouvez le deck le plus puissant que vous pouvez construire avec vos cartes",
         "free": "✅",
         "premium": "✅"
       },
       "exclude": {
-        "title": "Exclure les Cartes que Vous N'Avez Pas",
+        "title": "Exclure les cartes que vous n'avez pas",
         "description": "Filtrez les cartes que vous ne possédez pas pour mettre à jour la liste des niveaux en direct avec ce que vous avez",
         "free": "✅",
         "premium": "✅"
       },
       "matchups": {
-        "title": "Forces/Faiblesses des Decks",
+        "title": "Forces/Faiblesses des decks",
         "description": "Pour chaque deck, voyez contre quels decks il est fort ou faible, y compris les taux de victoire",
         "free": "🚫",
         "premium": "✅"
       },
       "filters": {
-        "title": "Filtres de Decks",
-        "description": "Filtrez les decks par Énergie ou sans cartes Ex, utile pour vous aider à gagner certains Combats en Solo",
+        "title": "Filtres de decks",
+        "description": "Filtrez les decks par énergie ou sans cartes EX, utile pour vous aider à gagner certains combats en Solo",
         "free": "🚫",
         "premium": "✅"
       },
       "sortBy": {
-        "title": "Classements Alternatifs",
-        "description": "Changez la liste des niveaux pour qu'elle soit classée par Popularité ou Force",
+        "title": "Classements alternatifs",
+        "description": "Changez la liste des niveaux pour qu'elle soit classée par popularité ou force",
         "free": "🚫",
         "premium": "✅"
       },
       "contact": {
-        "title": "Contacter les Développeurs",
+        "title": "Contacter les développeurs",
         "description": "Contactez les développeurs par e-mail pour donner votre avis sur le site, demander de nouvelles fonctionnalités ou signaler des bugs. Les demandes de fonctionnalités ne sont pas garanties, mais toutes seront examinées.",
         "free": "🚫",
         "premium": "✅"
       },
       "updated": {
-        "title": "Tier List Mise à Jour",
+        "title": "Tier list mise à jour",
         "description": "À quelle fréquence la liste des niveaux est mise à jour avec de nouvelles données. Des mises à jour plus rapides vous aident à rester à jour avec la méta.",
         "free": "Hebdomadaire",
         "premium": "Horaire"
       },
       "decks": {
-        "title": "Decks dans la Tier List",
+        "title": "Decks dans la Tier list",
         "description": "Nombre de decks affichés dans la liste des niveaux. Plus de decks signifie plus d'options à choisir. Découvrez des decks puissants qui ne sont pas encore populaires.",
         "free": "30",
         "premium": "100"
@@ -143,7 +143,7 @@
     }
   },
   "userAccount": {
-    "title": "Compte Utilisateur",
+    "title": "Compte utilisateur",
     "signOut": "Se déconnecter"
   }
 }
