@@ -298,7 +298,7 @@ const DECK_NAMES: DeckNameType[] = [
   ["Ho-Oh ex A4 34", "Mew ex A4 151"],
   ["Typhlosion A4 29", "Turtonator A3 37"],
   ["Primarina ex A3b 24", "Greninja A1 89"],
-  ["Tsareena A3 20", "Alolan Exeggutor ex A3 2"],
+  ["Tsareena A3 20", "Alolan Exeggutor A3 2"],
   ["Donphan ex A4 100", "Marshadow A1a 47"],
   ["Alolan Exeggutor A3 2", "Leafeon ex A2a 10"],
   ["Flareon ex A3b 9", "Silvally A3a 61"],
@@ -308,10 +308,11 @@ const DECK_NAMES: DeckNameType[] = [
   ["Togekiss A2 65", "Cleffa A4 77"],
   ["Flareon ex A3b 9", "Magby A4 32"],
   ["Ho-Oh ex A4 34", "Pichu A4 66"],
-  ["Alolan Exeggutor ex A3 2", "Pichu A4 66"],
-  ["Leafeon ex A2a 10", "Alolan Exeggutor ex A3 2"],
+  ["Alolan Exeggutor A3 2", "Pichu A4 66"],
+  ["Leafeon ex A2a 10", "Alolan Exeggutor A3 2"],
   ["Magcargo A4 31", "Silvally A3a 61"],
   ["Suicune ex A4a 20", "Primarina A3 48"],
+  ["Suicune ex A4a 20", "Magnezone A2 53"],
   ["Suicune ex A4a 20", "Greninja A1 89"],
   ["Suicune ex A4a 20", "Silvally A3a 61"],
   ["Suicune ex A4a 20", "Wugtrio ex A2b 19"],
@@ -335,6 +336,13 @@ const DECK_NAMES: DeckNameType[] = [
   ["Zoroark A4a 50", "Silvally A3a 61"],
   ["Zoroark A4a 50", "Darkrai ex A2 110"],
   ["Darkrai ex A2 110", "Tyrogue A4 101"],
+  ["Umbreon ex A4 112", "Umbreon A3b 43"],
+  ["Exeggutor ex A1 23", "Alolan Exeggutor A3 2"],
+  ["Dragonite ex A3b 53", "Dragonite A1 185"],
+  ["Miltank A4a 62", "Darkrai ex A2 110"],
+  ["Latios A4a 37", "Latios A4a 36"],
+  ["Poliwrath ex A4a 42", "Mantyke A4a 23"],
+  ["Jumpluff ex A4a 3", "Zeraora A3a 21"],
 
   // Main Card (never side card)
   "Bronzong A2a 59",
@@ -476,6 +484,7 @@ const DECK_NAMES: DeckNameType[] = [
   "Pichu A4 66",
   "Magby A4 32",
   "Tyrogue A4 101",
+  "Miltank A4a 62",
 ];
 
 /**
