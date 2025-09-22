@@ -340,9 +340,11 @@ const DECK_NAMES: DeckNameType[] = [
   ["Exeggutor ex A1 23", "Alolan Exeggutor A3 2"],
   ["Dragonite ex A3b 53", "Dragonite A1 185"],
   ["Miltank A4a 62", "Darkrai ex A2 110"],
-  ["Latios A4a 37", "Latios A4a 36"],
+  ["Latios A4a 37", "Latias A4a 36"],
   ["Poliwrath ex A4a 42", "Mantyke A4a 23"],
   ["Jumpluff ex A4a 3", "Zeraora A3a 21"],
+  ["Charizard ex A2b 10", "Entei ex A4a 10"],
+  ["Crobat A2a 50", "Nihilego A3a 42"],
 
   // Main Card (never side card)
   "Bronzong A2a 59",
