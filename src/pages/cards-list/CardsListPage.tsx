@@ -5,6 +5,7 @@ import CardIcon from "../../components/CardIcon";
 import ArrowDown from "../../assets/arrow-down.svg";
 import useFilters from "../../app/use-filters";
 import { EXPANSION_CODES, getExpansionName } from "../../app/expansion-names";
+import LastUpdated from "../../components/LastUpdated";
 
 const StyledCardsListPage = styled.div`
   width: 100%;
@@ -231,6 +232,7 @@ const CardsListPage = () => {
           ))}
         </RowContent>
       </DeckRow>
+      <LastUpdated />
     </StyledCardsListPage>
   );
 };
