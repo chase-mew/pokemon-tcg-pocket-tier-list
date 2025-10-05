@@ -212,6 +212,10 @@ const run = async () => {
     "../public/data/matchup-data.json",
     JSON.stringify(matchupData, null, 2)
   );
+  fs.writeFileSync(
+    "../src/app/last-updated.ts",
+    `export const LAST_UPDATED = new Date("${new Date().toISOString()}");`
+  );
 };
 
 run();
