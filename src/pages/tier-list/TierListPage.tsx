@@ -8,6 +8,7 @@ import useIsPremium from "../../app/use-is-premium";
 import UserAccount from "../../components/UserAccount";
 import { SortBy } from "../../components/FilterContext";
 import { getSortValue } from "../../app/sorting-helper";
+import LastUpdated from "../../components/LastUpdated";
 
 const StyledTierListPage = styled.div`
   width: 100%;
@@ -340,6 +341,7 @@ const LandingPage = () => {
           ))}
         </RowContent>
       </DeckRow>
+      <LastUpdated />
     </StyledTierListPage>
   );
 };
