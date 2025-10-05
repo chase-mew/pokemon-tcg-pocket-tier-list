@@ -27,13 +27,13 @@
     "Colorless": "Incolore"
   },
   "filter": {
-  "includeEx": "Inclure les cartes EX",
-  "deckAmount": "Nombre de decks",
-  "sortBy": "Trier par",
-  "score": "Meilleur global",
-  "popularity": "Popularité",
-  "strength": "Force",
-  "winRate": "Taux de victoire"
+    "includeEx": "Inclure les cartes EX",
+    "deckAmount": "Nombre de decks",
+    "sortBy": "Trier par",
+    "score": "Meilleur global",
+    "popularity": "Popularité",
+    "strength": "Force",
+    "winRate": "Taux de victoire"
   },
   "bestDeckFinder": {
     "title": "Trouver votre meilleur deck",
@@ -132,7 +132,7 @@
         "title": "Tier list mise à jour",
         "description": "À quelle fréquence la liste des niveaux est mise à jour avec de nouvelles données. Des mises à jour plus rapides vous aident à rester à jour avec la méta.",
         "free": "Hebdomadaire",
-        "premium": "Horaire"
+        "premium": "Quotidien"
       },
       "decks": {
         "title": "Decks dans la Tier list",
