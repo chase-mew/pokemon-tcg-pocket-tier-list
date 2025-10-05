@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { LAST_UPDATED } from "../app/last-updated";
 import dateformat from "dateformat";
+import { useTranslation } from "react-i18next";
 
 const StyledLastUpdated = styled.div`
   position: fixed;
@@ -11,9 +12,11 @@ const StyledLastUpdated = styled.div`
 `;
 
 const LastUpdated = () => {
+  const { t } = useTranslation();
+
   return (
     <StyledLastUpdated>
-      Last updated: {dateformat(LAST_UPDATED, "yyyy-mm-dd HH:MM:ss")}
+      {t("lastUpdated")} {dateformat(LAST_UPDATED, "yyyy/mm/dd h:MM tt")}
     </StyledLastUpdated>
   );
 };
