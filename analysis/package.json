@@ -1,7 +1,8 @@
 {
   "name": "pokemon-tcg-pocket-analysis",
   "version": "1.0.0",
-  "private": true,
+  "private": false,
+  "license": "MIT",
   "scripts": {
     "download": "ts-node src/download-decks.ts",
     "start": "ts-node src/get-best-decks.ts",
