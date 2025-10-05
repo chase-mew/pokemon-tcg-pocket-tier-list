@@ -2,7 +2,7 @@
   "name": "pokemon-tcg-pocket-deck-tier-list",
   "version": "0.1.0",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@invertase/firestore-stripe-payments": "^0.0.8",
     "@tanstack/react-query": "^5.76.0",
