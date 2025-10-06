@@ -345,6 +345,9 @@ const DECK_NAMES: DeckNameType[] = [
   ["Jumpluff ex A4a 3", "Zeraora A3a 21"],
   ["Charizard ex A2b 10", "Entei ex A4a 10"],
   ["Crobat A2a 50", "Nihilego A3a 42"],
+  ["Flareon ex A3b 9", "Pichu A4 66"],
+  ["Crobat ex A4 109", "Nihilego A3a 42"],
+  ["Magcargo A4 31", "Magby A4 32"],
 
   // Main Card (never side card)
   "Bronzong A2a 59",
@@ -442,6 +445,7 @@ const DECK_NAMES: DeckNameType[] = [
   "Altaria A4a 55",
   "Electivire A2 57",
   "Zoroark A4a 50",
+  "Magcargo A4 31",
 
   // Basic ex (can be side card)
   "Pachirisu ex A2 61",
