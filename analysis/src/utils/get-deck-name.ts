@@ -9,11 +9,14 @@ const DECK_NAMES: DeckNameType[] = [
   // Doubles
   ["Mega Absol ex B1 151", "Hydreigon B1 157"],
   ["Mega Absol ex B1 151", "Oricorio A3 66"],
+  ["Mega Absol ex B1 151", "Pichu A4 66"],
   ["Mega Absol ex B1 151", "Tyrogue A4 101"],
 
   ["Mega Blaziken ex B1 36", "Heatmor B1 44"],
   ["Mega Blaziken ex B1 36", "Entei ex A4a 10"],
+  ["Mega Blaziken ex B1 36", "Cleffa A4 77"],
 
+  ["Mega Altaria ex B1 102", "Dusknoir A2 72"],
   ["Mega Altaria ex B1 102", "Giratina ex A2b 35"],
   ["Mega Altaria ex B1 102", "Indeedee ex B1 121"],
   ["Mega Altaria ex B1 102", "Chingling B1 109"],
@@ -25,8 +28,23 @@ const DECK_NAMES: DeckNameType[] = [
   ["Mega Gyarados ex B1 52", "Suicune ex A4a 20"],
   ["Mega Gyarados ex B1 52", "Mantyke A4a 23"],
 
-  ["Galarian Cursola A4a 35", "Giratina ex A2b 35"],
+  ["Mega Ampharos ex B1 85", "Zeraora A3a 21"],
+  ["Mega Ampharos ex B1 85", "Pichu A4 66"],
+
+  ["Jolteon ex B1 81", "Jolteon A3b 25"],
+  ["Jolteon ex B1 81", "Zeraora A3a 21"],
+
+  ["Dragalge ex B1 160", "Absol A4 120"],
+
+  ["Honchkrow B1 149", "Snorlax A2a 63"],
+  ["Honchkrow B1 149", "Darkrai ex A2 110"],
   ["Honchkrow B1 149", "Pichu A4 66"],
+  ["Honchkrow B1 149", "Magby A4 32"],
+
+  ["Rampardos A2 89", "Delcatty B1 194"],
+  ["Meowscarada A2b 7", "Leafeon ex A2a 10"],
+  ["Infernape ex A2 29", "Magnezone A2 53"],
+  ["Galarian Cursola A4a 35", "Giratina ex A2b 35"],
   ["Decidueye ex A3 12", "Decidueye A3a 5"],
   ["Garchomp ex A2a 47", "Donphan ex A4 100"],
   ["Raikou ex A4a 25", "Alolan Raichu A4 66"],
@@ -104,7 +122,7 @@ const DECK_NAMES: DeckNameType[] = [
   ["Lucario A2 92", "Primeape A1 142"],
   ["Vaporeon A1a 19", "Articuno ex A1 84"],
   ["Dialga ex A2 119", "Skarmory A2 111"],
-  // ["Charizard ex A1 36", "Moltres ex A1 47"],
+  ["Charizard ex A1 36", "Moltres ex A1 47"],
   ["Luxray A2 60", "Electivire A2 57"],
   ["Luxray A2 60", "Oricorio A3 66"],
   ["Bastiodon A2 114", "Skarmory A2 111"],
@@ -190,6 +208,7 @@ const DECK_NAMES: DeckNameType[] = [
   ["Suicune ex A4a 20", "Giratina ex A2b 35"],
   ["Suicune ex A4a 20", "Oricorio A3 66"],
   ["Suicune ex A4a 20", "Sylveon ex A3b 34"],
+  ["Suicune ex A4a 20", "Mantyke A4a 23"],
   ["Pawmot A2b 28", "Oricorio A3 66"],
   ["Wishiwashi ex A3 51", "Wishiwashi A3 50"],
   ["Snorlax A2a 63", "Greninja A1 89"],
@@ -403,6 +422,7 @@ const DECK_NAMES: DeckNameType[] = [
   "Poliwrath ex A4a 42",
 
   // Stage 2
+  "Porygon-Z A4 137",
   "Decidueye A3a 5",
   "Hydreigon B1 157",
   "Bronzong A2a 59",
@@ -423,7 +443,6 @@ const DECK_NAMES: DeckNameType[] = [
   "Pawmot A2b 28",
   "Gengar A1 122",
   "Stoutland A3a 56",
-  "Porygon-Z A4 129",
   "Primarina A3 48",
 
   // Stage 1 ex
@@ -458,6 +477,7 @@ const DECK_NAMES: DeckNameType[] = [
   "Umbreon ex A4 112",
 
   // Stage 1
+  "Delcatty B1 194",
   "Simisage B1 14",
   "Galarian Cursola A4a 35",
   "Honchkrow B1 149",
@@ -537,7 +557,6 @@ const DECK_NAMES: DeckNameType[] = [
   "Dusk Mane Necrozma PA 79",
   "Stakataka A3a 53",
   "Magearna A3 123",
-  "Pichu A4 66",
   "Magby A4 32",
   "Tyrogue A4 101",
   "Miltank A4a 62",
