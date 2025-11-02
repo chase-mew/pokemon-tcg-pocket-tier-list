@@ -20,9 +20,11 @@ const DECK_NAMES: DeckNameType[] = [
   ["Mega Altaria ex B1 102", "Giratina ex A2b 35"],
   ["Mega Altaria ex B1 102", "Indeedee ex B1 121"],
   ["Mega Altaria ex B1 102", "Chingling B1 109"],
+  ["Mega Altaria ex B1 102", "Elekid A4 70"],
 
   ["Mega Pinsir ex B1 2", "Leafeon ex A2a 10"],
   ["Mega Pinsir ex B1 2", "Simisage B1 14"],
+  ["Mega Pinsir ex B1 2", "Pichu A4 66"],
 
   ["Mega Gyarados ex B1 52", "Milotic A4a 22"],
   ["Mega Gyarados ex B1 52", "Suicune ex A4a 20"],
@@ -36,11 +38,15 @@ const DECK_NAMES: DeckNameType[] = [
 
   ["Dragalge ex B1 160", "Absol A4 120"],
 
+  ["Greninja ex B1 73", "Suicune ex A4a 20"],
+
   ["Honchkrow B1 149", "Snorlax A2a 63"],
   ["Honchkrow B1 149", "Darkrai ex A2 110"],
   ["Honchkrow B1 149", "Pichu A4 66"],
   ["Honchkrow B1 149", "Magby A4 32"],
 
+  ["Meowscarada A2b 7", "Pheromosa A3a 7"],
+  ["Guzzlord ex A3a 43", "Delcatty B1 194"],
   ["Rampardos A2 89", "Delcatty B1 194"],
   ["Meowscarada A2b 7", "Leafeon ex A2a 10"],
   ["Infernape ex A2 29", "Magnezone A2 53"],
