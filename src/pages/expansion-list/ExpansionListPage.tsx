@@ -1,8 +1,5 @@
 import styled from "styled-components";
-import UserAccount from "../../components/UserAccount";
 import useCards from "../../app/use-cards";
-import ArrowDown from "../../assets/arrow-down.svg";
-import useFilters from "../../app/use-filters";
 import ExpansionIcon from "../../components/ExpansionIcon";
 import useExpansions, {
   ExpansionType,
@@ -19,27 +16,6 @@ const StyledExpansionListPage = styled.div`
 
   @media (max-width: 900px) {
     height: auto;
-  }
-`;
-
-const FilterContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-  gap: 1.5rem;
-  z-index: 10;
-
-  @media (max-width: 900px) {
-    position: relative;
-    top: 0;
-    right: 0;
-    margin: 2rem;
-    width: calc(100% - 4rem);
-    justify-content: space-between;
-    align-items: center;
   }
 `;
 
@@ -114,31 +90,8 @@ const Loading = styled.div`
   font-weight: 500;
 `;
 
-const Dropdown = styled.select`
-  padding: 0.8rem 4rem 0.8rem 1.2rem;
-  font-size: 1.6rem;
-  border-radius: 0.4rem;
-  background: var(--bg);
-  color: var(--main);
-  border: 1px solid var(--main);
-  cursor: pointer;
-  outline: none;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-image: url(${ArrowDown});
-  background-repeat: no-repeat;
-  background-position: right 1.2rem center;
-  background-size: 1.2em 1.2em;
-
-  &:hover {
-    border-color: var(--a);
-  }
-`;
-
 const ExpansionListPage = () => {
-  const cards = useCards();
-  const { expansion, setExpansion } = useFilters();
+  const cards = useCards(1_000_000);
   const expansions = useExpansions();
 
   if (!cards || !expansions) return <Loading>Loading...</Loading>;
@@ -174,12 +127,13 @@ const ExpansionListPage = () => {
         packName: data.pack.name,
         packImage: data.pack.image,
         totalScore: cards
-          .filter(
-            (card) =>
+          .filter((card) => {
+            return (
               card.set === data.expansionId &&
               (card.pack === data.pack.name ||
                 card.pack.toLowerCase().includes("shared"))
-          )
+            );
+          })
           .reduce((acc, card) => acc + card.score, 0),
       };
     })
@@ -219,23 +173,6 @@ const ExpansionListPage = () => {
 
   return (
     <StyledExpansionListPage>
-      <FilterContainer>
-        <UserAccount showUpsell />
-        <Dropdown
-          value={expansion ?? ""}
-          onChange={(e) => {
-            const value = e.target.value;
-            setExpansion(value === "" ? null : value);
-          }}
-        >
-          <option value="">All</option>
-          {expansions?.map((expansion: ExpansionType) => (
-            <option key={expansion.id} value={expansion.id}>
-              {expansion.name}
-            </option>
-          ))}
-        </Dropdown>
-      </FilterContainer>
       <DeckRow>
         <RowHeader $backgroundColor="var(--s)">S</RowHeader>
         <RowContent>
