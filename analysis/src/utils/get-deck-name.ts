@@ -9,6 +9,7 @@ const DECK_NAMES: DeckNameType[] = [
   // Doubles
   ["Mega Absol ex B1 151", "Hydreigon B1 157"],
   ["Mega Absol ex B1 151", "Oricorio A3 66"],
+  ["Mega Absol ex B1 151", "Chingling B1 109"],
   ["Mega Absol ex B1 151", "Pichu A4 66"],
   ["Mega Absol ex B1 151", "Tyrogue A4 101"],
 
@@ -17,8 +18,11 @@ const DECK_NAMES: DeckNameType[] = [
   ["Mega Blaziken ex B1 36", "Cleffa A4 77"],
 
   ["Mega Altaria ex B1 102", "Dusknoir A2 72"],
+  ["Mega Altaria ex B1 102", "Galarian Cursola A4a 35"],
+  ["Mega Altaria ex B1 102", "Shiinotic A3a 27"],
   ["Mega Altaria ex B1 102", "Giratina ex A2b 35"],
   ["Mega Altaria ex B1 102", "Indeedee ex B1 121"],
+  ["Mega Altaria ex B1 102", "Jirachi B1 106"],
   ["Mega Altaria ex B1 102", "Chingling B1 109"],
   ["Mega Altaria ex B1 102", "Elekid A4 70"],
 
@@ -28,8 +32,10 @@ const DECK_NAMES: DeckNameType[] = [
 
   ["Mega Gyarados ex B1 52", "Milotic A4a 22"],
   ["Mega Gyarados ex B1 52", "Suicune ex A4a 20"],
+  ["Mega Gyarados ex B1 52", "Manaphy A2 50"],
   ["Mega Gyarados ex B1 52", "Mantyke A4a 23"],
 
+  ["Mega Ampharos ex B1 85", "Oricorio A3 66"],
   ["Mega Ampharos ex B1 85", "Zeraora A3a 21"],
   ["Mega Ampharos ex B1 85", "Pichu A4 66"],
 
@@ -37,6 +43,7 @@ const DECK_NAMES: DeckNameType[] = [
   ["Jolteon ex B1 81", "Zeraora A3a 21"],
 
   ["Dragalge ex B1 160", "Absol A4 120"],
+  ["Dragalge ex B1 160", "Nihilego A3a 42"],
 
   ["Greninja ex B1 73", "Suicune ex A4a 20"],
 
@@ -45,6 +52,7 @@ const DECK_NAMES: DeckNameType[] = [
   ["Honchkrow B1 149", "Pichu A4 66"],
   ["Honchkrow B1 149", "Magby A4 32"],
 
+  ["Infernape ex A2 29", "Heatmor B1 44"],
   ["Meowscarada A2b 7", "Pheromosa A3a 7"],
   ["Guzzlord ex A3a 43", "Delcatty B1 194"],
   ["Rampardos A2 89", "Delcatty B1 194"],
@@ -205,16 +213,18 @@ const DECK_NAMES: DeckNameType[] = [
   ["Crabominable ex A3 49", "Palkia ex A2 49"],
   ["Beedrill ex A2b 3", "Beedrill A1 10"],
   ["Lunala ex A3 87", "Giratina ex A2b 35"],
+
   ["Suicune ex A4a 20", "Primarina A3 48"],
   ["Suicune ex A4a 20", "Magnezone A2 53"],
+  ["Suicune ex A4a 20", "Oricorio A3 66"],
   ["Suicune ex A4a 20", "Greninja A1 89"],
   ["Suicune ex A4a 20", "Silvally A3a 61"],
   ["Suicune ex A4a 20", "Wugtrio ex A2b 19"],
   ["Suicune ex A4a 20", "Milotic A4a 22"],
   ["Suicune ex A4a 20", "Giratina ex A2b 35"],
-  ["Suicune ex A4a 20", "Oricorio A3 66"],
   ["Suicune ex A4a 20", "Sylveon ex A3b 34"],
   ["Suicune ex A4a 20", "Mantyke A4a 23"],
+
   ["Pawmot A2b 28", "Oricorio A3 66"],
   ["Wishiwashi ex A3 51", "Wishiwashi A3 50"],
   ["Snorlax A2a 63", "Greninja A1 89"],
@@ -545,6 +555,7 @@ const DECK_NAMES: DeckNameType[] = [
   "Raikou ex A4a 25",
 
   // Basic
+  "Jirachi B1 106",
   "Chingling B1 109",
   "Heatmor B1 44",
   "Lt. Surge A1 226",
