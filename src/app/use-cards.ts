@@ -27,7 +27,7 @@ const cardNameToSet = (name: string): string => {
   return setCode(parts[parts.length - 2]);
 };
 
-const useCards = (): CardScoreType[] | null => {
+const useCards = (amount: number = 20): CardScoreType[] | null => {
   const { expansion } = useFilters();
   const { missing } = useMissing();
 
@@ -58,7 +58,7 @@ const useCards = (): CardScoreType[] | null => {
 
   const outputCards: CardScoreType[] = [];
   for (const card of sortedCards) {
-    if (outputCards.length >= 20) break;
+    if (outputCards.length >= amount) break;
     const set = cardNameToSet(card.name);
     if (expansion && set !== expansion) continue;
     const id = cardNameToId(card.name);
