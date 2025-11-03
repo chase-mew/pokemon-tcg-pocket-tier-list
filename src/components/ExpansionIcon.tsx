@@ -2,36 +2,32 @@ import styled from "styled-components";
 
 const Container = styled.div`
   position: relative;
-  height: 100%;
+  height: calc(100dvh / 6 - 3.4rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transform: scale(1.1);
+  margin-right: 1rem;
 
   @media (max-width: 900px) {
-    height: auto;
-    width: 100%;
-    aspect-ratio: 1 / 1;
+    margin: 1rem 0;
   }
 `;
 
 const CardImage = styled.img`
-  height: 100%;
+  height: calc(127%);
+  transform: translateY(-6%);
 `;
 
 interface Props {
-  expansionCode: string;
+  image: string;
 }
 
-const ExpansionIcon = ({ expansionCode }: Props) => {
-  const chars = expansionCode.split("");
-  const number = chars.find((char) => !isNaN(Number(char)));
-  const beforeNumber = chars.slice(0, chars.indexOf(number ?? "")).join("");
-  const afterNumber = chars.slice(chars.indexOf(number ?? "") + 1).join("");
-
-  const expansionName = `${beforeNumber.toUpperCase()}${number}${afterNumber}`;
-
+const ExpansionIcon = ({ image }: Props) => {
   return (
     <Container>
-      <CardImage
-        src={`https://assets.pokemon-zone.com/game-assets/UI/Textures/System/Exp/LOGO_expansion_${expansionName}_en_US.webp`}
-      />
+      <CardImage src={image} />
     </Container>
   );
 };

@@ -3,8 +3,11 @@ import UserAccount from "../../components/UserAccount";
 import useCards from "../../app/use-cards";
 import ArrowDown from "../../assets/arrow-down.svg";
 import useFilters from "../../app/use-filters";
-import { EXPANSION_CODES, getExpansionName } from "../../app/expansion-names";
 import ExpansionIcon from "../../components/ExpansionIcon";
+import useExpansions, {
+  ExpansionType,
+  PackType,
+} from "../../app/use-expansions";
 
 const StyledExpansionListPage = styled.div`
   width: 100%;
@@ -136,27 +139,51 @@ const Dropdown = styled.select`
 const ExpansionListPage = () => {
   const cards = useCards();
   const { expansion, setExpansion } = useFilters();
+  const expansions = useExpansions();
 
-  if (!cards) return <Loading>Loading...</Loading>;
+  if (!cards || !expansions) return <Loading>Loading...</Loading>;
 
-  interface ExpansionData {
-    code: string;
+  interface PackData {
+    expansionId: string;
+    packId: string;
+    packName: string;
+    packImage: string;
     totalScore: number;
   }
 
-  const expansionData: ExpansionData[] = EXPANSION_CODES.filter(
-    (code) => code !== "pa"
-  )
-    .map((code) => {
+  const expansionData: PackData[] = expansions
+    .reduce(
+      (
+        acc: { expansionId: string; pack: PackType }[],
+        expansion: ExpansionType
+      ) => {
+        return [
+          ...acc,
+          ...expansion.packs.map((pack) => ({
+            expansionId: expansion.id,
+            pack: pack,
+          })),
+        ];
+      },
+      []
+    )
+    .map((data: { expansionId: string; pack: PackType }) => {
       return {
-        code: code,
+        expansionId: data.expansionId,
+        packId: data.pack.id,
+        packName: data.pack.name,
+        packImage: data.pack.image,
         totalScore: cards
-          .filter((card) => card.set === code)
+          .filter(
+            (card) =>
+              card.set === data.expansionId &&
+              (card.pack === data.pack.name ||
+                card.pack.toLowerCase().includes("shared"))
+          )
           .reduce((acc, card) => acc + card.score, 0),
       };
     })
     .sort((a, b) => b.totalScore - a.totalScore);
-
   const bestScore = expansionData[0].totalScore;
 
   const worstScore = expansionData[expansionData.length - 1].totalScore;
@@ -202,9 +229,9 @@ const ExpansionListPage = () => {
           }}
         >
           <option value="">All</option>
-          {EXPANSION_CODES.map((code) => (
-            <option key={code} value={code}>
-              {getExpansionName(code)}
+          {expansions?.map((expansion: ExpansionType) => (
+            <option key={expansion.id} value={expansion.id}>
+              {expansion.name}
             </option>
           ))}
         </Dropdown>
@@ -213,7 +240,7 @@ const ExpansionListPage = () => {
         <RowHeader $backgroundColor="var(--s)">S</RowHeader>
         <RowContent>
           {sTier.map((data) => (
-            <ExpansionIcon key={data.code} expansionCode={data.code} />
+            <ExpansionIcon key={data.packId} image={data.packImage} />
           ))}
         </RowContent>
       </DeckRow>
@@ -221,7 +248,7 @@ const ExpansionListPage = () => {
         <RowHeader $backgroundColor="var(--a)">A</RowHeader>
         <RowContent>
           {aTier.map((data) => (
-            <ExpansionIcon key={data.code} expansionCode={data.code} />
+            <ExpansionIcon key={data.packId} image={data.packImage} />
           ))}
         </RowContent>
       </DeckRow>
@@ -229,7 +256,7 @@ const ExpansionListPage = () => {
         <RowHeader $backgroundColor="var(--b)">B</RowHeader>
         <RowContent>
           {bTier.map((data) => (
-            <ExpansionIcon key={data.code} expansionCode={data.code} />
+            <ExpansionIcon key={data.packId} image={data.packImage} />
           ))}
         </RowContent>
       </DeckRow>
@@ -237,7 +264,7 @@ const ExpansionListPage = () => {
         <RowHeader $backgroundColor="var(--c)">C</RowHeader>
         <RowContent>
           {cTier.map((data) => (
-            <ExpansionIcon key={data.code} expansionCode={data.code} />
+            <ExpansionIcon key={data.packId} image={data.packImage} />
           ))}
         </RowContent>
       </DeckRow>
@@ -245,7 +272,7 @@ const ExpansionListPage = () => {
         <RowHeader $backgroundColor="var(--d)">D</RowHeader>
         <RowContent>
           {dTier.map((data) => (
-            <ExpansionIcon key={data.code} expansionCode={data.code} />
+            <ExpansionIcon key={data.packId} image={data.packImage} />
           ))}
         </RowContent>
       </DeckRow>
@@ -253,7 +280,7 @@ const ExpansionListPage = () => {
         <RowHeader $backgroundColor="var(--e)">E</RowHeader>
         <RowContent>
           {eTier.map((data) => (
-            <ExpansionIcon key={data.code} expansionCode={data.code} />
+            <ExpansionIcon key={data.packId} image={data.packImage} />
           ))}
         </RowContent>
       </DeckRow>

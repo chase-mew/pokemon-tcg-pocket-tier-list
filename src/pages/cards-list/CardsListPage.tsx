@@ -4,8 +4,8 @@ import useCards from "../../app/use-cards";
 import CardIcon from "../../components/CardIcon";
 import ArrowDown from "../../assets/arrow-down.svg";
 import useFilters from "../../app/use-filters";
-import { EXPANSION_CODES, getExpansionName } from "../../app/expansion-names";
 import LastUpdated from "../../components/LastUpdated";
+import useExpansions, { ExpansionType } from "../../app/use-expansions";
 
 const StyledCardsListPage = styled.div`
   width: 100%;
@@ -137,6 +137,7 @@ const Dropdown = styled.select`
 const CardsListPage = () => {
   const cards = useCards();
   const { expansion, setExpansion } = useFilters();
+  const expansions = useExpansions();
 
   if (!cards) return <Loading>Loading...</Loading>;
 
@@ -177,9 +178,9 @@ const CardsListPage = () => {
           }}
         >
           <option value="">All</option>
-          {EXPANSION_CODES.map((code) => (
-            <option key={code} value={code}>
-              {getExpansionName(code)}
+          {expansions?.map((expansion: ExpansionType) => (
+            <option key={expansion.id} value={expansion.id}>
+              {expansion.name}
             </option>
           ))}
         </Dropdown>

@@ -24,7 +24,9 @@ const useExpansions = (): ExpansionType[] | null => {
 
   if (!expansions) return null;
 
-  return expansions;
+  return expansions.filter(
+    (expansion) => expansion.id !== "promo" && expansion.id !== "a4b"
+  );
 };
 
 export default useExpansions;
