@@ -135,7 +135,7 @@ const Dropdown = styled.select`
 `;
 
 const CardsListPage = () => {
-  const cards = useCards(20);
+  const cards = useCards(30);
   const { expansion, setExpansion } = useFilters();
   const expansions = useExpansions();
 

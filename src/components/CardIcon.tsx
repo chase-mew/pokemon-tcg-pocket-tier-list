@@ -35,6 +35,17 @@ const CardImage = styled.img`
   height: 280%;
 `;
 
+const CardNumber = styled.div`
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: var(--s);
+  color: var(--bg);
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+`;
 interface Props {
   card: CardScoreType;
 }
@@ -51,6 +62,7 @@ const CardIcon = ({ card }: Props) => {
         }}
       >
         <CardImage key={card.id} src={card.image} alt={card.name} />
+        <CardNumber>{card.count}</CardNumber>
       </StyledCardIcon>
     </Container>
   );

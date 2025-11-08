@@ -5,6 +5,7 @@ import useFilters from "./use-filters";
 import useMissing from "./use-missing";
 
 export interface CardScoreType extends CardType {
+  count: number;
   score: number;
   popularity: number;
 }
@@ -12,6 +13,12 @@ export interface CardScoreType extends CardType {
 export const setCode = (set: string): string => {
   if (set === "P-A") return "pa";
   return set.toLowerCase();
+};
+
+const cardNameToCount = (name: string): number => {
+  const parts = name.split(" ");
+  const count = parts[0];
+  return parseInt(count ?? "0");
 };
 
 const cardNameToId = (name: string): string => {
@@ -27,9 +34,9 @@ const cardNameToSet = (name: string): string => {
   return setCode(parts[parts.length - 2]);
 };
 
-const useCards = (amount: number = 20): CardScoreType[] | null => {
+const useCards = (amount: number = 30): CardScoreType[] | null => {
   const { expansion } = useFilters();
-  const { missing } = useMissing();
+  const { missing: collected } = useMissing();
 
   const { data: cardData } = useQuery({
     queryKey: ["cards"],
@@ -52,16 +59,18 @@ const useCards = (amount: number = 20): CardScoreType[] | null => {
   const sortedCards = cards
     .filter((card) => {
       const id = cardNameToId(card.name);
-      return !missing.includes(id);
+      const count = cardNameToCount(card.name);
+      const collectedCount = collected.filter((m) => m === id).length;
+      return count - collectedCount > 0;
     })
-    .sort((a, b) => b.popularity - a.popularity);
+    .sort((a, b) => b.score - a.score);
 
   const outputCards: CardScoreType[] = [];
   for (const card of sortedCards) {
-    if (outputCards.length >= amount) break;
     const set = cardNameToSet(card.name);
     if (expansion && set !== expansion) continue;
     const id = cardNameToId(card.name);
+    const count = cardNameToCount(card.name);
     if (outputCards.find((c) => c.id === id)) continue;
     const cardInfo = cardData.find((c: CardType) => c.id === id);
     if (!cardInfo) throw new Error(`Card not found: ${id}`);
@@ -72,9 +81,14 @@ const useCards = (amount: number = 20): CardScoreType[] | null => {
       score,
       popularity: card.popularity,
       set,
+      count,
     });
   }
-  return outputCards.sort((a, b) => b.score - a.score);
+
+  return outputCards
+    .sort((a, b) => b.popularity - a.popularity)
+    .slice(0, amount)
+    .sort((a, b) => b.score - a.score);
 };
 
 export default useCards;
