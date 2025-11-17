@@ -7,7 +7,7 @@ type DeckNameType = string | string[];
 
 const DECK_NAMES: DeckNameType[] = [
   // Doubles
-  ["Mega Absol ex B1 151", "Hydreigon B1 157"],
+  ["Hydreigon B1 157", "Mega Absol ex B1 151"],
   ["Mega Absol ex B1 151", "Oricorio A3 66"],
   ["Mega Absol ex B1 151", "Chingling B1 109"],
   ["Mega Absol ex B1 151", "Pichu A4 66"],
@@ -20,6 +20,7 @@ const DECK_NAMES: DeckNameType[] = [
   ["Mega Altaria ex B1 102", "Dusknoir A2 72"],
   ["Mega Altaria ex B1 102", "Galarian Cursola A4a 35"],
   ["Mega Altaria ex B1 102", "Shiinotic A3a 27"],
+  ["Mega Altaria ex B1 102", "Oricorio A3 66"],
   ["Mega Altaria ex B1 102", "Giratina ex A2b 35"],
   ["Mega Altaria ex B1 102", "Indeedee ex B1 121"],
   ["Mega Altaria ex B1 102", "Jirachi B1 106"],
@@ -52,6 +53,11 @@ const DECK_NAMES: DeckNameType[] = [
   ["Honchkrow B1 149", "Pichu A4 66"],
   ["Honchkrow B1 149", "Magby A4 32"],
 
+  ["Melmetal ex B1 174", "Dialga ex A2 119"],
+  ["Rampardos A2 89", "Hitmonchan ex B1 124"],
+  ["Victreebel A1 20", "Chingling B1 109"],
+  ["Goodra B1 179", "Indeedee ex B1 121"],
+  ["Golem A1a 45", "Indeedee ex B1 121"],
   ["Infernape ex A2 29", "Heatmor B1 44"],
   ["Meowscarada A2b 7", "Pheromosa A3a 7"],
   ["Guzzlord ex A3a 43", "Delcatty B1 194"],
