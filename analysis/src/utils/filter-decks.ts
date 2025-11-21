@@ -3,6 +3,7 @@ import {
   NOEX_PERCENT_CUTOFF,
   WIGGLYTUFF_PERCENT_CUTOFF,
   NO_TRAINER_PERCENT_CUTOFF,
+  MAX_DECKS_TO_ANALYZE,
 } from "../settings";
 import { Deck } from "./types";
 
@@ -19,5 +20,7 @@ export const filterDecks = (decks: Deck[]): Deck[] => {
       return isNoEx === NOEX;
     })
     .filter((deck) => deck.wigglytuffPercent < WIGGLYTUFF_PERCENT_CUTOFF)
-    .filter((deck) => deck.noTrainerPercent < NO_TRAINER_PERCENT_CUTOFF);
+    .filter((deck) => deck.noTrainerPercent < NO_TRAINER_PERCENT_CUTOFF)
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .slice(0, MAX_DECKS_TO_ANALYZE);
 };
