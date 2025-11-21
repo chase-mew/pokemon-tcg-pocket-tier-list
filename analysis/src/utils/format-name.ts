@@ -11,7 +11,8 @@ const formatName = (cards: Card[], match: string[]): string => {
       );
       if (!card) throw new Error(`Card ${cardName} not found`);
       const padded = card.number.padStart(3, "0");
-      const set = card.set === "P-A" ? "PA" : card.set;
+      let set = card.set === "P-A" ? "PA" : card.set;
+      set = set === "P-B" ? "PB" : set;
       return `${card.name}-${set}-${padded}`;
     })
     .join("&");
@@ -25,7 +26,8 @@ export const formatMatch = (match: string[]) => {
       const cardNameParts = cardName.split(" ");
       const id = cardNameParts[cardNameParts.length - 1];
       const setRaw = cardNameParts[cardNameParts.length - 2];
-      const set = setRaw === "P-A" ? "PA" : setRaw;
+      let set = setRaw === "P-A" ? "PA" : setRaw;
+      set = set === "P-B" ? "PB" : set;
       const idLength = id.length;
       const nameLength = cardName.length - idLength - setRaw.length - 2;
       const name = cardName.slice(0, nameLength);

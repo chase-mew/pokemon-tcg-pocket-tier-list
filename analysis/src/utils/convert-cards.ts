@@ -7,6 +7,7 @@ interface LimitlessCardType {
 
 const setCode = (set: string): string => {
   if (set === "P-A") return "pa";
+  if (set === "P-B") return "pb";
   return set.toLowerCase();
 };
 

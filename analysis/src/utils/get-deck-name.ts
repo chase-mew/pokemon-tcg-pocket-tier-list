@@ -413,6 +413,7 @@ const DECK_NAMES: DeckNameType[] = [
   ["Magcargo A4 31", "Magby A4 32"],
 
   // Mega Card
+  "Mega Pidgeot ex PB 6",
   "Mega Pinsir ex B1 2",
   "Mega Blaziken ex B1 36",
   "Mega Gyarados ex B1 52",
