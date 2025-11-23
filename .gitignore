@@ -24,3 +24,5 @@ yarn-error.log*
 analysis/data
 /analysis/.env
 .env
+
+update-decks.sh
