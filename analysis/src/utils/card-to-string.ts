@@ -11,7 +11,7 @@ const cardToString = (card: Card): string => {
     throw new Error("Card object is required");
   }
 
-  const { count, name, set, number } = card;
+  let { count, name, set, number } = card;
 
   if (typeof count !== "number" || count < 0) {
     throw new Error("Invalid card count");
@@ -24,6 +24,9 @@ const cardToString = (card: Card): string => {
   if (!set?.trim()) {
     throw new Error("Card set is required");
   }
+
+  if (set === "P-B") set = "PB";
+  if (set === "P-A") set = "PA";
 
   if (!number?.trim()) {
     throw new Error("Card number is required");
