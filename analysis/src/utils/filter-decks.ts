@@ -13,7 +13,9 @@ export const filterDecks = (decks: Deck[]): Deck[] => {
       (deck) => !deck.cards.some((card) => card.name.endsWith(" ex")) || !NOEX
     )
     .filter((deck) =>
-      deck.cards.some((card) => card.set !== "A1" && card.set !== "P-A")
+      deck.cards.some(
+        (card) => card.set !== "A1" && card.set !== "P-A" && card.set !== "P-B"
+      )
     )
     .filter((deck) => {
       const isNoEx = deck.tournamentExPercent < NOEX_PERCENT_CUTOFF;
