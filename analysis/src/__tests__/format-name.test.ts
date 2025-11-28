@@ -47,7 +47,7 @@ describe("formatName", () => {
         number: "7",
       },
     ];
-    const match = ["Professor's Research P-A 7"];
+    const match = ["Professor's Research PA 7"];
 
     const result = formatName(cards, match);
     expect(result).toBe("Professor's Research-PA-007");

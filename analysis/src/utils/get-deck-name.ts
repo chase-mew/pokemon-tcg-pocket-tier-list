@@ -109,7 +109,7 @@ const DECK_NAMES: DeckNameType[] = [
   ["Crobat A2a 50", "Darkrai ex A2 110"],
   ["Darkrai ex A2 110", "Arceus ex A2a 71"],
   ["Crobat A2a 50", "Arceus ex A2a 71"],
-  ["Lapras ex P-A 14", "Greninja A1 89"],
+  ["Lapras ex PA 14", "Greninja A1 89"],
   ["Leafeon ex A2a 10", "Celebi ex A1a 3"],
   ["Scolipede A1a 55", "Weezing A1 177"],
   ["Articuno ex A1 84", "Greninja A1 89"],
