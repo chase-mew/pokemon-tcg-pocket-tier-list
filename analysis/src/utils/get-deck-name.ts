@@ -12,6 +12,7 @@ const DECK_NAMES: DeckNameType[] = [
 
   ["Mega Absol ex B1 151", "Oricorio A3 66"],
   ["Mega Absol ex B1 151", "Nihilego A3a 42"],
+  ["Mega Absol ex B1 151", "Absol A4 120"],
   ["Mega Absol ex B1 151", "Chingling B1 109"],
   ["Mega Absol ex B1 151", "Pichu A4 66"],
   ["Mega Absol ex B1 151", "Tyrogue A4 101"],
@@ -24,6 +25,7 @@ const DECK_NAMES: DeckNameType[] = [
   ["Mega Altaria ex B1 102", "Galarian Cursola A4a 35"],
   ["Mega Altaria ex B1 102", "Shiinotic A3a 27"],
   ["Mega Altaria ex B1 102", "Oricorio A3 66"],
+  ["Mega Altaria ex B1 102", "Honchkrow B1 149"],
   ["Mega Altaria ex B1 102", "Giratina ex A2b 35"],
   ["Mega Altaria ex B1 102", "Indeedee ex B1 121"],
   ["Mega Altaria ex B1 102", "Jirachi B1 106"],
@@ -44,6 +46,7 @@ const DECK_NAMES: DeckNameType[] = [
   ["Mega Ampharos ex B1 85", "Zeraora A3a 21"],
   ["Mega Ampharos ex B1 85", "Pichu A4 66"],
 
+  ["Jolteon ex B1 81", "Pikachu ex A1 96"],
   ["Jolteon ex B1 81", "Jolteon A3b 25"],
   ["Jolteon ex B1 81", "Zeraora A3a 21"],
 
@@ -58,7 +61,10 @@ const DECK_NAMES: DeckNameType[] = [
   ["Honchkrow B1 149", "Magby A4 32"],
 
   ["Indeedee ex B1 121", "Oricorio A3 66"],
+  ["Giratina ex A2b 35", "Indeedee ex B1 121"],
 
+  ["Charizard ex A2b 10", "Flareon ex A3b 9"],
+  ["Rampardos A2 89", "Snorlax A2a 63"],
   ["Espeon ex A4 83", "Indeedee ex B1 121"],
   ["Melmetal ex B1 174", "Dialga ex A2 119"],
   ["Rampardos A2 89", "Hitmonchan ex B1 124"],
