@@ -7,9 +7,28 @@ type DeckNameType = string | string[];
 
 const DECK_NAMES: DeckNameType[] = [
   // Doubles
-  ["Hydreigon B1 157", "Mega Absol ex B1 151"],
-  ["Hydreigon B1 157", "Chingling B1 109"],
+  ["Mega Lopunny ex B1a 42", "Lucario A2 92"],
 
+  ["Mega Charizard Y ex B1a 14", "Entei ex A4a 10"],
+
+  ["Magneton A1 98", "Mega Absol ex B1 151"],
+  ["Magneton A1 98", "Darkrai ex A2 110"],
+  ["Magneton A1 98", "Heliolisk B1a 29"],
+  ["Magneton A1 98", "Oricorio A3 66"],
+  ["Magneton A1 98", "Tyrogue A4 101"],
+  ["Magneton A1 98", "Chingling B1 109"],
+
+  ["Whimsicott ex B1 16", "Ariados B1a 6"],
+
+  ["Mega Steelix ex B1a 52", "Oricorio A3 66"],
+  ["Mega Steelix ex B1a 52", "Dialga ex A2 119"],
+  ["Mega Steelix ex B1a 52", "Pichu A4 66"],
+
+  ["Ditto B1a 55", "Rampardos A2 89"],
+
+  ["Hydreigon B1 157", "Mega Absol ex B1 151"],
+  ["Hydreigon B1 157", "Indeede ex B1 121"],
+  ["Hydreigon B1 157", "Chingling B1 109"],
   ["Mega Absol ex B1 151", "Dusknoir A2 72"],
   ["Mega Absol ex B1 151", "Oricorio A3 66"],
   ["Mega Absol ex B1 151", "Nihilego A3a 42"],
@@ -17,58 +36,46 @@ const DECK_NAMES: DeckNameType[] = [
   ["Mega Absol ex B1 151", "Chingling B1 109"],
   ["Mega Absol ex B1 151", "Pichu A4 66"],
   ["Mega Absol ex B1 151", "Tyrogue A4 101"],
-
   ["Mega Blaziken ex B1 36", "Heatmor B1 44"],
   ["Mega Blaziken ex B1 36", "Entei ex A4a 10"],
   ["Mega Blaziken ex B1 36", "Cleffa A4 77"],
-
   ["Mega Altaria ex B1 102", "Dusknoir A2 72"],
   ["Mega Altaria ex B1 102", "Galarian Cursola A4a 35"],
   ["Mega Altaria ex B1 102", "Shiinotic A3a 27"],
   ["Mega Altaria ex B1 102", "Oricorio A3 66"],
   ["Mega Altaria ex B1 102", "Honchkrow B1 149"],
-  ["Mega Altaria ex B1 102", "Giratina ex A2b 35"],
   ["Mega Altaria ex B1 102", "Indeedee ex B1 121"],
+  ["Mega Altaria ex B1 102", "Giratina ex A2b 35"],
   ["Mega Altaria ex B1 102", "Jirachi B1 106"],
   ["Mega Altaria ex B1 102", "Chingling B1 109"],
   ["Mega Altaria ex B1 102", "Elekid A4 70"],
-
+  ["Altaria A4a 55", "Pichu A4 66"],
   ["Mega Pinsir ex B1 2", "Leafeon ex A2a 10"],
   ["Mega Pinsir ex B1 2", "Simisage B1 14"],
   ["Mega Pinsir ex B1 2", "Pichu A4 66"],
-
   ["Mega Gyarados ex B1 52", "Milotic A4a 22"],
   ["Mega Gyarados ex B1 52", "Suicune ex A4a 20"],
   ["Mega Gyarados ex B1 52", "Eiscue B1 80"],
   ["Mega Gyarados ex B1 52", "Manaphy A2 50"],
   ["Mega Gyarados ex B1 52", "Mantyke A4a 23"],
-
   ["Mega Ampharos ex B1 85", "Oricorio A3 66"],
   ["Mega Ampharos ex B1 85", "Zeraora A3a 21"],
   ["Mega Ampharos ex B1 85", "Pichu A4 66"],
-
   ["Jolteon ex B1 81", "Pikachu ex A1 96"],
   ["Jolteon ex B1 81", "Jolteon A3b 25"],
   ["Jolteon ex B1 81", "Zeraora A3a 21"],
-
   ["Dragalge ex B1 160", "Absol A4 120"],
   ["Dragalge ex B1 160", "Nihilego A3a 42"],
-
   ["Greninja ex B1 73", "Suicune ex A4a 20"],
-
   ["Honchkrow B1 149", "Snorlax A2a 63"],
   ["Honchkrow B1 149", "Darkrai ex A2 110"],
   ["Honchkrow B1 149", "Pichu A4 66"],
   ["Honchkrow B1 149", "Magby A4 32"],
-
   ["Indeedee ex B1 121", "Oricorio A3 66"],
   ["Giratina ex A2b 35", "Indeedee ex B1 121"],
-
   ["Charizard ex A1 36", "Snorlax A2a 63"],
   ["Charizard ex A1 36", "Magby A4 32"],
-
   ["Rampardos A2 89", "Snorlax ex A3b 57"],
-
   ["Snorlax ex A3b 57", "Indeede ex B1 121"],
   ["Jolteon ex B1 81", "Leafeon ex A2a 10"],
   ["Charizard ex A2b 10", "Flareon ex A3b 9"],
@@ -435,8 +442,14 @@ const DECK_NAMES: DeckNameType[] = [
   ["Crobat ex A4 109", "Nihilego A3a 42"],
   ["Magcargo A4 31", "Magby A4 32"],
   ["Greninja A1 89", "Chingling B1 109"],
+  ["Greninja A1 89", "Tyrogue A4 101"],
 
   // Mega Card
+  "Mega Venusaur ex B1a 4",
+  "Mega Charizard Y ex B1a 14",
+  "Mega Blastoise ex B1a 20",
+  "Mega Lopunny ex B1a 42",
+  "Mega Steelix ex B1a 52",
   "Mega Pidgeot ex PB 6",
   "Mega Pinsir ex B1 2",
   "Mega Blaziken ex B1 36",
@@ -469,6 +482,8 @@ const DECK_NAMES: DeckNameType[] = [
   "Poliwrath ex A4a 42",
 
   // Stage 2
+  "Magneton A1 98",
+  "Magnezone B1a 26",
   "Porygon-Z A4 137",
   "Decidueye A3a 5",
   "Hydreigon B1 157",
@@ -524,6 +539,8 @@ const DECK_NAMES: DeckNameType[] = [
   "Umbreon ex A4 112",
 
   // Stage 1
+  "Heliolisk B1a 29",
+  "Ariados B1a 6",
   "Delcatty B1 194",
   "Simisage B1 14",
   "Galarian Cursola A4a 35",
@@ -586,6 +603,7 @@ const DECK_NAMES: DeckNameType[] = [
   "Raikou ex A4a 25",
 
   // Basic
+  "Ditto B1a 55",
   "Jirachi B1 106",
   "Chingling B1 109",
   "Heatmor B1 44",
