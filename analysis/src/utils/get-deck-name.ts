@@ -8,30 +8,46 @@ type DeckNameType = string | string[];
 const DECK_NAMES: DeckNameType[] = [
   // Doubles
   ["Mega Lopunny ex B1a 42", "Lucario A2 92"],
+  ["Mega Lopunny ex B1a 42", "Magneton A1 98"],
 
-  ["Mega Charizard Y ex B1a 14", "Entei ex A4a 10"],
+  ["Charmeleon B1a 12", "Entei ex A4a 10"],
+  ["Charmeleon B1a 12", "Moltres ex A1 47"],
 
   ["Magneton A1 98", "Mega Absol ex B1 151"],
   ["Magneton A1 98", "Darkrai ex A2 110"],
+  ["Magneton A1 98", "Jolteon ex B1 81"],
   ["Magneton A1 98", "Heliolisk B1a 29"],
   ["Magneton A1 98", "Oricorio A3 66"],
   ["Magneton A1 98", "Tyrogue A4 101"],
   ["Magneton A1 98", "Chingling B1 109"],
 
+  ["Ivysaur B1a 2", "Dustox B1 7"],
+  ["Ivysaur B1a 2", "Lilligant B1 18"],
+  ["Ivysaur B1a 2", "Oricorio A3 66"],
+
   ["Whimsicott ex B1 16", "Ariados B1a 6"],
 
   ["Mega Steelix ex B1a 52", "Oricorio A3 66"],
   ["Mega Steelix ex B1a 52", "Dialga ex A2 119"],
+  ["Mega Steelix ex B1a 52", "Indeedee ex B1 121"],
   ["Mega Steelix ex B1a 52", "Pichu A4 66"],
+  ["Mega Steelix ex B1a 52", "Mantyke A4a 23"],
 
   ["Ditto B1a 55", "Rampardos A2 89"],
+  ["Rampardos A2 89", "Primeape A1a 42"],
 
+  ["Rillaboom B1 27", "Serperior A1a 6"],
+  ["Porygon-Z A4 137", "Indeede ex B1 121"],
+  ["Porygon-Z A4 137", "Chingling B1 109"],
+  ["Goodra B1 179", "Indeedee ex B1 121"],
+  ["Goodra B1 179", "Mantyke A4a 23"],
   ["Hydreigon B1 157", "Mega Absol ex B1 151"],
   ["Hydreigon B1 157", "Indeede ex B1 121"],
   ["Hydreigon B1 157", "Chingling B1 109"],
   ["Mega Absol ex B1 151", "Dusknoir A2 72"],
   ["Mega Absol ex B1 151", "Oricorio A3 66"],
   ["Mega Absol ex B1 151", "Nihilego A3a 42"],
+  ["Mega Absol ex B1 151", "Greninja A1 89"],
   ["Mega Absol ex B1 151", "Absol A4 120"],
   ["Mega Absol ex B1 151", "Chingling B1 109"],
   ["Mega Absol ex B1 151", "Pichu A4 66"],
@@ -39,11 +55,15 @@ const DECK_NAMES: DeckNameType[] = [
   ["Mega Blaziken ex B1 36", "Heatmor B1 44"],
   ["Mega Blaziken ex B1 36", "Entei ex A4a 10"],
   ["Mega Blaziken ex B1 36", "Cleffa A4 77"],
+  ["Mega Altaria ex B1 102", "Goodra B1 179"],
   ["Mega Altaria ex B1 102", "Dusknoir A2 72"],
   ["Mega Altaria ex B1 102", "Galarian Cursola A4a 35"],
+  ["Mega Altaria ex B1 102", "Magnezone A2 53"],
   ["Mega Altaria ex B1 102", "Shiinotic A3a 27"],
+  ["Mega Altaria ex B1 102", "Greninja A1 89"],
   ["Mega Altaria ex B1 102", "Oricorio A3 66"],
   ["Mega Altaria ex B1 102", "Honchkrow B1 149"],
+  ["Mega Altaria ex B1 102", "Furfrou B1a 65"],
   ["Mega Altaria ex B1 102", "Indeedee ex B1 121"],
   ["Mega Altaria ex B1 102", "Giratina ex A2b 35"],
   ["Mega Altaria ex B1 102", "Jirachi B1 106"],
@@ -63,6 +83,7 @@ const DECK_NAMES: DeckNameType[] = [
   ["Mega Ampharos ex B1 85", "Pichu A4 66"],
   ["Jolteon ex B1 81", "Pikachu ex A1 96"],
   ["Jolteon ex B1 81", "Jolteon A3b 25"],
+  ["Jolteon ex B1 81", "Oricorio A3 66"],
   ["Jolteon ex B1 81", "Zeraora A3a 21"],
   ["Dragalge ex B1 160", "Absol A4 120"],
   ["Dragalge ex B1 160", "Nihilego A3a 42"],
@@ -84,7 +105,6 @@ const DECK_NAMES: DeckNameType[] = [
   ["Melmetal ex B1 174", "Dialga ex A2 119"],
   ["Rampardos A2 89", "Hitmonchan ex B1 124"],
   ["Victreebel A1 20", "Chingling B1 109"],
-  ["Goodra B1 179", "Indeedee ex B1 121"],
   ["Golem A1a 45", "Indeedee ex B1 121"],
   ["Infernape ex A2 29", "Heatmor B1 44"],
   ["Meowscarada A2b 7", "Pheromosa A3a 7"],
@@ -335,6 +355,8 @@ const DECK_NAMES: DeckNameType[] = [
   ["Flareon ex A3b 9", "Turtonator A3 37"],
   ["Magnezone A2 53", "Sylveon ex A3b 34"],
   ["Solgaleo ex A3 122", "Sylveon ex A3b 34"],
+  ["Heliolisk B1a 29", "Oricorio A3 66"],
+  ["Heliolisk B1a 29", "Zeraora A3a 21"],
   ["Zeraora A3a 21", "Oricorio A3 66"],
   ["Magnezone A2 53", "Tapu Koko ex A3a 19"],
   ["Magnezone A2 53", "Oricorio A3 66"],
@@ -443,8 +465,10 @@ const DECK_NAMES: DeckNameType[] = [
   ["Magcargo A4 31", "Magby A4 32"],
   ["Greninja A1 89", "Chingling B1 109"],
   ["Greninja A1 89", "Tyrogue A4 101"],
+  ["Greninja A1 89", "Zeraora A3a 21"],
 
   // Mega Card
+  "Ivysaur B1a 2",
   "Mega Venusaur ex B1a 4",
   "Mega Charizard Y ex B1a 14",
   "Mega Blastoise ex B1a 20",
@@ -482,6 +506,9 @@ const DECK_NAMES: DeckNameType[] = [
   "Poliwrath ex A4a 42",
 
   // Stage 2
+  "Dustox B1 7",
+  "Rillaboom B1 27",
+  "Goodra B1 179",
   "Magneton A1 98",
   "Magnezone B1a 26",
   "Porygon-Z A4 137",
@@ -539,6 +566,7 @@ const DECK_NAMES: DeckNameType[] = [
   "Umbreon ex A4 112",
 
   // Stage 1
+  "Lilligant B1 18",
   "Heliolisk B1a 29",
   "Ariados B1a 6",
   "Delcatty B1 194",
@@ -603,6 +631,7 @@ const DECK_NAMES: DeckNameType[] = [
   "Raikou ex A4a 25",
 
   // Basic
+  "Furfrou B1a 65",
   "Ditto B1a 55",
   "Jirachi B1 106",
   "Chingling B1 109",
