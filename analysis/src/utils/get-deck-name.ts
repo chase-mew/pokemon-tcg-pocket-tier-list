@@ -26,6 +26,7 @@ const DECK_NAMES: DeckNameType[] = [
   ["Ivysaur B1a 2", "Oricorio A3 66"],
 
   ["Whimsicott ex B1 16", "Ariados B1a 6"],
+  ["Ariados B1a 6", "Kartana A3a 8"],
 
   ["Mega Steelix ex B1a 52", "Oricorio A3 66"],
   ["Mega Steelix ex B1a 52", "Dialga ex A2 119"],
@@ -34,7 +35,12 @@ const DECK_NAMES: DeckNameType[] = [
   ["Mega Steelix ex B1a 52", "Mantyke A4a 23"],
 
   ["Ditto B1a 55", "Rampardos A2 89"],
+  ["Ditto B1a 55", "Archeops B1 134"],
+
+  ["Archeops B1 134", "Rampardos A2 89"],
   ["Rampardos A2 89", "Primeape A1a 42"],
+
+  ["Solgaleo ex A3 122", "Aegislash B1 172"],
 
   ["Rillaboom B1 27", "Serperior A1a 6"],
   ["Porygon-Z A4 137", "Indeede ex B1 121"],
@@ -70,6 +76,7 @@ const DECK_NAMES: DeckNameType[] = [
   ["Mega Altaria ex B1 102", "Chingling B1 109"],
   ["Mega Altaria ex B1 102", "Elekid A4 70"],
   ["Altaria A4a 55", "Pichu A4 66"],
+  ["Altaria A4a 55", "Mantyke A4a 23"],
   ["Mega Pinsir ex B1 2", "Leafeon ex A2a 10"],
   ["Mega Pinsir ex B1 2", "Simisage B1 14"],
   ["Mega Pinsir ex B1 2", "Pichu A4 66"],
@@ -506,6 +513,8 @@ const DECK_NAMES: DeckNameType[] = [
   "Poliwrath ex A4a 42",
 
   // Stage 2
+  "Aegislash B1 172",
+  "Archeops B1 134",
   "Dustox B1 7",
   "Rillaboom B1 27",
   "Goodra B1 179",
