@@ -42,6 +42,7 @@ const DECK_NAMES: DeckNameType[] = [
 
   ["Solgaleo ex A3 122", "Aegislash B1 172"],
 
+  ["Gengar A1 122", "Indeede ex B1 121"],
   ["Rillaboom B1 27", "Serperior A1a 6"],
   ["Porygon-Z A4 137", "Indeede ex B1 121"],
   ["Porygon-Z A4 137", "Chingling B1 109"],
@@ -283,11 +284,13 @@ const DECK_NAMES: DeckNameType[] = [
   ["Suicune ex A4a 20", "Greninja A1 89"],
   ["Suicune ex A4a 20", "Silvally A3a 61"],
   ["Suicune ex A4a 20", "Wugtrio ex A2b 19"],
+  ["Suicune ex A4a 20", "Gyarados A4 45"],
   ["Suicune ex A4a 20", "Milotic A4a 22"],
   ["Suicune ex A4a 20", "Giratina ex A2b 35"],
   ["Suicune ex A4a 20", "Sylveon ex A3b 34"],
   ["Suicune ex A4a 20", "Mantyke A4a 23"],
 
+  ["Wugtrio ex A2b 19", "Mantyke A4a 23"],
   ["Pawmot A2b 28", "Oricorio A3 66"],
   ["Wishiwashi ex A3 51", "Wishiwashi A3 50"],
   ["Snorlax A2a 63", "Greninja A1 89"],
@@ -445,7 +448,6 @@ const DECK_NAMES: DeckNameType[] = [
   ["Giratina ex A2b 35", "Greninja A1 89"],
   ["Milotic A4a 22", "Palkia ex A2 49"],
   ["Poliwrath ex A4a 42", "Lucario A2 92"],
-  ["Gyarados A4 45", "Suicune ex A4a 20"],
   ["Gyarados A4 45", "Corsola A4 54"],
   ["Gyarados A4 45", "Mantyke A4a 23"],
   ["Altaria A4a 55", "Silvally A3a 61"],
@@ -575,6 +577,7 @@ const DECK_NAMES: DeckNameType[] = [
   "Umbreon ex A4 112",
 
   // Stage 1
+  "Gyarados A4 45",
   "Lilligant B1 18",
   "Heliolisk B1a 29",
   "Ariados B1a 6",
