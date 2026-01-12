@@ -42,7 +42,7 @@ const DECK_NAMES: DeckNameType[] = [
 
   ["Solgaleo ex A3 122", "Aegislash B1 172"],
 
-  ["Gengar A1 122", "Indeede ex B1 121"],
+  ["Gengar A1 122", "Indeedee ex B1 121"],
   ["Rillaboom B1 27", "Serperior A1a 6"],
   ["Porygon-Z A4 137", "Indeede ex B1 121"],
   ["Porygon-Z A4 137", "Chingling B1 109"],
@@ -50,6 +50,7 @@ const DECK_NAMES: DeckNameType[] = [
   ["Goodra B1 179", "Mantyke A4a 23"],
   ["Hydreigon B1 157", "Mega Absol ex B1 151"],
   ["Hydreigon B1 157", "Indeede ex B1 121"],
+  ["Hydreigon B1 157", "Furfrou B1a 65"],
   ["Hydreigon B1 157", "Chingling B1 109"],
   ["Mega Absol ex B1 151", "Dusknoir A2 72"],
   ["Mega Absol ex B1 151", "Oricorio A3 66"],
