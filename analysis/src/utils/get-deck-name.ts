@@ -24,6 +24,7 @@ const DECK_NAMES: DeckNameType[] = [
   ["Ivysaur B1a 2", "Dustox B1 7"],
   ["Ivysaur B1a 2", "Lilligant B1 18"],
   ["Ivysaur B1a 2", "Oricorio A3 66"],
+  ["Ivysaur B1a 2", "Igglybuff A4a 59"],
 
   ["Whimsicott ex B1 16", "Ariados B1a 6"],
   ["Ariados B1a 6", "Kartana A3a 8"],
@@ -42,6 +43,7 @@ const DECK_NAMES: DeckNameType[] = [
 
   ["Solgaleo ex A3 122", "Aegislash B1 172"],
 
+  ["Jolteon ex B1 81", "Indeedee ex B1 121"],
   ["Gengar A1 122", "Indeedee ex B1 121"],
   ["Rillaboom B1 27", "Serperior A1a 6"],
   ["Porygon-Z A4 137", "Indeede ex B1 121"],
