@@ -135,13 +135,12 @@ const Dropdown = styled.select`
 `;
 
 const CardsListPage = () => {
-  const cards_ = useCards(160);
+  const cards = useCards(30);
   const { expansion, setExpansion } = useFilters();
   const expansions = useExpansions();
 
-  if (!cards_) return <Loading>Loading...</Loading>;
+  if (!cards) return <Loading>Loading...</Loading>;
 
-  const cards = cards_.filter((card) => card.type === "Trainer")
 
   const bestScore = cards[0].score;
 

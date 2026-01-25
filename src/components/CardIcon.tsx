@@ -62,7 +62,7 @@ const CardIcon = ({ card }: Props) => {
         }}
       >
         <CardImage key={card.id} src={card.image} alt={card.name} />
-        {/* <CardNumber>{card.count}</CardNumber> */}
+        <CardNumber>{card.count}</CardNumber>
       </StyledCardIcon>
     </Container>
   );
