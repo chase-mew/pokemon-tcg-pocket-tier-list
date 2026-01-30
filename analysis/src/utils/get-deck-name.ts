@@ -7,17 +7,58 @@ type DeckNameType = string | string[];
 
 const DECK_NAMES: DeckNameType[] = [
   // Doubles
+  ["Mega Gardevoir ex B2 66", "Latias A4a 36"],
+  ["Mega Gardevoir ex B2 66", "Meloetta B2 70"],
+  ["Mega Gardevoir ex B2 66", "Mewtwo ex A1 129"],
+  ["Mega Gardevoir ex B2 66", "Giratina ex A2b 35"],
+  ["Mega Gardevoir ex B2 66", "Xerneas B1a 37"],
+  ["Mega Gardevoir ex B2 66", "Sylveon ex A3b 34"],
+  ["Mega Gardevoir ex B2 66", "Indeedee ex B1 121"],
+
+  ["Mega Kangaskhan ex B2 127", "Gengar A1 122"],
+  ["Mega Kangaskhan ex B2 127", "Darkrai ex A2 110"],
+  ["Mega Kangaskhan ex B2 127", "Darkrai ex A2 110"],
+  ["Mega Kangaskhan ex B2 127", "Oricorio A3 66"],
+  ["Mega Kangaskhan ex B2 127", "Zeraora A3a 21"],
+  ["Mega Kangaskhan ex B2 127", "Indeedee ex B1 121"],
+  ["Mega Kangaskhan ex B2 127", "Meowth B2 124"],
+
+  ["Toxtricity ex B2 55", "Zeraora A3a 21"],
+  ["Toxtricity ex B2 55", "Pichu A4 66"],
+
+  ["Blacephalon ex B2 23", "Celesteela A3a 62"],
+  ["Blacephalon ex B2 23", "Heatmor B1 44"],
+
+  ["Galarian Obstagoon B2 100", "Mega Absol ex B1 151"],
+  ["Galarian Obstagoon B2 100", "Darkrai ex A2 110"],
+  ["Galarian Obstagoon B2 100", "Chingling B1 109"],
+
+  ["Mega Swampert ex B2 36", "Cramorant B2 45"],
+  ["Mega Swampert ex B2 36", "Furfrou B1a 65"],
+
   ["Mega Lopunny ex B1a 42", "Lucario A2 92"],
   ["Mega Lopunny ex B1a 42", "Magneton A1 98"],
 
   ["Charmeleon B1a 12", "Entei ex A4a 10"],
   ["Charmeleon B1a 12", "Moltres ex A1 47"],
+  ["Charmeleon B1a 12", "Oricorio B2 22"],
+  ["Charmeleon B1a 12", "Ho-Oh ex A4 34"],
+
+  ["Mimikyu ex B2 73", "Giratina ex A2b 35"],
+  ["Mimikyu ex B2 73", "Indeedee ex B1 121"],
+
+  ["Alolan Ninetales ex B2 29", "Greninja A1 89"],
+  ["Alolan Ninetales ex B2 29", "Crawdaunt A4 61"],
+
+  ["Tyrantrum B2 90", "Hitmonchan ex B1 124"],
 
   ["Magneton A1 98", "Mega Absol ex B1 151"],
   ["Magneton A1 98", "Darkrai ex A2 110"],
   ["Magneton A1 98", "Jolteon ex B1 81"],
   ["Magneton A1 98", "Heliolisk B1a 29"],
+  ["Magneton A1 98", "Ditto B1a 55"],
   ["Magneton A1 98", "Oricorio A3 66"],
+  ["Magneton A1 98", "Meowth B2 124"],
   ["Magneton A1 98", "Tyrogue A4 101"],
   ["Magneton A1 98", "Chingling B1 109"],
 
@@ -62,23 +103,29 @@ const DECK_NAMES: DeckNameType[] = [
   ["Mega Absol ex B1 151", "Chingling B1 109"],
   ["Mega Absol ex B1 151", "Pichu A4 66"],
   ["Mega Absol ex B1 151", "Tyrogue A4 101"],
+
   ["Mega Blaziken ex B1 36", "Heatmor B1 44"],
   ["Mega Blaziken ex B1 36", "Entei ex A4a 10"],
+  ["Mega Blaziken ex B1 36", "Oricorio B2 22"],
   ["Mega Blaziken ex B1 36", "Cleffa A4 77"],
+
   ["Mega Altaria ex B1 102", "Goodra B1 179"],
   ["Mega Altaria ex B1 102", "Dusknoir A2 72"],
   ["Mega Altaria ex B1 102", "Galarian Cursola A4a 35"],
   ["Mega Altaria ex B1 102", "Magnezone A2 53"],
   ["Mega Altaria ex B1 102", "Shiinotic A3a 27"],
+  ["Mega Altaria ex B1 102", "Silvally A3a 61"],
+  ["Mega Altaria ex B1 102", "Sylveon ex A3b 34"],
   ["Mega Altaria ex B1 102", "Greninja A1 89"],
+  ["Mega Altaria ex B1 102", "Giratina ex A2b 35"],
   ["Mega Altaria ex B1 102", "Oricorio A3 66"],
   ["Mega Altaria ex B1 102", "Honchkrow B1 149"],
   ["Mega Altaria ex B1 102", "Furfrou B1a 65"],
   ["Mega Altaria ex B1 102", "Indeedee ex B1 121"],
-  ["Mega Altaria ex B1 102", "Giratina ex A2b 35"],
   ["Mega Altaria ex B1 102", "Jirachi B1 106"],
   ["Mega Altaria ex B1 102", "Chingling B1 109"],
   ["Mega Altaria ex B1 102", "Elekid A4 70"],
+
   ["Altaria A4a 55", "Pichu A4 66"],
   ["Altaria A4a 55", "Mantyke A4a 23"],
   ["Mega Pinsir ex B1 2", "Leafeon ex A2a 10"],
@@ -404,6 +451,7 @@ const DECK_NAMES: DeckNameType[] = [
   ["Crobat ex A4 109", "Arceus ex A2a 71"],
   ["Crobat ex A4 109", "Darkrai ex A2 110"],
   ["Crobat ex A4 109", "Sylveon ex A3b 34"],
+  ["Crobat ex A4 109", "Mega Absol ex B1 151"],
   ["Silvally A3a 61", "Pichu A4 66"],
   ["Silvally A3a 61", "Magby A4 32"],
   ["Darkrai ex A2 110", "Pichu A4 66"],
@@ -422,6 +470,7 @@ const DECK_NAMES: DeckNameType[] = [
   ["Dragonite ex A3b 53", "Zeraora A3a 21"],
   ["Ho-Oh ex A4 34", "Magby A4 32"],
   ["Leafeon ex A2a 10", "Leafeon A2a 10"],
+  ["Leafeon ex A2a 10", "Teal Mask Ogerpon ex B2 17"],
   ["Rayquaza ex PA 65", "Ho-Oh ex A4 34"],
   ["Steelix A4 122", "Magby A4 32"],
   ["Porygon-Z A4 129", "Espeon ex A4 83"],
@@ -480,6 +529,11 @@ const DECK_NAMES: DeckNameType[] = [
   ["Greninja A1 89", "Zeraora A3a 21"],
 
   // Mega Card
+  "Mega Swampert ex B2 36",
+  "Mega Gardevoir ex B2 66",
+  "Mega Mawile ex B2 113",
+  "Mega Kangaskhan ex B2 127",
+  "Mega Medicham ex PB 29",
   "Ivysaur B1a 2",
   "Mega Venusaur ex B1a 4",
   "Mega Charizard Y ex B1a 14",
@@ -495,6 +549,7 @@ const DECK_NAMES: DeckNameType[] = [
   "Mega Absol ex B1 151",
 
   // Stage 2 ex
+  "Gigalith ex B2 87",
   "Greninja ex B1 73",
   "Garchomp ex A2a 47",
   "Charizard ex A1 36",
@@ -518,6 +573,7 @@ const DECK_NAMES: DeckNameType[] = [
   "Poliwrath ex A4a 42",
 
   // Stage 2
+  "Tyrantrum B2 90",
   "Aegislash B1 172",
   "Archeops B1 134",
   "Dustox B1 7",
@@ -549,6 +605,8 @@ const DECK_NAMES: DeckNameType[] = [
   "Primarina A3 48",
 
   // Stage 1 ex
+  "Toxtricity ex B2 55",
+  "Alolan Ninetales ex B2 29",
   "Melmetal ex B1 174",
   "Dragalge ex B1 160",
   "Jolteon ex B1 81",
@@ -580,6 +638,7 @@ const DECK_NAMES: DeckNameType[] = [
   "Umbreon ex A4 112",
 
   // Stage 1
+  "Galarian Perrserker B2 111",
   "Gyarados A4 45",
   "Lilligant B1 18",
   "Heliolisk B1a 29",
@@ -619,6 +678,9 @@ const DECK_NAMES: DeckNameType[] = [
   "Magcargo A4 31",
 
   // Basic ex
+  "Mimikyu ex B2 73",
+  "Teal Mask Ogerpon ex B2 17",
+  "Blacephalon ex B2 23",
   "Tauros ex B1 183",
   "Hitmonchan ex B1 124",
   "Indeedee ex B1 121",
