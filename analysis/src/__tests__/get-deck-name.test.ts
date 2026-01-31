@@ -8,10 +8,10 @@ describe("getDeckName", () => {
       name: "Test Deck",
       cards: [
         {
-          name: "Gyarados ex",
+          name: "Mimikyu ex",
           count: 2,
-          set: "A1a",
-          number: "18",
+          set: "B2",
+          number: "73",
         },
         {
           name: "Giratina ex",
@@ -34,7 +34,7 @@ describe("getDeckName", () => {
     };
 
     const result = getDeckName(deck);
-    expect(result).toBe("Gyarados ex-A1a-018&Giratina ex-A2b-035");
+    expect(result).toBe("mimikyu-ex-b2-073&giratina-ex-a2b-035");
   });
 
   it("should return correct name for a deck with one main card", () => {
@@ -43,10 +43,10 @@ describe("getDeckName", () => {
       name: "Test Deck",
       cards: [
         {
-          name: "Bronzong",
+          name: "Magnezone",
           count: 2,
-          set: "A2a",
-          number: "59",
+          set: "A2",
+          number: "53",
         },
       ],
       pokemon: 2,
@@ -63,7 +63,7 @@ describe("getDeckName", () => {
     };
 
     const result = getDeckName(deck);
-    expect(result).toBe("Bronzong-A2a-059");
+    expect(result).toBe("magnezone-a2-053");
   });
 
   it("should return correct name for a deck with one main card and one side card", () => {
@@ -72,19 +72,19 @@ describe("getDeckName", () => {
       name: "Test Deck",
       cards: [
         {
-          name: "Gyarados ex",
+          name: "Suicune ex",
           count: 2,
-          set: "A1a",
-          number: "18",
+          set: "A4a",
+          number: "20",
         },
         {
           name: "Greninja",
-          count: 1,
+          count: 2,
           set: "A1",
           number: "89",
         },
       ],
-      pokemon: 3,
+      pokemon: 4,
       differentPokemon: 2,
       winCount: 0,
       lossCount: 0,
@@ -98,7 +98,7 @@ describe("getDeckName", () => {
     };
 
     const result = getDeckName(deck);
-    expect(result).toBe("Gyarados ex-A1a-018");
+    expect(result).toBe("suicune-ex-a4a-020&greninja-a1-089");
   });
 
   it("should return null for a deck with no matching cards", () => {

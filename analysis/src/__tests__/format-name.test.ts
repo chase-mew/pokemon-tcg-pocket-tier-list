@@ -14,7 +14,7 @@ describe("formatName", () => {
     const match = ["Pikachu base 58"];
 
     const result = formatName(cards, match);
-    expect(result).toBe("Pikachu-base-058");
+    expect(result).toBe("pikachu-base-058");
   });
 
   it("should format multiple card names correctly", () => {
@@ -35,7 +35,7 @@ describe("formatName", () => {
     const match = ["Pikachu base 58", "Charizard ex base 12"];
 
     const result = formatName(cards, match);
-    expect(result).toBe("Pikachu-base-058&Charizard ex-base-012");
+    expect(result).toBe("pikachu-base-058&charizard-ex-base-012");
   });
 
   it("should handle P-A set code correctly", () => {
@@ -50,10 +50,10 @@ describe("formatName", () => {
     const match = ["Professor's Research PA 7"];
 
     const result = formatName(cards, match);
-    expect(result).toBe("Professor's Research-PA-007");
+    expect(result).toBe("professor's-research-pa-007");
   });
 
-  it("should throw error when card is not found", () => {
+  it("should format card name even when card is not in cards array", () => {
     const cards: Card[] = [
       {
         name: "Pikachu",
@@ -64,8 +64,7 @@ describe("formatName", () => {
     ];
     const match = ["Charizard base 4"];
 
-    expect(() => formatName(cards, match)).toThrow(
-      "Card Charizard base 4 not found"
-    );
+    const result = formatName(cards, match);
+    expect(result).toBe("charizard-base-004");
   });
 });
