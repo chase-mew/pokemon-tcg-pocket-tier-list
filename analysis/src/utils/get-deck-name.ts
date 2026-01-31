@@ -17,11 +17,14 @@ const ALTARIA = ["Mega Altaria ex B1 102", "Altaria A4a 55", "Altaria B1 197"]
 const MAGNEZONE = ["Magnezone A2 53", "Magnezone B1a 26"]
 const ESPEON = ["Espeon ex A4 83", "Espeon A3b 28"]
 const GUZZLORD = ["Guzzlord ex A3a 43", "Guzzlord B2 109"]
+const BUZZWOLE = ["Buzzwole ex A3a 6", "Buzzwole B2 14"]
 const DECIDUEYE = ["Decidueye ex A3 12", "Decidueye A3a 5"]
+const ALOLAN_NINETALES = ["Alolan Ninetales ex B2 29", "Alolan Ninetales A3 41"]
+const POISON = ["Poison Barb A3 146", "Nihilego A3a 42"]
 
 const ARCHITYPES: Architype[] = [
   // Outliers
-  { primary: "Ditto B1a 55", secondary: ["Rampardos A2 89", "Liepard B1a 48", MAGNEZONE] },
+  { primary: "Ditto B1a 55", secondary: ["Rampardos A2 89", "Liepard B1a 48", MAGNEZONE, "Maushold B2 143"] },
 
   // Stage 2 Mega
   { primary: "Mega Swampert ex B2 36", secondary: [] },
@@ -33,7 +36,7 @@ const ARCHITYPES: Architype[] = [
   { primary: "Mega Ampharos ex B1 85", secondary: ["Alolan Raichu B2 50"] },
 
   // Stage 2 ex
-  { primary: "Crobat ex A4 109", secondary: [] },
+  { primary: "Crobat ex A4 109", secondary: [POISON] },
   { primary: "Incineroar ex A3 33", secondary: [] },
   { primary: "Lunala ex A3 87", secondary: [] },
   { primary: DECIDUEYE, secondary: [] },
@@ -53,10 +56,10 @@ const ARCHITYPES: Architype[] = [
   // Stage 1 ex
   { primary: "Jolteon ex B1 81", secondary: ["Jolteon A3b 25", MAGNEZONE] },
   { primary: "Leafeon ex A2a 10", secondary: [] },
-  { primary: "Alolan Ninetales ex B2 29", secondary: ["Crawdaunt A4 61"] },
+  { primary: ALOLAN_NINETALES, secondary: ["Crawdaunt A4 61"] },
 
   // Stage 1
-  { primary: "Hydreigon B1 157", secondary: [] },
+  { primary: "Hydreigon B1 157", secondary: [POISON] },
   { primary: ESPEON, secondary: [] },
   { primary: "Crobat A2a 50", secondary: [] },
   { primary: "Silvally A3a 61", secondary: ["Oricorio A3 66"] },
@@ -70,7 +73,7 @@ const ARCHITYPES: Architype[] = [
   { primary: "Suicune ex A4a 20", secondary: [GRENINJA] },
   { primary: "Darkrai ex A2 110", secondary: ["Giratina ex A2b 35"] },
   { primary: GUZZLORD, secondary: [] },
-  { primary: "Buzzwole ex A3a 6", secondary: [] },
+  { primary: BUZZWOLE, secondary: [] },
   { primary: "Mega Absol ex B1 151", secondary: [GRENINJA] },
   { primary: "Mimikyu ex B2 73", secondary: ["Giratina ex A2b 35"] },
 
