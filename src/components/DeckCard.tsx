@@ -14,7 +14,7 @@ const Container = styled.div`
   }
 `;
 
-const StyledDeckCard = styled(Link)<{ $disabled: boolean }>`
+const StyledDeckCard = styled(Link) <{ $disabled: boolean }>`
   position: relative;
   border-radius: 1.2rem;
   color: var(--bg);
@@ -28,7 +28,7 @@ const StyledDeckCard = styled(Link)<{ $disabled: boolean }>`
   opacity: ${(props) => (props.$disabled ? 0.5 : 1)};
 `;
 
-const SubCard = styled(Link)<{ $disabled: boolean }>`
+const SubCard = styled(Link) <{ $disabled: boolean }>`
   position: absolute;
   bottom: -1rem;
   right: -1rem;
@@ -68,19 +68,6 @@ interface Props {
 }
 
 const DeckCard = ({ deck }: Props) => {
-  const cardIds = deck.name.split("&");
-
-  const cards: CardType[] = cardIds.map((cardId) => {
-    const exactCard = deck.bestList.cards.find(
-      (card) => `${card.name}-${card.id}`.toLowerCase() === cardId.toLowerCase()
-    );
-    let mainCard = deck.bestList.cards.find((card) =>
-      card.name.includes(cardId)
-    );
-
-    return exactCard || mainCard || deck.bestList.cards[0];
-  });
-
   const round = (num: number, decimals = 2) => {
     return Math.round(num * 10 ** decimals) / 10 ** decimals;
   };
@@ -88,15 +75,15 @@ const DeckCard = ({ deck }: Props) => {
   return (
     <Container>
       <StyledDeckCard to={`/deck/${deck.id}`} $disabled={false}>
-        <DeckImage key={cards[0].id} src={cards[0].image} alt={cards[0].name} />
+        <DeckImage key={deck.iconPrimary.id} src={deck.iconPrimary.image} alt={deck.iconPrimary.name} />
         {DEBUG && <Percent>{round(deck.percentOfGames, 5)}%</Percent>}
       </StyledDeckCard>
-      {cards.length > 1 && (
+      {deck.iconSecondary && (
         <SubCard to={`/deck/${deck.id}`} $disabled={false}>
           <DeckImage
-            key={cards[1].id}
-            src={cards[1].image}
-            alt={cards[1].name}
+            key={deck.iconSecondary.id}
+            src={deck.iconSecondary.image}
+            alt={deck.iconSecondary.name}
           />
         </SubCard>
       )}

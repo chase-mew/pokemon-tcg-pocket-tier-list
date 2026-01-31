@@ -56,6 +56,8 @@ export interface FullDeckType {
   strength: number;
   percentOfGames: number;
   matchups: MatchupType[];
+  iconPrimary: CardType;
+  iconSecondary: CardType | null;
 }
 
 interface DecksContextType {
@@ -196,15 +198,15 @@ export const DecksProvider: React.FC<{ children: React.ReactNode }> = ({
     const highestPopularity =
       decksFiltered.length > 0
         ? decksFiltered.sort(
-            (a: PartialDeckType, b: PartialDeckType) =>
-              b.popularity - a.popularity
-          )[0].popularity
+          (a: PartialDeckType, b: PartialDeckType) =>
+            b.popularity - a.popularity
+        )[0].popularity
         : 0;
     const highestStrength =
       decksFiltered.length > 0
         ? decksFiltered
-            .map((deck: PartialDeckType) => maxStrength(deck))
-            .sort((a: number, b: number) => b - a)[0]
+          .map((deck: PartialDeckType) => maxStrength(deck))
+          .sort((a: number, b: number) => b - a)[0]
         : 0;
 
     const fullDecks = decksFiltered
@@ -231,6 +233,13 @@ export const DecksProvider: React.FC<{ children: React.ReactNode }> = ({
           };
         });
 
+        const cardNames = oldDeck.name.split("&");
+        const cardIds = cardNames.map((cardName) => {
+          const cardNameParts = cardName.split("-");
+          const cardIdParts = [cardNameParts[cardNameParts.length - 2], cardNameParts[cardNameParts.length - 1]];
+          return cardIdParts.join("-");
+        });
+
         const deck: FullDeckType = {
           id: oldDeck.name.toLowerCase().replace(/\s/g, "-"),
           name: oldDeck.name,
@@ -243,6 +252,8 @@ export const DecksProvider: React.FC<{ children: React.ReactNode }> = ({
           strength: maxStrength(oldDeck) / highestStrength,
           percentOfGames: oldDeck.percentOfGames,
           matchups,
+          iconPrimary: cardsMapping[cardIds[0]],
+          iconSecondary: cardsMapping[cardIds[1]],
         };
         return deck;
       })

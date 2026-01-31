@@ -1,19 +1,14 @@
 import { Card } from "./types";
-import cardToString from "./card-to-string";
 
 const formatName = (cards: Card[], match: string[]): string => {
   return match
     .map((cardName) => {
-      const card = cards.find(
-        (card) =>
-          cardToString(card) === `2 ${cardName}` ||
-          cardToString(card) === `1 ${cardName}`
-      );
-      if (!card) throw new Error(`Card ${cardName} not found`);
-      const padded = card.number.padStart(3, "0");
-      let set = card.set === "P-A" ? "PA" : card.set;
-      set = set === "P-B" ? "PB" : set;
-      return `${card.name}-${set}-${padded}`;
+      const cardNameParts = cardName.split(" ");
+      const id = cardNameParts[cardNameParts.length - 1];
+      const padded = id.padStart(3, "0");
+      const newCardNameParts = [...cardNameParts.slice(0, -1), padded];
+      const newCardName = newCardNameParts.join("-").toLowerCase();
+      return newCardName;
     })
     .join("&");
 };
