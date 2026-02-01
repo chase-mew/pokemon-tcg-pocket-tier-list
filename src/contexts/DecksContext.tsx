@@ -262,7 +262,28 @@ export const DecksProvider: React.FC<{ children: React.ReactNode }> = ({
           getSortValue(b, sortBy) - getSortValue(a, sortBy)
       );
 
-    return fullDecks.sort(
+    if (energy !== null) {
+      return fullDecks.sort((a: FullDeckType, b: FullDeckType) =>
+        getSortValue(b, sortBy) - getSortValue(a, sortBy)
+      );
+    }
+
+    // Excluding the decks at the bottom that don't have a double
+    let includedDecks = [];
+    let hasOneDouble = false;
+    for (let i = fullDecks.length - 1; i >= 0; i--) {
+      const deck = fullDecks[i];
+      if (!hasOneDouble) {
+        if (!deck.name.includes("&")) {
+          continue;
+        } else {
+          hasOneDouble = true;
+        }
+      }
+      includedDecks.push(deck);
+    }
+
+    return includedDecks.sort(
       (a: FullDeckType, b: FullDeckType) =>
         getSortValue(b, sortBy) - getSortValue(a, sortBy)
     );

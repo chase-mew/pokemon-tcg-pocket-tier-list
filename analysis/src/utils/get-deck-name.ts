@@ -23,6 +23,7 @@ const ALOLAN_NINETALES = ["Alolan Ninetales ex B2 29", "Alolan Ninetales A3 41"]
 const POISON = ["Poison Barb A3 146", "Nihilego A3a 42"]
 const ORICORIO = ["Oricorio A3 66", "Pichu A4 66"]
 const MEGA_KANGASKHAN = ["Mega Kangaskhan ex B2 127", "Serena B1a 69", "Ilima A3 149"]
+const MEGA_MAWILE = ["Mega Mawile ex B2 113", "Serena B1a 69"]
 
 const ARCHITYPES: Architype[] = [
   // Outliers
@@ -46,7 +47,7 @@ const ARCHITYPES: Architype[] = [
 
   // Stage 2
   { primary: "Galarian Obstagoon B2 100", secondary: [] },
-  { primary: "Dusknoir A2 72", secondary: ["Mega Mawile ex B2 113", "Mega Absol ex B1 151"] },
+  { primary: "Dusknoir A2 72", secondary: [MEGA_MAWILE, "Mega Absol ex B1 151"] },
   { primary: "Rampardos A2 89", secondary: ["Donphan ex A4 100"] },
   { primary: "Tyrantrum B2 90", secondary: [] },
 
@@ -66,10 +67,11 @@ const ARCHITYPES: Architype[] = [
   { primary: "Crobat A2a 50", secondary: [] },
   { primary: "Silvally A3a 61", secondary: [ORICORIO] },
   { primary: "Ariados B1a 6", secondary: ["Whimsicott ex B1 16"] },
+  { primary: "Galarian Perrserker B2 111", secondary: [MEGA_MAWILE] },
 
   // Basic Mega
   { primary: MEGA_KANGASKHAN, secondary: [MAGNEZONE, GRENINJA, POISON, ORICORIO] },
-  { primary: "Mega Mawile ex B2 113", secondary: [] },
+  { primary: MEGA_MAWILE, secondary: [] },
 
   // Basic ex
   { primary: "Suicune ex A4a 20", secondary: [GRENINJA] },
