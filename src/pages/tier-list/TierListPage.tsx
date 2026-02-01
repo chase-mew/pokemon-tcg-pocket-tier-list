@@ -200,6 +200,8 @@ const LandingPage = () => {
 
   if (loading || !decks) return <Loading>Loading...</Loading>;
 
+  if (decks.length === 0) return <Loading>No decks found</Loading>;
+
   const bestScore = getSortValue(decks[0], sortBy);
 
   const worstScore = getSortValue(decks[decks.length - 1], sortBy);
