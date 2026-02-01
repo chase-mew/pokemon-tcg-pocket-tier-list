@@ -33,7 +33,9 @@
     "score": "Gesamtbeste",
     "popularity": "Beliebtheit",
     "strength": "Stärke",
-    "winRate": "Gewinnrate"
+    "winRate": "Gewinnrate",
+    "latestExpansionCards": "Karten aus neuester Erweiterung",
+    "latestExpansionCardsAny": "Beliebig"
   },
   "bestDeckFinder": {
     "title": "Finde Dein Bestes Deck",
