@@ -21,6 +21,8 @@ const BUZZWOLE = ["Buzzwole ex A3a 6", "Buzzwole B2 14"]
 const DECIDUEYE = ["Decidueye ex A3 12", "Decidueye A3a 5"]
 const ALOLAN_NINETALES = ["Alolan Ninetales ex B2 29", "Alolan Ninetales A3 41"]
 const POISON = ["Poison Barb A3 146", "Nihilego A3a 42"]
+const ORICORIO = ["Oricorio A3 66", "Pichu A4 66"]
+const MEGA_KANGASKHAN = ["Mega Kangaskhan ex B2 127", "Serena B1a 69", "Ilima A3 149"]
 
 const ARCHITYPES: Architype[] = [
   // Outliers
@@ -44,14 +46,14 @@ const ARCHITYPES: Architype[] = [
 
   // Stage 2
   { primary: "Galarian Obstagoon B2 100", secondary: [] },
-  { primary: "Dusknoir A2 72", secondary: ["Mega Mawile ex B2 113"] },
+  { primary: "Dusknoir A2 72", secondary: ["Mega Mawile ex B2 113", "Mega Absol ex B1 151"] },
   { primary: "Rampardos A2 89", secondary: ["Donphan ex A4 100"] },
   { primary: "Tyrantrum B2 90", secondary: [] },
 
   // Stage 1 Mega
   { primary: ALTARIA, secondary: ["Sylveon ex A3b 34"] },
   { primary: "Mega Gyarados ex B1 52", secondary: ["Jellicent B1 69"] },
-  { primary: "Mega Lopunny ex B1a 42", secondary: ["Magneton A1 98", "Lucario A2 92"] },
+  { primary: "Mega Lopunny ex B1a 42", secondary: [MAGNEZONE, "Lucario A2 92", GRENINJA] },
 
   // Stage 1 ex
   { primary: "Jolteon ex B1 81", secondary: ["Jolteon A3b 25", MAGNEZONE] },
@@ -62,11 +64,11 @@ const ARCHITYPES: Architype[] = [
   { primary: "Hydreigon B1 157", secondary: [POISON] },
   { primary: ESPEON, secondary: [] },
   { primary: "Crobat A2a 50", secondary: [] },
-  { primary: "Silvally A3a 61", secondary: ["Oricorio A3 66"] },
+  { primary: "Silvally A3a 61", secondary: [ORICORIO] },
   { primary: "Ariados B1a 6", secondary: ["Whimsicott ex B1 16"] },
 
   // Basic Mega
-  { primary: "Mega Kangaskhan ex B2 127", secondary: [] },
+  { primary: MEGA_KANGASKHAN, secondary: [MAGNEZONE, GRENINJA, POISON, ORICORIO] },
   { primary: "Mega Mawile ex B2 113", secondary: [] },
 
   // Basic ex
@@ -81,9 +83,10 @@ const ARCHITYPES: Architype[] = [
   { primary: "Celesteela A3a 62", secondary: [] },
 
   // Tech Cards
-  { primary: MAGNEZONE, secondary: ["Oricorio A3 66"] },
+  { primary: MAGNEZONE, secondary: [ORICORIO] },
+  { primary: GRENINJA, secondary: [ORICORIO] },
 
-  // // Fallback
+  // Fallback
   // { primary: "Professor's Research PA 7", secondary: [] },
 ];
 
