@@ -19,19 +19,23 @@ interface FilterContextType {
   setSortBy: (sortBy: SortBy) => void;
   expansion: string | null;
   setExpansion: (expansion: string | null) => void;
+  latestExpansionCards: number | null;
+  setLatestExpansionCards: (count: number | null) => void;
 }
 
 export const FilterContext = createContext<FilterContextType>({
   energy: null,
-  setEnergy: () => {},
+  setEnergy: () => { },
   includeEx: true,
-  setIncludeEx: () => {},
+  setIncludeEx: () => { },
   deckAmount: FREE_DECK_AMOUNT,
-  setDeckAmount: () => {},
+  setDeckAmount: () => { },
   sortBy: SortBy.SCORE,
-  setSortBy: (sortBy: SortBy) => {},
+  setSortBy: (sortBy: SortBy) => { },
   expansion: null,
-  setExpansion: (expansion: string | null) => {},
+  setExpansion: (expansion: string | null) => { },
+  latestExpansionCards: null,
+  setLatestExpansionCards: () => { },
 });
 
 interface Props {
@@ -44,6 +48,7 @@ const FilterContextProvider = ({ children }: Props) => {
   const [deckAmount, setDeckAmount] = useState<number>(FREE_DECK_AMOUNT);
   const [sortBy, setSortBy] = useState<SortBy>(SortBy.SCORE);
   const [expansion, setExpansion] = useState<string | null>(null);
+  const [latestExpansionCards, setLatestExpansionCards] = useState<number | null>(null);
 
   return (
     <FilterContext.Provider
@@ -67,6 +72,10 @@ const FilterContextProvider = ({ children }: Props) => {
         expansion,
         setExpansion: (expansion) => {
           setExpansion(expansion);
+        },
+        latestExpansionCards,
+        setLatestExpansionCards: (count) => {
+          setLatestExpansionCards(count);
         },
       }}
     >

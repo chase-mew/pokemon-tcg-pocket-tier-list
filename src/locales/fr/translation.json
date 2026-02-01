@@ -33,7 +33,9 @@
     "score": "Meilleur global",
     "popularity": "Popularité",
     "strength": "Force",
-    "winRate": "Taux de victoire"
+    "winRate": "Taux de victoire",
+    "latestExpansionCards": "Cartes de la dernière extension",
+    "latestExpansionCardsAny": "Tous"
   },
   "bestDeckFinder": {
     "title": "Trouver votre meilleur deck",

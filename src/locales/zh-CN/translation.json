@@ -33,7 +33,9 @@
     "score": "综合最佳",
     "popularity": "流行度",
     "strength": "强度",
-    "winRate": "胜率"
+    "winRate": "胜率",
+    "latestExpansionCards": "最新扩展包卡牌",
+    "latestExpansionCardsAny": "任意"
   },
   "bestDeckFinder": {
     "title": "寻找您的最佳卡组",

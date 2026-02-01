@@ -100,7 +100,9 @@
     "score": "Overall Best",
     "popularity": "Popularity",
     "strength": "Strength",
-    "winRate": "Win Rate"
+    "winRate": "Win Rate",
+    "latestExpansionCards": "Cards from latest expansion",
+    "latestExpansionCardsAny": "Any"
   },
   "bestDeckFinder": {
     "title": "Find Your Best Deck",

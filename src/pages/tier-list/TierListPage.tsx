@@ -194,6 +194,8 @@ const LandingPage = () => {
     setDeckAmount,
     sortBy,
     setSortBy,
+    latestExpansionCards,
+    setLatestExpansionCards,
   } = useFilters();
   const { t } = useTranslation();
   const isPremium = useIsPremium();
@@ -289,6 +291,23 @@ const LandingPage = () => {
                     </option>
                   )
                 )}
+              </DeckAmountSelect>
+            </DeckAmountContainer>
+            <DeckAmountContainer>
+              {t("filter.latestExpansionCards")}
+              <DeckAmountSelect
+                value={latestExpansionCards ?? ""}
+                onChange={(e) => {
+                  const value = e.target.value;
+                  setLatestExpansionCards(value === "" ? null : Number(value));
+                }}
+              >
+                <option value="">{t("filter.latestExpansionCardsAny")}</option>
+                {[2, 6, 12].map((count) => (
+                  <option key={count} value={count}>
+                    {count}
+                  </option>
+                ))}
               </DeckAmountSelect>
             </DeckAmountContainer>
           </>

@@ -33,7 +33,9 @@
     "score": "総合最強",
     "popularity": "人気度",
     "strength": "強さ",
-    "winRate": "勝率"
+    "winRate": "勝率",
+    "latestExpansionCards": "最新拡張パックのカード",
+    "latestExpansionCardsAny": "任意"
   },
   "bestDeckFinder": {
     "title": "最適なデッキを見つけよう",

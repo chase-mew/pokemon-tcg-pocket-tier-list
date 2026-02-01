@@ -33,7 +33,9 @@
     "score": "Mejor General",
     "popularity": "Popularidad",
     "strength": "Fuerza",
-    "winRate": "Tasa de Victoria"
+    "winRate": "Tasa de Victoria",
+    "latestExpansionCards": "Cartas de la expansión más reciente",
+    "latestExpansionCardsAny": "Cualquiera"
   },
   "bestDeckFinder": {
     "title": "Encuentra Tu Mejor Mazo",

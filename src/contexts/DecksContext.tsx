@@ -6,6 +6,7 @@ import { useMemo } from "react";
 import useIsPremium from "../app/use-is-premium";
 import { getSortValue } from "../app/sorting-helper";
 import { CARDS_URL } from "../app/constants";
+import useExpansions from "../app/use-expansions";
 
 export interface CardType {
   id: string;
@@ -93,8 +94,9 @@ export const DecksProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
   const { missing } = useMissing();
-  const { energy, includeEx, deckAmount, sortBy } = useFilters();
+  const { energy, includeEx, deckAmount, sortBy, latestExpansionCards } = useFilters();
   const isPremium = useIsPremium();
+  const expansions = useExpansions();
 
   const { data: cards, isLoading: cardsLoading } = useQuery({
     queryKey: ["cards"],
@@ -127,6 +129,12 @@ export const DecksProvider: React.FC<{ children: React.ReactNode }> = ({
       return { decks: decksData, matchupData };
     },
   });
+
+  const latestExpansionId = useMemo(() => {
+    return expansions && expansions.length > 0
+      ? expansions[expansions.length - 1].id
+      : null;
+  }, [expansions]);
 
   const decks = useMemo(() => {
     if (!cards || !decksData || isPremium === null) return null;
@@ -181,6 +189,22 @@ export const DecksProvider: React.FC<{ children: React.ReactNode }> = ({
               if (cardData.type === "Trainer") return true;
               return cardData.ex === "No";
             });
+          })
+          .filter((deck: PartialList) => {
+            if (latestExpansionCards === null || latestExpansionId === null) return true;
+
+            let cardsFromLatestExpansion = 0;
+            for (const card of deck.cards) {
+              const id = cardToId(card);
+              const cardData = cardsMapping[id];
+              if (!cardData) throw new Error(`Card not found: ${id}`);
+              const setId = cardData.id.split("-")[0];
+              if (setId === latestExpansionId) {
+                cardsFromLatestExpansion += cardToCount(card);
+              }
+            }
+
+            return cardsFromLatestExpansion >= latestExpansionCards;
           });
 
         return {
@@ -297,6 +321,8 @@ export const DecksProvider: React.FC<{ children: React.ReactNode }> = ({
     deckAmount,
     sortBy,
     cardsMapping,
+    latestExpansionCards,
+    latestExpansionId,
   ]);
 
   const value = {
