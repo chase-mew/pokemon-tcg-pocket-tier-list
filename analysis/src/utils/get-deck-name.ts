@@ -44,6 +44,7 @@ const ARCHITYPES: Architype[] = [
   { primary: "Lunala ex A3 87", secondary: [] },
   { primary: DECIDUEYE, secondary: [] },
   { primary: "Gigalith ex A2 94", secondary: [] },
+  { primary: "Solgaleo ex A3 122", secondary: ["Galarian Perrserker B2 111"] },
 
   // Stage 2
   { primary: "Galarian Obstagoon B2 100", secondary: [] },
