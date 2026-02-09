@@ -51,16 +51,20 @@ const ARCHITYPES: Architype[] = [
   { primary: "Dusknoir A2 72", secondary: [MEGA_MAWILE, "Mega Absol ex B1 151"] },
   { primary: "Rampardos A2 89", secondary: ["Donphan ex A4 100"] },
   { primary: "Tyrantrum B2 90", secondary: [] },
+  { primary: "Slaking B2 136", secondary: [] },
 
   // Stage 1 Mega
-  { primary: ALTARIA, secondary: ["Sylveon ex A3b 34"] },
+  { primary: ALTARIA, secondary: ["Sylveon ex A3b 34", "Gourgeist B2 72"] },
   { primary: "Mega Gyarados ex B1 52", secondary: ["Jellicent B1 69"] },
   { primary: "Mega Lopunny ex B1a 42", secondary: [MAGNEZONE, "Lucario A2 92", GRENINJA] },
+  { primary: "Mega Steelix ex B1a 52", secondary: [] },
 
   // Stage 1 ex
+  { primary: "Lugia ex A4 149", secondary: ["Ho-Oh ex A4 34"] },
   { primary: "Jolteon ex B1 81", secondary: ["Jolteon A3b 25", MAGNEZONE] },
   { primary: "Leafeon ex A2a 10", secondary: [] },
   { primary: ALOLAN_NINETALES, secondary: ["Crawdaunt A4 61"] },
+  { primary: "Dragalge ex B1 160", secondary: [] },
 
   // Stage 1
   { primary: "Hydreigon B1 157", secondary: [POISON] },
@@ -69,6 +73,7 @@ const ARCHITYPES: Architype[] = [
   { primary: "Silvally A3a 61", secondary: [ORICORIO] },
   { primary: "Ariados B1a 6", secondary: ["Whimsicott ex B1 16"] },
   { primary: "Galarian Perrserker B2 111", secondary: [MEGA_MAWILE] },
+  { primary: "Gourgeist B2 72", secondary: [] },
 
   // Basic Mega
   { primary: MEGA_KANGASKHAN, secondary: [MAGNEZONE, GRENINJA, POISON, ORICORIO] },
@@ -80,7 +85,7 @@ const ARCHITYPES: Architype[] = [
   { primary: GUZZLORD, secondary: [] },
   { primary: BUZZWOLE, secondary: [] },
   { primary: "Mega Absol ex B1 151", secondary: [GRENINJA] },
-  { primary: "Mimikyu ex B2 73", secondary: ["Giratina ex A2b 35"] },
+  { primary: "Mimikyu ex B2 73", secondary: [GRENINJA, "Giratina ex A2b 35"] },
 
   // Basic
   { primary: "Celesteela A3a 62", secondary: [] },
