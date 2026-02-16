@@ -47,14 +47,16 @@ const ARCHITYPES: Architype[] = [
   { primary: "Solgaleo ex A3 122", secondary: ["Galarian Perrserker B2 111"] },
 
   // Stage 2
+  { primary: "Chandelure B2 69", secondary: [] },
   { primary: "Galarian Obstagoon B2 100", secondary: [] },
-  { primary: "Dusknoir A2 72", secondary: [MEGA_MAWILE, "Mega Absol ex B1 151"] },
+  { primary: "Dusknoir A2 72", secondary: [MEGA_MAWILE, "Mega Absol ex B1 151", ALTARIA] },
   { primary: "Rampardos A2 89", secondary: ["Donphan ex A4 100"] },
   { primary: "Tyrantrum B2 90", secondary: [] },
   { primary: "Slaking B2 136", secondary: [] },
 
   // Stage 1 Mega
-  { primary: ALTARIA, secondary: ["Sylveon ex A3b 34", "Gourgeist B2 72"] },
+  { primary: "Mega Medicham ex PB 29", secondary: [] },
+  { primary: ALTARIA, secondary: ["Sylveon ex A3b 34", "Gourgeist B2 72", "Aegislash B1 172"] },
   { primary: "Mega Gyarados ex B1 52", secondary: ["Jellicent B1 69"] },
   { primary: "Mega Lopunny ex B1a 42", secondary: [MAGNEZONE, "Lucario A2 92", GRENINJA] },
   { primary: "Mega Steelix ex B1a 52", secondary: [] },
