@@ -45,6 +45,7 @@ const ARCHITYPES: Architype[] = [
   { primary: DECIDUEYE, secondary: [] },
   { primary: "Gigalith ex A2 94", secondary: [] },
   { primary: "Solgaleo ex A3 122", secondary: ["Galarian Perrserker B2 111"] },
+  { primary: "Lunala ex A3 87", secondary: [] },
 
   // Stage 2
   { primary: "Chandelure B2 69", secondary: [] },
@@ -84,7 +85,7 @@ const ARCHITYPES: Architype[] = [
   // Basic ex
   { primary: "Suicune ex A4a 20", secondary: [GRENINJA] },
   { primary: "Darkrai ex A2 110", secondary: ["Giratina ex A2b 35"] },
-  { primary: GUZZLORD, secondary: [] },
+  { primary: GUZZLORD, secondary: [POISON] },
   { primary: BUZZWOLE, secondary: [] },
   { primary: "Mega Absol ex B1 151", secondary: [GRENINJA] },
   { primary: "Mimikyu ex B2 73", secondary: [GRENINJA, "Giratina ex A2b 35"] },
