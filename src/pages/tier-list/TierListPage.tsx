@@ -2,13 +2,13 @@ import styled from "styled-components";
 import { useDecks } from "../../contexts/DecksContext";
 import DeckCard from "../../components/DeckCard";
 import useFilters from "../../app/use-filters";
-import ArrowDown from "../../assets/arrow-down.svg";
 import { useTranslation } from "react-i18next";
 import useIsPremium from "../../app/use-is-premium";
 import UserAccount from "../../components/UserAccount";
 import { SortBy } from "../../components/FilterContext";
 import { getSortValue } from "../../app/sorting-helper";
 import LastUpdated from "../../components/LastUpdated";
+import Dropdown from "../../components/Dropdown";
 
 const StyledTierListPage = styled.div`
   width: 100%;
@@ -44,26 +44,16 @@ const FilterContainer = styled.div`
   }
 `;
 
-const EnergySelect = styled.select`
-  padding: 0.8rem 4rem 0.8rem 1.2rem;
-  font-size: 1.6rem;
-  border-radius: 0.4rem;
-  background: var(--bg);
+const DeckAmountContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  font-size: 1.4rem;
   color: var(--main);
-  border: 1px solid var(--main);
-  cursor: pointer;
-  outline: none;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-image: url(${ArrowDown});
-  background-repeat: no-repeat;
-  background-position: right 1.2rem center;
-  background-size: 1.2em 1.2em;
+`;
 
-  &:hover {
-    border-color: var(--a);
-  }
+const DeckAmountSelect = styled(Dropdown)`
+  min-width: 8rem;
 `;
 
 const IncludeExContainer = styled.label`
@@ -85,18 +75,6 @@ const IncludeExCheckbox = styled.input.attrs({ type: "checkbox" })`
   border-radius: 0.3rem;
   margin-left: 0.8rem;
   cursor: pointer;
-`;
-
-const DeckAmountContainer = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 1.2rem;
-  font-size: 1.4rem;
-  color: var(--main);
-`;
-
-const DeckAmountSelect = styled(EnergySelect)`
-  min-width: 8rem;
 `;
 
 const DeckRow = styled.div`
@@ -243,7 +221,7 @@ const LandingPage = () => {
         <UserAccount showUpsell />
         {isPremium && (
           <>
-            <EnergySelect
+            <Dropdown
               value={energy ?? ""}
               onChange={(e) => {
                 const value = e.target.value;
@@ -256,7 +234,7 @@ const LandingPage = () => {
                   {t(`energyDropdown.${type}`)}
                 </option>
               ))}
-            </EnergySelect>
+            </Dropdown>
             <IncludeExContainer>
               {t("filter.includeEx")}
               <IncludeExCheckbox

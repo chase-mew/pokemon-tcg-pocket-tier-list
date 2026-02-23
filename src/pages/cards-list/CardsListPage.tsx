@@ -2,10 +2,10 @@ import styled from "styled-components";
 import UserAccount from "../../components/UserAccount";
 import useCards from "../../app/use-cards";
 import CardIcon from "../../components/CardIcon";
-import ArrowDown from "../../assets/arrow-down.svg";
 import useFilters from "../../app/use-filters";
 import LastUpdated from "../../components/LastUpdated";
 import useExpansions, { ExpansionType } from "../../app/use-expansions";
+import Dropdown from "../../components/Dropdown";
 
 const StyledCardsListPage = styled.div`
   width: 100%;
@@ -110,28 +110,6 @@ const Loading = styled.div`
   align-items: center;
   font-size: 2rem;
   font-weight: 500;
-`;
-
-const Dropdown = styled.select`
-  padding: 0.8rem 4rem 0.8rem 1.2rem;
-  font-size: 1.6rem;
-  border-radius: 0.4rem;
-  background: var(--bg);
-  color: var(--main);
-  border: 1px solid var(--main);
-  cursor: pointer;
-  outline: none;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-image: url(${ArrowDown});
-  background-repeat: no-repeat;
-  background-position: right 1.2rem center;
-  background-size: 1.2em 1.2em;
-
-  &:hover {
-    border-color: var(--a);
-  }
 `;
 
 const CardsListPage = () => {

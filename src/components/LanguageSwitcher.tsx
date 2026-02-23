@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
+import Dropdown from "./Dropdown";
 
 const Container = styled.div`
   position: relative;
@@ -11,26 +12,10 @@ const Container = styled.div`
   }
 `;
 
-const Select = styled.select`
+const LanguageDropdown = styled(Dropdown)`
   padding: 0.8rem 2.4rem 0.8rem 1.2rem;
   font-size: 1.4rem;
-  border-radius: 0.4rem;
-  background: var(--bg);
-  color: var(--main);
-  border: 1px solid var(--main);
-  cursor: pointer;
-  outline: none;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-  background-repeat: no-repeat;
   background-position: right 0.8rem center;
-  background-size: 1.2em 1.2em;
-
-  &:hover {
-    border-color: var(--a);
-  }
 `;
 
 const LanguageSwitcher = () => {
@@ -50,7 +35,7 @@ const LanguageSwitcher = () => {
 
   return (
     <Container>
-      <Select
+      <LanguageDropdown
         value={i18n.language}
         onChange={(e) => i18n.changeLanguage(e.target.value)}
         aria-label="Select language"
@@ -60,7 +45,7 @@ const LanguageSwitcher = () => {
             {lang.name}
           </option>
         ))}
-      </Select>
+      </LanguageDropdown>
     </Container>
   );
 };
