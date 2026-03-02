@@ -46,6 +46,7 @@ const ARCHITYPES: Architype[] = [
   { primary: "Gigalith ex A2 94", secondary: [] },
   { primary: "Solgaleo ex A3 122", secondary: ["Galarian Perrserker B2 111"] },
   { primary: "Lunala ex A3 87", secondary: [] },
+  { primary: "Meowscarada ex B2a 3", secondary: [] },
 
   // Stage 2
   { primary: "Chandelure B2 69", secondary: [] },
@@ -54,6 +55,7 @@ const ARCHITYPES: Architype[] = [
   { primary: "Rampardos A2 89", secondary: ["Donphan ex A4 100"] },
   { primary: "Tyrantrum B2 90", secondary: [] },
   { primary: "Slaking B2 136", secondary: [] },
+  { primary: "Baxcalibur B2a 36", secondary: [] },
 
   // Stage 1 Mega
   { primary: "Mega Medicham ex PB 29", secondary: [] },
@@ -68,6 +70,9 @@ const ARCHITYPES: Architype[] = [
   { primary: "Leafeon ex A2a 10", secondary: [] },
   { primary: ALOLAN_NINETALES, secondary: ["Crawdaunt A4 61"] },
   { primary: "Dragalge ex B1 160", secondary: [] },
+  { primary: "Armarouge ex B2a 20", secondary: [] },
+  { primary: "Bellibolt ex B2a 42", secondary: [] },
+  { primary: "Gholdengo ex B2a 78", secondary: [] },
 
   // Stage 1
   { primary: "Hydreigon B1 157", secondary: [POISON] },
@@ -89,6 +94,7 @@ const ARCHITYPES: Architype[] = [
   { primary: BUZZWOLE, secondary: [] },
   { primary: "Mega Absol ex B1 151", secondary: [GRENINJA] },
   { primary: "Mimikyu ex B2 73", secondary: [GRENINJA, "Giratina ex A2b 35"] },
+  { primary: "Chien-Pao ex B2a 37", secondary: [] },
 
   // Basic
   { primary: "Celesteela A3a 62", secondary: [] },
@@ -98,7 +104,7 @@ const ARCHITYPES: Architype[] = [
   { primary: GRENINJA, secondary: [ORICORIO] },
 
   // Fallback
-  // { primary: "Professor's Research PA 7", secondary: [] },
+  { primary: "Professor's Research PA 7", secondary: [] },
 ];
 
 // const DECK_NAMES: DeckNameType[] = [
