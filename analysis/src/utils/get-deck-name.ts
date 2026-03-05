@@ -24,6 +24,7 @@ const POISON = ["Poison Barb A3 146", "Nihilego A3a 42"]
 const ORICORIO = ["Oricorio A3 66", "Pichu A4 66"]
 const MEGA_KANGASKHAN = ["Mega Kangaskhan ex B2 127", "Serena B1a 69", "Ilima A3 149"]
 const MEGA_MAWILE = ["Mega Mawile ex B2 113", "Serena B1a 69"]
+const MEOWSCARADA = ["Meowscarada ex B2a 3", "Meowscarada A2b 7"]
 
 const ARCHITYPES: Architype[] = [
   // Outliers
@@ -46,7 +47,7 @@ const ARCHITYPES: Architype[] = [
   { primary: "Gigalith ex A2 94", secondary: [] },
   { primary: "Solgaleo ex A3 122", secondary: ["Galarian Perrserker B2 111"] },
   { primary: "Lunala ex A3 87", secondary: [] },
-  { primary: "Meowscarada ex B2a 3", secondary: [] },
+  { primary: MEOWSCARADA, secondary: [] },
 
   // Stage 2
   { primary: "Chandelure B2 69", secondary: [] },
@@ -56,10 +57,11 @@ const ARCHITYPES: Architype[] = [
   { primary: "Tyrantrum B2 90", secondary: [] },
   { primary: "Slaking B2 136", secondary: [] },
   { primary: "Baxcalibur B2a 36", secondary: [] },
+  { primary: "Annihilape B2a 56", secondary: ["Mega Lopunny ex B1a 42"] },
 
   // Stage 1 Mega
   { primary: "Mega Medicham ex PB 29", secondary: [] },
-  { primary: ALTARIA, secondary: ["Sylveon ex A3b 34", "Gourgeist B2 72", "Aegislash B1 172"] },
+  { primary: ALTARIA, secondary: ["Sylveon ex A3b 34", "Gourgeist B2 72", "Aegislash B1 172", GRENINJA] },
   { primary: "Mega Gyarados ex B1 52", secondary: ["Jellicent B1 69"] },
   { primary: "Mega Lopunny ex B1a 42", secondary: [MAGNEZONE, "Lucario A2 92", GRENINJA] },
   { primary: "Mega Steelix ex B1a 52", secondary: [] },
@@ -71,7 +73,7 @@ const ARCHITYPES: Architype[] = [
   { primary: ALOLAN_NINETALES, secondary: ["Crawdaunt A4 61"] },
   { primary: "Dragalge ex B1 160", secondary: [] },
   { primary: "Armarouge ex B2a 20", secondary: [] },
-  { primary: "Bellibolt ex B2a 42", secondary: [] },
+  { primary: "Bellibolt ex B2a 42", secondary: [MAGNEZONE] },
   { primary: "Gholdengo ex B2a 78", secondary: [] },
 
   // Stage 1
@@ -81,6 +83,7 @@ const ARCHITYPES: Architype[] = [
   { primary: "Silvally A3a 61", secondary: [ORICORIO] },
   { primary: "Ariados B1a 6", secondary: ["Whimsicott ex B1 16"] },
   { primary: "Galarian Perrserker B2 111", secondary: [MEGA_MAWILE] },
+  { primary: "Houndstone B2a 53", secondary: ["Gourgeist B2 72"] },
   { primary: "Gourgeist B2 72", secondary: [] },
 
   // Basic Mega
