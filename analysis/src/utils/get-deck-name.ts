@@ -57,7 +57,7 @@ const ARCHITYPES: Architype[] = [
   { primary: "Tyrantrum B2 90", secondary: [] },
   { primary: "Slaking B2 136", secondary: [] },
   { primary: "Baxcalibur B2a 36", secondary: [] },
-  { primary: "Annihilape B2a 56", secondary: ["Mega Lopunny ex B1a 42"] },
+  { primary: "Annihilape B2a 57", secondary: ["Mega Lopunny ex B1a 42"] },
 
   // Stage 1 Mega
   { primary: "Mega Medicham ex PB 29", secondary: [] },
