@@ -56,7 +56,7 @@ const ARCHITYPES: Architype[] = [
   { primary: "Rampardos A2 89", secondary: ["Donphan ex A4 100"] },
   { primary: "Tyrantrum B2 90", secondary: [] },
   { primary: "Slaking B2 136", secondary: [] },
-  { primary: "Baxcalibur B2a 36", secondary: [] },
+  { primary: "Baxcalibur B2a 36", secondary: [ALOLAN_NINETALES] },
   { primary: "Annihilape B2a 57", secondary: ["Mega Lopunny ex B1a 42"] },
 
   // Stage 1 Mega
@@ -89,13 +89,13 @@ const ARCHITYPES: Architype[] = [
   // Basic Mega
   { primary: MEGA_KANGASKHAN, secondary: [MAGNEZONE, GRENINJA, POISON, ORICORIO] },
   { primary: MEGA_MAWILE, secondary: [] },
+  { primary: "Mega Absol ex B1 151", secondary: [GRENINJA, ORICORIO] },
 
   // Basic ex
   { primary: "Suicune ex A4a 20", secondary: [GRENINJA] },
   { primary: "Darkrai ex A2 110", secondary: ["Giratina ex A2b 35"] },
   { primary: GUZZLORD, secondary: [POISON] },
   { primary: BUZZWOLE, secondary: [] },
-  { primary: "Mega Absol ex B1 151", secondary: [GRENINJA] },
   { primary: "Mimikyu ex B2 73", secondary: [GRENINJA, "Giratina ex A2b 35"] },
   { primary: "Chien-Pao ex B2a 37", secondary: [] },
 
