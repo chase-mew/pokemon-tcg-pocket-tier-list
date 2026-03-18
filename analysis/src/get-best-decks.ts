@@ -6,7 +6,6 @@ import { calculateDeckScore } from "./utils/calculate-deck-score";
 import { calculateCardScores } from "./utils/calculate-card-scores";
 import { calculateMatchupResults } from "./utils/calculate-matchup-results";
 import { Deck, MatchupData } from "./utils/types";
-import { EXPANSION_RELEASE_DATE } from "./settings";
 import { convertCardsToIds } from "./utils/convert-cards";
 
 const CARDS_API =
@@ -134,12 +133,8 @@ const run = async () => {
     });
   }
 
-  // Card scores for all games
-  const decksSinceLastExpansion = decks.filter(
-    (deck) => new Date(deck.date) > EXPANSION_RELEASE_DATE
-  );
   const allCards: Record<string, { winCount: number; totalGames: number }> = {};
-  for (const deck of decksSinceLastExpansion) {
+  for (const deck of decks) {
     for (const card of deck.cards) {
       const cardName = cardToString(card);
       if (allCards[cardName]) {
@@ -153,14 +148,7 @@ const run = async () => {
       }
     }
   }
-  const totalGamesSinceLastExpansion = decksSinceLastExpansion.reduce(
-    (acc, deck) => acc + deck.totalGames,
-    0
-  );
-  const cardScores = calculateCardScores(
-    allCards,
-    totalGamesSinceLastExpansion
-  );
+  const cardScores = calculateCardScores(allCards, allGames);
   const cardScoresList: { name: string; score: number; popularity: number }[] =
     Object.entries(cardScores).map(([cardName, { score, popularity }]) => ({
       name: cardName,

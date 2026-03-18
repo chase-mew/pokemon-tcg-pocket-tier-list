@@ -5,7 +5,6 @@ export const OLD_MULTIPLIER: number = 1;
 export const CARDS_IN_DECK: number = 20;
 export const RED_CARD_MULTIPLIER: number = 0.9;
 export const EXPANSION_RELEASE_DATE: Date = new Date("2026-02-27");
-export const POST_EXPANSION_PERCENT: number = 0.95;
 export const NOEX_PERCENT_CUTOFF: number = 0.2;
 export const WIGGLYTUFF_PERCENT_CUTOFF: number = 0.1;
 export const NO_TRAINER_PERCENT_CUTOFF: number = 0.1;

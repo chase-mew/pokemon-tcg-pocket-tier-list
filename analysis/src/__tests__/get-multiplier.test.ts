@@ -24,40 +24,7 @@ describe("getMultiplier", () => {
     name: "Test Deck",
   };
 
-  it("should return beforeExpansionMul for decks before expansion date", () => {
-    const beforeExpansionDate = new Date(EXPANSION_RELEASE_DATE);
-    beforeExpansionDate.setDate(beforeExpansionDate.getDate() - 1);
-
-    const deck: Deck = {
-      ...mockDeck,
-      date: beforeExpansionDate.toISOString(),
-    };
-
-    const newestDate = new Date(EXPANSION_RELEASE_DATE);
-    newestDate.setDate(newestDate.getDate() + 30);
-
-    const result = getMultiplier(deck, newestDate, 2, 1);
-    expect(result).toBe(2);
-  });
-
-  it("should calculate recency multiplier for decks after expansion date", () => {
-    const afterExpansionDate = new Date(EXPANSION_RELEASE_DATE);
-    afterExpansionDate.setDate(afterExpansionDate.getDate() + 15);
-
-    const deck: Deck = {
-      ...mockDeck,
-      date: afterExpansionDate.toISOString(),
-    };
-
-    const newestDate = new Date(EXPANSION_RELEASE_DATE);
-    newestDate.setDate(newestDate.getDate() + 30);
-
-    const result = getMultiplier(deck, newestDate, 1, 2);
-    const expectedMultiplier = ((OLD_MULTIPLIER + NEW_MULTIPLIER) / 2) * 2;
-    expect(result).toBeCloseTo(expectedMultiplier, 1);
-  });
-
-  it("should return maximum multiplier for newest decks", () => {
+  it("should return NEW_MULTIPLIER for the newest deck", () => {
     const newestDate = new Date(EXPANSION_RELEASE_DATE);
     newestDate.setDate(newestDate.getDate() + 30);
 
@@ -66,32 +33,55 @@ describe("getMultiplier", () => {
       date: newestDate.toISOString(),
     };
 
-    const result = getMultiplier(deck, newestDate, 1, 2);
-    expect(result).toBe(NEW_MULTIPLIER * 2);
+    const result = getMultiplier(deck, newestDate);
+    expect(result).toBe(NEW_MULTIPLIER);
   });
 
-  it("should return minimum multiplier for oldest post-expansion decks", () => {
-    const oldestDate = new Date(EXPANSION_RELEASE_DATE);
-    oldestDate.setDate(oldestDate.getDate() + 1);
-
+  it("should return OLD_MULTIPLIER for decks at the expansion date", () => {
     const deck: Deck = {
       ...mockDeck,
-      date: oldestDate.toISOString(),
+      date: EXPANSION_RELEASE_DATE.toISOString(),
     };
 
     const newestDate = new Date(EXPANSION_RELEASE_DATE);
     newestDate.setDate(newestDate.getDate() + 30);
 
-    // Calculate expected multiplier using the same formula as in getRecencyMultiplier
-    const deckDate = oldestDate;
-    const timePassed = deckDate.getTime() - EXPANSION_RELEASE_DATE.getTime();
-    const totalTime = newestDate.getTime() - EXPANSION_RELEASE_DATE.getTime();
-    const datePercentage = timePassed / totalTime;
-    const recencyMultiplier =
-      datePercentage * (NEW_MULTIPLIER - OLD_MULTIPLIER) + OLD_MULTIPLIER;
-    const expectedMultiplier = recencyMultiplier * 2;
+    const result = getMultiplier(deck, newestDate);
+    expect(result).toBeCloseTo(OLD_MULTIPLIER, 5);
+  });
 
-    const result = getMultiplier(deck, newestDate, 1, 2);
-    expect(result).toBeCloseTo(expectedMultiplier, 5);
+  it("should return midpoint multiplier for decks halfway between expansion and newest", () => {
+    const newestDate = new Date(EXPANSION_RELEASE_DATE);
+    newestDate.setDate(newestDate.getDate() + 30);
+
+    const midDate = new Date(EXPANSION_RELEASE_DATE);
+    midDate.setDate(midDate.getDate() + 15);
+
+    const deck: Deck = {
+      ...mockDeck,
+      date: midDate.toISOString(),
+    };
+
+    const result = getMultiplier(deck, newestDate);
+    const expectedMultiplier = (OLD_MULTIPLIER + NEW_MULTIPLIER) / 2;
+    expect(result).toBeCloseTo(expectedMultiplier, 1);
+  });
+
+  it("should interpolate linearly between OLD_MULTIPLIER and NEW_MULTIPLIER", () => {
+    const newestDate = new Date(EXPANSION_RELEASE_DATE);
+    newestDate.setDate(newestDate.getDate() + 30);
+
+    const quarterDate = new Date(EXPANSION_RELEASE_DATE);
+    quarterDate.setDate(quarterDate.getDate() + 7.5);
+
+    const deck: Deck = {
+      ...mockDeck,
+      date: quarterDate.toISOString(),
+    };
+
+    const result = getMultiplier(deck, newestDate);
+    const expectedMultiplier =
+      0.25 * (NEW_MULTIPLIER - OLD_MULTIPLIER) + OLD_MULTIPLIER;
+    expect(result).toBeCloseTo(expectedMultiplier, 1);
   });
 });

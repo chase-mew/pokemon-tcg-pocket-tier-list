@@ -3,7 +3,6 @@ import getMultiplier from "./get-multiplier";
 import { filterDecks } from "./filter-decks";
 import { populateDeckNames } from "./populate-deck-names";
 import { updateDeckResults } from "./update-deck-results";
-import { calculateMultipliers } from "./calculate-multipliers";
 import { fixPokeballCards } from "./fix-pokeball-cards";
 import { Deck } from "./types";
 
@@ -36,19 +35,9 @@ const getNewestDate = (decks: Deck[]): Date => {
   );
 };
 
-const applyMultipliers = (
-  decks: Deck[],
-  newestDate: Date,
-  beforeExpansionMul: number,
-  afterExpansionMul: number
-): Deck[] => {
+const applyMultipliers = (decks: Deck[], newestDate: Date): Deck[] => {
   return decks.map((deck) => {
-    const multiplier = getMultiplier(
-      deck,
-      newestDate,
-      beforeExpansionMul,
-      afterExpansionMul
-    );
+    const multiplier = getMultiplier(deck, newestDate);
     return {
       ...deck,
       totalGames: deck.totalGames * multiplier,
@@ -69,15 +58,7 @@ const getDecks = (): Deck[] => {
   console.log("Sample Games:", (totalGames / 2).toLocaleString());
 
   const newestDate = getNewestDate(decksWithResults);
-  const { beforeExpansionMul, afterExpansionMul } =
-    calculateMultipliers(decksWithResults);
-
-  const decksWithMultipliers = applyMultipliers(
-    decksWithResults,
-    newestDate,
-    beforeExpansionMul,
-    afterExpansionMul
-  );
+  const decksWithMultipliers = applyMultipliers(decksWithResults, newestDate);
 
   return fixPokeballCards(decksWithMultipliers);
 };

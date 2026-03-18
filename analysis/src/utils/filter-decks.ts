@@ -4,11 +4,13 @@ import {
   WIGGLYTUFF_PERCENT_CUTOFF,
   NO_TRAINER_PERCENT_CUTOFF,
   MAX_DECKS_TO_ANALYZE,
+  EXPANSION_RELEASE_DATE,
 } from "../settings";
 import { Deck } from "./types";
 
 export const filterDecks = (decks: Deck[]): Deck[] => {
   return decks
+    .filter((deck) => new Date(deck.date) >= EXPANSION_RELEASE_DATE)
     .filter(
       (deck) => !deck.cards.some((card) => card.name.endsWith(" ex")) || !NOEX
     )

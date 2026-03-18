@@ -6,6 +6,7 @@ jest.mock("../settings", () => ({
   NOEX_PERCENT_CUTOFF: 0.2,
   WIGGLYTUFF_PERCENT_CUTOFF: 0.1,
   NO_TRAINER_PERCENT_CUTOFF: 0.1,
+  EXPANSION_RELEASE_DATE: new Date("2020-01-01"),
 }));
 
 describe("filterDecks", () => {
