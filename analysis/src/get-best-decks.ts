@@ -7,19 +7,31 @@ import { calculateCardScores } from "./utils/calculate-card-scores";
 import { calculateMatchupResults } from "./utils/calculate-matchup-results";
 import { Deck, MatchupData } from "./utils/types";
 import { convertCardsToIds } from "./utils/convert-cards";
+import { MIN_WINRATE_THRESHOLD } from "./settings";
 
 const CARDS_API =
   "https://raw.githubusercontent.com/chase-manning/pokemon-tcg-pocket-cards/refs/heads/main/v4.json";
 
 const run = async () => {
   const cardsPromise = fetch(CARDS_API);
-  const decks = getDecks();
-  const allGames = decks.reduce(
+  const allDecks = getDecks();
+
+  const qualifiedDecks = allDecks.filter(
+    (deck: Deck) =>
+      deck.totalGames > 0 &&
+      deck.winCount / deck.totalGames >= MIN_WINRATE_THRESHOLD
+  );
+
+  console.log(
+    `Qualified decks (>=${MIN_WINRATE_THRESHOLD * 100}% winrate): ${qualifiedDecks.length} / ${allDecks.length}`
+  );
+
+  const allQualifiedGames = qualifiedDecks.reduce(
     (acc: number, deck: Deck) => acc + deck.totalGames,
     0
   );
 
-  const uniqueDeckNames = decks
+  const uniqueDeckNames = qualifiedDecks
     .map((deck: Deck) => deck.name)
     .filter(
       (value: string, index: number, self: string[]) =>
@@ -36,19 +48,22 @@ const run = async () => {
 
   for (const deckName of uniqueDeckNames) {
     matchupResults[deckName] = {};
-    const matchingDecks = decks.filter((game: Deck) => game.name === deckName);
-    const matchingGames = matchingDecks.reduce(
+
+    // Qualified decks for this archetype (80%+ winrate)
+    const matchingQualifiedDecks = qualifiedDecks.filter(
+      (game: Deck) => game.name === deckName
+    );
+    const matchingQualifiedGames = matchingQualifiedDecks.reduce(
       (acc: number, game: Deck) => acc + game.totalGames,
       0
     );
-    const percentOfGames = matchingGames / allGames;
+    const percentOfGames = matchingQualifiedGames / allQualifiedGames;
 
     const cards: Record<
       string,
       { winCount: number; totalGames: number; score?: number }
     > = {};
-    for (const deck of matchingDecks) {
-      // Updating card results
+    for (const deck of matchingQualifiedDecks) {
       for (const card of deck.cards) {
         const cardName = cardToString(card);
         if (cards[cardName]) {
@@ -63,21 +78,22 @@ const run = async () => {
       }
     }
 
-    // Calculate card scores
-    const scoredCards = calculateCardScores(cards, matchingGames);
+    // Calculate card scores from qualified decks
+    const scoredCards = calculateCardScores(cards, matchingQualifiedGames);
 
-    // Calculate matchup results
-    matchupResults[deckName] = calculateMatchupResults(decks, deckName);
+    // Calculate matchup results from ALL decks (unfiltered) so winrates are accurate
+    matchupResults[deckName] = calculateMatchupResults(allDecks, deckName);
 
+    // Build lists from qualified decks only
     const lists: any = [];
-    for (const deck of matchingDecks) {
+    for (const deck of matchingQualifiedDecks) {
       const id = getId(deck);
       if (idExists[id]) continue;
       const deckScore = calculateDeckScore(
         deck,
         scoredCards,
-        matchingGames,
-        allGames
+        matchingQualifiedGames,
+        allQualifiedGames
       );
       const formattedList = {
         cards: convertCardsToIds(deck.cards),
@@ -89,10 +105,10 @@ const run = async () => {
     }
 
     const deckScore = calculateDeckScore(
-      matchingDecks[0],
+      matchingQualifiedDecks[0],
       scoredCards,
-      matchingGames,
-      allGames
+      matchingQualifiedGames,
+      allQualifiedGames
     );
     bestDecks.push({
       name: deckName,
@@ -134,7 +150,7 @@ const run = async () => {
   }
 
   const allCards: Record<string, { winCount: number; totalGames: number }> = {};
-  for (const deck of decks) {
+  for (const deck of qualifiedDecks) {
     for (const card of deck.cards) {
       const cardName = cardToString(card);
       if (allCards[cardName]) {
@@ -148,7 +164,7 @@ const run = async () => {
       }
     }
   }
-  const cardScores = calculateCardScores(allCards, allGames);
+  const cardScores = calculateCardScores(allCards, allQualifiedGames);
   const cardScoresList: { name: string; score: number; popularity: number }[] =
     Object.entries(cardScores).map(([cardName, { score, popularity }]) => ({
       name: cardName,
