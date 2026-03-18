@@ -10,6 +10,7 @@ export const WIGGLYTUFF_PERCENT_CUTOFF: number = 0.1;
 export const NO_TRAINER_PERCENT_CUTOFF: number = 0.1;
 export const MIN_GAMES_IN_TOURNAMENT: number = 50;
 export const MAX_DECKS_TO_ANALYZE: number = 400_000;
+export const MIN_WINRATE_THRESHOLD: number = 0.8;
 
 const NOW = new Date();
 const SECONDS_IN_WEEK = 7 * 24 * 60 * 60 * 1000;
