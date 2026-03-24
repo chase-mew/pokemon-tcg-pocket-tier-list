@@ -53,7 +53,7 @@ const ARCHITYPES: Architype[] = [
   { primary: "Chandelure B2 69", secondary: [] },
   { primary: "Galarian Obstagoon B2 100", secondary: [] },
   { primary: "Dusknoir A2 72", secondary: [MEGA_MAWILE, "Mega Absol ex B1 151", ALTARIA] },
-  { primary: "Rampardos A2 89", secondary: ["Donphan ex A4 100"] },
+  { primary: "Rampardos A2 89", secondary: ["Donphan ex A4 100", "Silvally A3a 61"] },
   { primary: "Tyrantrum B2 90", secondary: [] },
   { primary: "Slaking B2 136", secondary: [] },
   { primary: "Baxcalibur B2a 36", secondary: [ALOLAN_NINETALES] },
