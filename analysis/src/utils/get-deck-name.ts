@@ -8,9 +8,8 @@ interface Architype {
   primary: CardNameType;
   secondary: CardNameType[];
 }
-
 const VENUSAUR = ["Mega Venusaur ex B1a 4", "Venusaur ex A1 4", "Venusaur B1a 3", "Venusaur A1 3"];
-const CHARIZARD = ["Mega Charizard Y ex B1a 14", "Charizard ex A2b 10", "Charizard ex A1 36", "Charizard B1a 13", "Charizard A1 35"]
+const CHARIZARD = ["Mega Charizard X ex B2b 9", "Mega Charizard Y ex B1a 14", "Charizard ex A2b 10", "Charizard ex A1 36", "Charizard B1a 13", "Charizard A1 35"]
 const BLASTOISE = ["Blastoise ex A1 56", "Mega Blastoise ex B1a 20", "Blastoise A1 55", "Blastoise B1a 19"]
 const GRENINJA = ["Greninja A1 89", "Greninja ex B1 73"]
 const ALTARIA = ["Mega Altaria ex B1 102", "Altaria A4a 55", "Altaria B1 197"]
@@ -25,16 +24,23 @@ const ORICORIO = ["Oricorio A3 66", "Pichu A4 66"]
 const MEGA_KANGASKHAN = ["Mega Kangaskhan ex B2 127", "Serena B1a 69", "Ilima A3 149"]
 const MEGA_MAWILE = ["Mega Mawile ex B2 113", "Serena B1a 69"]
 const MEOWSCARADA = ["Meowscarada ex B2a 3", "Meowscarada A2b 7"]
+const SCIZOR = ["Mega Scizor ex B2b 47", "Scizor A4 123"]
+const DRAGONITE = ["Dragonite ex A3b 53", "Dragonite B2b 53", "Dragonite A1 185"]
+const SLEEP = ["Darkrai B2b 40", "Igglybuff A4a 59"];
 
 const ARCHITYPES: Architype[] = [
   // Outliers
   { primary: "Ditto B1a 55", secondary: ["Rampardos A2 89", "Liepard B1a 48", MAGNEZONE, "Maushold B2 143"] },
 
   // Stage 2 Mega
+  { primary: "Mega Slowbro ex B2b 16", secondary: ["Suicune ex A4a 20"] },
+  { primary: "Mega Manectric ex B2b 27", secondary: [] },
+  { primary: "Mega Gengar ex B2b 39", secondary: [] },
+  { primary: SCIZOR, secondary: ["Revavroom B2b 50"] },
   { primary: "Mega Swampert ex B2 36", secondary: [] },
   { primary: "Mega Gardevoir ex B2 66", secondary: ["Latias A4a 36", "Sylveon ex A3b 34"] },
   { primary: VENUSAUR, secondary: ["Exeggutor ex A1 23", "Dustox B1 7", "Lilligant B1 18"] },
-  { primary: CHARIZARD, secondary: [] },
+  { primary: CHARIZARD, secondary: ["Skeledirge B2a 18"] },
   { primary: BLASTOISE, secondary: [] },
   { primary: "Mega Blaziken ex B1 36", secondary: [] },
   { primary: "Mega Ampharos ex B1 85", secondary: ["Alolan Raichu B2 50"] },
@@ -48,20 +54,24 @@ const ARCHITYPES: Architype[] = [
   { primary: "Solgaleo ex A3 122", secondary: ["Galarian Perrserker B2 111"] },
   { primary: "Lunala ex A3 87", secondary: [] },
   { primary: MEOWSCARADA, secondary: [] },
+  { primary: DRAGONITE, secondary: ["Rampardos A2 89"] },
 
   // Stage 2
+  { primary: "Vivillon B2 13", secondary: [SLEEP] },
+  { primary: "Skeledirge B2a 18", secondary: [] },
+  { primary: "Haxorus B2b 56", secondary: [] },
   { primary: "Chandelure B2 69", secondary: [] },
   { primary: "Galarian Obstagoon B2 100", secondary: [] },
   { primary: "Dusknoir A2 72", secondary: [MEGA_MAWILE, "Mega Absol ex B1 151", ALTARIA] },
   { primary: "Rampardos A2 89", secondary: ["Donphan ex A4 100", "Silvally A3a 61"] },
   { primary: "Tyrantrum B2 90", secondary: [] },
   { primary: "Slaking B2 136", secondary: [] },
-  { primary: "Baxcalibur B2a 36", secondary: [ALOLAN_NINETALES] },
+  { primary: "Baxcalibur B2a 36", secondary: ["Suicune ex A4a 20", ALOLAN_NINETALES] },
   { primary: "Annihilape B2a 57", secondary: ["Mega Lopunny ex B1a 42"] },
 
   // Stage 1 Mega
   { primary: "Mega Medicham ex PB 29", secondary: [] },
-  { primary: ALTARIA, secondary: ["Sylveon ex A3b 34", "Gourgeist B2 72", "Aegislash B1 172", GRENINJA] },
+  { primary: ALTARIA, secondary: ["Sylveon ex A3b 34", "Gourgeist B2 72", "Aegislash B1 172", GRENINJA, SLEEP] },
   { primary: "Mega Gyarados ex B1 52", secondary: ["Jellicent B1 69"] },
   { primary: "Mega Lopunny ex B1a 42", secondary: [MAGNEZONE, "Lucario A2 92", GRENINJA] },
   { primary: "Mega Steelix ex B1a 52", secondary: [] },
@@ -104,7 +114,7 @@ const ARCHITYPES: Architype[] = [
 
   // Tech Cards
   { primary: MAGNEZONE, secondary: [ORICORIO] },
-  { primary: GRENINJA, secondary: [ORICORIO] },
+  { primary: GRENINJA, secondary: [ORICORIO, SLEEP] },
 
   // Fallback
   { primary: "Professor's Research PA 7", secondary: [] },
