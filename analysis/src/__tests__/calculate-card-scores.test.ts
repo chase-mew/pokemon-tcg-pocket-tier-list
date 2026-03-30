@@ -3,7 +3,7 @@ import { calculateCardScores } from "../utils/calculate-card-scores";
 describe("calculateCardScores", () => {
   it("should calculate card scores correctly", () => {
     const mockCards = {
-      Pikachu: { winCount: 10, totalGames: 20 },
+      Pikachu: { winCount: 5, totalGames: 10 },
       "Red Card": { winCount: 15, totalGames: 20 },
     };
 
