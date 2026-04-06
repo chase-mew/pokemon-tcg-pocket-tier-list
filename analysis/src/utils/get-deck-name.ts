@@ -42,7 +42,7 @@ const ARCHITYPES: Architype[] = [
   { primary: VENUSAUR, secondary: ["Exeggutor ex A1 23", "Dustox B1 7", "Lilligant B1 18"] },
   { primary: CHARIZARD, secondary: ["Skeledirge B2a 18"] },
   { primary: BLASTOISE, secondary: [] },
-  { primary: "Mega Blaziken ex B1 36", secondary: [] },
+  { primary: "Mega Blaziken ex B1 36", secondary: [GRENINJA] },
   { primary: "Mega Ampharos ex B1 85", secondary: ["Alolan Raichu B2 50"] },
 
   // Stage 2 ex
@@ -87,6 +87,7 @@ const ARCHITYPES: Architype[] = [
   { primary: "Gholdengo ex B2a 78", secondary: [] },
 
   // Stage 1
+  { primary: "Gyarados A4 45", secondary: ["Suicune ex A4a 20"] },
   { primary: "Hydreigon B1 157", secondary: [POISON] },
   { primary: ESPEON, secondary: [] },
   { primary: "Crobat A2a 50", secondary: [] },
