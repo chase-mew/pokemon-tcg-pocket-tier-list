@@ -281,7 +281,7 @@ const LandingPage = () => {
                 }}
               >
                 <option value="">{t("filter.latestExpansionCardsAny")}</option>
-                {[2, 6, 12].map((count) => (
+                {[2, 6, 7].map((count) => (
                   <option key={count} value={count}>
                     {count}
                   </option>
