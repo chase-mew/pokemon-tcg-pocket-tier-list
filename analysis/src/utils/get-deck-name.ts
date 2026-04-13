@@ -96,6 +96,7 @@ const ARCHITYPES: Architype[] = [
   { primary: "Galarian Perrserker B2 111", secondary: [MEGA_MAWILE] },
   { primary: "Houndstone B2a 53", secondary: ["Gourgeist B2 72"] },
   { primary: "Gourgeist B2 72", secondary: [] },
+  { primary: "Naganadel A3a 45", secondary: [] },
 
   // Basic Mega
   { primary: MEGA_KANGASKHAN, secondary: [MAGNEZONE, GRENINJA, POISON, ORICORIO] },
