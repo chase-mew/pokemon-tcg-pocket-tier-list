@@ -89,7 +89,7 @@ const ARCHITYPES: Architype[] = [
   // Stage 1
   { primary: "Gyarados A4 45", secondary: ["Suicune ex A4a 20"] },
   { primary: "Hydreigon B1 157", secondary: [POISON] },
-  { primary: ESPEON, secondary: [] },
+  { primary: ESPEON, secondary: ["Sylveon ex A3b 34"] },
   { primary: "Crobat A2a 50", secondary: [] },
   { primary: "Silvally A3a 61", secondary: [ORICORIO] },
   { primary: "Ariados B1a 6", secondary: ["Whimsicott ex B1 16"] },
@@ -104,6 +104,7 @@ const ARCHITYPES: Architype[] = [
   { primary: "Mega Absol ex B1 151", secondary: [GRENINJA, ORICORIO] },
 
   // Basic ex
+  { primary: "Ho-Oh ex A4 34", secondary: ["Ilima A3 149"] },
   { primary: "Suicune ex A4a 20", secondary: [GRENINJA] },
   { primary: "Darkrai ex A2 110", secondary: ["Giratina ex A2b 35"] },
   { primary: GUZZLORD, secondary: [POISON] },
