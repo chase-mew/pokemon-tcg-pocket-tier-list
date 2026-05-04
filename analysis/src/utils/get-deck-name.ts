@@ -212,7 +212,7 @@ const getDeckName = (deck: Deck): string | null => {
     }
   }
 
-  // Then try matching with at least 1 copy of each card
+  // Then try matching with at least 1 copy of the primary card; secondary-card matches still require 2 copies
   for (const criteria of ARCHITYPES) {
     const { primary, secondary } = criteria;
     for (const secondaryCard of secondary) {
