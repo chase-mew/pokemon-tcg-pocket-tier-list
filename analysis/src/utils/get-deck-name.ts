@@ -176,6 +176,21 @@ const hasAllCards = (
 };
 
 /**
+ * Finds the specific card from a match criteria that is actually present in the deck.
+ * Falls back to the first entry if none are found.
+ */
+const getMatchedCard = (cards: Deck["cards"], match: CardNameType): string => {
+  const cardStrings = new Set(cards.map((card) => cardToString(card)));
+  const matchArray = Array.isArray(match) ? match : [match];
+  for (const cardName of matchArray) {
+    if (cardStrings.has(`2 ${cardName}`) || cardStrings.has(`1 ${cardName}`)) {
+      return cardName;
+    }
+  }
+  return matchArray[0];
+};
+
+/**
  * Attempts to find a matching deck name based on the deck's cards
  * @param deck The deck to find a name for
  * @returns The formatted deck name if found, null otherwise
@@ -188,32 +203,26 @@ const getDeckName = (deck: Deck): string | null => {
     const { primary, secondary } = criteria;
     for (const secondaryCard of secondary) {
       if (hasAllCards(cards, primary, true, secondaryCard)) {
-        const primaryMatch = Array.isArray(primary) ? primary : [primary];
-        const secondaryMatch = Array.isArray(secondaryCard) ? secondaryCard : [secondaryCard];
-        const match = [primaryMatch[0], secondaryMatch[0]];
+        const match = [getMatchedCard(cards, primary), getMatchedCard(cards, secondaryCard)];
         return formatName(cards, match);
       }
     }
     if (hasAllCards(cards, primary, true)) {
-      const primaryMatch = Array.isArray(primary) ? [primary[0]] : [primary];
-      return formatName(cards, primaryMatch);
+      return formatName(cards, [getMatchedCard(cards, primary)]);
     }
   }
 
-  // First try matching with exactly 2 copies of each card
+  // Then try matching with at least 1 copy of the primary card; secondary-card matches still require 2 copies
   for (const criteria of ARCHITYPES) {
     const { primary, secondary } = criteria;
     for (const secondaryCard of secondary) {
       if (hasAllCards(cards, primary, false, secondaryCard)) {
-        const primaryMatch = Array.isArray(primary) ? primary : [primary];
-        const secondaryMatch = Array.isArray(secondaryCard) ? secondaryCard : [secondaryCard];
-        const match = [primaryMatch[0], secondaryMatch[0]];
+        const match = [getMatchedCard(cards, primary), getMatchedCard(cards, secondaryCard)];
         return formatName(cards, match);
       }
     }
     if (hasAllCards(cards, primary, false)) {
-      const primaryMatch = Array.isArray(primary) ? [primary[0]] : [primary];
-      return formatName(cards, primaryMatch);
+      return formatName(cards, [getMatchedCard(cards, primary)]);
     }
   }
 
