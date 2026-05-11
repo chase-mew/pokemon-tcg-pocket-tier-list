@@ -28,7 +28,7 @@ const SCIZOR = ["Mega Scizor ex B2b 47", "Scizor A4 123"]
 const DRAGONITE = ["Dragonite ex A3b 53", "Dragonite B2b 53", "Dragonite A1 185"]
 const SLEEP = ["Darkrai B2b 40", "Igglybuff A4a 59"];
 const LUCARIO = ["Mega Lucario ex B3 81", "Lucario A2 92"]
-const SCEPTILE = ["Mega Sceptile ex B3 8", "Sceptile A3 7"]
+const SCEPTILE = ["Mega Sceptile ex B3 8", "Sceptile B3 7"]
 
 const ARCHITYPES: Architype[] = [
   // Outliers
