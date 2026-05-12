@@ -217,7 +217,7 @@ export const DecksProvider: React.FC<{ children: React.ReactNode }> = ({
         (a: PartialDeckType, b: PartialDeckType) =>
           b.percentOfGames - a.percentOfGames
       )
-      .slice(0, 29);
+      .slice(0, deckAmount);
 
     const highestPopularity =
       decksFiltered.length > 0
