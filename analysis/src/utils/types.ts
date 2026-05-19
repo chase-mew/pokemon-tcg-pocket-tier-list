@@ -20,6 +20,9 @@ export interface Deck {
   noTrainerPercent: number;
   wins: string[];
   losses: string[];
+  // Recency weight (set by applyMultipliers); defaults to 1 when unset so
+  // older code paths/tests still behave correctly.
+  multiplier?: number;
 }
 
 export interface Tournament {

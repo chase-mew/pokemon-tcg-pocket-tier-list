@@ -3,7 +3,8 @@ import { Deck, MatchupResult } from "./types";
 const processOpponentResults = (
   matchupResults: Map<string, MatchupResult>,
   opponents: string[],
-  isWin: boolean
+  isWin: boolean,
+  weight: number
 ): void => {
   for (const opponent of opponents) {
     const currentResult = matchupResults.get(opponent) ?? {
@@ -12,7 +13,8 @@ const processOpponentResults = (
     };
     matchupResults.set(opponent, {
       ...currentResult,
-      [isWin ? "wins" : "losses"]: currentResult[isWin ? "wins" : "losses"] + 1,
+      [isWin ? "wins" : "losses"]:
+        currentResult[isWin ? "wins" : "losses"] + weight,
     });
   }
 };
@@ -29,8 +31,12 @@ export const calculateMatchupResults = (
   const matchingDecks = decks.filter((deck) => deck.name === deckName);
 
   for (const deck of matchingDecks) {
-    processOpponentResults(matchupResults, deck.wins, true);
-    processOpponentResults(matchupResults, deck.losses, false);
+    // Use the recency multiplier so matchup-data is weighted consistently
+    // with the popularity / winrate numbers used elsewhere. Falls back to 1
+    // for decks that haven't been through applyMultipliers (e.g. in tests).
+    const weight = deck.multiplier ?? 1;
+    processOpponentResults(matchupResults, deck.wins, true, weight);
+    processOpponentResults(matchupResults, deck.losses, false, weight);
   }
 
   return Object.fromEntries(matchupResults) as Record<string, MatchupResult>;

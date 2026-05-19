@@ -16,15 +16,49 @@ interface CardScore extends Omit<CardData, "score"> {
 }
 
 /**
- * Calculates the score for a single card based on its win rate, popularity, and type
+ * Wilson-style shrinkage estimator: given an observed proportion `p` and
+ * an effective sample size `n`, returns a value <= `p` that pulls toward 0
+ * harder when `n` is small. Used to keep card stats from a tiny archetype
+ * from looking as confidently good as the same stats from a large one.
+ *
+ * Formally this is the Wilson score interval lower bound for a binomial
+ * proportion at confidence level `z` (default z=1.96 ≈ 95%). In this
+ * pipeline the inputs are recency-weighted (and therefore non-integer)
+ * game counts, so `n` is treated as an effective sample size rather than
+ * a strict binomial trial count, and the result should be read as a
+ * sample-size-aware shrinkage rather than a true CI bound. Returns 0 if
+ * `n` <= 0.
+ */
+const wilsonLowerBound = (p: number, n: number, z = 1.96): number => {
+  if (n <= 0) return 0;
+  const safeP = Math.max(0, Math.min(1, p));
+  const denom = 1 + (z * z) / n;
+  const center = safeP + (z * z) / (2 * n);
+  const margin = z * Math.sqrt((safeP * (1 - safeP)) / n + (z * z) / (4 * n * n));
+  return Math.max(0, (center - margin) / denom);
+};
+
+/**
+ * Calculates the score for a single card based on its win rate, popularity, and type.
+ *
+ * Both the per-card win rate (over the card's appearances) and the per-card
+ * popularity (over the archetype's qualified games) are passed through a
+ * Wilson lower bound so that small samples within a tiny archetype don't
+ * artificially saturate at 1.0.
  */
 const calculateSingleCardScore = (
   cardName: string,
   { winCount, totalGames }: CardData,
   totalMatchingGames: number
 ): { score: number; popularity: number } => {
-  const winRate = winCount / totalGames;
-  const popularity = totalGames / totalMatchingGames;
+  const rawWinRate = totalGames > 0 ? winCount / totalGames : 0;
+  const rawPopularity =
+    totalMatchingGames > 0 ? totalGames / totalMatchingGames : 0;
+
+  // Sample-size-aware versions: small samples shrink toward zero.
+  const winRate = wilsonLowerBound(rawWinRate, totalGames);
+  const popularity = wilsonLowerBound(rawPopularity, totalMatchingGames);
+
   const isRedCard = cardName.toLowerCase().includes("red card");
   const isMars = cardName.toLowerCase().includes("mars ");
   const multiplier = isRedCard || isMars ? RED_CARD_MULTIPLIER : 1;

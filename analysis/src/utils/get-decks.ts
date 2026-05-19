@@ -44,6 +44,7 @@ const applyMultipliers = (decks: Deck[], newestDate: Date): Deck[] => {
       winCount: deck.winCount * multiplier,
       wins: deck.wins || [],
       losses: deck.losses || [],
+      multiplier,
     };
   });
 };
