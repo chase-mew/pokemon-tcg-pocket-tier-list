@@ -16,15 +16,44 @@ interface CardScore extends Omit<CardData, "score"> {
 }
 
 /**
- * Calculates the score for a single card based on its win rate, popularity, and type
+ * Wilson score interval lower bound for a binomial proportion. Used to give
+ * small-sample card stats less weight: a card that appears in 100% of a
+ * 1-deck archetype should not look as confidently good as one that appears
+ * in 100% of a 200-deck archetype.
+ *
+ * Returns the lower bound at the given confidence level (default z=1.96 ≈
+ * 95%). Returns 0 if n <= 0.
+ */
+const wilsonLowerBound = (p: number, n: number, z = 1.96): number => {
+  if (n <= 0) return 0;
+  const safeP = Math.max(0, Math.min(1, p));
+  const denom = 1 + (z * z) / n;
+  const center = safeP + (z * z) / (2 * n);
+  const margin = z * Math.sqrt((safeP * (1 - safeP)) / n + (z * z) / (4 * n * n));
+  return Math.max(0, (center - margin) / denom);
+};
+
+/**
+ * Calculates the score for a single card based on its win rate, popularity, and type.
+ *
+ * Both the per-card win rate (over the card's appearances) and the per-card
+ * popularity (over the archetype's qualified games) are passed through a
+ * Wilson lower bound so that small samples within a tiny archetype don't
+ * artificially saturate at 1.0.
  */
 const calculateSingleCardScore = (
   cardName: string,
   { winCount, totalGames }: CardData,
   totalMatchingGames: number
 ): { score: number; popularity: number } => {
-  const winRate = winCount / totalGames;
-  const popularity = totalGames / totalMatchingGames;
+  const rawWinRate = totalGames > 0 ? winCount / totalGames : 0;
+  const rawPopularity =
+    totalMatchingGames > 0 ? totalGames / totalMatchingGames : 0;
+
+  // Sample-size-aware versions: small samples shrink toward zero.
+  const winRate = wilsonLowerBound(rawWinRate, totalGames);
+  const popularity = wilsonLowerBound(rawPopularity, totalMatchingGames);
+
   const isRedCard = cardName.toLowerCase().includes("red card");
   const isMars = cardName.toLowerCase().includes("mars ");
   const multiplier = isRedCard || isMars ? RED_CARD_MULTIPLIER : 1;

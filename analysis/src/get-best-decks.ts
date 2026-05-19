@@ -7,7 +7,10 @@ import { calculateCardScores } from "./utils/calculate-card-scores";
 import { calculateMatchupResults } from "./utils/calculate-matchup-results";
 import { Deck, MatchupData } from "./utils/types";
 import { convertCardsToIds } from "./utils/convert-cards";
-import { MIN_WINRATE_THRESHOLD } from "./settings";
+import {
+  MIN_WINRATE_THRESHOLD,
+  MIN_ARCHETYPE_QUALIFIED_GAMES,
+} from "./settings";
 
 const CARDS_API =
   "https://raw.githubusercontent.com/chase-manning/pokemon-tcg-pocket-cards/refs/heads/main/v4.json";
@@ -31,12 +34,34 @@ const run = async () => {
     0
   );
 
+  // Tally qualified games per archetype so we can drop tiny-sample
+  // archetypes (1-2 lucky tournament runs) from the rankings.
+  const qualifiedGamesByName = new Map<string, number>();
+  for (const deck of qualifiedDecks) {
+    qualifiedGamesByName.set(
+      deck.name,
+      (qualifiedGamesByName.get(deck.name) ?? 0) + deck.totalGames
+    );
+  }
+
   const uniqueDeckNames = qualifiedDecks
     .map((deck: Deck) => deck.name)
     .filter(
       (value: string, index: number, self: string[]) =>
         self.indexOf(value) === index
+    )
+    .filter(
+      (name: string) =>
+        (qualifiedGamesByName.get(name) ?? 0) >= MIN_ARCHETYPE_QUALIFIED_GAMES
     );
+
+  const droppedArchetypes = [...new Set(qualifiedDecks.map((d) => d.name))]
+    .filter(
+      (n) => (qualifiedGamesByName.get(n) ?? 0) < MIN_ARCHETYPE_QUALIFIED_GAMES
+    );
+  console.log(
+    `Archetypes ranked: ${uniqueDeckNames.length} (dropped ${droppedArchetypes.length} below ${MIN_ARCHETYPE_QUALIFIED_GAMES} qualified games)`
+  );
 
   // Calculate Best Decks
   const bestDecks = [];
