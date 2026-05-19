@@ -16,13 +16,18 @@ interface CardScore extends Omit<CardData, "score"> {
 }
 
 /**
- * Wilson score interval lower bound for a binomial proportion. Used to give
- * small-sample card stats less weight: a card that appears in 100% of a
- * 1-deck archetype should not look as confidently good as one that appears
- * in 100% of a 200-deck archetype.
+ * Wilson-style shrinkage estimator: given an observed proportion `p` and
+ * an effective sample size `n`, returns a value <= `p` that pulls toward 0
+ * harder when `n` is small. Used to keep card stats from a tiny archetype
+ * from looking as confidently good as the same stats from a large one.
  *
- * Returns the lower bound at the given confidence level (default z=1.96 ≈
- * 95%). Returns 0 if n <= 0.
+ * Formally this is the Wilson score interval lower bound for a binomial
+ * proportion at confidence level `z` (default z=1.96 ≈ 95%). In this
+ * pipeline the inputs are recency-weighted (and therefore non-integer)
+ * game counts, so `n` is treated as an effective sample size rather than
+ * a strict binomial trial count, and the result should be read as a
+ * sample-size-aware shrinkage rather than a true CI bound. Returns 0 if
+ * `n` <= 0.
  */
 const wilsonLowerBound = (p: number, n: number, z = 1.96): number => {
   if (n <= 0) return 0;

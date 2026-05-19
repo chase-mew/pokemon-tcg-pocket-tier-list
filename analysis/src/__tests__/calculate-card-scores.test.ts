@@ -2,8 +2,8 @@ import { calculateCardScores } from "../utils/calculate-card-scores";
 
 describe("calculateCardScores", () => {
   it("should calculate card scores correctly", () => {
-    // Use larger samples so the Wilson lower bound has tight enough intervals
-    // for "Red Card" to clearly come out behind "Pikachu" once its
+    // Use larger samples so the Wilson lower bound is tight enough that
+    // Red Card's higher win-rate still wins out over Pikachu even after its
     // RED_CARD_MULTIPLIER penalty is applied.
     const mockCards = {
       Pikachu: { winCount: 1000, totalGames: 2000 },

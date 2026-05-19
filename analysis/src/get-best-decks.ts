@@ -44,23 +44,14 @@ const run = async () => {
     );
   }
 
-  const uniqueDeckNames = qualifiedDecks
-    .map((deck: Deck) => deck.name)
-    .filter(
-      (value: string, index: number, self: string[]) =>
-        self.indexOf(value) === index
-    )
-    .filter(
-      (name: string) =>
-        (qualifiedGamesByName.get(name) ?? 0) >= MIN_ARCHETYPE_QUALIFIED_GAMES
-    );
-
-  const droppedArchetypes = [...new Set(qualifiedDecks.map((d) => d.name))]
-    .filter(
-      (n) => (qualifiedGamesByName.get(n) ?? 0) < MIN_ARCHETYPE_QUALIFIED_GAMES
-    );
+  const allDeckNames = [...new Set(qualifiedDecks.map((d: Deck) => d.name))];
+  const uniqueDeckNames = allDeckNames.filter(
+    (name: string) =>
+      (qualifiedGamesByName.get(name) ?? 0) >= MIN_ARCHETYPE_QUALIFIED_GAMES
+  );
+  const droppedCount = allDeckNames.length - uniqueDeckNames.length;
   console.log(
-    `Archetypes ranked: ${uniqueDeckNames.length} (dropped ${droppedArchetypes.length} below ${MIN_ARCHETYPE_QUALIFIED_GAMES} qualified games)`
+    `Archetypes ranked: ${uniqueDeckNames.length} (dropped ${droppedCount} below ${MIN_ARCHETYPE_QUALIFIED_GAMES} qualified games)`
   );
 
   // Calculate Best Decks
