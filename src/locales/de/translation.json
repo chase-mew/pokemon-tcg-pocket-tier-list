@@ -50,6 +50,10 @@
     "signOut": "Abmelden",
     "bestCards": "Beste Karten"
   },
+  "footer": {
+    "about": "Über uns",
+    "privacy": "Datenschutz"
+  },
   "hero": {
     "title": "Pokémon TCG Pocket Beste Decks und Tier-Liste",
     "subtitle": "Bleibe mit einer datengesteuerten Deck-Tier-Liste dem Pokémon TCG Pocket Meta voraus. Basierend auf Turnierergebnissen, finde vollständige Listen, markiere fehlende Karten und entdecke die stärksten Decks, die du jetzt bauen kannst.",
@@ -94,6 +98,12 @@
       "title": "Funktionen",
       "free": "Kostenlos",
       "premium": "Premium",
+      "removeAds": {
+        "title": "Werbung entfernen",
+        "description": "Genießen Sie ein völlig werbefreies, schnelleres Erlebnis auf der gesamten Website.",
+        "free": "🚫",
+        "premium": "✅"
+      },
       "bestDeckFinder": {
         "title": "Bester Deck-Finder",
         "description": "Finden Sie das stärkste Deck, das Sie mit Ihren Karten bauen können",
@@ -143,6 +153,11 @@
         "premium": "100"
       }
     }
+  },
+  "ads": {
+    "advertisement": "Werbung",
+    "removeAds": "Werbung entfernen",
+    "close": "Schließen"
   },
   "userAccount": {
     "title": "Benutzerkonto",

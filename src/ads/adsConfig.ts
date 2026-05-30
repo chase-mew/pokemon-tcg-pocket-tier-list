@@ -1,0 +1,38 @@
+// Central configuration for the ads layer.
+//
+// The implementation is network-agnostic at the placement level: every position
+// renders through `AdSlot`, which reads these flags. The active network is
+// Google AdSense; swapping networks later only touches `adsense.ts`, `AdSlot`,
+// and this file, not the placement call sites.
+
+// Flip this to true once the AdSense account is approved and all ADSENSE_SLOTS
+// below have their slot IDs filled in. Controls whether real ads are served in
+// production; dev always shows placeholders regardless of this flag.
+export const ADS_ENABLED = false;
+
+// In local development we render labelled placeholder boxes instead of loading
+// the real ad network, so the layout/spacing can be verified without third
+// party scripts or console noise.
+export const IS_DEV = process.env.NODE_ENV !== "production";
+
+// AdSense publisher ID. Public by design — it already ships verbatim in
+// index.html's verification snippet and in every served page.
+export const ADSENSE_CLIENT = "ca-pub-3547629432918335";
+
+// AdSense ad unit slot IDs, one per on-screen position. Create these as
+// "Display" ad units in the AdSense dashboard (https://adsense.google.com)
+// once approved, then paste the numeric slot IDs here. Filling these plus
+// ADSENSE_CLIENT + the ADS_ENABLED flag is all that's needed to go live.
+export const ADSENSE_SLOTS = {
+  anchor: "",
+  landing: "",
+  tierList: "",
+  deck: "",
+} as const;
+
+export type AdPlacement = keyof typeof ADSENSE_SLOTS;
+
+// Reserved heights (px) so slots don't cause layout shift before they fill.
+// The anchor hosts a short horizontal banner; in-content units are larger.
+export const ANCHOR_HEIGHT_MOBILE = 60;
+export const ANCHOR_HEIGHT_DESKTOP = 90;

@@ -13,6 +13,7 @@ import { useEffect, useState } from "react";
 import useIsPremium from "../../app/use-is-premium";
 import UserAccount from "../../components/UserAccount";
 import arrowRight from "../../assets/arrow-right.svg";
+import AdInContent from "../../ads/AdInContent";
 
 const StyledDeckPage = styled.div`
   width: 100%;
@@ -401,6 +402,7 @@ const DeckPage = () => {
             </CardContainer>
           ))}
         </CardList>
+        <AdInContent placement="deck" />
       </CardSection>
       {!isDeckFinderMode && (
         <PannelSection>

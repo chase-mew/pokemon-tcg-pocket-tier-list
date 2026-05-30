@@ -50,6 +50,10 @@
     "signOut": "退出登录",
     "bestCards": "最佳卡牌"
   },
+  "footer": {
+    "about": "关于",
+    "privacy": "隐私政策"
+  },
   "hero": {
     "title": "宝可梦卡牌游戏 Pocket 最强卡组和等级列表",
     "subtitle": "通过数据驱动的卡组等级列表，领先宝可梦卡牌游戏 Pocket 的环境。基于比赛结果构建，查找完整列表，标记您缺少的卡牌，并发现您现在可以构建的最强卡组。",
@@ -94,6 +98,12 @@
       "title": "功能",
       "free": "免费",
       "premium": "高级会员",
+      "removeAds": {
+        "title": "去除广告",
+        "description": "在整个网站享受完全无广告、更快速的体验。",
+        "free": "🚫",
+        "premium": "✅"
+      },
       "bestDeckFinder": {
         "title": "最佳卡组查找器",
         "description": "找到您能用收藏卡牌组建的最强卡组",
@@ -143,6 +153,11 @@
         "premium": "100"
       }
     }
+  },
+  "ads": {
+    "advertisement": "广告",
+    "removeAds": "去除广告",
+    "close": "关闭"
   },
   "userAccount": {
     "title": "用户账户",

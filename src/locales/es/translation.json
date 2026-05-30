@@ -50,6 +50,10 @@
     "signOut": "Cerrar sesión",
     "bestCards": "Mejores Cartas"
   },
+  "footer": {
+    "about": "Acerca de",
+    "privacy": "Política de Privacidad"
+  },
   "hero": {
     "title": "Mejores Mazos y Lista de Tiers de Pokémon TCG Pocket",
     "subtitle": "Mantente al día con el meta de Pokémon TCG Pocket con una lista de tiers basada en datos. Construida a partir de resultados de torneos, encuentra listas completas, marca las cartas que te faltan y descubre las construcciones más fuertes que puedes crear ahora mismo.",
@@ -94,6 +98,12 @@
       "title": "Características",
       "free": "Gratis",
       "premium": "Premium",
+      "removeAds": {
+        "title": "Eliminar Anuncios",
+        "description": "Disfruta de una experiencia totalmente sin anuncios y más rápida en todo el sitio.",
+        "free": "🚫",
+        "premium": "✅"
+      },
       "bestDeckFinder": {
         "title": "Buscador de Mejores Mazos",
         "description": "Encuentra el mazo más fuerte que puedes construir con tus cartas",
@@ -143,6 +153,11 @@
         "premium": "100"
       }
     }
+  },
+  "ads": {
+    "advertisement": "Anuncio",
+    "removeAds": "Eliminar anuncios",
+    "close": "Cerrar"
   },
   "userAccount": {
     "title": "Cuenta de Usuario",

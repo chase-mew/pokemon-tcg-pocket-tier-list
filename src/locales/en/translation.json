@@ -11,6 +11,12 @@
       "title": "Features",
       "free": "Free",
       "premium": "Premium",
+      "removeAds": {
+        "title": "Remove Ads",
+        "description": "Enjoy a completely ad-free, faster experience across the whole site.",
+        "free": "🚫",
+        "premium": "✅"
+      },
       "bestDeckFinder": {
         "title": "Best Deck Finder",
         "description": "Find the strongest deck you can build with your cards",
@@ -60,6 +66,11 @@
         "premium": "100"
       }
     }
+  },
+  "ads": {
+    "advertisement": "Advertisement",
+    "removeAds": "Remove ads",
+    "close": "Close"
   },
   "userAccount": {
     "title": "User Account",
@@ -116,6 +127,10 @@
     "signIn": "Sign in with Google",
     "signOut": "Sign out",
     "bestCards": "Best Cards"
+  },
+  "footer": {
+    "about": "About",
+    "privacy": "Privacy Policy"
   },
   "hero": {
     "title": "Pokemon TCG Pocket Best Decks and Tier List",
