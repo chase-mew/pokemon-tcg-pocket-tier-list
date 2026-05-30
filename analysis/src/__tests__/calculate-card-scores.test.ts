@@ -1,5 +1,15 @@
 import { calculateCardScores } from "../utils/calculate-card-scores";
 
+// Pin the scoring weights so these tests don't depend on the real
+// settings, where WINRATE_IMPORTANCE drifts over time relative to
+// EXPANSION_RELEASE_DATE (it sits near its 0.2 floor right after a release,
+// which lets popularity dominate and flips the expected ordering below).
+jest.mock("../settings", () => ({
+  WINRATE_IMPORTANCE: 0.5,
+  POPULARITY_IMPORTANCE: 0.5,
+  RED_CARD_MULTIPLIER: 0.9,
+}));
+
 describe("calculateCardScores", () => {
   it("should calculate card scores correctly", () => {
     // Use larger samples so the Wilson lower bound is tight enough that
