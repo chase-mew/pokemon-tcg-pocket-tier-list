@@ -12,7 +12,7 @@ const VENUSAUR = ["Mega Venusaur ex B1a 4", "Venusaur ex A1 4", "Venusaur B1a 3"
 const CHARIZARD = ["Mega Charizard X ex B2b 9", "Mega Charizard Y ex B1a 14", "Charizard ex A2b 10", "Charizard ex A1 36", "Charizard B1a 13", "Charizard A1 35"]
 const BLASTOISE = ["Blastoise ex A1 56", "Mega Blastoise ex B1a 20", "Blastoise A1 55", "Blastoise B1a 19"]
 const GRENINJA = ["Greninja A1 89", "Greninja ex B1 73"]
-const ALTARIA = ["Mega Altaria ex B1 102", "Altaria A4a 55", "Altaria B1 197"]
+const ALTARIA = ["Mega Altaria ex B1 102", "Altaria B1 197"]
 const MAGNEZONE = ["Magnezone ex B3 54", "Magnezone A2 53", "Magnezone B1a 26"]
 const ESPEON = ["Espeon ex A4 83", "Espeon A3b 28"]
 const GUZZLORD = ["Guzzlord ex A3a 43", "Guzzlord B2 109"]
@@ -29,6 +29,9 @@ const DRAGONITE = ["Dragonite ex A3b 53", "Dragonite B2b 53", "Dragonite A1 185"
 const SLEEP = ["Darkrai B2b 40", "Igglybuff A4a 59"];
 const LUCARIO = ["Mega Lucario ex B3 81", "Lucario A2 92"]
 const SCEPTILE = ["Mega Sceptile ex B3 8", "Sceptile B3 7"]
+const MIRAIDON = ["Miraidon ex B3a 19", "Professor Turo B3a 73"];
+const BABY_ENERGY = ["Pichu A4 66", "Magby A4 22", "Mantyke A4a 23"];
+const FUTURE = ["Future Booster Energy Capsule B3a 70", "Iron Valiant B3a 27", "Iron Crown B3a 30"]
 
 const ARCHITYPES: Architype[] = [
   // Outliers
@@ -60,9 +63,10 @@ const ARCHITYPES: Architype[] = [
   { primary: "Lunala ex A3 87", secondary: [] },
   { primary: MEOWSCARADA, secondary: [] },
   { primary: DRAGONITE, secondary: ["Rampardos A2 89"] },
-  { primary: MAGNEZONE, secondary: [] },
+  { primary: MAGNEZONE, secondary: [MIRAIDON] },
 
   // Stage 2
+  { primary: "Kingambit B3a 43", secondary: ["Glimmora B3a 45"] },
   { primary: "Inteleon B3 50", secondary: [GRENINJA, "Vaporeon ex B3 37"] },
   { primary: "Vivillon B2 13", secondary: [SLEEP] },
   { primary: "Skeledirge B2a 18", secondary: [] },
@@ -81,7 +85,8 @@ const ARCHITYPES: Architype[] = [
   { primary: LUCARIO, secondary: ["Rampardos A2 89", GRENINJA, "Donphan ex A4 100", SLEEP] },
   { primary: "Mega Camerupt ex B3 23", secondary: [] },
   { primary: "Mega Medicham ex PB 29", secondary: [] },
-  { primary: ALTARIA, secondary: ["Sylveon ex A3b 34", "Gourgeist B2 72", "Aegislash B1 172", GRENINJA, SLEEP] },
+  { primary: "Espeon B3a 20", secondary: ["Swablu B1 196"] },
+  { primary: ALTARIA, secondary: ["Sylveon ex A3b 34", FUTURE, "Gourgeist B2 72", "Aegislash B1 172", GRENINJA, SLEEP] },
   { primary: "Mega Gyarados ex B1 52", secondary: ["Jellicent B1 69"] },
   { primary: "Mega Lopunny ex B1a 42", secondary: [LUCARIO, GRENINJA, SLEEP] },
   { primary: "Mega Steelix ex B1a 52", secondary: [] },
@@ -99,6 +104,8 @@ const ARCHITYPES: Architype[] = [
   { primary: "Gholdengo ex B2a 78", secondary: [] },
 
   // Stage 1
+  { primary: "Altaria A4a 55", secondary: [] },
+  { primary: "Glimmora B3a 45", secondary: [] },
   { primary: "Vaporeon ex B3 37", secondary: [] },
   { primary: "Gyarados A4 45", secondary: ["Suicune ex A4a 20"] },
   { primary: "Hydreigon B1 157", secondary: [POISON] },
@@ -117,6 +124,10 @@ const ARCHITYPES: Architype[] = [
   { primary: "Mega Absol ex B1 151", secondary: [GRENINJA, ORICORIO] },
 
   // Basic ex
+  { primary: "Iron Bundle ex B3a 13", secondary: [] },
+  { primary: "Flutter Mane ex B3a 26", secondary: [GRENINJA] },
+  { primary: "Koraidon ex B3a 36", secondary: ["Great Tusk B3a 34"] },
+  { primary: "Terapagos ex B3a 68", secondary: [BABY_ENERGY, "Ho-Oh ex A4 34"] },
   { primary: "Ho-Oh ex A4 34", secondary: ["Ilima A3 149"] },
   { primary: "Suicune ex A4a 20", secondary: [GRENINJA] },
   { primary: "Darkrai ex A2 110", secondary: ["Giratina ex A2b 35"] },
@@ -124,8 +135,11 @@ const ARCHITYPES: Architype[] = [
   { primary: BUZZWOLE, secondary: [] },
   { primary: "Mimikyu ex B2 73", secondary: [GRENINJA, "Giratina ex A2b 35"] },
   { primary: "Chien-Pao ex B2a 37", secondary: [] },
+  { primary: MIRAIDON, secondary: [] },
 
   // Basic
+  { primary: FUTURE, secondary: [] },
+  { primary: "Great Tusk B3a 34", secondary: [] },
   { primary: "Celesteela A3a 62", secondary: [] },
 
   // Tech Cards
