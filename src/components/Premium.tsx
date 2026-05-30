@@ -19,6 +19,21 @@ const ButtonContainer = styled.button`
   cursor: pointer;
 `;
 
+const RemoveAdsLink = styled.button`
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--e);
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+`;
+
 const PremiumIcon = styled.img`
   width: 4rem;
   height: 4rem;
@@ -114,9 +129,17 @@ const ButtonWrapper = styled.div`
 
 interface Props {
   showUpsell?: boolean;
+  // "link" renders a compact "Remove ads" text trigger (used by the ad anchor)
+  // instead of the default premium icon / upsell button.
+  variant?: "default" | "link";
+  linkLabel?: string;
 }
 
-const Premium = ({ showUpsell = false }: Props) => {
+const Premium = ({
+  showUpsell = false,
+  variant = "default",
+  linkLabel,
+}: Props) => {
   const { t } = useTranslation();
   const isPremium = useIsPremium();
   const { user, signInWithGoogle } = useAuth();
@@ -125,9 +148,16 @@ const Premium = ({ showUpsell = false }: Props) => {
 
   if (isPremium === null) return null;
 
+  const isLink = variant === "link";
+
   return (
     <>
-      {isPremium && (
+      {isLink && !isPremium && (
+        <RemoveAdsLink onClick={() => setIsOpen(true)}>
+          {linkLabel ?? t("ads.removeAds")}
+        </RemoveAdsLink>
+      )}
+      {!isLink && isPremium && (
         <ButtonContainer
           onClick={async () => {
             setIsOpen(true);
@@ -136,7 +166,7 @@ const Premium = ({ showUpsell = false }: Props) => {
           <PremiumIcon src={premiumIcon} alt="Premium" />
         </ButtonContainer>
       )}
-      {!isPremium && showUpsell && (
+      {!isLink && !isPremium && showUpsell && (
         <Button
           wide
           action={async () => {
@@ -164,6 +194,14 @@ const Premium = ({ showUpsell = false }: Props) => {
             </tr>
           </thead>
           <tbody>
+            <tr>
+              <FeatureCell>
+                {t("premium.features.removeAds.title")}
+                <Tooltip text={t("premium.features.removeAds.description")} />
+              </FeatureCell>
+              <FreeCell>{t("premium.features.removeAds.free")}</FreeCell>
+              <PremiumCell>{t("premium.features.removeAds.premium")}</PremiumCell>
+            </tr>
             <tr>
               <FeatureCell>
                 {t("premium.features.bestDeckFinder.title")}

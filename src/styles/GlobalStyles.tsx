@@ -11,6 +11,12 @@ const GlobalStyle = createGlobalStyle`
         --c: #FFFF7F;
         --d: #BFFF7F;
         --e: #7FFF7F;
+        /* Bottom space reserved for the sticky ad anchor (0 when no ads). */
+        --ad-anchor-h: 0px;
+    }
+
+    body {
+        padding-bottom: var(--ad-anchor-h, 0px);
     }
 
     * {

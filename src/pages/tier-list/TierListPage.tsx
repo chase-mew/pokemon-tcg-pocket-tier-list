@@ -9,6 +9,7 @@ import { SortBy } from "../../components/FilterContext";
 import { getSortValue } from "../../app/sorting-helper";
 import LastUpdated from "../../components/LastUpdated";
 import Dropdown from "../../components/Dropdown";
+import AdInContent from "../../ads/AdInContent";
 
 const StyledTierListPage = styled.div`
   width: 100%;
@@ -340,6 +341,7 @@ const LandingPage = () => {
           ))}
         </RowContent>
       </DeckRow>
+      <AdInContent placement="tierList" mobileOnly />
       <LastUpdated />
     </StyledTierListPage>
   );

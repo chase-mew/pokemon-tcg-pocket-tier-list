@@ -1,0 +1,92 @@
+import styled from "styled-components";
+import Header from "../../components/Header";
+
+const StyledLegalPage = styled.div`
+  width: 100%;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg);
+`;
+
+const Content = styled.article`
+  width: 100%;
+  max-width: 90rem;
+  padding: 2rem 2.4rem 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  color: var(--main);
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+
+    @media (max-width: 900px) {
+      font-size: 3rem;
+    }
+  }
+
+  h2 {
+    font-size: 2.6rem;
+    font-weight: 500;
+    margin-top: 2rem;
+
+    @media (max-width: 900px) {
+      font-size: 2.1rem;
+    }
+  }
+
+  p,
+  li {
+    font-size: 1.7rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding-left: 2.4rem;
+  }
+
+  /* The global "*" reset sets font-size: 10px on every element directly, which
+     overrides inheritance for inline elements. Force them back to their
+     parent's size so bold text and links aren't shrunk to 1rem. */
+  strong,
+  em,
+  a {
+    font-size: inherit;
+  }
+
+  a {
+    color: var(--e);
+    text-decoration: underline;
+  }
+
+  .updated {
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.5);
+  }
+`;
+
+interface Props {
+  children: React.ReactNode;
+}
+
+// Shared layout for static informational pages (Privacy, About). Mirrors the
+// landing page chrome: header on top, readable content column, footer below.
+const LegalPage = ({ children }: Props) => {
+  return (
+    <StyledLegalPage>
+      <Header />
+      <Content>{children}</Content>
+      <Header footer />
+    </StyledLegalPage>
+  );
+};
+
+export default LegalPage;

@@ -3,6 +3,7 @@ import Hero from "./Hero";
 import Header from "../../components/Header";
 import Features from "./Features";
 import BestDeckFinder from "./BestDeckFinder";
+import AdInContent from "../../ads/AdInContent";
 
 const StyledLandingPage = styled.div`
   width: 100%;
@@ -20,6 +21,7 @@ const LandingPage = () => {
     <StyledLandingPage>
       <Hero />
       <Features />
+      <AdInContent placement="landing" />
       <BestDeckFinder />
       <Header footer />
     </StyledLandingPage>

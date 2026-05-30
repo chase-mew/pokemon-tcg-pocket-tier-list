@@ -58,6 +58,28 @@ const RightSection = styled.div`
   }
 `;
 
+const FooterLinks = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  @media (max-width: 900px) {
+    gap: 1.6rem;
+  }
+`;
+
+const FooterLink = styled(Link)`
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--main);
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 1;
+  }
+`;
+
 interface Props {
   footer?: boolean;
 }
@@ -82,6 +104,12 @@ const Header = ({ footer }: Props) => {
         </NavItem>
       </Nav>
       <RightSection>
+        {footer && (
+          <FooterLinks>
+            <FooterLink to="/about">{t("footer.about")}</FooterLink>
+            <FooterLink to="/privacy">{t("footer.privacy")}</FooterLink>
+          </FooterLinks>
+        )}
         {footer && <LanguageSwitcher />}
         {(!user || footer) && <Socials />}
         {!footer && <UserAccount />}

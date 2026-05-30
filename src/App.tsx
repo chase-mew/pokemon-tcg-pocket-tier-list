@@ -8,6 +8,9 @@ import { AuthProvider } from "./contexts/AuthContext";
 import { DecksProvider } from "./contexts/DecksContext";
 import CardsListPage from "./pages/cards-list/CardsListPage";
 import ExpansionListPage from "./pages/expansion-list/ExpansionListPage";
+import PrivacyPage from "./pages/legal/PrivacyPage";
+import AboutPage from "./pages/legal/AboutPage";
+import AdAnchor from "./ads/AdAnchor";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -30,6 +33,7 @@ const Layout = () => {
   return (
     <StyledApp>
       <Outlet />
+      <AdAnchor />
     </StyledApp>
   );
 };
@@ -45,6 +49,8 @@ const App = () => {
               <Route path="tier-list" element={<TierListPage />} />
               <Route path="cards-list" element={<CardsListPage />} />
               <Route path="expansion-list" element={<ExpansionListPage />} />
+              <Route path="privacy" element={<PrivacyPage />} />
+              <Route path="about" element={<AboutPage />} />
               <Route path="deck">
                 <Route index element={<DeckPage />} />
                 <Route path=":deckId" element={<DeckPage />} />

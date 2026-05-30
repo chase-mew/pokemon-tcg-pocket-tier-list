@@ -50,6 +50,10 @@
     "signOut": "Se déconnecter",
     "bestCards": "Meilleures cartes"
   },
+  "footer": {
+    "about": "À propos",
+    "privacy": "Confidentialité"
+  },
   "hero": {
     "title": "Meilleurs decks et Tier list Pokemon TCG Pocket",
     "subtitle": "Restez à la pointe de la méta Pokemon TCG Pocket avec une tier list basée sur les données. Construite à partir des résultats des tournois, trouvez des decks complets, marquez les cartes qui vous manquent et découvrez les decks les plus forts que vous pouvez créer maintenant.",
@@ -94,6 +98,12 @@
       "title": "Fonctionnalités",
       "free": "Gratuit",
       "premium": "Premium",
+      "removeAds": {
+        "title": "Supprimer les publicités",
+        "description": "Profitez d'une expérience entièrement sans publicité et plus rapide sur tout le site.",
+        "free": "🚫",
+        "premium": "✅"
+      },
       "bestDeckFinder": {
         "title": "Trouver votre meilleur deck",
         "description": "Trouvez le deck le plus puissant que vous pouvez construire avec vos cartes",
@@ -143,6 +153,11 @@
         "premium": "100"
       }
     }
+  },
+  "ads": {
+    "advertisement": "Publicité",
+    "removeAds": "Supprimer les publicités",
+    "close": "Fermer"
   },
   "userAccount": {
     "title": "Compte utilisateur",
