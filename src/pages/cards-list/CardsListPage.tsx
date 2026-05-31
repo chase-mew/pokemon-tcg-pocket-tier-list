@@ -6,6 +6,8 @@ import useFilters from "../../app/use-filters";
 import LastUpdated from "../../components/LastUpdated";
 import useExpansions, { ExpansionType } from "../../app/use-expansions";
 import Dropdown from "../../components/Dropdown";
+import SeoContent from "../../components/SeoContent";
+import { useMarkContentReady } from "../../ads/ContentReadyContext";
 
 const StyledCardsListPage = styled.div`
   width: 100%;
@@ -117,103 +119,148 @@ const CardsListPage = () => {
   const { expansion, setExpansion } = useFilters();
   const expansions = useExpansions();
 
-  if (!cards) return <Loading>Loading...</Loading>;
+  const ready = !!cards && cards.length > 0;
+  useMarkContentReady(ready);
 
+  const renderTiers = () => {
+    if (!cards) return <Loading>Loading...</Loading>;
+    if (cards.length === 0) return <Loading>No cards found</Loading>;
 
-  const bestScore = cards[0].score;
+    const bestScore = cards[0].score;
+    const worstScore = cards[cards.length - 1].score;
+    const steps = (bestScore - worstScore) / 6;
 
-  const worstScore = cards[cards.length - 1].score;
+    const sTier = cards.filter((card) => card.score >= bestScore - steps);
+    const aTier = cards.filter(
+      (card) =>
+        card.score < bestScore - steps && card.score >= bestScore - steps * 2
+    );
+    const bTier = cards.filter(
+      (card) =>
+        card.score < bestScore - steps * 2 &&
+        card.score >= bestScore - steps * 3
+    );
+    const cTier = cards.filter(
+      (card) =>
+        card.score < bestScore - steps * 3 &&
+        card.score >= bestScore - steps * 4
+    );
+    const dTier = cards.filter(
+      (card) =>
+        card.score < bestScore - steps * 4 &&
+        card.score >= bestScore - steps * 5
+    );
+    const eTier = cards.filter((card) => card.score < bestScore - steps * 5);
 
-  const steps = (bestScore - worstScore) / 6;
-
-  const sTier = cards.filter((card) => card.score >= bestScore - steps);
-  const aTier = cards.filter(
-    (card) =>
-      card.score < bestScore - steps && card.score >= bestScore - steps * 2
-  );
-  const bTier = cards.filter(
-    (card) =>
-      card.score < bestScore - steps * 2 && card.score >= bestScore - steps * 3
-  );
-  const cTier = cards.filter(
-    (card) =>
-      card.score < bestScore - steps * 3 && card.score >= bestScore - steps * 4
-  );
-  const dTier = cards.filter(
-    (card) =>
-      card.score < bestScore - steps * 4 && card.score >= bestScore - steps * 5
-  );
-  const eTier = cards.filter((card) => card.score < bestScore - steps * 5);
+    return (
+      <>
+        <DeckRow>
+          <RowHeader $backgroundColor="var(--s)">S</RowHeader>
+          <RowContent>
+            {sTier.map((card) => (
+              <CardIcon key={card.id} card={card} />
+            ))}
+          </RowContent>
+        </DeckRow>
+        <DeckRow>
+          <RowHeader $backgroundColor="var(--a)">A</RowHeader>
+          <RowContent>
+            {aTier.map((card) => (
+              <CardIcon key={card.id} card={card} />
+            ))}
+          </RowContent>
+        </DeckRow>
+        <DeckRow>
+          <RowHeader $backgroundColor="var(--b)">B</RowHeader>
+          <RowContent>
+            {bTier.map((card) => (
+              <CardIcon key={card.id} card={card} />
+            ))}
+          </RowContent>
+        </DeckRow>
+        <DeckRow>
+          <RowHeader $backgroundColor="var(--c)">C</RowHeader>
+          <RowContent>
+            {cTier.map((card) => (
+              <CardIcon key={card.id} card={card} />
+            ))}
+          </RowContent>
+        </DeckRow>
+        <DeckRow>
+          <RowHeader $backgroundColor="var(--d)">D</RowHeader>
+          <RowContent>
+            {dTier.map((card) => (
+              <CardIcon key={card.id} card={card} />
+            ))}
+          </RowContent>
+        </DeckRow>
+        <DeckRow>
+          <RowHeader $backgroundColor="var(--e)">E</RowHeader>
+          <RowContent>
+            {eTier.map((card) => (
+              <CardIcon key={card.id} card={card} />
+            ))}
+          </RowContent>
+        </DeckRow>
+        <LastUpdated />
+      </>
+    );
+  };
 
   return (
-    <StyledCardsListPage>
-      <FilterContainer>
-        <UserAccount showUpsell />
-        <Dropdown
-          value={expansion ?? ""}
-          onChange={(e) => {
-            const value = e.target.value;
-            setExpansion(value === "" ? null : value);
-          }}
-        >
-          <option value="">All</option>
-          {expansions?.map((expansion: ExpansionType) => (
-            <option key={expansion.id} value={expansion.id}>
-              {expansion.name}
-            </option>
-          ))}
-        </Dropdown>
-      </FilterContainer>
-      <DeckRow>
-        <RowHeader $backgroundColor="var(--s)">S</RowHeader>
-        <RowContent>
-          {sTier.map((card) => (
-            <CardIcon key={card.id} card={card} />
-          ))}
-        </RowContent>
-      </DeckRow>
-      <DeckRow>
-        <RowHeader $backgroundColor="var(--a)">A</RowHeader>
-        <RowContent>
-          {aTier.map((card) => (
-            <CardIcon key={card.id} card={card} />
-          ))}
-        </RowContent>
-      </DeckRow>
-      <DeckRow>
-        <RowHeader $backgroundColor="var(--b)">B</RowHeader>
-        <RowContent>
-          {bTier.map((card) => (
-            <CardIcon key={card.id} card={card} />
-          ))}
-        </RowContent>
-      </DeckRow>
-      <DeckRow>
-        <RowHeader $backgroundColor="var(--c)">C</RowHeader>
-        <RowContent>
-          {cTier.map((card) => (
-            <CardIcon key={card.id} card={card} />
-          ))}
-        </RowContent>
-      </DeckRow>
-      <DeckRow>
-        <RowHeader $backgroundColor="var(--d)">D</RowHeader>
-        <RowContent>
-          {dTier.map((card) => (
-            <CardIcon key={card.id} card={card} />
-          ))}
-        </RowContent>
-      </DeckRow>
-      <DeckRow>
-        <RowHeader $backgroundColor="var(--e)">E</RowHeader>
-        <RowContent>
-          {eTier.map((card) => (
-            <CardIcon key={card.id} card={card} />
-          ))}
-        </RowContent>
-      </DeckRow>
-      <LastUpdated />
-    </StyledCardsListPage>
+    <>
+      <StyledCardsListPage>
+        <FilterContainer>
+          <UserAccount showUpsell />
+          <Dropdown
+            value={expansion ?? ""}
+            onChange={(e) => {
+              const value = e.target.value;
+              setExpansion(value === "" ? null : value);
+            }}
+          >
+            <option value="">All</option>
+            {expansions?.map((expansion: ExpansionType) => (
+              <option key={expansion.id} value={expansion.id}>
+                {expansion.name}
+              </option>
+            ))}
+          </Dropdown>
+        </FilterContainer>
+        {renderTiers()}
+      </StyledCardsListPage>
+
+      <SeoContent>
+        <h2>About the Pokémon TCG Pocket card tier list</h2>
+        <p>
+          This card tier list ranks individual cards in Pokémon TCG Pocket by how
+          much they contribute to winning decks. Instead of guessing which
+          Pokémon and Trainer cards are worth pulling or crafting, you can see at
+          a glance which cards show up most often in the strongest tournament
+          decks, ranked from S down to E.
+        </p>
+
+        <h3>How card scores are calculated</h3>
+        <p>
+          Each card's score is derived from the performance and popularity of the
+          decks it appears in. Cards that are core to multiple high-tier
+          archetypes earn the highest ratings, while cards that see little
+          competitive play settle lower. You can filter the list by expansion to
+          focus on a specific set when deciding where to spend your pack points
+          or wonder picks.
+        </p>
+
+        <h3>Using the card rankings</h3>
+        <p>
+          Pair this list with the{" "}
+          <a href="/tier-list">deck tier list</a> and the Best Deck Finder to
+          plan your collection: prioritise the high-tier cards that unlock the
+          decks you want to play, and avoid spending resources on cards that
+          rarely make an impact. The rankings refresh alongside the deck data as
+          the metagame evolves.
+        </p>
+      </SeoContent>
+    </>
   );
 };
 

@@ -54,10 +54,13 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
     signOut,
   };
 
+  // Always render children. This is a public site (Premium features gate
+  // themselves via useIsPremium, which tracks its own loading state), so there's
+  // no reason to blank the whole app while auth resolves. Rendering immediately
+  // also avoids a blank first paint and keeps the prerendered (react-snap) HTML
+  // consistent with the client's initial render, preventing hydration mismatch.
   return (
-    <AuthContext.Provider value={value}>
-      {!loading && children}
-    </AuthContext.Provider>
+    <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
   );
 };
 

@@ -10,6 +10,8 @@ import { getSortValue } from "../../app/sorting-helper";
 import LastUpdated from "../../components/LastUpdated";
 import Dropdown from "../../components/Dropdown";
 import AdInContent from "../../ads/AdInContent";
+import SeoContent from "../../components/SeoContent";
+import { useMarkContentReady } from "../../ads/ContentReadyContext";
 
 const StyledTierListPage = styled.div`
   width: 100%;
@@ -179,47 +181,105 @@ const LandingPage = () => {
   const { t } = useTranslation();
   const isPremium = useIsPremium();
 
-  if (loading || !decks) return <Loading>Loading...</Loading>;
+  const ready = !loading && !!decks && decks.length > 0;
+  useMarkContentReady(ready);
 
-  if (decks.length === 0) return <Loading>No decks found</Loading>;
+  const renderTiers = () => {
+    if (loading || !decks) return <Loading>Loading...</Loading>;
+    if (decks.length === 0) return <Loading>No decks found</Loading>;
 
-  const bestScore = getSortValue(decks[0], sortBy);
+    const bestScore = getSortValue(decks[0], sortBy);
+    const worstScore = getSortValue(decks[decks.length - 1], sortBy);
+    const steps = (bestScore - worstScore) / 6;
 
-  const worstScore = getSortValue(decks[decks.length - 1], sortBy);
+    const sTier = decks.filter(
+      (deck) => getSortValue(deck, sortBy) >= bestScore - steps
+    );
+    const aTier = decks.filter(
+      (deck) =>
+        getSortValue(deck, sortBy) < bestScore - steps &&
+        getSortValue(deck, sortBy) >= bestScore - steps * 2
+    );
+    const bTier = decks.filter(
+      (deck) =>
+        getSortValue(deck, sortBy) < bestScore - steps * 2 &&
+        getSortValue(deck, sortBy) >= bestScore - steps * 3
+    );
+    const cTier = decks.filter(
+      (deck) =>
+        getSortValue(deck, sortBy) < bestScore - steps * 3 &&
+        getSortValue(deck, sortBy) >= bestScore - steps * 4
+    );
+    const dTier = decks.filter(
+      (deck) =>
+        getSortValue(deck, sortBy) < bestScore - steps * 4 &&
+        getSortValue(deck, sortBy) >= bestScore - steps * 5
+    );
+    const eTier = decks.filter(
+      (deck) => getSortValue(deck, sortBy) < bestScore - steps * 5
+    );
 
-  const steps = (bestScore - worstScore) / 6;
-
-  const sTier = decks.filter(
-    (deck) => getSortValue(deck, sortBy) >= bestScore - steps
-  );
-  const aTier = decks.filter(
-    (deck) =>
-      getSortValue(deck, sortBy) < bestScore - steps &&
-      getSortValue(deck, sortBy) >= bestScore - steps * 2
-  );
-  const bTier = decks.filter(
-    (deck) =>
-      getSortValue(deck, sortBy) < bestScore - steps * 2 &&
-      getSortValue(deck, sortBy) >= bestScore - steps * 3
-  );
-  const cTier = decks.filter(
-    (deck) =>
-      getSortValue(deck, sortBy) < bestScore - steps * 3 &&
-      getSortValue(deck, sortBy) >= bestScore - steps * 4
-  );
-  const dTier = decks.filter(
-    (deck) =>
-      getSortValue(deck, sortBy) < bestScore - steps * 4 &&
-      getSortValue(deck, sortBy) >= bestScore - steps * 5
-  );
-  const eTier = decks.filter(
-    (deck) => getSortValue(deck, sortBy) < bestScore - steps * 5
-  );
+    return (
+      <>
+        <DeckRow>
+          <RowHeader $backgroundColor="var(--s)">S</RowHeader>
+          <RowContent>
+            {sTier.map((deck) => (
+              <DeckCard key={deck.id} deck={deck} />
+            ))}
+          </RowContent>
+        </DeckRow>
+        <DeckRow>
+          <RowHeader $backgroundColor="var(--a)">A</RowHeader>
+          <RowContent>
+            {aTier.map((deck) => (
+              <DeckCard key={deck.id} deck={deck} />
+            ))}
+          </RowContent>
+        </DeckRow>
+        <DeckRow>
+          <RowHeader $backgroundColor="var(--b)">B</RowHeader>
+          <RowContent>
+            {bTier.map((deck) => (
+              <DeckCard key={deck.id} deck={deck} />
+            ))}
+          </RowContent>
+        </DeckRow>
+        <DeckRow>
+          <RowHeader $backgroundColor="var(--c)">C</RowHeader>
+          <RowContent>
+            {cTier.map((deck) => (
+              <DeckCard key={deck.id} deck={deck} />
+            ))}
+          </RowContent>
+        </DeckRow>
+        <DeckRow>
+          <RowHeader $backgroundColor="var(--d)">D</RowHeader>
+          <RowContent>
+            {dTier.map((deck) => (
+              <DeckCard key={deck.id} deck={deck} />
+            ))}
+          </RowContent>
+        </DeckRow>
+        <DeckRow>
+          <RowHeader $backgroundColor="var(--e)">E</RowHeader>
+          <RowContent>
+            {eTier.map((deck) => (
+              <DeckCard key={deck.id} deck={deck} />
+            ))}
+          </RowContent>
+        </DeckRow>
+        <AdInContent placement="tierList" mobileOnly />
+        <LastUpdated />
+      </>
+    );
+  };
 
   return (
-    <StyledTierListPage>
-      <FilterContainer>
-        <UserAccount showUpsell />
+    <>
+      <StyledTierListPage>
+        <FilterContainer>
+          <UserAccount showUpsell />
         {isPremium && (
           <>
             <Dropdown
@@ -293,57 +353,76 @@ const LandingPage = () => {
         )}
       </FilterContainer>
 
-      <DeckRow>
-        <RowHeader $backgroundColor="var(--s)">S</RowHeader>
-        <RowContent>
-          {sTier.map((deck) => (
-            <DeckCard key={deck.id} deck={deck} />
-          ))}
-        </RowContent>
-      </DeckRow>
-      <DeckRow>
-        <RowHeader $backgroundColor="var(--a)">A</RowHeader>
-        <RowContent>
-          {aTier.map((deck) => (
-            <DeckCard key={deck.id} deck={deck} />
-          ))}
-        </RowContent>
-      </DeckRow>
-      <DeckRow>
-        <RowHeader $backgroundColor="var(--b)">B</RowHeader>
-        <RowContent>
-          {bTier.map((deck) => (
-            <DeckCard key={deck.id} deck={deck} />
-          ))}
-        </RowContent>
-      </DeckRow>
-      <DeckRow>
-        <RowHeader $backgroundColor="var(--c)">C</RowHeader>
-        <RowContent>
-          {cTier.map((deck) => (
-            <DeckCard key={deck.id} deck={deck} />
-          ))}
-        </RowContent>
-      </DeckRow>
-      <DeckRow>
-        <RowHeader $backgroundColor="var(--d)">D</RowHeader>
-        <RowContent>
-          {dTier.map((deck) => (
-            <DeckCard key={deck.id} deck={deck} />
-          ))}
-        </RowContent>
-      </DeckRow>
-      <DeckRow>
-        <RowHeader $backgroundColor="var(--e)">E</RowHeader>
-        <RowContent>
-          {eTier.map((deck) => (
-            <DeckCard key={deck.id} deck={deck} />
-          ))}
-        </RowContent>
-      </DeckRow>
-      <AdInContent placement="tierList" mobileOnly />
-      <LastUpdated />
-    </StyledTierListPage>
+      {renderTiers()}
+      </StyledTierListPage>
+
+      <SeoContent>
+        <h2>About the Pokémon TCG Pocket tier list</h2>
+        <p>
+          This tier list ranks the best decks in Pokémon TCG Pocket using real
+          competitive results rather than opinion. Every deck is scored from
+          tournament data collected from{" "}
+          <a
+            href="https://limitlesstcg.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Limitless
+          </a>{" "}
+          events, then sorted into tiers from S (strongest) down to E. The list
+          is refreshed regularly so it reflects the current metagame as new
+          expansions and balance changes shake things up.
+        </p>
+
+        <h3>How the rankings are calculated</h3>
+        <p>
+          Each deck's placement is based on a blend of how often it is played,
+          how well it performs, and its results against the rest of the field.
+          We aggregate decklists from recent tournaments, group them by
+          archetype, and calculate an overall score along with separate
+          popularity and strength ratings. Decks with a higher win rate and
+          strong showings in top cuts rise toward the S and A tiers, while
+          fringe or underperforming decks settle into the lower tiers.
+        </p>
+
+        <h3>What the tiers mean</h3>
+        <ul>
+          <li>
+            <strong>S tier</strong> — the strongest, most consistent decks in
+            the current meta. Safe, powerful choices for ranked play.
+          </li>
+          <li>
+            <strong>A and B tier</strong> — highly competitive decks that can win
+            events in the right hands or with favourable matchups.
+          </li>
+          <li>
+            <strong>C and D tier</strong> — viable but less consistent; often
+            budget-friendly or matchup-dependent options.
+          </li>
+          <li>
+            <strong>E tier</strong> — niche or experimental decks that struggle
+            against the top of the meta.
+          </li>
+        </ul>
+
+        <h3>Building the best deck you can</h3>
+        <p>
+          Don't own every card yet? Open any deck to see its full decklist and
+          card-for-card alternatives, or use the Best Deck Finder to mark the
+          cards you're missing and instantly surface the strongest deck you can
+          actually build with your collection. You can also filter by energy
+          type and rank decks by popularity or raw strength to find the style
+          that suits you.
+        </p>
+
+        <h3>How often is the tier list updated?</h3>
+        <p>
+          The tier list updates as fresh tournament results come in, with the
+          fastest updates available to Premium members. The "last updated" date
+          shown above the rankings always reflects the most recent refresh.
+        </p>
+      </SeoContent>
+    </>
   );
 };
 

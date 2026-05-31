@@ -5,6 +5,7 @@ import useExpansions, {
   ExpansionType,
   PackType,
 } from "../../app/use-expansions";
+import { useMarkContentReady } from "../../ads/ContentReadyContext";
 
 const StyledExpansionListPage = styled.div`
   width: 100%;
@@ -93,6 +94,8 @@ const Loading = styled.div`
 const ExpansionListPage = () => {
   const cards = useCards(1_000_000);
   const expansions = useExpansions();
+
+  useMarkContentReady(!!cards && !!expansions);
 
   if (!cards || !expansions) return <Loading>Loading...</Loading>;
 

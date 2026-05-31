@@ -14,6 +14,8 @@ import useIsPremium from "../../app/use-is-premium";
 import UserAccount from "../../components/UserAccount";
 import arrowRight from "../../assets/arrow-right.svg";
 import AdInContent from "../../ads/AdInContent";
+import SeoContent from "../../components/SeoContent";
+import { useMarkContentReady } from "../../ads/ContentReadyContext";
 
 const StyledDeckPage = styled.div`
   width: 100%;
@@ -306,15 +308,20 @@ const DeckPage = () => {
     setBestScore(bestDeck.score);
   }, [deckId, decks, bestScore]);
 
-  if (loading || !decks) return <Overlay>Loading...</Overlay>;
-
   let deck: FullDeckType | undefined = undefined;
-
-  if (deckId) {
-    deck = decks.find((deck) => deck.id === deckId);
-  } else {
-    deck = decks.sort((a, b) => b.score - a.score)[0];
+  if (decks) {
+    if (deckId) {
+      deck = decks.find((d) => d.id === deckId);
+    } else {
+      deck = decks.sort((a, b) => b.score - a.score)[0];
+    }
   }
+
+  // Ready (for showing ads) only once a real deck is resolved — never on the
+  // loading or "not enough cards" screens.
+  useMarkContentReady(!loading && !!decks && !!deck);
+
+  if (loading || !decks) return <Overlay>Loading...</Overlay>;
 
   const relativeScore = deck ? deck.score / (bestScore ?? 1) : 0;
 
@@ -364,7 +371,15 @@ const DeckPage = () => {
     .sort((a, b) => b.score - a.score)
     .slice(0, 3);
 
+  const deckDisplayName =
+    [deck.iconPrimary?.name, deck.iconSecondary?.name]
+      .filter(Boolean)
+      .join(" / ") || "This deck";
+  const totalMatchup = deck.matchups?.find((m) => m.name === "Total");
+  const winRatePct = totalMatchup ? Math.round(totalMatchup.winRate * 100) : null;
+
   return (
+    <>
     <StyledDeckPage>
       <CardSection>
         {isDeckFinderMode && (
@@ -563,6 +578,48 @@ const DeckPage = () => {
         </PannelSection>
       )}
     </StyledDeckPage>
+
+      {isDeckFinderMode ? (
+        <SeoContent>
+          <h2>Best Deck Finder</h2>
+          <p>
+            The Best Deck Finder helps you build the strongest possible deck from
+            the cards you actually own. It starts with the top-rated deck in
+            Pokémon TCG Pocket, then lets you click any cards you don't have. Each
+            time you remove a card, it recalculates and shows you the next best
+            deck that doesn't rely on it.
+          </p>
+          <p>
+            Keep tapping the cards you're missing until you reach a deck you can
+            fully build. The relative strength indicator tells you how your deck
+            compares to the best deck in the current meta, so you can see exactly
+            how competitive your collection is and which cards are worth crafting
+            next.
+          </p>
+        </SeoContent>
+      ) : (
+        <SeoContent>
+          <h2>{deckDisplayName} deck</h2>
+          <p>
+            {deckDisplayName} is a Pokémon TCG Pocket deck ranked on our{" "}
+            <a href="/tier-list">tier list</a> using results from recent
+            tournaments.
+            {winRatePct !== null
+              ? ` Across tracked matches it holds an overall win rate of about ${winRatePct}%.`
+              : ""}{" "}
+            Above you'll find its recommended decklist, one-card alternatives you
+            can swap in, and its key strengths and weaknesses.
+          </p>
+          <p>
+            Use the matchup sections to see which popular decks this build beats
+            and which ones to watch out for. Don't have every card? Tap the ones
+            you're missing to have the deck rebuild around your collection, or
+            head back to the <a href="/tier-list">tier list</a> to explore other
+            top decks in the meta.
+          </p>
+        </SeoContent>
+      )}
+    </>
   );
 };
 
