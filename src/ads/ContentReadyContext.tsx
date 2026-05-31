@@ -53,12 +53,17 @@ export const useContentReady = (): boolean => {
   return readyPath === pathname;
 };
 
-// For pages: call with `true` once primary content has rendered. Pages that
-// never become ready (errors, empty states) simply never show ads.
+// For pages: call with `true` once primary content has rendered, and `false`
+// while loading or on empty/error states. Pages that never become ready simply
+// never show ads.
 export const useMarkContentReady = (isReady: boolean): void => {
   const { markReady } = useContentReadyContext();
   const { pathname } = useLocation();
   useEffect(() => {
-    if (isReady) markReady(pathname);
+    // Reflect the current ready state. Clearing readiness (an empty path never
+    // matches the current pathname) when a route transitions back to a
+    // loading/empty state ensures global units like AdAnchor don't linger on a
+    // content-less screen.
+    markReady(isReady ? pathname : "");
   }, [isReady, pathname, markReady]);
 };

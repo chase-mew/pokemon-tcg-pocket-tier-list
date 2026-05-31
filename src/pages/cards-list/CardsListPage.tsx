@@ -123,7 +123,8 @@ const CardsListPage = () => {
   useMarkContentReady(ready);
 
   const renderTiers = () => {
-    if (!ready || !cards) return <Loading>Loading...</Loading>;
+    if (!cards) return <Loading>Loading...</Loading>;
+    if (cards.length === 0) return <Loading>No cards found</Loading>;
 
     const bestScore = cards[0].score;
     const worstScore = cards[cards.length - 1].score;
