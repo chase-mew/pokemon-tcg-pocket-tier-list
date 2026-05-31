@@ -1,5 +1,6 @@
 import useIsPremium from "../app/use-is-premium";
 import { ADS_ENABLED, IS_DEV } from "./adsConfig";
+import { useContentReady } from "./ContentReadyContext";
 
 export interface AdsState {
   // Premium status has resolved (avoids rendering then yanking ads).
@@ -16,10 +17,13 @@ export interface AdsState {
 // ads when the build flag is enabled.
 const useAdsState = (): AdsState => {
   const isPremium = useIsPremium();
+  const contentReady = useContentReady();
   const resolved = isPremium !== null;
   const isFree = resolved && !isPremium;
 
-  const showAds = isFree && (IS_DEV || ADS_ENABLED);
+  // Only show ads once the current page has rendered real content, so ads never
+  // appear on loading, error, or content-less screens (AdSense policy).
+  const showAds = isFree && contentReady && (IS_DEV || ADS_ENABLED);
   const useReal = showAds && !IS_DEV && ADS_ENABLED;
 
   return { resolved, showAds, useReal };

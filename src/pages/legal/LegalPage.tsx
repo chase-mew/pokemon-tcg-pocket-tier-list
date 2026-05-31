@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Header from "../../components/Header";
+import { useMarkContentReady } from "../../ads/ContentReadyContext";
 
 const StyledLegalPage = styled.div`
   width: 100%;
@@ -80,6 +81,8 @@ interface Props {
 // Shared layout for static informational pages (Privacy, About). Mirrors the
 // landing page chrome: header on top, readable content column, footer below.
 const LegalPage = ({ children }: Props) => {
+  useMarkContentReady(true);
+
   return (
     <StyledLegalPage>
       <Header />

@@ -4,6 +4,7 @@ import Header from "../../components/Header";
 import Features from "./Features";
 import BestDeckFinder from "./BestDeckFinder";
 import AdInContent from "../../ads/AdInContent";
+import { useMarkContentReady } from "../../ads/ContentReadyContext";
 
 const StyledLandingPage = styled.div`
   width: 100%;
@@ -17,6 +18,8 @@ const StyledLandingPage = styled.div`
 `;
 
 const LandingPage = () => {
+  useMarkContentReady(true);
+
   return (
     <StyledLandingPage>
       <Hero />

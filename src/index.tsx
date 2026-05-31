@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import { createRoot } from "react-dom/client";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import GlobalStyles from "./styles/GlobalStyles";
@@ -8,10 +8,9 @@ import MissingContextProvider from "./components/MissingContext";
 import FilterContextProvider from "./components/FilterContext";
 import "./i18n";
 
-const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement
-);
-root.render(
+const rootElement = document.getElementById("root") as HTMLElement;
+
+const app = (
   <React.StrictMode>
     <BrowserRouter>
       <MissingContextProvider>
@@ -23,5 +22,15 @@ root.render(
     </BrowserRouter>
   </React.StrictMode>
 );
+
+// react-snap prerenders each route to static HTML at build time so crawlers
+// (and the AdSense review) receive real content. We render fresh rather than
+// hydrate: this app is heavily client-driven (i18n with per-user language
+// detection, auth, async data), which makes the prerendered markup and the
+// client's first paint diverge — hydrating that produces mismatch errors and a
+// full client re-render anyway. Rendering fresh replaces the static markup
+// cleanly in every language without console errors, while the served HTML keeps
+// its SEO/AdSense value.
+createRoot(rootElement).render(app);
 
 reportWebVitals();
