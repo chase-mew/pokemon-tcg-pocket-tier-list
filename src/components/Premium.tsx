@@ -190,6 +190,7 @@ const Premium = ({
   );
 
   const startCheckout = async (price: string, plan: "monthly" | "yearly") => {
+    if (loadingPlan !== null) return;
     setLoadingPlan(plan);
     try {
       // The extension reads `trial_period_days` from the checkout session

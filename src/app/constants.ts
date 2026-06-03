@@ -17,9 +17,10 @@ export const TWITTER_URL = "https://x.com/pocketdecks";
 // original price until they cancel, which is exactly how grandfathering works.
 // Do NOT use Stripe's "update subscriptions to this price" migration tools.
 //
-// The 7-day free trial is configured on each NEW price in Stripe
-// (trial_period_days = 7). The checkout applies it automatically because the
-// extension defaults trial_from_plan to true — no extra code needed here.
+// The 7-day free trial is set in code (see FREE_TRIAL_DAYS) by passing
+// `trial_period_days` on the checkout session document root; the extension
+// forwards it to subscription_data.trial_period_days. No Stripe price
+// configuration is required.
 //
 // Legacy prices (kept active in Stripe for grandfathered subscribers, no longer
 // referenced here): $1/mo price_1RXU5FBIHa8JB5eJAkWt6cRp, $6/yr
