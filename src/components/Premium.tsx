@@ -1,6 +1,7 @@
 import Button from "./Button";
 import { createCheckoutSession } from "@invertase/firestore-stripe-payments";
 import {
+  FREE_TRIAL_DAYS,
   MANAGE_SUBSCRIPTION_URL,
   MONTHLY_PRICE_ID,
   YEARLY_PRICE_ID,
@@ -127,6 +128,46 @@ const ButtonWrapper = styled.div`
   }
 `;
 
+// Monthly is offered as a quiet secondary option so the annual plan reads as
+// the default choice (better LTV / conversion).
+const SecondaryPlan = styled.button`
+  align-self: center;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: underline;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+`;
+
+const TrialNote = styled.p`
+  margin: 0;
+  text-align: center;
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.55);
+`;
+
+const Headline = styled.h2`
+  margin: 0 0 0.5rem;
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--main);
+
+  @media (max-width: 900px) {
+    font-size: 2.2rem;
+  }
+`;
+
 interface Props {
   showUpsell?: boolean;
   // "link" renders a compact "Remove ads" text trigger (used by the ad anchor)
@@ -144,7 +185,29 @@ const Premium = ({
   const isPremium = useIsPremium();
   const { user, signInWithGoogle } = useAuth();
   const [isOpen, setIsOpen] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [loadingPlan, setLoadingPlan] = useState<"monthly" | "yearly" | null>(
+    null
+  );
+
+  const startCheckout = async (price: string, plan: "monthly" | "yearly") => {
+    setLoadingPlan(plan);
+    try {
+      // The extension reads `trial_period_days` from the checkout session
+      // document root (it writes our params to Firestore verbatim) and maps it
+      // to subscription_data.trial_period_days. The typed SDK omits the field,
+      // so it's passed through with a cast.
+      const session = await createCheckoutSession(payments, {
+        price,
+        ...(FREE_TRIAL_DAYS > 0
+          ? { trial_period_days: FREE_TRIAL_DAYS }
+          : {}),
+      } as Parameters<typeof createCheckoutSession>[1]);
+      window.location.assign(session.url);
+    } catch (error) {
+      console.error(error);
+      setLoadingPlan(null);
+    }
+  };
 
   if (isPremium === null) return null;
 
@@ -185,6 +248,7 @@ const Premium = ({
           setIsOpen(false);
         }}
       >
+        <Headline>{t("premium.headline")}</Headline>
         <ComparisonTable>
           <thead>
             <tr>
@@ -284,32 +348,18 @@ const Premium = ({
             <>
               <Button
                 wide
-                isLoading={isLoading}
-                action={async () => {
-                  setIsLoading(true);
-                  const session = await createCheckoutSession(payments, {
-                    price: MONTHLY_PRICE_ID,
-                  });
-                  window.location.assign(session.url);
-                  setIsLoading(false);
-                }}
-              >
-                {t("premium.getPremiumMonthly")}
-              </Button>
-              <Button
-                wide
-                isLoading={isLoading}
-                action={async () => {
-                  setIsLoading(true);
-                  const session = await createCheckoutSession(payments, {
-                    price: YEARLY_PRICE_ID,
-                  });
-                  window.location.assign(session.url);
-                  setIsLoading(false);
-                }}
+                isLoading={loadingPlan === "yearly"}
+                action={() => startCheckout(YEARLY_PRICE_ID, "yearly")}
               >
                 {t("premium.getPremiumYearly")}
               </Button>
+              <SecondaryPlan
+                disabled={loadingPlan !== null}
+                onClick={() => startCheckout(MONTHLY_PRICE_ID, "monthly")}
+              >
+                {t("premium.getPremiumMonthly")}
+              </SecondaryPlan>
+              <TrialNote>{t("premium.freeTrial")}</TrialNote>
             </>
           ) : (
             <Button

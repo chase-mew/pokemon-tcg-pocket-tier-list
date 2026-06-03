@@ -97,8 +97,10 @@
     "description": "모든 기능을 잠금 해제하고 프로젝트를 지원하려면 프리미엄을 구독하세요.",
     "signIn": "프리미엄을 구독하려면 로그인하세요",
     "getPremium": "프리미엄 구독",
-    "getPremiumMonthly": "프리미엄 월 $1",
-    "getPremiumYearly": "프리미엄 연 $6 (50% 할인!)",
+    "getPremiumMonthly": "또는 월 $3",
+    "getPremiumYearly": "프리미엄 연 $18 (50% 할인!)",
+    "freeTrial": "7일 무료 체험 포함 · 언제든지 취소 가능",
+    "headline": "광고 제거 & 모든 기능 잠금 해제",
     "manageSubscription": "구독 관리",
     "features": {
       "title": "기능",
