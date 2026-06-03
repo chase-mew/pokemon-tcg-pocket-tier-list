@@ -8,7 +8,7 @@
 // Flip this to true once the AdSense account is approved and all ADSENSE_SLOTS
 // below have their slot IDs filled in. Controls whether real ads are served in
 // production; dev always shows placeholders regardless of this flag.
-export const ADS_ENABLED = false;
+export const ADS_ENABLED = true;
 
 // In local development we render labelled placeholder boxes instead of loading
 // the real ad network, so the layout/spacing can be verified without third
@@ -24,10 +24,10 @@ export const ADSENSE_CLIENT = "ca-pub-3547629432918335";
 // once approved, then paste the numeric slot IDs here. Filling these plus
 // ADSENSE_CLIENT + the ADS_ENABLED flag is all that's needed to go live.
 export const ADSENSE_SLOTS = {
-  anchor: "",
-  landing: "",
-  tierList: "",
-  deck: "",
+  anchor: "6391402118",
+  landing: "2452157107",
+  tierList: "9572403149",
+  deck: "8781910120",
 } as const;
 
 export type AdPlacement = keyof typeof ADSENSE_SLOTS;
