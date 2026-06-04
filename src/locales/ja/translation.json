@@ -97,8 +97,10 @@
     "description": "すべての機能をアンロックし、プロジェクトをサポートするためにプレミアムを取得してください。",
     "signIn": "プレミアムを取得するにはサインインしてください",
     "getPremium": "プレミアムを取得",
-    "getPremiumMonthly": "プレミアムを月額$1で取得",
-    "getPremiumYearly": "プレミアムを年間$6で取得（50%オフ！）",
+    "getPremiumMonthly": "または月額$3",
+    "getPremiumYearly": "プレミアムを年間$18で取得（50%オフ！）",
+    "freeTrial": "7日間の無料トライアル付き · いつでもキャンセル可能",
+    "headline": "広告を非表示にしてすべてを解放",
     "manageSubscription": "サブスクリプション管理",
     "features": {
       "title": "機能",

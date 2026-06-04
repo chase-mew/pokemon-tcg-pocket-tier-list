@@ -91,8 +91,10 @@
     "description": "获取高级会员以解锁所有功能并支持项目发展。",
     "signIn": "登录以获取高级会员",
     "getPremium": "获取高级会员",
-    "getPremiumMonthly": "高级会员 $1/月",
-    "getPremiumYearly": "高级会员 $6/年（50%优惠！）",
+    "getPremiumMonthly": "或 $3/月",
+    "getPremiumYearly": "高级会员 $18/年（省50%！）",
+    "freeTrial": "包含7天免费试用 · 随时取消",
+    "headline": "去除广告，解锁全部功能",
     "manageSubscription": "管理订阅",
     "features": {
       "title": "功能",
