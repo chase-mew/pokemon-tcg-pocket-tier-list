@@ -26,3 +26,4 @@ analysis/data
 .env
 
 update-decks.sh
+.cursor/settings.json
