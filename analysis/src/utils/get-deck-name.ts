@@ -11,7 +11,7 @@ interface Architype {
 const VENUSAUR = ["Mega Venusaur ex B1a 4", "Venusaur ex A1 4", "Venusaur B1a 3", "Venusaur A1 3"];
 const CHARIZARD = ["Mega Charizard X ex B2b 9", "Mega Charizard Y ex B1a 14", "Charizard ex A2b 10", "Charizard ex A1 36", "Charizard B1a 13", "Charizard A1 35"]
 const BLASTOISE = ["Blastoise ex A1 56", "Mega Blastoise ex B1a 20", "Blastoise A1 55", "Blastoise B1a 19"]
-const GRENINJA = ["Greninja A1 89", "Greninja ex B1 73"]
+const GRENINJA = ["Greninja A1 89", "Greninja ex B1 73", "Juliana B3a 71"]
 const ALTARIA = ["Mega Altaria ex B1 102", "Altaria B1 197"]
 const MAGNEZONE = ["Magnezone ex B3 54", "Magnezone A2 53", "Magnezone B1a 26"]
 const ESPEON = ["Espeon ex A4 83", "Espeon A3b 28"]
@@ -32,6 +32,7 @@ const SCEPTILE = ["Mega Sceptile ex B3 8", "Sceptile B3 7"]
 const MIRAIDON = ["Miraidon ex B3a 19", "Professor Turo B3a 73"];
 const BABY_ENERGY = ["Pichu A4 66", "Magby A4 22", "Mantyke A4a 23"];
 const FUTURE = ["Future Booster Energy Capsule B3a 70", "Iron Valiant B3a 27", "Iron Crown B3a 30"]
+const BLAZIKEN = ["Mega Blaziken ex B1 36", "Juliana B3a 71"]
 
 const ARCHITYPES: Architype[] = [
   // Outliers
@@ -48,7 +49,7 @@ const ARCHITYPES: Architype[] = [
   { primary: VENUSAUR, secondary: ["Exeggutor ex A1 23", "Dustox B1 7", "Lilligant B1 18"] },
   { primary: CHARIZARD, secondary: ["Skeledirge B2a 18"] },
   { primary: BLASTOISE, secondary: [] },
-  { primary: "Mega Blaziken ex B1 36", secondary: [GRENINJA, "Castform Sunny Form B3 24"] },
+  { primary: BLAZIKEN, secondary: [GRENINJA, "Castform Sunny Form B3 24"] },
   { primary: "Mega Ampharos ex B1 85", secondary: ["Alolan Raichu B2 50"] },
 
   // Stage 2 ex
