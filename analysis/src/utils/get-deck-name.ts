@@ -125,7 +125,7 @@ const ARCHITYPES: Architype[] = [
   { primary: "Mega Absol ex B1 151", secondary: [GRENINJA, ORICORIO] },
 
   // Basic ex
-  { primary: "Iron Bundle ex B3a 13", secondary: [] },
+  { primary: "Iron Bundle ex B3a 13", secondary: [FUTURE] },
   { primary: "Flutter Mane ex B3a 26", secondary: [GRENINJA] },
   { primary: "Koraidon ex B3a 36", secondary: ["Great Tusk B3a 34"] },
   { primary: "Terapagos ex B3a 68", secondary: [BABY_ENERGY, "Ho-Oh ex A4 34"] },
