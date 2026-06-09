@@ -280,80 +280,80 @@ const LandingPage = () => {
       <StyledTierListPage>
         <FilterContainer>
           <UserAccount showUpsell />
-        {isPremium && (
-          <>
-            <Dropdown
-              value={energy ?? ""}
-              onChange={(e) => {
-                const value = e.target.value;
-                setEnergy(value === "" ? null : value);
-              }}
-            >
-              <option value="">{t("energyDropdown.all")}</option>
-              {ENERGY_TYPES.map((type) => (
-                <option key={type} value={type}>
-                  {t(`energyDropdown.${type}`)}
-                </option>
-              ))}
-            </Dropdown>
-            <IncludeExContainer>
-              {t("filter.includeEx")}
-              <IncludeExCheckbox
-                type="checkbox"
-                checked={includeEx}
-                onChange={(e) => setIncludeEx(e.target.checked)}
-              />
-            </IncludeExContainer>
-            <DeckAmountContainer>
-              {t("filter.deckAmount")}
-              <DeckAmountSelect
-                value={deckAmount}
-                onChange={(e) => setDeckAmount(Number(e.target.value))}
-              >
-                {[10, 20, 30, 40, 50, 60, 70, 80, 90, 100].map((amount) => (
-                  <option key={amount} value={amount}>
-                    {amount}
-                  </option>
-                ))}
-              </DeckAmountSelect>
-            </DeckAmountContainer>
-            <DeckAmountContainer>
-              {t("filter.sortBy")}
-              <DeckAmountSelect
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as SortBy)}
-              >
-                {[SortBy.SCORE, SortBy.POPULARITY, SortBy.STRENGTH].map(
-                  (sortByOption) => (
-                    <option key={sortByOption} value={sortByOption}>
-                      {t(`filter.${sortByOption}`)}
-                    </option>
-                  )
-                )}
-              </DeckAmountSelect>
-            </DeckAmountContainer>
-            <DeckAmountContainer>
-              {t("filter.latestExpansionCards")}
-              <DeckAmountSelect
-                value={latestExpansionCards ?? ""}
+          {isPremium && (
+            <>
+              <Dropdown
+                value={energy ?? ""}
                 onChange={(e) => {
                   const value = e.target.value;
-                  setLatestExpansionCards(value === "" ? null : Number(value));
+                  setEnergy(value === "" ? null : value);
                 }}
               >
-                <option value="">{t("filter.latestExpansionCardsAny")}</option>
-                {[2, 6, 7].map((count) => (
-                  <option key={count} value={count}>
-                    {count}
+                <option value="">{t("energyDropdown.all")}</option>
+                {ENERGY_TYPES.map((type) => (
+                  <option key={type} value={type}>
+                    {t(`energyDropdown.${type}`)}
                   </option>
                 ))}
-              </DeckAmountSelect>
-            </DeckAmountContainer>
-          </>
-        )}
-      </FilterContainer>
+              </Dropdown>
+              <IncludeExContainer>
+                {t("filter.includeEx")}
+                <IncludeExCheckbox
+                  type="checkbox"
+                  checked={includeEx}
+                  onChange={(e) => setIncludeEx(e.target.checked)}
+                />
+              </IncludeExContainer>
+              <DeckAmountContainer>
+                {t("filter.deckAmount")}
+                <DeckAmountSelect
+                  value={deckAmount}
+                  onChange={(e) => setDeckAmount(Number(e.target.value))}
+                >
+                  {[10, 20, 30, 40, 50, 60, 70, 80, 90, 100].map((amount) => (
+                    <option key={amount} value={amount}>
+                      {amount}
+                    </option>
+                  ))}
+                </DeckAmountSelect>
+              </DeckAmountContainer>
+              <DeckAmountContainer>
+                {t("filter.sortBy")}
+                <DeckAmountSelect
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value as SortBy)}
+                >
+                  {[SortBy.SCORE, SortBy.POPULARITY, SortBy.STRENGTH].map(
+                    (sortByOption) => (
+                      <option key={sortByOption} value={sortByOption}>
+                        {t(`filter.${sortByOption}`)}
+                      </option>
+                    )
+                  )}
+                </DeckAmountSelect>
+              </DeckAmountContainer>
+              <DeckAmountContainer>
+                {t("filter.latestExpansionCards")}
+                <DeckAmountSelect
+                  value={latestExpansionCards ?? ""}
+                  onChange={(e) => {
+                    const value = e.target.value;
+                    setLatestExpansionCards(value === "" ? null : Number(value));
+                  }}
+                >
+                  <option value="">{t("filter.latestExpansionCardsAny")}</option>
+                  {[2, 6, 12].map((count) => (
+                    <option key={count} value={count}>
+                      {count}
+                    </option>
+                  ))}
+                </DeckAmountSelect>
+              </DeckAmountContainer>
+            </>
+          )}
+        </FilterContainer>
 
-      {renderTiers()}
+        {renderTiers()}
       </StyledTierListPage>
 
       <SeoContent>
