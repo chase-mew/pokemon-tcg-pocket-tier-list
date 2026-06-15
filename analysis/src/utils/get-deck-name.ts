@@ -13,7 +13,7 @@ const CHARIZARD = ["Mega Charizard X ex B2b 9", "Mega Charizard Y ex B1a 14", "C
 const BLASTOISE = ["Blastoise ex A1 56", "Mega Blastoise ex B1a 20", "Blastoise A1 55", "Blastoise B1a 19"]
 const GRENINJA = ["Greninja A1 89", "Greninja ex B1 73", "Juliana B3a 71"]
 const ALTARIA = ["Mega Altaria ex B1 102", "Altaria B1 197"]
-const MAGNEZONE = ["Magnezone ex B3 54", "Magnezone A2 53", "Magnezone B1a 26"]
+const MAGNEZONE = ["Magnezone ex B3 54", "Magnezone A2 53", "Magnezone B1a 26", "Magneton A1 98"]
 const ESPEON = ["Espeon ex A4 83", "Espeon A3b 28"]
 const GUZZLORD = ["Guzzlord ex A3a 43", "Guzzlord B2 109"]
 const BUZZWOLE = ["Buzzwole ex A3a 6", "Buzzwole B2 14"]
@@ -191,17 +191,13 @@ const hasAllCards = (
 };
 
 /**
- * Finds the specific card from a match criteria that is actually present in the deck.
- * Falls back to the first entry if none are found.
+ * Returns the canonical card for a match criteria, i.e. the first entry in the
+ * archetype's card list. Using a single canonical card (rather than whichever
+ * variant happens to be in the deck) ensures every deck of the same archetype
+ * resolves to the same name, even when they run different card variants.
  */
-const getMatchedCard = (cards: Deck["cards"], match: CardNameType): string => {
-  const cardStrings = new Set(cards.map((card) => cardToString(card)));
+const getCanonicalCard = (match: CardNameType): string => {
   const matchArray = Array.isArray(match) ? match : [match];
-  for (const cardName of matchArray) {
-    if (cardStrings.has(`2 ${cardName}`) || cardStrings.has(`1 ${cardName}`)) {
-      return cardName;
-    }
-  }
   return matchArray[0];
 };
 
@@ -218,12 +214,12 @@ const getDeckName = (deck: Deck): string | null => {
     const { primary, secondary } = criteria;
     for (const secondaryCard of secondary) {
       if (hasAllCards(cards, primary, true, secondaryCard)) {
-        const match = [getMatchedCard(cards, primary), getMatchedCard(cards, secondaryCard)];
+        const match = [getCanonicalCard(primary), getCanonicalCard(secondaryCard)];
         return formatName(cards, match);
       }
     }
     if (hasAllCards(cards, primary, true)) {
-      return formatName(cards, [getMatchedCard(cards, primary)]);
+      return formatName(cards, [getCanonicalCard(primary)]);
     }
   }
 
@@ -232,12 +228,12 @@ const getDeckName = (deck: Deck): string | null => {
     const { primary, secondary } = criteria;
     for (const secondaryCard of secondary) {
       if (hasAllCards(cards, primary, false, secondaryCard)) {
-        const match = [getMatchedCard(cards, primary), getMatchedCard(cards, secondaryCard)];
+        const match = [getCanonicalCard(primary), getCanonicalCard(secondaryCard)];
         return formatName(cards, match);
       }
     }
     if (hasAllCards(cards, primary, false)) {
-      return formatName(cards, [getMatchedCard(cards, primary)]);
+      return formatName(cards, [getCanonicalCard(primary)]);
     }
   }
 
