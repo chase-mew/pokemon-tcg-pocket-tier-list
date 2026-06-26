@@ -26,6 +26,7 @@ jobs:
           FIREBASE_TOOLS_VERSION: 15.22.3
           PROJECT_ID: pokemon-tcg-pocket-tier-list
         run: |
+          # Firebase reports an already-live deploy via this message instead of a distinct exit code.
           duplicate_release_pattern="Can't release to .*channels/live.*supplied version .* is the current active version\\."
           credentials_file="$(mktemp)"
           log_file="$(mktemp)"
