@@ -20,9 +20,37 @@ jobs:
           REACT_APP_FIREBASE_STORAGE_BUCKET: ${{ secrets.REACT_APP_FIREBASE_STORAGE_BUCKET }}
           REACT_APP_FIREBASE_MESSAGING_SENDER_ID: ${{ secrets.REACT_APP_FIREBASE_MESSAGING_SENDER_ID }}
           REACT_APP_FIREBASE_APP_ID: ${{ secrets.REACT_APP_FIREBASE_APP_ID }}
-      - uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: "${{ secrets.GITHUB_TOKEN }}"
-          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_POKEMON_TCG_POCKET_TIER_LIST }}"
-          channelId: live
-          projectId: pokemon-tcg-pocket-tier-list
+      - name: Deploy to Firebase Hosting
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_POKEMON_TCG_POCKET_TIER_LIST }}
+          FIREBASE_TOOLS_VERSION: 15.22.3
+          PROJECT_ID: pokemon-tcg-pocket-tier-list
+        run: |
+          # Matches Firebase CLI's duplicate live release error:
+          # "Can't release to ... channels/live ... supplied version ... is the current active version."
+          duplicate_release_pattern="Can't release to .*channels/live.*supplied version .* is the current active version\\."
+          credentials_file="$(mktemp)"
+          log_file="$(mktemp)"
+          trap 'rm -f "$credentials_file" "$log_file"' EXIT
+          chmod 600 "$credentials_file"
+
+          printf '%s' "$FIREBASE_SERVICE_ACCOUNT" > "$credentials_file"
+          export GOOGLE_APPLICATION_CREDENTIALS="$credentials_file"
+
+          npx "firebase-tools@$FIREBASE_TOOLS_VERSION" deploy --only hosting --project "$PROJECT_ID" 2>&1 | tee "$log_file"
+          pipeline_status=("${PIPESTATUS[@]}")
+          deploy_status=${pipeline_status[0]}
+          tee_status=${pipeline_status[1]}
+
+          if [ "$tee_status" -ne 0 ]; then
+            exit "$tee_status"
+          fi
+
+          if [ "$deploy_status" -ne 0 ]; then
+            if grep -Eq "$duplicate_release_pattern" "$log_file"; then
+              echo "Hosting version is already live; treating deploy as successful."
+              exit 0
+            fi
+
+            exit "$deploy_status"
+          fi
