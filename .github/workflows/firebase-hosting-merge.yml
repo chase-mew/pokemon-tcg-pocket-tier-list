@@ -27,7 +27,7 @@ jobs:
           PROJECT_ID: pokemon-tcg-pocket-tier-list
         run: |
           set -o pipefail
-          duplicate_release_pattern="Can't release to .*channels/live.*supplied version .* is the current active version\\."
+          duplicate_release_pattern='Can'\''t release to .*channels/live.*supplied version .* is the current active version\.'
           credentials_file="$(mktemp)"
           log_file="$(mktemp)"
           trap 'rm -f "$credentials_file" "$log_file"' EXIT
