@@ -20,9 +20,26 @@ jobs:
           REACT_APP_FIREBASE_STORAGE_BUCKET: ${{ secrets.REACT_APP_FIREBASE_STORAGE_BUCKET }}
           REACT_APP_FIREBASE_MESSAGING_SENDER_ID: ${{ secrets.REACT_APP_FIREBASE_MESSAGING_SENDER_ID }}
           REACT_APP_FIREBASE_APP_ID: ${{ secrets.REACT_APP_FIREBASE_APP_ID }}
-      - uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: "${{ secrets.GITHUB_TOKEN }}"
-          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_POKEMON_TCG_POCKET_TIER_LIST }}"
-          channelId: live
-          projectId: pokemon-tcg-pocket-tier-list
+      - name: Deploy to Firebase Hosting
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_POKEMON_TCG_POCKET_TIER_LIST }}
+          PROJECT_ID: pokemon-tcg-pocket-tier-list
+        run: |
+          set -o pipefail
+          credentials_file="$(mktemp)"
+          log_file="$(mktemp)"
+          trap 'rm -f "$credentials_file" "$log_file"' EXIT
+
+          printf '%s' "$FIREBASE_SERVICE_ACCOUNT" > "$credentials_file"
+          export GOOGLE_APPLICATION_CREDENTIALS="$credentials_file"
+
+          if npx firebase-tools@latest deploy --only hosting --project "$PROJECT_ID" --json 2>&1 | tee "$log_file"; then
+            exit 0
+          fi
+
+          if grep -Fq 'is the current active version' "$log_file"; then
+            echo "Hosting version is already live; treating deploy as successful."
+            exit 0
+          fi
+
+          exit 1
