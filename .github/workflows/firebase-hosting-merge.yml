@@ -27,6 +27,7 @@ jobs:
           PROJECT_ID: pokemon-tcg-pocket-tier-list
         run: |
           set -o pipefail
+          duplicate_release_message='is the current active version'
           credentials_file="$(mktemp)"
           log_file="$(mktemp)"
           trap 'rm -f "$credentials_file" "$log_file"' EXIT
@@ -34,13 +35,11 @@ jobs:
           printf '%s' "$FIREBASE_SERVICE_ACCOUNT" > "$credentials_file"
           export GOOGLE_APPLICATION_CREDENTIALS="$credentials_file"
 
-          if npx "firebase-tools@$FIREBASE_TOOLS_VERSION" deploy --only hosting --project "$PROJECT_ID" --json 2>&1 | tee "$log_file"; then
-            exit 0
-          fi
+          if ! npx "firebase-tools@$FIREBASE_TOOLS_VERSION" deploy --only hosting --project "$PROJECT_ID" --json 2>&1 | tee "$log_file"; then
+            if grep -Fq "$duplicate_release_message" "$log_file"; then
+              echo "Hosting version is already live; treating deploy as successful."
+              exit 0
+            fi
 
-          if grep -Fq 'is the current active version' "$log_file"; then
-            echo "Hosting version is already live; treating deploy as successful."
-            exit 0
+            exit 1
           fi
-
-          exit 1
