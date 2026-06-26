@@ -26,11 +26,13 @@ jobs:
           FIREBASE_TOOLS_VERSION: 15.22.3
           PROJECT_ID: pokemon-tcg-pocket-tier-list
         run: |
-          # Firebase reports an already-live deploy via this message instead of a distinct exit code.
+          # Matches Firebase CLI's duplicate live release error:
+          # "Can't release to ... channels/live ... supplied version ... is the current active version."
           duplicate_release_pattern="Can't release to .*channels/live.*supplied version .* is the current active version\\."
           credentials_file="$(mktemp)"
           log_file="$(mktemp)"
           trap 'rm -f "$credentials_file" "$log_file"' EXIT
+          chmod 600 "$credentials_file"
 
           printf '%s' "$FIREBASE_SERVICE_ACCOUNT" > "$credentials_file"
           export GOOGLE_APPLICATION_CREDENTIALS="$credentials_file"
