@@ -23,6 +23,7 @@ jobs:
       - name: Deploy to Firebase Hosting
         env:
           FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_POKEMON_TCG_POCKET_TIER_LIST }}
+          FIREBASE_TOOLS_VERSION: 15.22.3
           PROJECT_ID: pokemon-tcg-pocket-tier-list
         run: |
           set -o pipefail
@@ -33,7 +34,7 @@ jobs:
           printf '%s' "$FIREBASE_SERVICE_ACCOUNT" > "$credentials_file"
           export GOOGLE_APPLICATION_CREDENTIALS="$credentials_file"
 
-          if npx firebase-tools@latest deploy --only hosting --project "$PROJECT_ID" --json 2>&1 | tee "$log_file"; then
+          if npx "firebase-tools@$FIREBASE_TOOLS_VERSION" deploy --only hosting --project "$PROJECT_ID" --json 2>&1 | tee "$log_file"; then
             exit 0
           fi
 
