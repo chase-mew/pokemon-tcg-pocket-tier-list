@@ -23,7 +23,7 @@ jobs:
       # Pin Node for the firebase-tools subprocess only: the runner default
       # Node breaks node-fetch@v2 (premature close on every request), but the
       # legacy react-snap/puppeteer in the build step needs the default Node.
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: 24.16.0
       - uses: FirebaseExtended/action-hosting-deploy@v0
