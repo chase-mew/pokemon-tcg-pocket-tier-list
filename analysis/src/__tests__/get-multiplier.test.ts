@@ -71,8 +71,10 @@ describe("getMultiplier", () => {
     const newestDate = new Date(EXPANSION_RELEASE_DATE);
     newestDate.setDate(newestDate.getDate() + 30);
 
-    const quarterDate = new Date(EXPANSION_RELEASE_DATE);
-    quarterDate.setDate(quarterDate.getDate() + 7.5);
+    const quarterDate = new Date(
+      EXPANSION_RELEASE_DATE.getTime() +
+        0.25 * (newestDate.getTime() - EXPANSION_RELEASE_DATE.getTime())
+    );
 
     const deck: Deck = {
       ...mockDeck,
