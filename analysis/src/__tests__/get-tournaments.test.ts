@@ -6,7 +6,13 @@ jest.mock("fs");
 describe("getTournaments", () => {
   beforeEach(() => {
     jest.clearAllMocks();
+    process.env.LIMITLESS_API_KEY = "test-key";
+    (fs.existsSync as jest.Mock).mockReturnValue(true);
     (fs.readFileSync as jest.Mock).mockReturnValue(JSON.stringify([]));
+  });
+
+  afterEach(() => {
+    delete process.env.LIMITLESS_API_KEY;
   });
 
   it("should filter tournaments based on minimum games", async () => {

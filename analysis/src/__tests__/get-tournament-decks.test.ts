@@ -5,6 +5,11 @@ jest.mock("../utils/get-pairings");
 describe("getDecks", () => {
   beforeEach(() => {
     jest.clearAllMocks();
+    process.env.LIMITLESS_API_KEY = "test-key";
+  });
+
+  afterEach(() => {
+    delete process.env.LIMITLESS_API_KEY;
   });
 
   it("should process decks correctly", async () => {

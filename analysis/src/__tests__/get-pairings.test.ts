@@ -3,6 +3,11 @@ import { getPairings } from "../utils/get-pairings";
 describe("getPairings", () => {
   beforeEach(() => {
     jest.clearAllMocks();
+    process.env.LIMITLESS_API_KEY = "test-key";
+  });
+
+  afterEach(() => {
+    delete process.env.LIMITLESS_API_KEY;
   });
 
   it("should transform pairings correctly", async () => {
